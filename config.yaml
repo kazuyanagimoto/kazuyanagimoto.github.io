@@ -82,10 +82,6 @@ menu:
       title: Contact form
       url: /contact/
       weight: 2
-    - name: Contributors
-      title: Contributors
-      url: /contributors/
-      weight: 3
   header:
     - name: About
       title: About Blogophonic
@@ -95,6 +91,10 @@ menu:
       title: Blog
       url: /blog/
       weight: 2
+    - name: CV
+      title: CV
+      url: https://nicetak.github.io/cv/
+      weight: 3
 privacy:
   disqus:
     disable: no
