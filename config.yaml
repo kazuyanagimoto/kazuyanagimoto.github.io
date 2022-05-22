@@ -44,8 +44,8 @@ params:
   math:
     renderer: katex
   navallcaps: yes
-  orgLocal: Anywhere
-  orgName: RStudio
+  orgLocal: Madrid
+  orgName: Kazuharu Yanagimoto
   sharing_image: /img/papillons.jpg
   social:
     - icon: github
@@ -53,7 +53,7 @@ params:
       url: https://github.com/nicetak
     - icon: twitter
       icon_pack: fab
-      url: https://twitter.com/hashtag/apéro
+      url: https://twitter.com/kazuyanagimoto
     - icon: linkedin
       icon_pack: fab
       url: https://www.linkedin.com/in/kazuharu-yanagimoto/
@@ -84,7 +84,7 @@ menu:
       weight: 2
   header:
     - name: About
-      title: About Blogophonic
+      title: About Me
       url: /about/
       weight: 1
     - name: Blog
@@ -95,6 +95,10 @@ menu:
       title: CV
       url: https://nicetak.github.io/cv/
       weight: 3
+    - name: Talk
+      title: Talk
+      url: /talk/
+      weight: 4
 privacy:
   disqus:
     disable: no
