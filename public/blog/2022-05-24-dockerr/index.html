@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head>
+  
+                           
+     
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.98.0" />
+<title>My Docker Template for R | Kazuharu Yanagimoto&#39;s Webpage</title>
+
+
+<meta property="twitter:site" content="@apreshill">
+<meta property="twitter:creator" content="@apreshill">
+
+
+
+
+
+
+
+  
+    
+  
+<meta name="description" content="A portable research environment with Docker, VSCode, and DVC">
+
+
+<meta property="og:site_name" content="Kazuharu Yanagimoto&#39;s Webpage">
+<meta property="og:title" content="My Docker Template for R | Kazuharu Yanagimoto&#39;s Webpage">
+<meta property="og:description" content="A portable research environment with Docker, VSCode, and DVC" />
+<meta property="og:type" content="page" />
+<meta property="og:url" content="https://kazuyanagimoto.com/blog/2022-05-24-dockerr/" />
+<meta property="og:locale" content="en">
+
+
+
+
+    
+        <meta property="og:image" content="https://kazuyanagimoto.com/blog/2022-05-24-dockerr/featured.png" >
+        <meta property="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://kazuyanagimoto.com/blog/2022-05-24-dockerr/featured.png" >
+    
+    
+  <meta itemprop="name" content="My Docker Template for R">
+<meta itemprop="description" content="Docker is one of the best environments for reproductivity of the research. I use Docker for basically all my projects, but it took me about 2 years to get to a satisfactory environment setup. I would like to share it here as a template.
+Quick Start      Clone this repository Open it in VSCode and add Remote-Containers Extension From command pallete, choose &ldquo;open folder in container&rdquo; Open localhost:8787 in a browser Create a project for this projet directory (by default, choose /home/rstudio/work) RUN renv::init() in the R console Set up a DVC environment  Prepare a folder in Google Drive (and copy the folder code) Init DVC dvc initdvc remote add --default myremote gdrive://GDRIVE_FOLDER_CODE     Brief Explanations     In this section, I briefly comment on each files."><meta itemprop="datePublished" content="2022-05-24T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-05-24T00:00:00+00:00" />
+<meta itemprop="wordCount" content="443"><meta itemprop="image" content="https://kazuyanagimoto.com/blog/2022-05-24-dockerr/featured.png">
+<meta itemprop="keywords" content="" />
+  
+  
+  <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  
+  
+  <link rel="stylesheet" href="/style.main.min.508aa34bb4fa7ebfddd6892a4ec251e1ce46ad0e0c5be6380abc84336f01b14e.css" integrity="sha256-UIqjS7T6fr/d1okqTsJR4c5GrQ4MW&#43;Y4CryEM28BsU4=" media="screen">
+  
+  
+  <script src="/panelset.min.8f4cba0107356728f266d94a12a4d18ef504eda8a9a284cda73675bae7884a68.js" type="text/javascript"></script>
+  
+  
+  <script src="/main.min.84c697bc01b140d49d3b9babd4e7b6ed37880b5d5f1b46b39b8f46ce4382a4d7.js" type="text/javascript"></script>
+</head>
+<body>
+      <div class="grid-container single">
+<header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
+  <nav class="site-nav db dt-l w-100" role="navigation">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://kazuyanagimoto.com/" title="Home">
+      <img src="/img/blogophonic-mark-dark.png" class="dib db-l h2 w-auto" alt="Kazuharu Yanagimoto&#39;s Webpage">
+    </a>
+    <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/about/" title="About Me">About</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 active" href="/blog/" title="Blog">Blog</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="https://nicetak.github.io/cv/" title="CV">CV</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/talk/" title="Talk">Talk</a>
+      
+      
+    </div>
+  </nav>
+</header>
+
+<main class="page-main pa4" role="main">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 ph4-l">
+      <header class="post-header">
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">My Docker Template for R</h1>
+        <h4 class="f4 mt0 mb4 lh-title measure">A portable research environment with Docker, VSCode, and DVC</h4>
+        <p class="f6 measure lh-copy mv1">By Kazuharu Yanagimoto in <a href="https://kazuyanagimoto.com/categories/r">R</a>  <a href="https://kazuyanagimoto.com/categories/docker">Docker</a> </p>
+        <p class="f7 db mv0 ttu">May 24, 2022</p>
+
+      
+
+      </header>
+      <section class="post-body pt5 pb4">
+        <p>Docker is one of the best environments for <strong>reproductivity</strong> of the research.
+I use Docker for basically all my projects, but it took me about 2 years to get to a satisfactory environment setup. I would like to share it here as a template.</p>
+
+
+
+
+<h2 id="quick-start">Quick Start
+  <a href="#quick-start"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<ol>
+<li>Clone 
+<a href="https://github.com/nicetak/dockerR" target="_blank" rel="noopener">this repository</a></li>
+<li>Open it in VSCode and add Remote-Containers Extension</li>
+<li>From command pallete, choose &ldquo;open folder in container&rdquo;</li>
+<li>Open <code>localhost:8787</code> in a browser</li>
+<li>Create a project for this projet directory (by default, choose <code>/home/rstudio/work</code>)</li>
+<li>RUN <code>renv::init()</code> in the R console</li>
+<li>Set up a 
+<a href="https://dvc.org/" target="_blank" rel="noopener">DVC</a> environment
+<ol>
+<li>Prepare a folder in Google Drive (and copy the folder code)</li>
+<li>Init DVC
+<pre tabindex="0"><code class="language-{bash}" data-lang="{bash}">dvc init
+dvc remote add --default myremote gdrive://GDRIVE_FOLDER_CODE
+</code></pre></li>
+</ol>
+</li>
+</ol>
+
+
+
+
+<h2 id="brief-explanations">Brief Explanations
+  <a href="#brief-explanations"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>In this section, I briefly comment on each files. I assume you are familiar with</p>
+<ul>
+<li>R, Rstudio &amp; <code>renv</code></li>
+<li>
+<a href="https://www.docker.com/" target="_blank" rel="noopener">Docker</a></li>
+<li>
+<a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VSCode</a> and its 
+<a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers" target="_blank" rel="noopener">Remote-Containers</a> extension</li>
+</ul>
+<p>I manage data files by 
+<a href="https://dvc.org/" target="_blank" rel="noopener">DVC</a>.
+But if you have another strategy for the data management, ignore these parts.</p>
+
+
+
+
+<h3 id="dockerfile"><code>Dockerfile</code>
+  <a href="#dockerfile"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<pre tabindex="0"><code class="language-{bash}" data-lang="{bash}">FROM rocker/verse
+
+RUN apt update &amp;&amp; apt install -y gnupg openssh-client libpoppler-cpp-dev
+
+# DVC
+RUN wget \
+       https://dvc.org/deb/dvc.list \
+       -O /etc/apt/sources.list.d/dvc.list &amp;&amp; \
+    wget -qO - https://dvc.org/deb/iterative.asc | apt-key add - &amp;&amp; \
+    apt update &amp;&amp; \
+    apt install -y dvc 
+
+# R Packages
+RUN R -e &#34;install.packages(c(&#39;languageserver&#39;, &#39;renv&#39;))&#34;
+
+# Rstudio Global Options
+COPY --chown=rstudio:rstudio .config/rstudio/rstudio-prefs.json /home/rstudio/.config/rstudio/rstudio-prefs.json
+</code></pre>
+
+
+
+<h4 id="r-image">R image
+  <a href="#r-image"></a>
+</h4>
+<p>If you don&rsquo;t have any preferences, I recommend you to use one of the rocker image series
+of 
+<a href="https://github.com/rocker-org/rocker" target="_blank" rel="noopener">rocker-org</a>:</p>
+<ul>
+<li>rocker/rstudio</li>
+<li>rocker/tidyverse</li>
+<li>rocker/verse</li>
+<li>rocker/geospatial</li>
+</ul>
+<p>Because I currently write a paper by Rmarkdown,
+I usually use <code>rocker/verse</code> and use <code>rocker/geospatial</code> for spatial analysis.</p>
+
+
+
+
+<h4 id="dvc">DVC
+  <a href="#dvc"></a>
+</h4>
+<p>I have just follow the official guide for 
+<a href="https://dvc.org/doc/install/linux#from-repo-on-debian-ubuntu" target="_blank" rel="noopener">Install from repository</a>.
+If your environment includes python, it is easier to install it via <code>pip</code>.</p>
+
+
+
+
+<h4 id="r-packages">R packages
+  <a href="#r-packages"></a>
+</h4>
+<p>I use <code>renv</code> for dependency management.
+<code>languageserver</code> allows us to run a code in VSCode, but I don&rsquo;t usually use it.</p>
+
+
+
+
+<h4 id="rstudio-global-options">Rstudio Global Options
+  <a href="#rstudio-global-options"></a>
+</h4>
+<p>When Rstudio launches, it loads the <code>~/.config/rstudio/rstudio-prefs.json</code> file for general settings. So I prepare <code>/.config/rstudio/rstudio-prefs.json</code>,
+and it allows me to use Rstudio with my favorites settings.</p>
+<p>If you want to use your own settings, I recommend you</p>
+<ol>
+<li>Open Rstudio</li>
+<li>Set up by GUI (Tools -&gt; Global Options)</li>
+<li>Copy <code>~/.config/rstudio/rstudio-prefs.json</code> (in container)</li>
+<li>Paste it on <code>/.config/rstudio/rstudio-prefs.json</code> (in host)</li>
+</ol>
+
+
+
+
+<h3 id="docker-composeyml"><code>docker-compose.yml</code>
+  <a href="#docker-composeyml"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<pre tabindex="0"><code class="language-{json}" data-lang="{json}">version: &#39;3&#39;
+services:
+    rstudio:
+        build:
+            context: .
+        environment:
+            - TZ=Europe/Madrid
+            - DISABLE_AUTH=true
+            - RENV_PATHS_CACHE=/home/rstudio/.renv/cache
+        volumes:
+            - .:/home/rstudio/work
+            - $HOME/.renv:/home/rstudio/.renv/cache
+</code></pre>
+
+
+
+<h4 id="disable_authtrue">DISABLE_AUTH=true
+  <a href="#disable_authtrue"></a>
+</h4>
+<p>You don&rsquo;t need to type a password for each new session.</p>
+
+
+
+
+<h4 id="cache-for-renv">Cache for <code>renv</code>
+  <a href="#cache-for-renv"></a>
+</h4>
+<p>By setting the <code>RENV_PATH_CACHE</code> and mount the directory,
+you don&rsquo;t need to re-install packages.
+In other words, you can share packages with other (docker) projects and
+don&rsquo;t have to re-install all the packages when you rebuild a container.</p>
+<p>Have fun!</p>
+
+        
+        <details closed class="f6 fw7 input-reset">
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Posted on:</dt>
+    <dd class="fw5 ml0">May 24, 2022</dd>
+  </dl>
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Length:</dt>
+    <dd class="fw5 ml0">3 minute read, 443 words</dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Categories:</dt>
+    <dd class="fw5 ml0"> <a href="https://kazuyanagimoto.com/categories/r">R</a>  <a href="https://kazuyanagimoto.com/categories/docker">Docker</a> </dd>
+  </dl>
+  
+  
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">See Also:</dt>
+    
+  </dl>
+</details>
+
+      </section>
+      <footer class="post-footer">
+        <div class="post-pagination dt w-100 mt4 mb2">
+  
+  
+  
+  
+</div>
+
+      </footer>
+    </article>
+    
+      
+<div class="post-comments pa0 pa4-l mt4">
+  
+  <script src="https://utteranc.es/client.js"
+          repo="apreshill/apero"
+          issue-term="pathname"
+          theme="boxy-light"
+          label="comments :crystal_ball:"
+          crossorigin="anonymous"
+          async
+          type="text/javascript">
+  </script>
+  
+</div>
+
+    
+  </section>
+</main>
+<footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
+  <nav class="db dt-l w-100">
+    <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
+      &copy; 2022 Kazuharu Yanagimoto, Madrid
+      <span class="middot-divider"></span>
+      Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
+      <br />
+      
+Based on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/formspree/blogophonic-hugo" rel="dct:source">Blogophonic</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://formspree.io" property="cc:attributionName" rel="cc:attributionURL">Formspree</a>.
+    </p>
+    
+    <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2 pv0-l mv0">
+      <div class="social-icon-links" aria-hidden="true">
+  
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://github.com/nicetak" title="github" target="_blank" rel="noopener">
+      <i class="fab fa-github fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://twitter.com/kazuyanagimoto" title="twitter" target="_blank" rel="noopener">
+      <i class="fab fa-twitter fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.linkedin.com/in/kazuharu-yanagimoto/" title="linkedin" target="_blank" rel="noopener">
+      <i class="fab fa-linkedin fa-lg fa-fw"></i>
+    </a>
+  
+</div>
+
+    </div>
+    
+    <div class="site-links f6 db dtc-l v-mid w-100 w-67-l tc tr-l pv2 pv0-l mv0">
+      
+      <a class="dib pv1 ph2 link" href="/license/" title="License">License</a>
+      
+      <a class="dib pv1 ph2 link" href="/contact/" title="Contact form">Contact</a>
+      
+    </div>
+  </nav>
+  
+    <script>
+
+    var i, text, code, codes = document.getElementsByTagName('code');
+    for (let i = 0; i < codes.length;) {
+      code = codes[i];
+      if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+        text = code.textContent;
+        if (/^\$[^$]/.test(text) && /[^$]\$$/.test(text)) {
+          text = text.replace(/^\$/, '\\(').replace(/\$$/, '\\)');
+          code.textContent = text;
+        }
+        if (/^\\\((.|\s)+\\\)$/.test(text) ||
+            /^\\\[(.|\s)+\\\]$/.test(text) ||
+            /^\$(.|\s)+\$$/.test(text) ||
+            /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+          code.outerHTML = code.innerHTML;  
+          continue;
+        }
+      }
+      i++;
+    }
+</script>
+
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js" integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+    
+  
+  
+</footer>
+
+      </div>
+    </body>
+</html>

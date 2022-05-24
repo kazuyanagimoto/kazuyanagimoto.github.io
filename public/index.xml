@@ -6,7 +6,7 @@
     <description>Recent content in Kazuharu Yanagimoto on Kazuharu Yanagimoto&#39;s Webpage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 24 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kazuyanagimoto.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 24 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://kazuyanagimoto.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Netlify</title>
       <link>https://kazuyanagimoto.com/collection/day02/01-netlify/</link>
@@ -81,6 +81,16 @@ install.packages(&amp;quot;distill&amp;quot;)  Restart your R session. If you us
       <description>Hi, I&#39;m the here-bot cat! Use me to find your way in your website.
 Here I am: content/collection\day02\03-blogdown\index.md  To remove me, delete this line inside that file: {{&amp;lt; here &amp;gt;}}
 My content section is: collection  My layout is: single-series   part 2!     does this work?      now for some very cool things     more     get ready!</description>
+    </item>
+    
+    <item>
+      <title>My Docker Template for R</title>
+      <link>https://kazuyanagimoto.com/blog/2022-05-24-dockerr/</link>
+      <pubDate>Tue, 24 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://kazuyanagimoto.com/blog/2022-05-24-dockerr/</guid>
+      <description>Docker is one of the best environments for reproductivity of the research. I use Docker for basically all my projects, but it took me about 2 years to get to a satisfactory environment setup. I would like to share it here as a template.
+Quick Start      Clone this repository Open it in VSCode and add Remote-Containers Extension From command pallete, choose &amp;ldquo;open folder in container&amp;rdquo; Open localhost:8787 in a browser Create a project for this projet directory (by default, choose /home/rstudio/work) RUN renv::init() in the R console Set up a DVC environment  Prepare a folder in Google Drive (and copy the folder code) Init DVC dvc initdvc remote add --default myremote gdrive://GDRIVE_FOLDER_CODE     Brief Explanations     In this section, I briefly comment on each files.</description>
     </item>
     
     <item>
