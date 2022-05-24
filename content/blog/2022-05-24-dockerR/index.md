@@ -4,7 +4,7 @@ subtitle: "A portable research environment with Docker, VSCode, and DVC"
 excerpt: "This template provides a Docker environment for research with R. Since it uses VSCode's Remote-Container extension, all you need to do is open it by VSCode."
 date: 2022-05-24
 author: Kazuharu Yanagimoto
-draft: true
+draft: false
 # layout options: single, single-sidebar
 layout: single
 categories:
