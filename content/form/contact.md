@@ -2,7 +2,7 @@
 date: "2019-02-25T13:38:41-06:00"
 description: Use this form to send me an email, or connect with me on social media using the icons below.
 draft: false
-formspree_form_id: kazuharu.yanagimoto@cemfi.edu.es
+formspree_form_id: xpzbbrpv
 layout: split-right
 name: Contact Us Form
 show_poweredby_formspree: true
