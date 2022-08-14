@@ -6,7 +6,16 @@
     <description>Recent content in Categories on Kazuharu Yanagimoto&#39;s Webpage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 24 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://kazuyanagimoto.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://kazuyanagimoto.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>other</title>
+      <link>https://kazuyanagimoto.com/categories/other/</link>
+      <pubDate>Sun, 10 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://kazuyanagimoto.com/categories/other/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Docker</title>
       <link>https://kazuyanagimoto.com/categories/docker/</link>
