@@ -2,86 +2,86 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://kazuyanagimoto.com/collection/day02/01-netlify/</loc>
+    <loc>/collection/day02/01-netlify/</loc>
     <lastmod>2021-01-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kazuyanagimoto.com/collection/day01/01-github/</loc>
+    <loc>/collection/day01/01-github/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kazuyanagimoto.com/collection/prework/</loc>
+    <loc>/collection/prework/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kazuyanagimoto.com/collection/day01/</loc>
+    <loc>/collection/day01/</loc>
     <lastmod>2021-01-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kazuyanagimoto.com/collection/day01/02-postcards/</loc>
+    <loc>/collection/day01/02-postcards/</loc>
     <lastmod>2021-01-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kazuyanagimoto.com/collection/day02/02-blogdown/</loc>
+    <loc>/collection/day02/02-blogdown/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kazuyanagimoto.com/collection/day02/</loc>
+    <loc>/collection/day02/</loc>
     <lastmod>2021-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kazuyanagimoto.com/collection/day01/03-distill/</loc>
+    <loc>/collection/day01/03-distill/</loc>
     <lastmod>2021-01-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kazuyanagimoto.com/collection/day02/03-blogdown/</loc>
+    <loc>/collection/day02/03-blogdown/</loc>
     <lastmod>2021-01-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kazuyanagimoto.com/categories/</loc>
+    <loc>/categories/</loc>
     <lastmod>2022-07-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kazuyanagimoto.com/talk/beikoku_daigakuin/</loc>
+    <loc>/talk/beikoku_daigakuin/</loc>
     <lastmod>2022-07-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kazuyanagimoto.com/</loc>
+    <loc>/</loc>
     <lastmod>2022-07-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kazuyanagimoto.com/categories/other/</loc>
+    <loc>/categories/other/</loc>
     <lastmod>2022-07-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kazuyanagimoto.com/talk/</loc>
+    <loc>/talk/</loc>
     <lastmod>2022-07-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kazuyanagimoto.com/blog/</loc>
+    <loc>/blog/</loc>
     <lastmod>2022-05-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kazuyanagimoto.com/categories/docker/</loc>
+    <loc>/categories/docker/</loc>
     <lastmod>2022-05-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kazuyanagimoto.com/blog/2022-05-24-dockerr/</loc>
+    <loc>/blog/2022-05-24-dockerr/</loc>
     <lastmod>2022-05-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kazuyanagimoto.com/categories/r/</loc>
+    <loc>/categories/r/</loc>
     <lastmod>2022-05-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kazuyanagimoto.com/talk/github_cemfi/</loc>
+    <loc>/talk/github_cemfi/</loc>
     <lastmod>2021-09-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kazuyanagimoto.com/categories/workshop/</loc>
+    <loc>/categories/workshop/</loc>
     <lastmod>2021-09-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kazuyanagimoto.com/collection/</loc>
+    <loc>/collection/</loc>
     <lastmod>2021-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kazuyanagimoto.com/contact/</loc>
+    <loc>/contact/</loc>
     <lastmod>2019-02-25T13:38:41-06:00</lastmod>
   </url><url>
-    <loc>https://kazuyanagimoto.com/form/</loc>
+    <loc>/form/</loc>
     <lastmod>2019-02-25T13:38:41-06:00</lastmod>
   </url><url>
-    <loc>https://kazuyanagimoto.com/elements/</loc>
+    <loc>/elements/</loc>
     <lastmod>2019-02-18T12:27:33-06:00</lastmod>
   </url><url>
-    <loc>https://kazuyanagimoto.com/project/</loc>
+    <loc>/project/</loc>
   </url><url>
-    <loc>https://kazuyanagimoto.com/about/</loc>
+    <loc>/about/</loc>
   </url><url>
-    <loc>https://kazuyanagimoto.com/license/</loc>
+    <loc>/license/</loc>
   </url><url>
-    <loc>https://kazuyanagimoto.com/series/</loc>
+    <loc>/series/</loc>
   </url><url>
-    <loc>https://kazuyanagimoto.com/tags/</loc>
+    <loc>/tags/</loc>
   </url>
 </urlset>

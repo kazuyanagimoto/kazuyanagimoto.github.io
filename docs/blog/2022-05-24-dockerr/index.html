@@ -31,57 +31,57 @@
 <meta property="og:title" content="My Docker Template for R | Kazuharu Yanagimoto&#39;s Webpage">
 <meta property="og:description" content="A portable research environment with Docker, VSCode, and DVC" />
 <meta property="og:type" content="page" />
-<meta property="og:url" content="https://kazuyanagimoto.com/blog/2022-05-24-dockerr/" />
+<meta property="og:url" content="/blog/2022-05-24-dockerr/" />
 <meta property="og:locale" content="en">
 
 
 
 
     
-        <meta property="og:image" content="https://kazuyanagimoto.com/blog/2022-05-24-dockerr/featured.png" >
+        <meta property="og:image" content="/blog/2022-05-24-dockerr/featured.png" >
         <meta property="twitter:card" content="summary_large_image">
-        <meta name="twitter:image" content="https://kazuyanagimoto.com/blog/2022-05-24-dockerr/featured.png" >
+        <meta name="twitter:image" content="/blog/2022-05-24-dockerr/featured.png" >
     
     
   <meta itemprop="name" content="My Docker Template for R">
 <meta itemprop="description" content="Docker is one of the best environments for reproductivity of the research. I use Docker for basically all my projects, but it took me about 2 years to get to a satisfactory environment setup. I would like to share it here as a template.
 Quick Start Clone this repository Open it in VSCode and add Remote-Containers Extension From command pallete, choose &ldquo;open folder in container&rdquo; Open localhost:8787 in a browser Create a project for this projet directory (by default, choose /home/rstudio/work) RUN renv::init() in the R console Set up a DVC environment  Prepare a folder in Google Drive (and copy the folder code) Init DVC dvc initdvc remote add --default myremote gdrive://GDRIVE_FOLDER_CODE     Brief ExplanationsIn this section, I briefly comment on each files."><meta itemprop="datePublished" content="2022-05-24T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2022-05-24T00:00:00+00:00" />
-<meta itemprop="wordCount" content="443"><meta itemprop="image" content="https://kazuyanagimoto.com/blog/2022-05-24-dockerr/featured.png">
+<meta itemprop="wordCount" content="443"><meta itemprop="image" content="/blog/2022-05-24-dockerr/featured.png">
 <meta itemprop="keywords" content="" />
   
   
   <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="../../img/favicon.ico" type="image/x-icon">
   
   
-  <link rel="stylesheet" href="/style.main.min.508aa34bb4fa7ebfddd6892a4ec251e1ce46ad0e0c5be6380abc84336f01b14e.css" integrity="sha256-UIqjS7T6fr/d1okqTsJR4c5GrQ4MW&#43;Y4CryEM28BsU4=" media="screen">
+  <link rel="stylesheet" href="../../style.main.min.508aa34bb4fa7ebfddd6892a4ec251e1ce46ad0e0c5be6380abc84336f01b14e.css" integrity="sha256-UIqjS7T6fr/d1okqTsJR4c5GrQ4MW&#43;Y4CryEM28BsU4=" media="screen">
   
   
-  <script src="/panelset.min.8f4cba0107356728f266d94a12a4d18ef504eda8a9a284cda73675bae7884a68.js" type="text/javascript"></script>
+  <script src="../../panelset.min.8f4cba0107356728f266d94a12a4d18ef504eda8a9a284cda73675bae7884a68.js" type="text/javascript"></script>
   
   
-  <script src="/main.min.49edf2b942bf461bab92cba0319209516bfeef39f53a94dde3d5b56add4ed7aa.js" type="text/javascript"></script>
+  <script src="../../main.min.49edf2b942bf461bab92cba0319209516bfeef39f53a94dde3d5b56add4ed7aa.js" type="text/javascript"></script>
 </head>
 <body>
       <div class="grid-container single">
 <header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
   <nav class="site-nav db dt-l w-100" role="navigation">
-    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://kazuyanagimoto.com/" title="Home">
-      <img src="/img/blogophonic-mark-dark.png" class="dib db-l h2 w-auto" alt="Kazuharu Yanagimoto&#39;s Webpage">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="../../" title="Home">
+      <img src="../../img/blogophonic-mark-dark.png" class="dib db-l h2 w-auto" alt="Kazuharu Yanagimoto&#39;s Webpage">
     </a>
     <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
       
         
         
         
-      <a class="link f6 f5-l dib pv1 ph2 " href="/about/" title="About Me">About</a>
+      <a class="link f6 f5-l dib pv1 ph2 " href="../../about/" title="About Me">About</a>
       
         
         
         
-      <a class="link f6 f5-l dib pv1 ph2 active" href="/blog/" title="Blog">Blog</a>
+      <a class="link f6 f5-l dib pv1 ph2 active" href="../../blog/" title="Blog">Blog</a>
       
         
         
@@ -91,7 +91,7 @@ Quick Start Clone this repository Open it in VSCode and add Remote-Containe
         
         
         
-      <a class="link f6 f5-l dib pv1 ph2 " href="/talk/" title="Talk">Talk</a>
+      <a class="link f6 f5-l dib pv1 ph2 " href="../../talk/" title="Talk">Talk</a>
       
       
     </div>
@@ -104,7 +104,7 @@ Quick Start Clone this repository Open it in VSCode and add Remote-Containe
       <header class="post-header">
         <h1 class="f1 lh-solid measure-narrow mb3 fw4">My Docker Template for R</h1>
         <h4 class="f4 mt0 mb4 lh-title measure">A portable research environment with Docker, VSCode, and DVC</h4>
-        <p class="f6 measure lh-copy mv1">By Kazuharu Yanagimoto in <a href="https://kazuyanagimoto.com/categories/r">R</a>  <a href="https://kazuyanagimoto.com/categories/docker">Docker</a> </p>
+        <p class="f6 measure lh-copy mv1">By Kazuharu Yanagimoto in <a href="../../categories/r">R</a>  <a href="../../categories/docker">Docker</a> </p>
         <p class="f7 db mv0 ttu">May 24, 2022</p>
 
       
@@ -300,7 +300,7 @@ don&rsquo;t have to re-install all the packages when you rebuild a container.</p
   
   <dl class="f6 lh-copy">
     <dt class="fw7">Categories:</dt>
-    <dd class="fw5 ml0"> <a href="https://kazuyanagimoto.com/categories/r">R</a>  <a href="https://kazuyanagimoto.com/categories/docker">Docker</a> </dd>
+    <dd class="fw5 ml0"> <a href="../../categories/r">R</a>  <a href="../../categories/docker">Docker</a> </dd>
   </dl>
   
   
@@ -407,9 +407,9 @@ Based on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xml
     
     <div class="site-links f6 db dtc-l v-mid w-100 w-67-l tc tr-l pv2 pv0-l mv0">
       
-      <a class="dib pv1 ph2 link" href="/license/" title="License">License</a>
+      <a class="dib pv1 ph2 link" href="../../license/" title="License">License</a>
       
-      <a class="dib pv1 ph2 link" href="/contact/" title="Contact form">Contact</a>
+      <a class="dib pv1 ph2 link" href="../../contact/" title="Contact form">Contact</a>
       
     </div>
   </nav>

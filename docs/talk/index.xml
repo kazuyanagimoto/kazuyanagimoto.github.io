@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Talks that Last on Kazuharu Yanagimoto&#39;s Webpage</title>
-    <link>https://kazuyanagimoto.com/talk/</link>
+    <link>/talk/</link>
     <description>Recent content in Talks that Last on Kazuharu Yanagimoto&#39;s Webpage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 10 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://kazuyanagimoto.com/talk/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="/talk/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>El Camino del PhD</title>
-      <link>https://kazuyanagimoto.com/talk/beikoku_daigakuin/</link>
+      <link>/talk/beikoku_daigakuin/</link>
       <pubDate>Sun, 10 Jul 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://kazuyanagimoto.com/talk/beikoku_daigakuin/</guid>
-      <description>2022年7月10日に行われた海外大学院留学説明会@東京大学にて, 私が所属するCEMFIでの生活をお話させていただきました.</description>
+      <guid>/talk/beikoku_daigakuin/</guid>
+      <description>2022年7月10日に行われた 海外大学院留学説明会@東京大学にて, 私が所属する CEMFIでの生活をお話させていただきました.</description>
     </item>
     
     <item>
       <title>Git &amp; GitHub Workshop</title>
-      <link>https://kazuyanagimoto.com/talk/github_cemfi/</link>
+      <link>/talk/github_cemfi/</link>
       <pubDate>Fri, 24 Sep 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://kazuyanagimoto.com/talk/github_cemfi/</guid>
+      <guid>/talk/github_cemfi/</guid>
       <description>Slides are available: HTML &amp;amp; PDF.
 I think this repository itself is a good example for Slidev and GitHub Actions!</description>
     </item>
