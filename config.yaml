@@ -93,7 +93,7 @@ menu:
       weight: 2
     - name: CV
       title: CV
-      url: https://nicetak.github.io/cv/
+      url: https://kazuyanagimoto.com/cv/
       weight: 3
     - name: Talk
       title: Talk
