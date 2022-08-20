@@ -120,3 +120,4 @@ privacy:
   youtube:
     disable: no
     privacyEnhanced: yes
+publishdir: docs

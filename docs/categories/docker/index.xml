@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on Kazuharu Yanagimoto&#39;s Webpage</title>
+    <link>https://kazuyanagimoto.com/categories/docker/</link>
+    <description>Recent content in Docker on Kazuharu Yanagimoto&#39;s Webpage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 24 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://kazuyanagimoto.com/categories/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Docker Template for R</title>
+      <link>https://kazuyanagimoto.com/blog/2022-05-24-dockerr/</link>
+      <pubDate>Tue, 24 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://kazuyanagimoto.com/blog/2022-05-24-dockerr/</guid>
+      <description>Docker is one of the best environments for reproductivity of the research. I use Docker for basically all my projects, but it took me about 2 years to get to a satisfactory environment setup. I would like to share it here as a template.
+Quick Start Clone this repository Open it in VSCode and add Remote-Containers Extension From command pallete, choose &amp;ldquo;open folder in container&amp;rdquo; Open localhost:8787 in a browser Create a project for this projet directory (by default, choose /home/rstudio/work) RUN renv::init() in the R console Set up a DVC environment  Prepare a folder in Google Drive (and copy the folder code) Init DVC dvc initdvc remote add --default myremote gdrive://GDRIVE_FOLDER_CODE     Brief ExplanationsIn this section, I briefly comment on each files.</description>
+    </item>
+    
+  </channel>
+</rss>
