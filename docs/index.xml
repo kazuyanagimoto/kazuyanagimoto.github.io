@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kazuharu Yanagimoto on Kazuharu Yanagimoto&#39;s Webpage</title>
-    <link>https://kazuyanagimoto.com/</link>
+    <link>/</link>
     <description>Recent content in Kazuharu Yanagimoto on Kazuharu Yanagimoto&#39;s Webpage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 10 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://kazuyanagimoto.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Netlify</title>
-      <link>https://kazuyanagimoto.com/collection/day02/01-netlify/</link>
+      <link>/collection/day02/01-netlify/</link>
       <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://kazuyanagimoto.com/collection/day02/01-netlify/</guid>
+      <guid>/collection/day02/01-netlify/</guid>
       <description>So far, we&amp;rsquo;ve been leveraging GitHub Pages for publishing. This works great, but for blogdown we&amp;rsquo;ll start using Netlify. Let&amp;rsquo;s start RIGHT NOW with a site we&amp;rsquo;ve already built and published.
 Pre-requisitesPick either your postcards site, or your distill site from day 01. Refresh your memory- which repository was it again?</description>
     </item>
     
     <item>
       <title>A GitHub profile</title>
-      <link>https://kazuyanagimoto.com/collection/day01/01-github/</link>
+      <link>/collection/day01/01-github/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://kazuyanagimoto.com/collection/day01/01-github/</guid>
+      <guid>/collection/day01/01-github/</guid>
       <description>Profilehttps://docs.github.com/en/github/setting-up-and-managing-your-github-profile/personalizing-your-profile
 Pin projects to profilehttps://docs.github.com/en/github/setting-up-and-managing-your-github-profile/pinning-items-to-your-profile
 Profile READMEThis is new! Let&amp;rsquo;s do it:
@@ -31,20 +31,20 @@ Profile READMEThis is new! Let&amp;rsquo;s do it:
     
     <item>
       <title>Prework</title>
-      <link>https://kazuyanagimoto.com/collection/prework/</link>
+      <link>/collection/prework/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://kazuyanagimoto.com/collection/prework/</guid>
+      <guid>/collection/prework/</guid>
       <description>Welcome to the Introducing Yourself Online workshop! We look forward to meeting you. Before attending the workshop, please complete the following prework.
 Set up RStudio CloudSign up for a free RStudio Cloud account at https://rstudio.cloud/ before the workshop. I recommend logging in with an existing Google or GitHub account, if you have one (rather than creating a new account with another password you have to remember).</description>
     </item>
     
     <item>
       <title>A postcard</title>
-      <link>https://kazuyanagimoto.com/collection/day01/02-postcards/</link>
+      <link>/collection/day01/02-postcards/</link>
       <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://kazuyanagimoto.com/collection/day01/02-postcards/</guid>
+      <guid>/collection/day01/02-postcards/</guid>
       <description>Pre-requisitesFirst, make sure you have the latest version of the postcards package installed from CRAN:
 install.packages(&amp;#34;postcards&amp;#34;) Restart your R session. If you use RStudio, use the menu item Session &amp;gt; Restart R or the associated keyboard shortcut:
  Ctrl + Shift + F10 (Windows and Linux) or Command + Shift + F10 (Mac OS).  packageVersion(&amp;#34;postcards&amp;#34;)[1] ‘0.2.0’ Create GitHub repoOnline.</description>
@@ -52,10 +52,10 @@ install.packages(&amp;#34;postcards&amp;#34;) Restart your R session. If you use
     
     <item>
       <title>Using blogdown</title>
-      <link>https://kazuyanagimoto.com/collection/day02/02-blogdown/</link>
+      <link>/collection/day02/02-blogdown/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://kazuyanagimoto.com/collection/day02/02-blogdown/</guid>
+      <guid>/collection/day02/02-blogdown/</guid>
       <description>Pre-requisitesFirst, make sure you have the latest version of the blogdown package installed from CRAN:
 install.packages(&amp;#34;blogdoown&amp;#34;) Restart your R session. If you use RStudio, use the menu item Session &amp;gt; Restart R or the associated keyboard shortcut:
  Ctrl + Shift + F10 (Windows and Linux) or Command + Shift + F10 (Mac OS).  packageVersion(&amp;#34;blogdown&amp;#34;)[1] ‘1.0’ Create GitHub repoOnline.</description>
@@ -63,10 +63,10 @@ install.packages(&amp;#34;blogdoown&amp;#34;) Restart your R session. If you use
     
     <item>
       <title>A distill site</title>
-      <link>https://kazuyanagimoto.com/collection/day01/03-distill/</link>
+      <link>/collection/day01/03-distill/</link>
       <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://kazuyanagimoto.com/collection/day01/03-distill/</guid>
+      <guid>/collection/day01/03-distill/</guid>
       <description>Pre-requisitesFirst, make sure you have the latest version of the distill package installed from CRAN:
 install.packages(&amp;quot;distill&amp;quot;) Restart your R session. If you use RStudio, use the menu item Session &amp;gt; Restart R or the associated keyboard shortcut:
  Ctrl + Shift + F10 (Windows and Linux) or Command + Shift + F10 (Mac OS).  &amp;lt;!-- --&amp;gt; packageVersion(&amp;quot;distill&amp;quot;)[1] ‘1.2’ Create GitHub repoOnline.</description>
@@ -74,10 +74,10 @@ install.packages(&amp;quot;distill&amp;quot;) Restart your R session. If you us
     
     <item>
       <title>Warm woolen mittens</title>
-      <link>https://kazuyanagimoto.com/collection/day02/03-blogdown/</link>
+      <link>/collection/day02/03-blogdown/</link>
       <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://kazuyanagimoto.com/collection/day02/03-blogdown/</guid>
+      <guid>/collection/day02/03-blogdown/</guid>
       <description>Hi, I&#39;m the here-bot cat!Use me to find your way in your website.
 Here I am:content/collection\day02\03-blogdown\index.mdTo remove me, delete this line inside that file: {{&amp;lt; here &amp;gt;}}
 My content section is:collectionMy layout is:single-series part 2!does this work? now for some very cool thingsmoreget ready!</description>
@@ -85,49 +85,49 @@ My content section is:collectionMy layout is:single-series part 2!doe
     
     <item>
       <title>El Camino del PhD</title>
-      <link>https://kazuyanagimoto.com/talk/beikoku_daigakuin/</link>
+      <link>/talk/beikoku_daigakuin/</link>
       <pubDate>Sun, 10 Jul 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://kazuyanagimoto.com/talk/beikoku_daigakuin/</guid>
-      <description>2022年7月10日に行われた海外大学院留学説明会@東京大学にて, 私が所属するCEMFIでの生活をお話させていただきました.</description>
+      <guid>/talk/beikoku_daigakuin/</guid>
+      <description>2022年7月10日に行われた 海外大学院留学説明会@東京大学にて, 私が所属する CEMFIでの生活をお話させていただきました.</description>
     </item>
     
     <item>
       <title>My Docker Template for R</title>
-      <link>https://kazuyanagimoto.com/blog/2022-05-24-dockerr/</link>
+      <link>/blog/2022-05-24-dockerr/</link>
       <pubDate>Tue, 24 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://kazuyanagimoto.com/blog/2022-05-24-dockerr/</guid>
+      <guid>/blog/2022-05-24-dockerr/</guid>
       <description>Docker is one of the best environments for reproductivity of the research. I use Docker for basically all my projects, but it took me about 2 years to get to a satisfactory environment setup. I would like to share it here as a template.
 Quick Start Clone this repository Open it in VSCode and add Remote-Containers Extension From command pallete, choose &amp;ldquo;open folder in container&amp;rdquo; Open localhost:8787 in a browser Create a project for this projet directory (by default, choose /home/rstudio/work) RUN renv::init() in the R console Set up a DVC environment  Prepare a folder in Google Drive (and copy the folder code) Init DVC dvc initdvc remote add --default myremote gdrive://GDRIVE_FOLDER_CODE     Brief ExplanationsIn this section, I briefly comment on each files.</description>
     </item>
     
     <item>
       <title>Git &amp; GitHub Workshop</title>
-      <link>https://kazuyanagimoto.com/talk/github_cemfi/</link>
+      <link>/talk/github_cemfi/</link>
       <pubDate>Fri, 24 Sep 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://kazuyanagimoto.com/talk/github_cemfi/</guid>
+      <guid>/talk/github_cemfi/</guid>
       <description>Slides are available: HTML &amp;amp; PDF.
 I think this repository itself is a good example for Slidev and GitHub Actions!</description>
     </item>
     
     <item>
       <title>Contact</title>
-      <link>https://kazuyanagimoto.com/contact/</link>
+      <link>/contact/</link>
       <pubDate>Mon, 25 Feb 2019 13:38:41 -0600</pubDate>
       
-      <guid>https://kazuyanagimoto.com/contact/</guid>
+      <guid>/contact/</guid>
       <description>** Contact page don&amp;rsquo;t contain a body, just the front matter above. See form.html in the layouts folder.
 Formspree requires a (free) account and new form to be set up. The link is made on the final published url in the field: Restrict to Domain. It is possible to register up to 2 emails free and you can select which one you want the forms to go to within Formspree in the Settings tab.</description>
     </item>
     
     <item>
       <title>Typography Styles &amp; Element Examples</title>
-      <link>https://kazuyanagimoto.com/elements/</link>
+      <link>/elements/</link>
       <pubDate>Mon, 18 Feb 2019 12:27:33 -0600</pubDate>
       
-      <guid>https://kazuyanagimoto.com/elements/</guid>
+      <guid>/elements/</guid>
       <description>Font SizesAAAAAAAA6rem
 (96px)5rem
 (80px)3rem
@@ -141,10 +141,10 @@ Formspree requires a (free) account and new form to be set up. The link is made 
     
     <item>
       <title>License</title>
-      <link>https://kazuyanagimoto.com/license/</link>
+      <link>/license/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kazuyanagimoto.com/license/</guid>
+      <guid>/license/</guid>
       <description>My blog posts are released under a Creative Commons Attribution-ShareAlike 4.0 International License.
 </description>
     </item>
