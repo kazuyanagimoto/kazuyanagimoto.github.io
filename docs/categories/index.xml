@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Kazuharu Yanagimoto&#39;s Webpage</title>
+    <link>https://kazuyanagimoto.com/categories/</link>
+    <description>Recent content in Categories on Kazuharu Yanagimoto&#39;s Webpage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 10 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://kazuyanagimoto.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>other</title>
+      <link>https://kazuyanagimoto.com/categories/other/</link>
+      <pubDate>Sun, 10 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://kazuyanagimoto.com/categories/other/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>https://kazuyanagimoto.com/categories/docker/</link>
+      <pubDate>Tue, 24 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://kazuyanagimoto.com/categories/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>https://kazuyanagimoto.com/categories/r/</link>
+      <pubDate>Tue, 24 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://kazuyanagimoto.com/categories/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>workshop</title>
+      <link>https://kazuyanagimoto.com/categories/workshop/</link>
+      <pubDate>Fri, 24 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://kazuyanagimoto.com/categories/workshop/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
