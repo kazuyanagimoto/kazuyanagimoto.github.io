@@ -6,7 +6,17 @@
     <description>Recent content in Talks that Last on Kazuharu Yanagimoto&#39;s Webpage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 10 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="/talk/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="/talk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git &amp; GitHub Workshop</title>
+      <link>/talk/github_cemfi_2022/</link>
+      <pubDate>Fri, 23 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/github_cemfi_2022/</guid>
+      <description>Slides are available: HTML &amp;amp; PDF.
+This is an updated version of my last-year talk. In this year, I use quarto for the slides.</description>
+    </item>
+    
     <item>
       <title>El Camino del PhD</title>
       <link>/talk/beikoku_daigakuin/</link>
