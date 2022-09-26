@@ -6,7 +6,7 @@
     <description>Recent content in Kazuharu Yanagimoto on Kazuharu Yanagimoto&#39;s Webpage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 10 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Netlify</title>
       <link>/collection/day02/01-netlify/</link>
@@ -81,6 +81,16 @@ install.packages(&amp;quot;distill&amp;quot;) Restart your R session. If you us
       <description>Hi, I&#39;m the here-bot cat!Use me to find your way in your website.
 Here I am:content/collection\day02\03-blogdown\index.mdTo remove me, delete this line inside that file: {{&amp;lt; here &amp;gt;}}
 My content section is:collectionMy layout is:single-series part 2!does this work? now for some very cool thingsmoreget ready!</description>
+    </item>
+    
+    <item>
+      <title>Git &amp; GitHub Workshop</title>
+      <link>/talk/github_cemfi_2022/</link>
+      <pubDate>Fri, 23 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/github_cemfi_2022/</guid>
+      <description>Slides are available: HTML &amp;amp; PDF.
+This is an updated version of my last-year talk. In this year, I use quarto for the slides.</description>
     </item>
     
     <item>
