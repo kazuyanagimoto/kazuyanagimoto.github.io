@@ -1,0 +1,46 @@
+```{=html}
+<div class="talks">
+    <% for (const talk of items) { %>
+    <div class="talk-entry">
+        <div class="feature">
+            <% if (talk.url) { %>
+            <a href="<%= talk.url %>" target="_blank"><img src="<%= talk.feature %>" alt="<%= talk.title %>" title="<%= talk.title %>" /></a>
+            <% } else { %>
+            <img src="<%= talk.feature %>" alt="<%= talk.title %>" title="<%= talk.title %>" />
+            <% } %>
+        </div>
+        <div class="body">
+            <p class="talk-title">
+                <% if (talk.url) { %>
+                <a href="<%= talk.url %>" target="_blank"><%= talk.title %></a> 
+                <% } else { %>
+                <%= talk.title %> 
+                <% } %>
+            </p>
+            <p class="talk-details">
+                <span class="talk-date"><%= talk.date %></span> &#8729; 
+                <span class="talk-location"><%= talk.location %></span>
+                <% if (talk.role) { %>
+                | <span class="talk-role"><%= talk.role %></span>
+                <% } %>
+            </p>
+            <p class="talk-description"><%= talk.description %></p>
+
+            <ul class="talk-links">
+                <% for (const link of talk.links) { %>
+                <li class="talk-link">
+                    <% if (link.local) { %>
+                    <a href="<%- talk.path.substring(0, talk.path.lastIndexOf('/')) %>/<%- link.url %>">
+                    <% } else { %>
+                    <a href="<%- link.url %>">
+                    <% } %>
+                        <i class="<%- link.icon %>"></i> <%= link.name %>
+                    </a>
+                </li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+    <% } %>
+</div>
+```

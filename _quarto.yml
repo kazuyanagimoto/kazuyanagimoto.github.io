@@ -1,0 +1,34 @@
+project:
+  type: website
+  preview: 
+    port: 5556
+    browser: true
+    watch-inputs: true
+    navigate: true
+
+website:
+  title: "Kazuharu Yanagimoto"
+  navbar:
+    right:
+      - text: About
+        file: about/index.qmd
+      - text: Blog
+        file: blog/index.qmd
+      - text: CV
+        href: https://kazuyanagimoto.com/cv/
+      - text: Talks
+        file: talks/index.qmd
+      - icon: github
+        href: https://github.com/nicetak
+      - icon: twitter
+        href: https://twitter.com/kazuyanagimoto
+      - icon: linkedin
+        href: https://www.linkedin.com/in/kazuharu-yanagimoto/
+      
+format:
+  html:
+    theme: 
+      - static/html/custom.scss
+
+
+

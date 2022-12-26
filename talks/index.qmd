@@ -1,0 +1,35 @@
+---
+title: "Talks"
+listing:
+  - id: talks_2022
+    contents: talks_2022.yml
+    sort: "date desc"
+    template: ../static/html/talks/listing.ejs
+  - id: talks_2021
+    contents: talks_2021.yml
+    sort: "date desc"
+    template: ../static/html/talks/listing.ejs
+title-block-banner: "#FB9E07"
+page-layout: full
+toc: true
+toc-location: right
+toc-title: Year
+date-format: "MMMM D, YYYY"
+---
+
+::: {.callout-note}
+### Copyright
+
+Except where noted, all content is {{< fa regular copyright >}} Kazuharu Yanagimoto and licensed under [Creative Commons](https://creativecommons.org/licenses/by-sa/4.0/).
+:::
+
+## 2022
+
+:::{#talks_2022}
+:::
+
+## 2021
+
+:::{#talks_2021}
+:::
+
