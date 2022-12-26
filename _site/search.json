@@ -1,0 +1,135 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Kazuharu Yanagimoto",
+    "section": "",
+    "text": "I am a PhD student at CEMFI. My research fields are labor, macro economics, and especially family economics.\n\nRead More →"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Hi There!",
+    "section": "",
+    "text": "I am PhD student in Economics at CEMFI in Madrid, Spain.\nMy research field is family economics, broadly speaking, I am interested in questions like:\nMaster in Economics ∙ CEMFI ∙ 2021\nBachelor in Economics ∙ University of Tokyo ∙ 2019"
+  },
+  {
+    "objectID": "talks/index.html",
+    "href": "talks/index.html",
+    "title": "Talks",
+    "section": "",
+    "text": "Copyright\n\n\n\nExcept where noted, all content is  Kazuharu Yanagimoto and licensed under Creative Commons."
+  },
+  {
+    "objectID": "talks/index.html#section",
+    "href": "talks/index.html#section",
+    "title": "Talks",
+    "section": "2022",
+    "text": "2022\n\n\n    \n        \n            \n        \n        \n            \n                Git & GitHub Workshop \n            \n            \n                September 23, 2022 ∙ \n                CEMFI, Madrid\n            \n            Here is a talk I gave on managing codes and data by using GitHub and DVC for economists.\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         GitHub\n                    \n                \n            \n        \n    \n    \n        \n            \n        \n        \n            \n                El Camino del PhD \n            \n            \n                July 10, 2022 ∙ \n                東京大学 (via Zoom)\n            \n            米国大学院学生会主催の海外大学院留学説明会@東京大学で所属するCEMFIでの生活についてお話しました.\n            \n                \n                    \n                         Video\n                    \n                \n            \n        \n    \n\n\nNo matching items"
+  },
+  {
+    "objectID": "talks/index.html#section-1",
+    "href": "talks/index.html#section-1",
+    "title": "Talks",
+    "section": "2021",
+    "text": "2021\n\n\n    \n        \n            \n        \n        \n            \n                Git & GitHub Workshop \n            \n            \n                September 24, 2021 ∙ \n                CEMFI\n            \n            Here is a talk I gave on managing codes and data by using GitHub and DVC for economists\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         GitHub\n                    \n                \n            \n        \n    \n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog/220524_dokcer_template/index.html",
+    "href": "blog/220524_dokcer_template/index.html",
+    "title": "My Docker Template for R",
+    "section": "",
+    "text": "Docker is one of the best environments for reproductivity of the research. I use Docker for basically all my projects, but it took me about 2 years to get to a satisfactory environment setup. I would like to share it here as a template."
+  },
+  {
+    "objectID": "blog/220524_dokcer_template/index.html#quick-start",
+    "href": "blog/220524_dokcer_template/index.html#quick-start",
+    "title": "My Docker Template for R",
+    "section": "Quick Start",
+    "text": "Quick Start\n\nClone this repository\nOpen it in VSCode and add Remote-Containers Extension\nFrom command pallete, choose “open folder in container”\nOpen localhost:8787 in a browser\nCreate a project for this projet directory (by default, choose /home/rstudio/work)\nRUN renv::init() in the R console\nSet up a DVC environment\n\nPrepare a folder in Google Drive (and copy the folder code)\nInit DVC\ndvc init\ndvc remote add --default myremote gdrive://GDRIVE_FOLDER_CODE"
+  },
+  {
+    "objectID": "blog/220524_dokcer_template/index.html#brief-explanations",
+    "href": "blog/220524_dokcer_template/index.html#brief-explanations",
+    "title": "My Docker Template for R",
+    "section": "Brief Explanations",
+    "text": "Brief Explanations\nIn this section, I briefly comment on each files. I assume you are familiar with\n\nR, Rstudio & renv\nDocker\nVSCode and its Remote-Containers extension\n\nI manage data files by DVC. But if you have another strategy for the data management, ignore these parts.\n\nDockerfile\nFROM rocker/verse\n\nRUN apt update && apt install -y gnupg openssh-client libpoppler-cpp-dev\n\n# DVC\nRUN wget \\\n       https://dvc.org/deb/dvc.list \\\n       -O /etc/apt/sources.list.d/dvc.list && \\\n    wget -qO - https://dvc.org/deb/iterative.asc | apt-key add - && \\\n    apt update && \\\n    apt install -y dvc \n\n# R Packages\nRUN R -e \"install.packages(c('languageserver', 'renv'))\"\n\n# Rstudio Global Options\nCOPY --chown=rstudio:rstudio .config/rstudio/rstudio-prefs.json /home/rstudio/.config/rstudio/rstudio-prefs.json\n\nR image\nIf you don’t have any preferences, I recommend you to use one of the rocker image series of rocker-org:\n\nrocker/rstudio\nrocker/tidyverse\nrocker/verse\nrocker/geospatial\n\nBecause I currently write a paper by Rmarkdown, I usually use rocker/verse and use rocker/geospatial for spatial analysis.\n\n\nDVC\nI have just follow the official guide for Install from repository. If your environment includes python, it is easier to install it via pip.\n\n\nR packages\nI use renv for dependency management. languageserver allows us to run a code in VSCode, but I don’t usually use it.\n\n\nRstudio Global Options\nWhen Rstudio launches, it loads the ~/.config/rstudio/rstudio-prefs.json file for general settings. So I prepare /.config/rstudio/rstudio-prefs.json, and it allows me to use Rstudio with my favorites settings.\nIf you want to use your own settings, I recommend you\n\nOpen Rstudio\nSet up by GUI (Tools -> Global Options)\nCopy ~/.config/rstudio/rstudio-prefs.json (in container)\nPaste it on /.config/rstudio/rstudio-prefs.json (in host)\n\n\n\n\ndocker-compose.yml\nversion: '3'\nservices:\n    rstudio:\n        build:\n            context: .\n        environment:\n            - TZ=Europe/Madrid\n            - DISABLE_AUTH=true\n            - RENV_PATHS_CACHE=/home/rstudio/.renv/cache\n        volumes:\n            - .:/home/rstudio/work\n            - $HOME/.renv:/home/rstudio/.renv/cache\n\nDISABLE_AUTH=true\nYou don’t need to type a password for each new session.\n\n\nCache for renv\nBy setting the RENV_PATH_CACHE and mount the directory, you don’t need to re-install packages. In other words, you can share packages with other (docker) projects and don’t have to re-install all the packages when you rebuild a container.\nHave fun!"
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "May 24, 2022\n        \n        \n            My Docker Template for R\n            \n                \n                    R\n                \n                \n                    Docker\n                \n            \n            \n        \n        \n            \n        \n    \n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog/2022/05/24/docker_template/index.html",
+    "href": "blog/2022/05/24/docker_template/index.html",
+    "title": "My Docker Template for R",
+    "section": "",
+    "text": "Docker is one of the best environments for reproductivity of the research. I use Docker for basically all my projects, but it took me about 2 years to get to a satisfactory environment setup. I would like to share it here as a template."
+  },
+  {
+    "objectID": "blog/2022/05/24/docker_template/index.html#quick-start",
+    "href": "blog/2022/05/24/docker_template/index.html#quick-start",
+    "title": "My Docker Template for R",
+    "section": "Quick Start",
+    "text": "Quick Start\n\nClone this repository\nOpen it in VSCode and add Remote-Containers Extension\nFrom command pallete, choose “open folder in container”\nOpen localhost:8787 in a browser\nCreate a project for this projet directory (by default, choose /home/rstudio/work)\nRUN renv::init() in the R console\nSet up a DVC environment\n\nPrepare a folder in Google Drive (and copy the folder code)\nInit DVC\ndvc init\ndvc remote add --default myremote gdrive://GDRIVE_FOLDER_CODE"
+  },
+  {
+    "objectID": "blog/2022/05/24/docker_template/index.html#brief-explanations",
+    "href": "blog/2022/05/24/docker_template/index.html#brief-explanations",
+    "title": "My Docker Template for R",
+    "section": "Brief Explanations",
+    "text": "Brief Explanations\nIn this section, I briefly comment on each files. I assume you are familiar with\n\nR, Rstudio & renv\nDocker\nVSCode and its Remote-Containers extension\n\nI manage data files by DVC. But if you have another strategy for the data management, ignore these parts.\n\nDockerfile\nFROM rocker/verse\n\nRUN apt update && apt install -y gnupg openssh-client libpoppler-cpp-dev\n\n# DVC\nRUN wget \\\n       https://dvc.org/deb/dvc.list \\\n       -O /etc/apt/sources.list.d/dvc.list && \\\n    wget -qO - https://dvc.org/deb/iterative.asc | apt-key add - && \\\n    apt update && \\\n    apt install -y dvc \n\n# R Packages\nRUN R -e \"install.packages(c('languageserver', 'renv'))\"\n\n# Rstudio Global Options\nCOPY --chown=rstudio:rstudio .config/rstudio/rstudio-prefs.json /home/rstudio/.config/rstudio/rstudio-prefs.json\n\nR image\nIf you don’t have any preferences, I recommend you to use one of the rocker image series of rocker-org:\n\nrocker/rstudio\nrocker/tidyverse\nrocker/verse\nrocker/geospatial\n\nBecause I currently write a paper by Rmarkdown, I usually use rocker/verse and use rocker/geospatial for spatial analysis.\n\n\nDVC\nI have just follow the official guide for Install from repository. If your environment includes python, it is easier to install it via pip.\n\n\nR packages\nI use renv for dependency management. languageserver allows us to run a code in VSCode, but I don’t usually use it.\n\n\nRstudio Global Options\nWhen Rstudio launches, it loads the ~/.config/rstudio/rstudio-prefs.json file for general settings. So I prepare /.config/rstudio/rstudio-prefs.json, and it allows me to use Rstudio with my favorites settings.\nIf you want to use your own settings, I recommend you\n\nOpen Rstudio\nSet up by GUI (Tools -> Global Options)\nCopy ~/.config/rstudio/rstudio-prefs.json (in container)\nPaste it on /.config/rstudio/rstudio-prefs.json (in host)\n\n\n\n\ndocker-compose.yml\nversion: '3'\nservices:\n    rstudio:\n        build:\n            context: .\n        environment:\n            - TZ=Europe/Madrid\n            - DISABLE_AUTH=true\n            - RENV_PATHS_CACHE=/home/rstudio/.renv/cache\n        volumes:\n            - .:/home/rstudio/work\n            - $HOME/.renv:/home/rstudio/.renv/cache\n\nDISABLE_AUTH=true\nYou don’t need to type a password for each new session.\n\n\nCache for renv\nBy setting the RENV_PATH_CACHE and mount the directory, you don’t need to re-install packages. In other words, you can share packages with other (docker) projects and don’t have to re-install all the packages when you rebuild a container.\nHave fun!"
+  },
+  {
+    "objectID": "temp.html",
+    "href": "temp.html",
+    "title": "Hi There!",
+    "section": "",
+    "text": "I am PhD student in Economics at CEMFI in Madrid, Spain.\nMy research field is family economics, broadly speaking, I am interested in questions like:\nMaster in Economics ∙ CEMFI ∙ 2021\nBachelor in Economics ∙ University of Tokyo ∙ 2019"
+  },
+  {
+    "objectID": "temp.html#a-blog-that-works",
+    "href": "temp.html#a-blog-that-works",
+    "title": "Hi There!",
+    "section": "A BLOG THAT WORKS",
+    "text": "A BLOG THAT WORKS\n\n\n\n\n\n\n\n\n\n\n\n\n\nBlog\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nMy Docker Template for R\n\n\n\n\n\n\n\n\n\n\n\n\nMay 24, 2022\n\n\nKazuharu Yanagimoto\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html#a-blog-that-works",
+    "href": "about.html#a-blog-that-works",
+    "title": "Hi There!",
+    "section": "A BLOG THAT WORKS",
+    "text": "A BLOG THAT WORKS\n\n\n    \n            \n                \n            \n        \n            My Docker Template for R\n            \n                \n                    R\n                \n                \n                    Docker\n                \n            \n            \n        \n    \n\n\nNo matching items\n\n\n\nSee All →"
+  },
+  {
+    "objectID": "about.html#talks-that-last",
+    "href": "about.html#talks-that-last",
+    "title": "Hi There!",
+    "section": "TALKS THAT LAST",
+    "text": "TALKS THAT LAST\n\n\n    \n        \n            \n        \n        \n            \n                Git & GitHub Workshop \n            \n            \n                Sep 23, 2022 ∙ \n                CEMFI, Madrid\n            \n            Here is a talk I gave on managing codes and data by using GitHub and DVC for economists.\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         GitHub\n                    \n                \n            \n        \n    \n\n\nNo matching items\n\n\n\nSee All →"
+  },
+  {
+    "objectID": "about/index.html",
+    "href": "about/index.html",
+    "title": "Hi There!",
+    "section": "",
+    "text": "I am PhD student in Economics at CEMFI in Madrid, Spain.\nMy research field is family economics, broadly speaking, I am interested in questions like:\nMaster in Economics ∙ CEMFI ∙ 2021\nBachelor in Economics ∙ University of Tokyo ∙ 2019"
+  },
+  {
+    "objectID": "about/index.html#a-blog-that-works",
+    "href": "about/index.html#a-blog-that-works",
+    "title": "Hi There!",
+    "section": "A BLOG THAT WORKS",
+    "text": "A BLOG THAT WORKS\n\n\n    \n            \n                \n            \n        \n            My Docker Template for R\n            \n                \n                    R\n                \n                \n                    Docker\n                \n            \n            \n        \n    \n\n\nNo matching items\n\n\n\nSee All →"
+  },
+  {
+    "objectID": "about/index.html#talks-that-last",
+    "href": "about/index.html#talks-that-last",
+    "title": "Hi There!",
+    "section": "TALKS THAT LAST",
+    "text": "TALKS THAT LAST\n\n\n    \n        \n            \n        \n        \n            \n                Git & GitHub Workshop \n            \n            \n                Sep 23, 2022 ∙ \n                CEMFI, Madrid\n            \n            Here is a talk I gave on managing codes and data by using GitHub and DVC for economists.\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         GitHub\n                    \n                \n            \n        \n    \n\n\nNo matching items\n\n\n\nSee All →"
+  }
+]

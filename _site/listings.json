@@ -1,0 +1,38 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/blog/index.html",
+      "/blog/2022/05/24/docker_template/index.html"
+    ]
+  },
+  {
+    "listing": "/talks/index.html",
+    "items": []
+  },
+  {
+    "listing": "/blog/index.html",
+    "items": [
+      "/blog/2022/05/24/docker_template/index.html"
+    ]
+  },
+  {
+    "listing": "/temp.html",
+    "items": [
+      "/blog/index.html",
+      "/blog/2022/05/24/docker_template/index.html"
+    ]
+  },
+  {
+    "listing": "/about.html",
+    "items": [
+      "/blog/2022/05/24/docker_template/index.html"
+    ]
+  },
+  {
+    "listing": "/about/index.html",
+    "items": [
+      "/blog/2022/05/24/docker_template/index.html"
+    ]
+  }
+]
