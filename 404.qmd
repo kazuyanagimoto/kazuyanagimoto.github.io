@@ -1,6 +1,5 @@
 ---
-title: "Page not found!"
-title-block-banner: "#A52C60"
+title: "Page Not Found!"
 ---
 
 ### oh noes! :(
