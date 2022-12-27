@@ -1,5 +1,6 @@
 ---
 title: "Blog"
+description: "My notepad to keep some technical tips for Economic research"
 author: ""
 listing:
   - id: posts_2022
@@ -14,6 +15,7 @@ date-format: "MMMM D, YYYY"
 code-tools: false
 comments: false
 ---
+
 
 ## 2022
 

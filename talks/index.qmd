@@ -1,5 +1,6 @@
 ---
-title: "Talks"
+title: "Talks that Last"
+description: "A list for my talks, workshops, or other events with a time, date, and place"
 listing:
   - id: talks_2022
     contents: talks_2022.yml
@@ -9,7 +10,7 @@ listing:
     contents: talks_2021.yml
     sort: "date desc"
     template: ../static/html/talks/listing.ejs
-title-block-banner: "#FB9E07"
+title-block-banner: "#fff"
 page-layout: full
 toc: true
 toc-location: right
