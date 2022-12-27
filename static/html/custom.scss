@@ -1,10 +1,13 @@
 /*-- scss:defaults --*/
 
-$theme: "ath" !default;
+@import url(https://fonts.googleapis.com/css?family=Fraunces&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Commissioner&display=swap);
 
 //
 // Color system
 //
+
+$color-main: #516db0 !default;
 
 $white:    #ffffff !default;
 $gray-100: #f8f9fa !default;
@@ -39,31 +42,25 @@ $danger:    $red !default;
 $light:     $gray-400 !default;
 $dark:      $black !default;
 
-// $min-contrast-ratio: 2.6 !default;
-
 // Fonts
 
 
-$font-family-sans-serif: "Libre Franklin" !default;
+$font-family-sans-serif: "Commissioner", sans-serif !default;
 
-$headings-font-family: "Jost" !default;
+$headings-font-family: "Fraunces" !default;
 $headings-font-weight: 600 !default;
 
-$navbar-font-family: "Jost" !default;
-$toc-font-family: "Jost" !default;
-$footer-font-family: "Jost" !default;
-
-// $font-size-base: 1.1rem !default; // Assumes the browser default, typically `16px`
-// $font-size-sm: $font-size-base * .875 !default;
+$navbar-font-family: sans-serif !default;
+$toc-font-family: sans-serif !default;
+$footer-font-family: sans-serif !default;
 
 
 // Body
-$body-color: $gray-900 !default;
+$body-color: $gray-700 !default;
 
 // Links
-$link-color: $orange !default;
+$link-color: $color-main !default;
 $link-decoration: none !default;
-$link-hover-color: $red !default;
 $link-hover-decoration: underline !default;
 
 // Inline code
@@ -74,13 +71,12 @@ $code-color: $gray-900 !default;
 $btn-code-copy-color-active: $orange !default;
 
 // TOC
-$toc-color: $orange;
+$toc-color: $color-main;
 $toc-font-size: 1em;
 
 // Navbar
-$navbar-bg: $purple !default;
-$navbar-fg: $white !default;
-$navbar-hl: $light-orange !default;
+$navbar-bg: $white !default;
+$navbar-hl: $color-main !default;
 
 // Footer
 $footer-bg: $gray-900 !default;
@@ -88,74 +84,7 @@ $footer-fg: $gray-300 !default;
 
 /*-- scss:rules --*/
 
-$web-font-path: "https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" !default;
 
-@if $web-font-path {
-    @import url($web-font-path);
-}
-
-body {
-    -webkit-font-smoothing: antialiased;
-}
-
-.rtl {
-    direction: rtl;
-}
-
-
-.home {
-    .quarto-title-banner {
-        margin-bottom: 0;
-    }
-}
-
-#title-block-header {
-    &.home {
-        margin-block-end: 0.5rem;
-    }
-}
-
-.home {
-    .quarto-title-banner {
-        margin-bottom: 0;
-    }
-
-    #title-block-header {
-        margin-block-end: 0;
-    }
-}
-
-// Shrink blocks of code
-pre.text, pre.sourceCode, .cell-output pre {
-    font-size: 0.775em;
-}
-
-.navbar {
-    font-family: $navbar-font-family;
-}
-
-// Put all the icons in a single row in the hamburger menu
-.navbar-nav.navbar-nav-scroll.ms-auto {
-    flex-direction: row;
-}
-
-#TOC {
-    font-family: $toc-font-family;
-    padding-bottom: 0.1em;
-
-    .active {
-        font-weight: 400;
-    }
-
-    #toc-title {
-        font-weight: 600;
-    }
-}
-
-.sidebar nav[role="doc-toc"]>ul li a {
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-}
 
 #quarto-margin-sidebar {
     .quarto-listing-category-title {
@@ -177,7 +106,7 @@ pre.text, pre.sourceCode, .cell-output pre {
 
         .active {
             font-weight: 400;
-            color: $orange;
+            color: $color-main;
         }
 
         .quarto-category-count {
@@ -188,75 +117,21 @@ pre.text, pre.sourceCode, .cell-output pre {
     }
 }
 
-.nav-footer {
-    align-items: flex-start;  // Align all flex items to the top
-    flex-wrap: wrap;
-    border: 0 !important;
-    min-height: 3em;
-    font-family: $footer-font-family;
-
-    a {
-        color: $light-orange;
-    }
-
-    .faux-block {
-        display: block;
-        padding-bottom: 0.4em;
-    }
-
-    .fingerprint {
-        font-family: $font-family-monospace;
-        font-size: 0.8em;
-    }
-
-    // In the default Quarto template, .nav-footer-center has position: absolute 
-    // turned on, which makes the div not be a flex item
-    // This changes that so that it *is* a flex item
-    .nav-footer-center {
-        text-align: center;
-        position: inherit;
-        margin-top: 0;
-
-        @media (max-width: map-get($grid-breakpoints, md)) {
-            margin-top: 0.5em;
-            margin-bottom: 1.5em;
-        }
-    }
-
-    // When the screen is medium or smaller, make each footer chunk be 100% width 
-    // and centered; otherwise make them be 33% width and left/right/centerd
-    .nav-footer-left,
-    .nav-footer-right,
-    .nav-footer-center {
-        text-align: center;
-        width: 100%;
-        min-height: 2em;
-    }
-
-    @media (min-width: map-get($grid-breakpoints, md)) {
-        .nav-footer-left {
-            text-align: left;
-        }
-
-        .nav-footer-right {
-            text-align: right;
-        }
-
-        .nav-footer-left,
-        .nav-footer-right,
-        .nav-footer-center {
-            flex: 1 1 33%;
-        }
-    }
-}
-
 #title-block-header {
     .quarto-title-banner {
         font-family: $headings-font-family;
+        text-align: center;
         
+        .title {
+            font-size: 3em;
+            font-weight: 400;
+            color: $color-main;
+        }
         .description {
-            font-size: 1.1em;
+            font-family: sans-serif;
+            font-size: 1em;
             margin-top: 1em !important;
+            color: $gray-700;
         }
     }
 }
@@ -266,7 +141,7 @@ pre.text, pre.sourceCode, .cell-output pre {
     .blog-entry {
         display: flex;
         flex-direction: row;
-        font-family: $headings-font-family;
+        font-family: sans-serif;
         line-height: 1.3;
         margin-bottom: 1.5em;
         column-gap: 1em;
@@ -290,6 +165,7 @@ pre.text, pre.sourceCode, .cell-output pre {
         }
 
         .title {
+            font-family: $headings-font-family;
             font-weight: 500;
             font-size: 1.3em;
             margin-bottom: 0.2em;
@@ -385,9 +261,6 @@ pre.text, pre.sourceCode, .cell-output pre {
 
 }
 
-.back-nav {
-    margin-bottom: 1.5em;
-}
 
 .research {
     .back-nav a {
@@ -491,11 +364,12 @@ pre.text, pre.sourceCode, .cell-output pre {
     }
 }
 
+// Talks
 .talks {
     .talk-entry {
         display: flex;
         flex-direction: row;
-        font-family: $headings-font-family;
+        font-family: sans-serif;
         line-height: 1.3;
         margin-bottom: 3em;
         column-gap: 0.7em;
@@ -515,27 +389,28 @@ pre.text, pre.sourceCode, .cell-output pre {
         }
 
         .talk-title {
+            font-family: $headings-font-family;
             font-weight: 500;
             font-size: 1.25em;
             margin-bottom: 0.2em;
         }
         
         .talk-details {
-            font-weight: 300;
-            font-size: 0.9em;
+            font-weight: 500;
+            font-size: 0.8em;
             margin-bottom: 0.5em;
-            color: $gray-800;
+            color: $gray-500;
         }
 
         .talk-description {
-            font-weight: 300;
-            font-size: 1.1em;
+            font-weight: 500;
+            font-size: 1.0em;
             margin-bottom: 0.5em;
+            color: $gray-700;
         }
 
         ul.talk-links {
             padding: 0 0.5em;
-            background-color: shift-color($light-orange, -91%);
             margin-bottom: 0;
 
             .talk-link {
@@ -549,11 +424,3 @@ pre.text, pre.sourceCode, .cell-output pre {
     }
 }
 
-.code-tools-button {
-    position: relative;
-    left: 5em;
-
-    @media (max-width: map-get($grid-breakpoints, md)) {
-        left: 0;
-    }
-}
