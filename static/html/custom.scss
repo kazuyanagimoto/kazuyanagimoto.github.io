@@ -424,3 +424,14 @@ $footer-fg: $gray-300 !default;
     }
 }
 
+// Other
+.slide-deck {
+    width: 100%;
+    height: 475px;
+}
+  
+@media only screen and (max-width: 600px) {
+.slide-deck {
+    height: 400px;
+}
+}
