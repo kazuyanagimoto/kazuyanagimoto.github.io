@@ -5,6 +5,8 @@ author: Kazuharu Yanagimoto
 draft: false
 categories: [R, Docker]
 image: "feature.png"
+twitter-card:
+    image: "feature.png"
 execute:
     eval: false
 ---

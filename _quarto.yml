@@ -9,6 +9,11 @@ project:
 
 website:
   title: "Kazuharu Yanagimoto"
+  site-url: https://kazuyanagimoto.com
+  repo-url: https://github.com/nicetak/nicetak.github.io
+  twitter-card:
+    creator: "@kazuyanagimoto"
+    site: "@kazuyanagimoto"
   navbar:
     right:
       - text: About
