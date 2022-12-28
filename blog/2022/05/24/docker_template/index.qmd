@@ -15,9 +15,9 @@ I use Docker for basically all my projects, but it took me about 2 years to get 
 ## Quick Start
 1. Clone [this repository](https://github.com/nicetak/dockerR)
 1. Open it in VSCode and add Remote-Containers Extension
-1. From command pallete, choose "open folder in container"
+1. From the command palette, choose "open folder in container"
 1. Open `localhost:8787` in a browser
-1. Create a project for this projet directory (by default, choose `/home/rstudio/work`)
+1. Create a project for this project directory (by default, choose `/home/rstudio/work`)
 1. RUN `renv::init()` in the R console
 1. Set up a [DVC](https://dvc.org/) environment
     1. Prepare a folder in Google Drive (and copy the folder code)
@@ -29,18 +29,18 @@ I use Docker for basically all my projects, but it took me about 2 years to get 
 
 
 ## Brief Explanations
-In this section, I briefly comment on each files. I assume you are familiar with
+In this section, I briefly comment on each file. I assume you are familiar with
 
 - R, Rstudio & `renv`
 - [Docker](https://www.docker.com/)
 - [VSCode](https://code.visualstudio.com/) and its [Remote-Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension
 
 I manage data files by [DVC](https://dvc.org/).
-But if you have another strategy for the data management, ignore these parts.
+But if you have another strategy for data management, ignore these parts.
 
 
 ### `Dockerfile`
-```{bash}
+```{.bash}
 FROM rocker/verse
 
 RUN apt update && apt install -y gnupg openssh-client libpoppler-cpp-dev
@@ -61,7 +61,7 @@ COPY --chown=rstudio:rstudio .config/rstudio/rstudio-prefs.json /home/rstudio/.c
 ```
 
 #### R image
-If you don't have any preferences, I recommend you to use one of the rocker image series
+If you don't have any preferences, I recommend you use one of the rocker image series
 of [rocker-org](https://github.com/rocker-org/rocker):
 
 - rocker/rstudio
@@ -73,7 +73,7 @@ Because I currently write a paper by Rmarkdown,
 I usually use `rocker/verse` and use `rocker/geospatial` for spatial analysis.
 
 #### DVC
-I have just follow the official guide for [Install from repository](https://dvc.org/doc/install/linux#from-repo-on-debian-ubuntu).
+I just follow the official guide for [Install from repository](https://dvc.org/doc/install/linux#from-repo-on-debian-ubuntu).
 If your environment includes python, it is easier to install it via `pip`.
 
 #### R packages
@@ -82,7 +82,7 @@ I use `renv` for dependency management.
 
 #### Rstudio Global Options
 When Rstudio launches, it loads the `~/.config/rstudio/rstudio-prefs.json` file for general settings. So I prepare `/.config/rstudio/rstudio-prefs.json`,
-and it allows me to use Rstudio with my favorites settings.
+and it allows me to use Rstudio with my favorite settings.
 
 If you want to use your own settings, I recommend you
 
@@ -93,7 +93,8 @@ If you want to use your own settings, I recommend you
 
 
 ### `docker-compose.yml`
-```{json}
+
+```{.yaml}
 version: '3'
 services:
     rstudio:
@@ -112,7 +113,7 @@ services:
 You don't need to type a password for each new session.
 
 #### Cache for `renv`
-By setting the `RENV_PATH_CACHE` and mount the directory,
+By setting the `RENV_PATH_CACHE` and mounting the directory,
 you don't need to re-install packages.
 In other words, you can share packages with other (docker) projects and
 don't have to re-install all the packages when you rebuild a container.

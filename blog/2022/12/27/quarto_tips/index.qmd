@@ -1,0 +1,445 @@
+---
+title: "Some Quarto Tips for Academic Presentation"
+date: 2022-12-28
+author: Kazuharu Yanagimoto
+draft: false
+categories: [R, Quarto]
+image: https://source.unsplash.com/F2KRf_QfCqw
+execute:
+    eval: false
+---
+
+## Are You a Beamer Fan?
+The other day, I used slides made with [Quarto](https://quarto.org/) in a presentation at a conference.
+In the Economics community, 98% of people use Beamer of $\LaTeX$,
+and about 2% use PowerPoint for their presentations.
+I personally don't like Beamer's design,
+and I think PowerPoint has a problem with maintainability
+(i.e., can it be easily changed) in case of ongoing projects.
+I like Quarto for the following reasons:
+
+1. **Reasonably good design**. And highly customizable.
+1. **Time saving**. Slides are written in the markdown notation, so you can make it with the same amount of effort as Beamer (unless you care about the design😉)
+1. **Easily maintainable**. Variables can be used in the text, so the numbers are automatically updated even if the model or analysis is slightly changed.
+
+Here, I write some tips on Quarto for academic presentations. For the basic slide creation in Quarto, please refer to the [official documentation]((https://quarto.org/docs/presentations/revealjs/))
+or Tom Mock's [slides]((https://rstudio-conf-2022.github.io/get-started-quarto/materials/05-presentations.html#/presentations)) at the RStudio conference.
+The slides used at the conference presentation are not yet ready for public release,
+so I prepare these example slides
+
+```{=html}
+<iframe class="slide-deck" src="https://kazuyanagimoto.com/quarto-slides-example/code/slides/quarto_academic_tips/slides.html"></iframe>
+```
+
+
+[ {{< fa chalkboard-teacher >}} Slides](https://kazuyanagimoto.com/quarto-slides-example/code/slides/quarto_academic_tips/slides.html) &nbsp; 
+[ {{< fa file-pdf >}} PDF](https://kazuyanagimoto.com/quarto-slides-example/code/slides/quarto_academic_tips/slides.pdf) &nbsp; 
+[ {{< fa brands github >}} Code](https://github.com/nicetak/quarto-slides-example)
+
+
+## Data
+
+I render tables and plots inside of slides.
+In other words, I am not using the image files for the article.
+This is because
+
+1. Proper font sizes in the article are **too small** in presentation slides
+1. **Highlighting** is not easy. You need to create another figure/table or use complicated TikZ
+1. I want to **unify the design** of slides and figures&tables
+
+Hence, I create and save a data frame in a separate file and load it just before plotting it.
+
+```{.r}
+load("tb_hoge.rds")
+tb_hoge |>
+  ggplot(aes(x, y)) +
+  geom_point()
+```
+
+You can use this data frame to refer to its values in a slide text.
+
+```{markdown}
+In 2021, `r tb_hoge$value[tb_hoge$year == 2021]`% of people…
+```
+
+This is convenient in case you change your analysis slightly and the values in `tb_hoge.rds` change.^[
+  In economics, changing the age group of the sample or the parameters of the model
+  sometimes lead to changes in the results.
+  In addition, we sometimes found mistakes in cleaning the data.
+]
+The values will be updated by re-rendering slides.
+
+
+## Theme
+
+There are 11 built-in themes provided for Reveal presentations.
+These are good designs, but to match them with figures&tables,
+I write `custom.scss` and make my own theme.
+Currently, it is like [xaringanthemer](https://pkg.garrickadenbuie.com/xaringanthemer/)'s
+`style_mono_accent()` theme.
+You can check about the customizable parts in the [official document](https://quarto.org/docs/presentations/revealjs/themes.html#customizing-themes).
+
+```{css}
+#| code-fold: true
+
+/*-- scss:defaults --*/
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300,300i&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Fira+Mono&display=swap);
+
+// fonts
+$font-family-sans-serif: Montserrat, sans-serif !default;
+$font-family-monospace: "Fira Mono", monospace  !default;
+
+// colors
+$body-bg: #fff !default;
+$body-color: #272822 !default;
+$link-color: #055099 !default;
+
+// headings
+$presentation-heading-font: "Josefin Sans", sans-serif !default;
+$presentation-heading-color: #1C5253 !default;
+
+$h1-font-size: 1.6em !default;
+$h2-font-size: 1.3em !default;
+$h3-font-size: 1.15em !default;
+$h4-font-size: 1em !default;
+
+// code blocks
+$code-block-border-color: #93a1a1 !default;
+$code-color: $presentation-heading-color;
+
+//
+// Color system
+//
+
+// stylelint-disable
+$white:    #fff !default;
+$gray-100: #fdf6e3 !default;
+$gray-200: #eee8d5 !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #839496 !default;
+$gray-700: #495057 !default;
+$gray-800: #073642 !default;
+$gray-900: #002b36 !default;
+$black:    #000 !default;
+
+/*-- scss:rules --*/
+
+.title{
+    color: $white;
+    font-size: 2.5em;
+    font-family: $presentation-heading-font;
+    position: absolute;
+    top: 20%
+}
+
+.subtitle{
+    color: $gray-100;
+    font-size: $h2-font-size;
+    font-family: $presentation-heading-font;
+    position: absolute;
+    top: 33%
+}
+
+
+.author {
+    color: $white;
+    font-size: $h3-font-size;
+    font-family: $presentation-heading-font;
+    position: absolute;
+    bottom: 10%;
+}
+
+.date {
+    color: $white;
+    font-size: $h4-font-size;
+    font-family: $presentation-heading-font;
+    position: absolute;
+    bottom: 5%;
+}
+
+
+.message{
+    color: $presentation-heading-color;
+    font-size: $h2-font-size;
+    font-family: $presentation-heading-font;
+    text-align: center;
+}
+
+.space-left {
+    margin-left: 5%;
+}
+
+
+.center-xy {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateY(-50%), translateX(-50%);
+    transform: translateY(-50%), translateX(-50%);
+}
+
+
+.small {
+    font-size: 0.8em
+}
+
+.Large {
+    font-size: 1.6em
+}
+
+section.has-dark-background a {
+    color: $white;
+    border-style: dashed;
+    border-bottom-width: 1px;
+}
+
+section.has-dark-background a:hover {
+    color: $white;
+    border-bottom: solid
+}
+
+```
+
+
+### Ad-hoc CSS
+
+I write frequently used CSS settings in `custom.css`,
+but sometimes I want to use a CSS environment on an ad-hoc basis
+(for example, to change the font size slightly.)
+
+In these cases, you can write them in `style=` environment:
+
+```{.md}
+::: {style="font-size: 0.68"}
+
+Sentences you want to make smaller
+
+:::
+```
+
+### Fragments
+
+Quarto (or Reveal.js) allows some complicated animation.
+If you are interested, you might want to see Tom Mock's
+[this part]((https://rstudio-conf-2022.github.io/get-started-quarto/materials/05-presentations.html#/lists))
+of the slides.
+
+Apart from this, as discussed
+[here](https://community.rstudio.com/t/quarto-revealjs-presentation-2-columns-with-pause/151950),
+the original fragment separator `. . .` does not correctly work in environments like `columns`.
+From my experience, `fragment` environment solves them.
+
+## Plots
+### Theme
+
+Minimizing elements is a starting point of slide design.
+For that purpose, it is important to use the same fonts and colors for figures (and tables)
+as the slides.
+This is the reason why I used to use [xaringanthemer]((https://pkg.garrickadenbuie.com/xaringanthemer/)),
+which automatically generates the `ggplot2` theme corresponding to the slides' theme.
+Unfortunately, there have been no packages for Quarto slides (as far as I know),
+I declare this `theme_quarto()` function.
+
+```{r}
+#| code-fold: true
+blend_colors <- function(x, y, alpha = 0.5) {
+  x <- colorspace::hex2RGB(x)
+  y <- colorspace::hex2RGB(y)
+  z <- colorspace::mixcolor(alpha, x, y)
+  colorspace::hex(z)
+}
+color_blender <- function(x, y) function(alpha = 0.5) blend_colors(x, y, alpha)
+theme_quarto <- function (
+    text_color = color_text,
+    background_color = color_bg,
+    text_font = font_text,
+    text_font_size = 30,
+    accent_color = color_base,
+    title_font = font_title,
+    title_font_size = 30
+){
+    blend <- color_blender(text_color, background_color)
+    ggplot2::theme(
+        line = ggplot2::element_line(color = blend(0.2)),
+        rect = ggplot2::element_rect(fill = background_color),
+        title = ggplot2::element_text(
+            color = accent_color,
+            family = title_font,
+            size = title_font_size
+        ),
+        plot.background = ggplot2::element_rect(
+            fill = background_color,
+            color = background_color
+        ),
+        panel.background = ggplot2::element_rect(
+            fill = background_color,
+            color = background_color
+        ),
+        panel.grid.major = ggplot2::element_line(
+            color = blend(0.8),
+            inherit.blank = TRUE
+        ),
+        panel.grid.minor = ggplot2::element_line(
+            color = blend(0.9),
+            inherit.blank = TRUE
+        ),
+        axis.title = ggplot2::element_text(size = title_font_size * 0.8),
+        axis.ticks = ggplot2::element_line(color = blend(0.8)),
+        axis.text = ggplot2::element_text(color = blend(0.4), size = title_font_size * 0.7),
+        legend.key = ggplot2::element_rect(fill = "transparent", colour = NA),
+        legend.text = ggplot2::element_text(size = title_font_size * 0.8, family = title_font),
+        plot.caption = ggplot2::element_text(
+            size = text_font_size * 0.8,
+            color = blend(0.3)
+        )
+    )
+}
+```
+
+While the original `xaringanthemer::theme_xaringan()` redefines
+the primary color of `ggplot2::geom_*` by `ggplot2::update_geom_defaults`,
+my function does not.
+I did not overwrite it because color palettes must be specified manually for 2+ color cases, anyway.
+You can use it like:
+
+```{r}
+color_base <- "#1C5253"
+tb_hoge |>
+  ggplot(aes(x, y)) +
+  geom_point(color = color_base) +
+  theme_quarto()
+```
+
+### Highlighting
+
+The most famous way to highlight plots should be [gghighlight](https://cran.r-project.org/web/packages/gghighlight/vignettes/gghighlight.html).
+You can proceed with your stories smoothly and clearly by
+
+```{r filename = "First Slide"}
+p <- tb_hoge |>
+  ggplot(aes(x, y)) +
+  geom_col(color = color_base) +
+  theme_quarto()
+
+p
+```
+
+```{r filename = "Second Slide"}
+p + gghighlight(x == "Japan")
+```
+
+
+## Tables
+
+### `markdown` vs. `kableExtra` vs. `gt`?
+
+I think they are three popular ways to create tables in HTML slides.
+while each of them has pros and cons, I am using `gt` because
+
+**Markdown Table**
+
+- No highlighting
+- No `multirow` nor `multicol` from $\LaTeX$
+
+**kableExtra**
+
+- Syntax is a little more complicated than `gt` (e.g., need to mutate a string column for percentages.)
+- Highlighting is slightly more complicated than `gt`
+
+Note that I use `kableExtra` for tables in an article due to the following problem.
+
+### Problems with Mathematic Expressions
+
+Unfortunately, it is difficult to use mathematical expressions in a table in Quarto.
+`gt` does not support $\LaTeX$ notation.^[
+  This [issue](https://github.com/rstudio/gt/issues/375) has been raised in 2019,
+  but it does not seem to be solved quickly.
+] Also, mathematical expressions of `kableExtra` are not rendered in Quarto ([GitHub Issue](https://github.com/quarto-dev/quarto-cli/issues/555)).
+You can solve it by
+
+```{.r}
+kableExtra::kbl(data, format="markdown")
+```
+
+but it contains the abovementioned disadvantages of markdown tables.
+
+Then, I compromise by using
+
+- Unicode Greek letters (θ, τ, δ, etc.)
+- HTML tags (`<sup>` and `<sub>`)
+
+and evaluating them by `gt::fmt_markdown()`.
+Mathematical expressions in tables are usually simple,
+so I don't have any problems so far.
+
+```{r}
+tibble(a = c("θ = 0", "τ<sup>δ-1</sup>")) |>
+  gt() |>
+  fmt_markdown(columns = everything())
+```
+
+### Highlighting
+
+The gt package itself can also highlight cells in a table with the function `tab_style()`.
+However, this requires redundant writing,
+so `gtExtras::gt_highlight_rows()` and `gtExtras::gt_highlight_cols()` are useful
+if you want to highlight row/column-wise.
+
+## Export
+
+### HTML or PDF?
+
+Although I think you use a prepared PC for your presentation,
+since it is difficult to imagine a PC without a browser,
+the HTML format is also acceptable.
+If you write the following in the YAML header,
+only one self-contained HTML file will be output.
+So you can easily carry it around like a PDF file.^[
+  The option `self-contained: true` produces a deprecated warning.
+]
+
+```{.yaml}
+format:
+  revealjs:
+    standalone: true
+    embed-resources: true
+```
+
+However, you will be asked to submit your slides in PDF format in various situations.
+And whether or not you actually present your presentation in PDF format,
+it is a good idea to have PDF slides on hand for insurance purposes.
+
+1. Open the HTML file in your browser and press <kbd>E</kbd>
+1. Click "Print" on the browser, then "Save as PDF"
+
+If you want to separate fragments, specify `pdf-separate-fragments: true` in YAML.
+
+### Problems with Hyperlink
+
+A hyperlink that jumps to each slide is essentially a reference to an `<h2>` tag,
+so the link can be written as:
+
+```{.markdown}
+## A Slide {#sec-slide}
+
+<a href="#/sec-detail">detail↗</a>
+
+## A Detail Slide {#sec-detail}
+
+<a href="#/sec-slide">↩︎</a>
+```
+
+However, as far as I know, the link is not reflected in the above PDF output. If anyone knows a solution to this problem, I would appreciate it if you could let me know.
+
+## Fin.
+These are some of my ideas for using Quarto for academic presentations.
+I think that Quarto's slides are quite suitable for academic presentations,
+because of their simple syntax, high degree of freedom in design,
+and high maintainability in numbers.
+I hope this is useful for you.
