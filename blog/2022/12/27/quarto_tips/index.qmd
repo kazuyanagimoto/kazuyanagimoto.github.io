@@ -24,8 +24,8 @@ I like Quarto for the following reasons:
 1. **Time saving**. Slides are written in the markdown notation, so you can make it with the same amount of effort as Beamer (unless you care about the design😉)
 1. **Easily maintainable**. Variables can be used in the text, so the numbers are automatically updated even if the model or analysis is slightly changed.
 
-Here, I write some tips on Quarto for academic presentations. For the basic slide creation in Quarto, please refer to the [official documentation]((https://quarto.org/docs/presentations/revealjs/))
-or Tom Mock's [slides]((https://rstudio-conf-2022.github.io/get-started-quarto/materials/05-presentations.html#/presentations)) at the RStudio conference.
+Here, I write some tips on Quarto for academic presentations. For the basic slide creation in Quarto, please refer to the [official documentation](https://quarto.org/docs/presentations/revealjs/)
+or Tom Mock's [slides](https://rstudio-conf-2022.github.io/get-started-quarto/materials/05-presentations.html#/presentations) at the RStudio conference.
 The slides used at the conference presentation are not yet ready for public release,
 so I prepare these example slides
 
@@ -229,7 +229,7 @@ Sentences you want to make smaller
 
 Quarto (or Reveal.js) allows some complicated animation.
 If you are interested, you might want to see Tom Mock's
-[this part]((https://rstudio-conf-2022.github.io/get-started-quarto/materials/05-presentations.html#/lists))
+[this part](https://rstudio-conf-2022.github.io/get-started-quarto/materials/05-presentations.html#/lists)
 of the slides.
 
 Apart from this, as discussed
@@ -243,7 +243,7 @@ From my experience, `fragment` environment solves them.
 Minimizing elements is a starting point of slide design.
 For that purpose, it is important to use the same fonts and colors for figures (and tables)
 as the slides.
-This is the reason why I used to use [xaringanthemer]((https://pkg.garrickadenbuie.com/xaringanthemer/)),
+This is the reason why I used to use [xaringanthemer](https://pkg.garrickadenbuie.com/xaringanthemer/),
 which automatically generates the `ggplot2` theme corresponding to the slides' theme.
 Unfortunately, there have been no packages for Quarto slides (as far as I know),
 I declare this `theme_quarto()` function.
