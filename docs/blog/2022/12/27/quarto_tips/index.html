@@ -240,7 +240,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><strong>Time saving</strong>. Slides are written in the markdown notation, so you can make it with the same amount of effort as Beamer (unless you care about the design😉)</li>
 <li><strong>Easily maintainable</strong>. Variables can be used in the text, so the numbers are automatically updated even if the model or analysis is slightly changed.</li>
 </ol>
-<p>Here, I write some tips on Quarto for academic presentations. For the basic slide creation in Quarto, please refer to the <a href="(https://quarto.org/docs/presentations/revealjs/)">official documentation</a> or Tom Mock’s <a href="(https://rstudio-conf-2022.github.io/get-started-quarto/materials/05-presentations.html#/presentations)">slides</a> at the RStudio conference. The slides used at the conference presentation are not yet ready for public release, so I prepare these example slides</p>
+<p>Here, I write some tips on Quarto for academic presentations. For the basic slide creation in Quarto, please refer to the <a href="https://quarto.org/docs/presentations/revealjs/">official documentation</a> or Tom Mock’s <a href="https://rstudio-conf-2022.github.io/get-started-quarto/materials/05-presentations.html#/presentations">slides</a> at the RStudio conference. The slides used at the conference presentation are not yet ready for public release, so I prepare these example slides</p>
 <iframe class="slide-deck" src="https://kazuyanagimoto.com/quarto-slides-example/code/slides/quarto_academic_tips/slides.html"></iframe>
 <p><a href="https://kazuyanagimoto.com/quarto-slides-example/code/slides/quarto_academic_tips/slides.html"><i class="fa-solid fa-chalkboard-teacher" aria-label="chalkboard-teacher"></i> Slides</a> &nbsp; <a href="https://kazuyanagimoto.com/quarto-slides-example/code/slides/quarto_academic_tips/slides.pdf"><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> PDF</a> &nbsp; <a href="https://github.com/nicetak/quarto-slides-example"><i class="fa-brands fa-github" aria-label="github"></i> Code</a></p>
 </section>
@@ -404,7 +404,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="fragments" class="level3">
 <h3 class="anchored" data-anchor-id="fragments">Fragments</h3>
-<p>Quarto (or Reveal.js) allows some complicated animation. If you are interested, you might want to see Tom Mock’s <a href="(https://rstudio-conf-2022.github.io/get-started-quarto/materials/05-presentations.html#/lists)">this part</a> of the slides.</p>
+<p>Quarto (or Reveal.js) allows some complicated animation. If you are interested, you might want to see Tom Mock’s <a href="https://rstudio-conf-2022.github.io/get-started-quarto/materials/05-presentations.html#/lists">this part</a> of the slides.</p>
 <p>Apart from this, as discussed <a href="https://community.rstudio.com/t/quarto-revealjs-presentation-2-columns-with-pause/151950">here</a>, the original fragment separator <code>. . .</code> does not correctly work in environments like <code>columns</code>. From my experience, <code>fragment</code> environment solves them.</p>
 </section>
 </section>
@@ -412,7 +412,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2 class="anchored" data-anchor-id="plots">Plots</h2>
 <section id="theme-1" class="level3">
 <h3 class="anchored" data-anchor-id="theme-1">Theme</h3>
-<p>Minimizing elements is a starting point of slide design. For that purpose, it is important to use the same fonts and colors for figures (and tables) as the slides. This is the reason why I used to use <a href="(https://pkg.garrickadenbuie.com/xaringanthemer/)">xaringanthemer</a>, which automatically generates the <code>ggplot2</code> theme corresponding to the slides’ theme. Unfortunately, there have been no packages for Quarto slides (as far as I know), I declare this <code>theme_quarto()</code> function.</p>
+<p>Minimizing elements is a starting point of slide design. For that purpose, it is important to use the same fonts and colors for figures (and tables) as the slides. This is the reason why I used to use <a href="https://pkg.garrickadenbuie.com/xaringanthemer/">xaringanthemer</a>, which automatically generates the <code>ggplot2</code> theme corresponding to the slides’ theme. Unfortunately, there have been no packages for Quarto slides (as far as I know), I declare this <code>theme_quarto()</code> function.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>

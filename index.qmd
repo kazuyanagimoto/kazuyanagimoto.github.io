@@ -17,7 +17,7 @@ about:
 ---
 
 I am a PhD student at [CEMFI](https://www.cemfi.es/).<br>
-My research fields are labor, macro economics, and especially family economics.
+My research fields are labor, macro, and especially family economics.
 
 ::: {style="text-align: right"}
 [Read More →](../about)
