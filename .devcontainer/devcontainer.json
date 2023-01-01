@@ -9,7 +9,7 @@
         "znck.grammarly"
 	],
 	"forwardPorts": [8787],
-    "workspaceFolder": "/home/rstudio/nicetak.github.io",
+    "workspaceFolder": "/home/rstudio/kazuyanagimoto.github.io",
     "shutdownAction": "stopCompose",
     "settings": {
     }
