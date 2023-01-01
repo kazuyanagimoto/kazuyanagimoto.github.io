@@ -10,7 +10,7 @@ project:
 website:
   title: "Kazuharu Yanagimoto"
   site-url: https://kazuyanagimoto.com
-  repo-url: https://github.com/nicetak/nicetak.github.io
+  repo-url: https://github.com/kazuyanagimoto/kazuyanagimoto.github.io
   google-analytics: "G-EX523L4LWJ"
   twitter-card:
     creator: "@kazuyanagimoto"
@@ -26,7 +26,7 @@ website:
       - text: Talks
         file: talks/index.qmd
       - icon: github
-        href: https://github.com/nicetak
+        href: https://github.com/kazuyanagimoto
       - icon: twitter
         href: https://twitter.com/kazuyanagimoto
       - icon: linkedin

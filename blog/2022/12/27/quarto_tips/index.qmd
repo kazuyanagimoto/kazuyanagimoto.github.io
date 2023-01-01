@@ -36,7 +36,7 @@ so I prepare these example slides
 
 [ {{< fa chalkboard-teacher >}} Slides](https://kazuyanagimoto.com/quarto-slides-example/code/slides/quarto_academic_tips/slides.html) &nbsp; 
 [ {{< fa file-pdf >}} PDF](https://kazuyanagimoto.com/quarto-slides-example/code/slides/quarto_academic_tips/slides.pdf) &nbsp; 
-[ {{< fa brands github >}} Code](https://github.com/nicetak/quarto-slides-example)
+[ {{< fa brands github >}} Code](https://github.com/kazuyanagimoto/quarto-slides-example)
 
 
 ## Data

@@ -8,5 +8,5 @@ services:
             - DISABLE_AUTH=true
             - RENV_PATHS_CACHE=/home/rstudio/.renv/cache
         volumes:
-            - .:/home/rstudio/nicetak.github.io
+            - .:/home/rstudio/kazuyanagimoto.github.io
             - $HOME/.renv:/home/rstudio/.renv/cache
