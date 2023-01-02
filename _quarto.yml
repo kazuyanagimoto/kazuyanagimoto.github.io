@@ -9,6 +9,7 @@ project:
 
 website:
   title: "Kazuharu Yanagimoto"
+  favicon: static/img/favicon.drawio.svg
   site-url: https://kazuyanagimoto.com
   repo-url: https://github.com/kazuyanagimoto/kazuyanagimoto.github.io
   google-analytics: "G-EX523L4LWJ"
