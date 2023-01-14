@@ -17,15 +17,15 @@
     "objectID": "talks/index.html#section",
     "href": "talks/index.html#section",
     "title": "Talks that Last",
-    "section": "2022",
-    "text": "2022\n\n\n    \n        \n            \n        \n        \n            \n                Git & GitHub Workshop \n            \n            \n                September 23, 2022 ∙ \n                CEMFI, Madrid\n            \n            Here is a talk I gave on managing codes and data by using GitHub and DVC for economists.\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         GitHub\n                    \n                \n            \n        \n    \n    \n        \n            \n        \n        \n            \n                El Camino del PhD \n            \n            \n                July 10, 2022 ∙ \n                東京大学 (via Zoom)\n            \n            米国大学院学生会主催の海外大学院留学説明会@東京大学で所属するCEMFIでの生活についてお話しました.\n            \n                \n                    \n                         Video\n                    \n                \n            \n        \n    \n\n\nNo matching items"
+    "section": "2023",
+    "text": "2023\n\n\n    \n        \n            \n        \n        \n            \n                An Advanced Introdution to R \n            \n            \n                January 13, 2023 ∙ \n                CEMFI, Madrid\n            \n            Here is a talk on practical techniques to write a paper with R\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         GitHub\n                    \n                \n            \n        \n    \n\n\nNo matching items"
   },
   {
     "objectID": "talks/index.html#section-1",
     "href": "talks/index.html#section-1",
     "title": "Talks that Last",
-    "section": "2021",
-    "text": "2021\n\n\n    \n        \n            \n        \n        \n            \n                Git & GitHub Workshop \n            \n            \n                September 24, 2021 ∙ \n                CEMFI\n            \n            Here is a talk I gave on managing codes and data by using GitHub and DVC for economists\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         GitHub\n                    \n                \n            \n        \n    \n\n\nNo matching items"
+    "section": "2022",
+    "text": "2022\n\n\n    \n        \n            \n        \n        \n            \n                Git & GitHub Workshop \n            \n            \n                September 23, 2022 ∙ \n                CEMFI, Madrid\n            \n            Here is a talk I gave on managing codes and data by using GitHub and DVC for economists.\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         GitHub\n                    \n                \n            \n        \n    \n    \n        \n            \n        \n        \n            \n                El Camino del PhD \n            \n            \n                July 10, 2022 ∙ \n                東京大学 (via Zoom)\n            \n            米国大学院学生会主催の海外大学院留学説明会@東京大学で所属するCEMFIでの生活についてお話しました.\n            \n                \n                    \n                         Video\n                    \n                \n            \n        \n    \n\n\nNo matching items"
   },
   {
     "objectID": "about/index.html",
@@ -46,7 +46,7 @@
     "href": "about/index.html#talks-that-last",
     "title": "Hi There!",
     "section": "TALKS THAT LAST",
-    "text": "TALKS THAT LAST\n\n\n    \n        \n            \n        \n        \n            \n                Git & GitHub Workshop \n            \n            \n                Sep 23, 2022 ∙ \n                CEMFI, Madrid\n            \n            Here is a talk I gave on managing codes and data by using GitHub and DVC for economists.\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         GitHub\n                    \n                \n            \n        \n    \n\n\nNo matching items\n\n\n\nSee All →"
+    "text": "TALKS THAT LAST\n\n\n    \n        \n            \n        \n        \n            \n                An Advanced Introdution to R \n            \n            \n                Jan 13, 2023 ∙ \n                CEMFI, Madrid\n            \n            Here is a talk on practical techniques to write a paper with R\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         GitHub\n                    \n                \n            \n        \n    \n\n\nNo matching items\n\n\n\nSee All →"
   },
   {
     "objectID": "blog/2022/05/24/docker_template/index.html",
@@ -131,5 +131,12 @@
     "title": "Some Quarto Tips for Academic Presentation",
     "section": "Are You a Beamer Fan?",
     "text": "Are You a Beamer Fan?\nThe other day, I used slides made with Quarto in a presentation at a conference. In the Economics community, 98% of people use Beamer of \\(\\LaTeX\\), and about 2% use PowerPoint for their presentations. I personally don’t like Beamer’s design, and I think PowerPoint has a problem with maintainability (i.e., can it be easily changed) in case of ongoing projects. I like Quarto for the following reasons:\n\nReasonably good design. And highly customizable.\nTime saving. Slides are written in the markdown notation, so you can make it with the same amount of effort as Beamer (unless you care about the design😉)\nEasily maintainable. Variables can be used in the text, so the numbers are automatically updated even if the model or analysis is slightly changed.\n\nHere, I write some tips on Quarto for academic presentations. For the basic slide creation in Quarto, please refer to the official documentation or Tom Mock’s slides at the RStudio conference. The slides used at the conference presentation are not yet ready for public release, so I prepare these example slides\n\n Slides    PDF    Code"
+  },
+  {
+    "objectID": "talks/index.html#section-2",
+    "href": "talks/index.html#section-2",
+    "title": "Talks that Last",
+    "section": "2021",
+    "text": "2021\n\n\n    \n        \n            \n        \n        \n            \n                Git & GitHub Workshop \n            \n            \n                September 24, 2021 ∙ \n                CEMFI\n            \n            Here is a talk I gave on managing codes and data by using GitHub and DVC for economists\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         GitHub\n                    \n                \n            \n        \n    \n\n\nNo matching items"
   }
 ]

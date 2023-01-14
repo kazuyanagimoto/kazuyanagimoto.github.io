@@ -2,6 +2,10 @@
 title: "Talks that Last"
 description: "A list for my talks, workshops, or other events with a time, date, and place"
 listing:
+  - id: talks_2023
+    contents: talks_2023.yml
+    sort: "date desc"
+    template: ../static/html/talks/listing.ejs
   - id: talks_2022
     contents: talks_2022.yml
     sort: "date desc"
@@ -22,6 +26,11 @@ date-format: "MMMM D, YYYY"
 ### Copyright
 
 Except where noted, all content is {{< fa regular copyright >}} Kazuharu Yanagimoto and licensed under [Creative Commons](https://creativecommons.org/licenses/by-sa/4.0/).
+:::
+
+## 2023
+
+:::{#talks_2023}
 :::
 
 ## 2022
