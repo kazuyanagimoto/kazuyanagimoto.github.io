@@ -67,6 +67,34 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-talks_2023 .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-date','listing-description','listing-location','listing-feature','listing-links',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
+      
+      searchColumns: ["listing-title","listing-date","listing-description","listing-location","listing-feature","listing-links"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-talks_2023'] = new List('listing-talks_2023', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
     const listingTargetEl = window.document.querySelector('#listing-talks_2022 .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
@@ -229,8 +257,9 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
     <h2 id="toc-title">Year</h2>
    
   <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">2022</a></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">2021</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">2023</a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">2022</a></li>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">2021</a></li>
   </ul>
 </nav>
     </div>
@@ -254,7 +283,44 @@ Copyright
 </div>
 </div>
 <section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section">2022</h2>
+<h2 class="anchored" data-anchor-id="section">2023</h2>
+<div id="listing-talks_2023" class="quarto-listing quarto-listing-container-custom">
+<div class="talks">
+    <div class="talk-entry">
+        <div class="feature">
+            <img src="https://source.unsplash.com/5QgIuuBxKwM" alt="An Advanced Introdution to R" title="An Advanced Introdution to R">
+        </div>
+        <div class="body">
+            <p class="talk-title">
+                An Advanced Introdution to R 
+            </p>
+            <p class="talk-details">
+                <span class="talk-date">January 13, 2023</span> ∙ 
+                <span class="talk-location">CEMFI, Madrid</span>
+            </p>
+            <p class="talk-description">Here is a talk on practical techniques to write a paper with R</p>
+            <ul class="talk-links">
+                <li class="talk-link">
+                    <a href="https://kazuyanagimoto.com/workshop-r-2022/code/slides/advancedr/">
+                        <i class="fa-solid fa-chalkboard-user"></i> Slides
+                    </a>
+                </li>
+                <li class="talk-link">
+                    <a href="https://kazuyanagimoto.com/workshop-r-2022/">
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1">2022</h2>
 <div id="listing-talks_2022" class="quarto-listing quarto-listing-container-custom">
 <div class="talks">
     <div class="talk-entry">
@@ -312,8 +378,8 @@ No matching items
 </div>
 </div>
 </section>
-<section id="section-1" class="level2">
-<h2 class="anchored" data-anchor-id="section-1">2021</h2>
+<section id="section-2" class="level2">
+<h2 class="anchored" data-anchor-id="section-2">2021</h2>
 <div id="listing-talks_2021" class="quarto-listing quarto-listing-container-custom">
 <div class="talks">
     <div class="talk-entry">

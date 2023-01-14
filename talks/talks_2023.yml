@@ -1,0 +1,12 @@
+- title: "An Advanced Introdution to R"
+  date: 2023-01-13
+  description: Here is a talk on practical techniques to write a paper with R
+  location: CEMFI, Madrid
+  feature: "https://source.unsplash.com/5QgIuuBxKwM"
+  links:
+  - name: Slides
+    url: https://kazuyanagimoto.com/workshop-r-2022/code/slides/advancedr/
+    icon: fa-solid fa-chalkboard-user
+  - name: GitHub
+    url: https://kazuyanagimoto.com/workshop-r-2022/
+    icon: fa-brands fa-github
