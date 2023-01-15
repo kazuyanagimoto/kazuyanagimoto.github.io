@@ -20,6 +20,8 @@ website:
     right:
       - text: About
         file: about/index.qmd
+      - text: Research
+        file: research/index.qmd
       - text: Blog
         file: blog/index.qmd
       - text: CV

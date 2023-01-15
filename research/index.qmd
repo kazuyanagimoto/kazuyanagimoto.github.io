@@ -1,0 +1,25 @@
+---
+title: "Research"
+listing:
+  - id: working-papers
+    contents: "working-papers/*/index.qmd"
+    sort: "date desc"
+    template: ../static/html/research/listing.ejs
+  - id: work-in-progress
+    contents: "work-in-progress/*/index.qmd"
+    sort: "date desc"
+    template: ../static/html/research/listing.ejs
+page-layout: full
+toc-title: Contents
+toc-location: right
+---
+
+## Working Papers
+
+:::{#working-papers}
+:::
+
+## Work in Progress
+
+:::{#work-in-progress}
+:::
