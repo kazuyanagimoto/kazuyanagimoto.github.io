@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="">
-<meta name="description" content="My notepad to keep some technical tips for Economic research">
 
-<title>Kazuharu Yanagimoto - Blog</title>
+<title>Kazuharu Yanagimoto - Research</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -66,20 +64,48 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-posts_2022 .list');
+    const listingTargetEl = window.document.querySelector('#listing-working-papers .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-freeze','listing-title-block-banner','listing-title','listing-date','listing-author','listing-draft','listing-categories','listing-image','listing-twitter-card','listing-execute','listing-path','listing-description','listing-filename','listing-file-modified','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] }],
+      valueNames: ['listing-title','listing-date','listing-author','listing-categories','listing-pub-info','listing-pub-status','listing-path','listing-description','listing-filename','listing-file-modified','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] }],
       
-      searchColumns: ["listing-freeze","listing-title-block-banner","listing-title","listing-date","listing-author","listing-draft","listing-categories","listing-image","listing-twitter-card","listing-execute","listing-path","listing-description","listing-filename","listing-file-modified","listing-reading-time"],
+      searchColumns: ["listing-title","listing-date","listing-author","listing-categories","listing-pub-info","listing-pub-status","listing-path","listing-description","listing-filename","listing-file-modified","listing-reading-time"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-posts_2022'] = new List('listing-posts_2022', options);
+    window['quarto-listings']['listing-working-papers'] = new List('listing-working-papers', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-work-in-progress .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-categories','listing-pub-info','listing-pub-status','listing-path','listing-description','listing-filename','listing-file-modified','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-categories","listing-pub-info","listing-pub-status","listing-path","listing-description","listing-filename","listing-file-modified","listing-reading-time"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-work-in-progress'] = new List('listing-work-in-progress', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -104,14 +130,10 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
 
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta name="twitter:title" content="Kazuharu Yanagimoto - Blog">
-<meta name="twitter:description" content="My notepad to keep some technical tips for Economic research">
-<meta name="twitter:image" content="https://kazuyanagimoto.com/blog/2022/05/24/docker_template/feature.png">
+<meta name="twitter:title" content="Kazuharu Yanagimoto - Research">
 <meta name="twitter:creator" content="@kazuyanagimoto">
 <meta name="twitter:site" content="@kazuyanagimoto">
-<meta name="twitter:image-height" content="1240">
-<meta name="twitter:image-width" content="1748">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-fixed">
@@ -135,11 +157,11 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../research/index.html">
+    <a class="nav-link active" href="../research/index.html" aria-current="page">
  <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../blog/index.html" aria-current="page">
+    <a class="nav-link" href="../blog/index.html">
  <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
@@ -172,89 +194,109 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Blog</h1>
-                  <div>
-        <div class="description">
-          My notepad to keep some technical tips for Economic research
-        </div>
-      </div>
-                </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Year</h2>
+    <h2 id="toc-title">Contents</h2>
    
   <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">2022</a></li>
+  <li><a href="#working-papers" id="toc-working-papers" class="nav-link active" data-scroll-target="#working-papers">Working Papers</a></li>
+  <li><a href="#work-in-progress" id="toc-work-in-progress" class="nav-link" data-scroll-target="#work-in-progress">Work in Progress</a></li>
   </ul>
 </nav>
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Docker">Docker <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Quarto">Quarto <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(2)</span></div></div></div>
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Research</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section">2022</h2>
-<div id="listing-posts_2022" class="quarto-listing quarto-listing-container-custom">
-<div class="list blog">
-    <div class="blog-entry" data-index="0" data-categories="R,Quarto" data-listing-date-sort="1672182000000" data-listing-file-modified-sort="1672589334223" data-listing-reading-time-sort="9.305">
-        <div class="metadata">          
-            <p class="date listing-date">December 28, 2022</p>
-        </div>
-        <div class="body">
-            <p class="title listing-title"><a href="../blog/2022/12/27/quarto_tips/index.html">Some Quarto Tips for Academic Presentation</a></p>
-            <div class="post-categories listing-categories">
-                <div class="post-category listing-category" onclick="window.quartoListingCategory('R'); return false;">
-                    R
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="working-papers" class="level2">
+<h2 class="anchored" data-anchor-id="working-papers">Working Papers</h2>
+<div id="listing-working-papers" class="quarto-listing quarto-listing-container-custom">
+<div class="research project-list">
+<ul class="list">
+        <li class="project" data-index="0" data-categories="Gender gaps,Social norms,Japan" data-listing-date-sort="1673650800000" data-listing-file-modified-sort="1673720189257" data-listing-reading-time-sort="1.395">
+            <div class="project-content listing-pub-info">
+                <p><strong>Kauharu Yanagimoto</strong>, “Time Allocations, Social Norms, and Gender Gaps”</p>
+            </div>
+            <div class="item-categories listing-categories">
+                <div class="item-category listing-category" onclick="window.quartoListingCategory('Gender gaps'); return false;">
+                    Gender gaps
                 </div>
-                <div class="post-category listing-category" onclick="window.quartoListingCategory('Quarto'); return false;">
-                    Quarto
+                <div class="item-category listing-category" onclick="window.quartoListingCategory('Social norms'); return false;">
+                    Social norms
+                </div>
+                <div class="item-category listing-category" onclick="window.quartoListingCategory('Japan'); return false;">
+                    Japan
                 </div>
             </div>
-            <p class="description listing-description">The other day, I used slides made with Quarto in a presentation at a conference. In the Economics community, 98% of people use Beamer of <span class="math inline">\(\LaTeX\)</span>, and about 2% use PowerPoint for their presentations. I personally don’t like Beamer’s design, and I think PowerPoint has a problem with maintainability (i.e., can it be…</p>
-        </div>
-        <div class="thumbnail">
-            <img src="https://source.unsplash.com/F2KRf_QfCqw" alt="Some Quarto Tips for Academic Presentation" title="Some Quarto Tips for Academic Presentation">
-        </div>
-    </div>
-    <div class="blog-entry" data-index="1" data-categories="R,Docker" data-listing-date-sort="1653343200000" data-listing-file-modified-sort="1672589320053" data-listing-reading-time-sort="2.795">
-        <div class="metadata">          
-            <p class="date listing-date">May 24, 2022</p>
-        </div>
-        <div class="body">
-            <p class="title listing-title"><a href="../blog/2022/05/24/docker_template/index.html">My Docker Template for R</a></p>
-            <div class="post-categories listing-categories">
-                <div class="post-category listing-category" onclick="window.quartoListingCategory('R'); return false;">
-                    R
+            <div class="project-details-listing">
+                <ul class="project-links">
+                    <li class="project-link details">
+                        <a href="../research/working-papers/static-norm/index.html" class="listing-name">
+                            <i class="fa-solid fa-circle-info"></i> Full details »
+                        </a>
+                    </li>
+                    <li class="project-link">
+                        <a href="../research/working-papers/static-norm/yanagimoto-time.pdf">
+                            <i class="fa-solid fa-file-pdf"></i> PDF
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+</ul>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="work-in-progress" class="level2">
+<h2 class="anchored" data-anchor-id="work-in-progress">Work in Progress</h2>
+<div id="listing-work-in-progress" class="quarto-listing quarto-listing-container-custom">
+<div class="research project-list">
+<ul class="list">
+        <li class="project" data-index="0" data-categories="Two-way Fixed Effects,Child Penalty" data-listing-file-modified-sort="1673720164326" data-listing-reading-time-sort="0.03">
+            <div class="project-content listing-pub-info">
+                <p><a href="https://sites.google.com/view/dmitry-arkhangelsky/">Dmitry Arkhangelsky</a>, <strong>Kauharu Yanagimoto</strong>, and <a href="https://tomzohar.com/">Tom Zohar</a> “Heterogenous Child Penalties”</p>
+            </div>
+            <div class="item-categories listing-categories">
+                <div class="item-category listing-category" onclick="window.quartoListingCategory('Two-way Fixed Effects'); return false;">
+                    Two-way Fixed Effects
                 </div>
-                <div class="post-category listing-category" onclick="window.quartoListingCategory('Docker'); return false;">
-                    Docker
+                <div class="item-category listing-category" onclick="window.quartoListingCategory('Child Penalty'); return false;">
+                    Child Penalty
                 </div>
             </div>
-            <p class="description listing-description">Docker is one of the best environments for <strong>reproductivity</strong> of the research. I use Docker for basically all my…</p>
-        </div>
-        <div class="thumbnail">
-            <img src="../blog/2022/05/24/docker_template/feature.png" alt="My Docker Template for R" title="My Docker Template for R">
-        </div>
-    </div>
+            <div class="project-details-listing">
+                <ul class="project-links">
+                    <li class="project-link details">
+                        <a href="../research/work-in-progress/hetero2wfe/index.html" class="listing-name">
+                            <i class="fa-solid fa-circle-info"></i> Full details »
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+</ul>
 </div>
 <div class="listing-no-matching d-none">
 No matching items

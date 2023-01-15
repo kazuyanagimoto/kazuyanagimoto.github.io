@@ -138,5 +138,68 @@
     "title": "Talks that Last",
     "section": "2021",
     "text": "2021\n\n\n    \n        \n            \n        \n        \n            \n                Git & GitHub Workshop \n            \n            \n                September 24, 2021 ∙ \n                CEMFI\n            \n            Here is a talk I gave on managing codes and data by using GitHub and DVC for economists\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         GitHub\n                    \n                \n            \n        \n    \n\n\nNo matching items"
+  },
+  {
+    "objectID": "research/working-papers/static-norm/index.html",
+    "href": "research/working-papers/static-norm/index.html",
+    "title": "Time Allocations, Social Norms, and Gender Gaps",
+    "section": "",
+    "text": "Paper (preprint)"
+  },
+  {
+    "objectID": "research/working-papers/static-norm/index.html#abstract",
+    "href": "research/working-papers/static-norm/index.html#abstract",
+    "title": "Time Allocations, Social Norms, and Gender Gaps",
+    "section": "Abstract",
+    "text": "Abstract\nJapan ranks 116 among 146 countries in the World Economic Forum’s Global Gender Gap Index 2022, well below many developing countries, and has one of the largest gender earnings gaps among high-income countries. On the other hand, the labor force participation of women is quiet in Japan. But women are much more likely to work in non-regular jobs associated with lower wages and lower hours. In contrast, men hold regular, higher-paid jobs with long-hours requirements. In this paper, I build and estimate a model where couples jointly decide their occupations and working hours. Occupations differ in their flexibility. Regular ones require long working hours, and hourly wages are convex functions of hours worked. Nonregular occupations have a linear mapping between hours worked and hourly wages. The model also allows for social norms that penalize women who earn more than their husbands. Given the inflexibility of regular jobs and social norms, women are more likely to choose non-regular jobs or not to work. The model can account for all the observed gender gaps in labor force participation, 33% in occupational choices, 74% in labor hours, and 34% in wages. Through the lens of the model, the inflexibility of regular jobs explains almost all the gaps in occupational choices and wages, while social norms that penalize women who earn more than their husbands account for all the gap in the participation rate and half of the gap in working hours."
+  },
+  {
+    "objectID": "research/working-papers/static-norm/index.html#important-figure",
+    "href": "research/working-papers/static-norm/index.html#important-figure",
+    "title": "Time Allocations, Social Norms, and Gender Gaps",
+    "section": "Important figure",
+    "text": "Important figure\nFigure 5: Derogation decisions across pandemic violations and pandemic backsliding\n\n\n\nFigure 5: Derogation decisions across pandemic violations and pandemic backsliding"
+  },
+  {
+    "objectID": "research/working-papers/static-norm/index.html#bibtex-citation",
+    "href": "research/working-papers/static-norm/index.html#bibtex-citation",
+    "title": "Time Allocations, Social Norms, and Gender Gaps",
+    "section": "BibTeX citation",
+    "text": "BibTeX citation\n@unpublished{Yanagimoto:2023,\n    Author = {Kazuharu Yanagimoto},\n    Note = {Working paper},\n    Title = {Time Allocations, Social Norms, and Gender Gaps},\n    Year = {2023}}"
+  },
+  {
+    "objectID": "research/index.html",
+    "href": "research/index.html",
+    "title": "Research",
+    "section": "",
+    "text": "Kauharu Yanagimoto, “Time Allocations, Social Norms, and Gender Gaps”\n            \n            \n                \n                    Gender gaps\n                \n                \n                    Social norms\n                \n                \n                    Japan\n                \n            \n            \n                \n                    \n                        \n                             Full details »\n                        \n                    \n                    \n                        \n                             PDF\n                        \n                    \n                \n            \n        \n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "research/working-papers/static-norm/index.html#important-table-figure",
+    "href": "research/working-papers/static-norm/index.html#important-table-figure",
+    "title": "Time Allocations, Social Norms, and Gender Gaps",
+    "section": "Important table & figure",
+    "text": "Important table & figure"
+  },
+  {
+    "objectID": "research/work-in-progress/hetero2wfe/index.html#abstract",
+    "href": "research/work-in-progress/hetero2wfe/index.html#abstract",
+    "title": "Heterogenous Child Penalties",
+    "section": "Abstract",
+    "text": "Abstract"
+  },
+  {
+    "objectID": "research/work-in-progress/hetero2wfe/index.html#important-table-figure",
+    "href": "research/work-in-progress/hetero2wfe/index.html#important-table-figure",
+    "title": "Heterogenous Child Penalties",
+    "section": "Important table & figure",
+    "text": "Important table & figure"
+  },
+  {
+    "objectID": "research/index.html#work-in-progress",
+    "href": "research/index.html#work-in-progress",
+    "title": "Research",
+    "section": "Work in Progress",
+    "text": "Work in Progress\n\n\n\n        \n            \n                Dmitry Arkhangelsky, Kauharu Yanagimoto, and Tom Zohar “Heterogenous Child Penalties”\n            \n            \n                \n                    Two-way Fixed Effects\n                \n                \n                    Child Penalty\n                \n            \n            \n                \n                    \n                        \n                             Full details »\n                        \n                    \n                \n            \n        \n\n\n\nNo matching items"
   }
 ]

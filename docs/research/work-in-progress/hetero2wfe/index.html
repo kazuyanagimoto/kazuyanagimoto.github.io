@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Dmitry Arkhangelsky">
+<meta name="author" content="Kazuharu Yanagimoto">
+<meta name="author" content="Tom Zohar">
 
-<title>Kazuharu Yanagimoto</title>
+<title>Kazuharu Yanagimoto - Heterogenous Child Penalties</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +26,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./static/img/favicon.drawio.svg" rel="icon" type="image/svg+xml">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../static/img/favicon.drawio.svg" rel="icon" type="image/svg+xml">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,12 +73,10 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
 </script>
 
 
-<meta name="twitter:title" content="Kazuharu Yanagimoto">
-<meta name="twitter:description" content="I am a PhD student at CEMFI. My research fields are labor, macro, and especially family economics.">
-<meta name="twitter:image" content="https://kazuyanagimoto.com/static/img/profile.jpg">
+<meta name="twitter:title" content="Kazuharu Yanagimoto - Heterogenous Child Penalties">
 <meta name="twitter:creator" content="@kazuyanagimoto">
 <meta name="twitter:site" content="@kazuyanagimoto">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -84,7 +86,7 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Kazuharu Yanagimoto</span>
     </a>
   </div>
@@ -94,15 +96,15 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about/index.html">
+    <a class="nav-link" href="../../../about/index.html">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./research/index.html">
+    <a class="nav-link" href="../../../research/index.html">
  <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blog/index.html">
+    <a class="nav-link" href="../../../blog/index.html">
  <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
@@ -110,7 +112,7 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
  <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./talks/index.html">
+    <a class="nav-link" href="../../../talks/index.html">
  <span class="menu-text">Talks</span></a>
   </li>  
   <li class="nav-item compact">
@@ -140,40 +142,71 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-jolla">
-  <img src="/static/img/profile.jpg" class="about-image
-  round " style="height: 15em; width: 15em;">
- <header id="title-block-header" class="quarto-title-block default">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Kazuharu Yanagimoto</h1>
-</div>
-<div class="quarto-title-meta">
+<h1 class="title">Heterogenous Child Penalties</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Two-way Fixed Effects</div>
+    <div class="quarto-category">Child Penalty</div>
   </div>
-</header><main class="content" id="quarto-document-content">
-<p>I am a PhD student at <a href="https://www.cemfi.es/">CEMFI</a>.<br> My research fields are labor, macro, and especially family economics.</p>
-<div style="text-align: right">
-<p><a href="../about">Read More →</a></p>
-</div>
+  </div>
 
 
-</main> 
-  <hr class="about-sep">
-   <div class="about-links">
-  <a href="https://twitter.com" class="about-link">
-    <i class="bi bi-twitter"></i>
-     <span class="about-link-text">Twitter</span>
-  </a>
-  <a href="https://linkedin.com" class="about-link">
-    <i class="bi bi-linkedin"></i>
-     <span class="about-link-text">LinkedIn</span>
-  </a>
-  <a href="https://github.com" class="about-link">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">Github</span>
-  </a>
-</div>
-</div>
- <!-- /main -->
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Authors</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <a href="https://sites.google.com/view/dmitry-arkhangelsky/">Dmitry Arkhangelsky</a> 
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            CEMFI
+          </p>
+      </div>
+      <div class="quarto-title-meta-contents">
+    <a href="https://kazuyanagimoto.com/">Kazuharu Yanagimoto</a> 
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            CEMFI
+          </p>
+      </div>
+      <div class="quarto-title-meta-contents">
+    <a href="https://tomzohar.com/">Tom Zohar</a> 
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            CEMFI
+          </p>
+      </div>
+    </div>
+
+<div class="quarto-title-meta">
+
+      
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="important-links" class="level2">
+<h2 class="anchored" data-anchor-id="important-links">Important links</h2>
+</section>
+<section id="abstract" class="level2">
+<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
+</section>
+<section id="important-table-figure" class="level2">
+<h2 class="anchored" data-anchor-id="important-table-figure">Important table &amp; figure</h2>
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -194,6 +227,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const clipboard = new window.ClipboardJS('.code-copy-button', {
     target: function(trigger) {
       return trigger.previousElementSibling;

@@ -1,0 +1,52 @@
+---
+title: "Time Allocations, Social Norms, and Gender Gaps"
+date: 2023-01-14
+author:
+  - name: Kazuharu Yanagimoto
+    url: https://kazuyanagimoto.com/
+    affiliation: CEMFI
+categories:
+  - Gender gaps
+  - Social norms
+  - Japan
+pub-info:
+  reference: >-
+    <strong>Kauharu Yanagimoto</strong>, “Time Allocations, Social Norms, and Gender Gaps”
+  links:
+    - name: PDF
+      url: yanagimoto-time.pdf
+      local: true
+      icon: fa-solid fa-file-pdf
+  extra: >-
+    Presented at a workshop on “The Implications of COVID-19 for Civic Spaces: Assessing Data, Patterns and Trends,” Leibniz-Institut Hessische Stiftung Friedens- und Konfliktforschung (HSFK), online, March 2021
+pub-status: 
+  status: Writing
+  class: warning
+  icon: fa-solid fa-pencil
+#   status: Under review
+#   class: success
+#   icon: fas fa-glasses
+---
+
+## Important links
+
+- [Paper (preprint)](yanagimoto-time.pdf)
+
+
+## Abstract
+
+Japan ranks 116 among 146 countries in the World Economic Forum’s Global Gender Gap Index 2022, well below many developing countries, and has one of the largest gender earnings gaps among high-income countries. On the other hand, the labor force participation of women is quiet in Japan. But women are much more likely to work in non-regular jobs associated with lower wages and lower hours. In contrast, men hold regular, higher-paid jobs with long-hours requirements. In this paper, I build and estimate a model where couples jointly decide their occupations and working hours. Occupations differ in their flexibility. Regular ones require long working hours, and hourly wages are convex functions of hours worked. Nonregular occupations have a linear mapping between hours worked and hourly wages. The model also allows for social norms that penalize women who earn more than their husbands. Given the inflexibility of regular jobs and social norms, women are more likely to choose non-regular jobs or not to work. The model can account for all the observed gender gaps in labor force participation, 33% in occupational choices, 74% in labor hours, and 34% in wages. Through the lens of the model, the inflexibility of regular jobs explains almost all the gaps in occupational choices and wages, while social norms that penalize women who earn more than their husbands account for all the gap in the participation rate and half of the gap in working hours.
+
+## Important table & figure
+
+
+
+## BibTeX citation
+
+```bibtex
+@unpublished{Yanagimoto:2023,
+    Author = {Kazuharu Yanagimoto},
+    Note = {Working paper},
+    Title = {Time Allocations, Social Norms, and Gender Gaps},
+    Year = {2023}}
+```

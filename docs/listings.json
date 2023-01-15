@@ -16,5 +16,12 @@
       "/blog/2022/12/27/quarto_tips/index.html",
       "/blog/2022/05/24/docker_template/index.html"
     ]
+  },
+  {
+    "listing": "/research/index.html",
+    "items": [
+      "/research/working-papers/static-norm/index.html",
+      "/research/work-in-progress/hetero2wfe/index.html"
+    ]
   }
 ]
