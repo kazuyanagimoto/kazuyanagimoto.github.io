@@ -1,6 +1,13 @@
 ---
 title: "Hi There!"
 listing:
+  - id: research
+    contents: ../research/working-papers/**/index.qmd
+    sort: "date desc"
+    type: default
+    categories: false
+    max-items: 1
+    template: ../static/html/about/research.ejs
   - id: blog
     contents: ../blog/*/**/index.qmd
     sort: "date desc"
@@ -19,18 +26,27 @@ page-layout: full
 title-block-banner: true
 ---
 
-I am PhD student in Economics at [CEMFI](https://www.cemfi.es/) in Madrid, Spain.
+I am a Ph.D. student in Economics at [CEMFI](https://www.cemfi.es/) in Madrid, Spain.
 
 My research field is family economics, broadly speaking, I am interested in questions like:
 
 - Why do gender wage and earning gaps still remain?
-- Why do fertility rate remain low in any countries?
+- Why does the fertility rate remain low in any country?
 
 {{< fa graduation-cap >}} Master in Economics  &#8729; CEMFI  &#8729;  2021
 
 {{< fa graduation-cap >}} Bachelor in Economics  &#8729; University of Tokyo  &#8729;  2019
 
 <br>
+
+## WORKING PAPERS
+
+:::{#research}
+:::
+
+::: {style="text-align: right"}
+[See All →](../research)
+:::
 
 ## A BLOG THAT WORKS
 
