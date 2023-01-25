@@ -41,3 +41,7 @@ vignettes/*.pdf
 /.quarto/
 
 /.luarc.json
+
+# Before Submission
+yanagimoto-why.pdf
+yanagimoto-why.html

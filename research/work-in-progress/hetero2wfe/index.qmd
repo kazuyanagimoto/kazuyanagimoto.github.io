@@ -13,12 +13,13 @@ author:
 categories:
   - Two-way Fixed Effects
   - Child Penalty
+  - Gender Gaps
 pub-info:
-  reference: >-
-    <a href="https://sites.google.com/view/dmitry-arkhangelsky/">Dmitry Arkhangelsky</a>,
-    <strong>Kauharu Yanagimoto</strong>, and
+  coauthors: >-
+    <a href="https://sites.google.com/view/dmitry-arkhangelsky/">Dmitry Arkhangelsky</a>
+    and
     <a href="https://tomzohar.com/">Tom Zohar</a>
-    “Heterogenous Child Penalties”
+hide-detail: true
 pub-status: 
   status: Writing
   class: warning
