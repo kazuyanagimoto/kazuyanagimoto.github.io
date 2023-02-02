@@ -12,11 +12,11 @@ categories:
 pub-info:
   links:
     - name: Slides (SAEe2022)
-      url: yanagimoto-why_slides.pdf
+      url: yanagimoto-why.html
       local: true
       icon: fa-solid fa-chalkboard-user
     - name: Slides (SAEe2022)
-      url: yanagimoto-why.pdf
+      url: yanagimoto-why_slides.pdf
       local: true
       icon: fa-solid fa-file-pdf
   extra: >-
