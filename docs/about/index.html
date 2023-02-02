@@ -66,6 +66,34 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-research .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-date','listing-author','listing-categories','listing-pub-info','listing-pub-status','listing-path','listing-description','listing-filename','listing-file-modified','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] }],
+      
+      searchColumns: ["listing-title","listing-date","listing-author","listing-categories","listing-pub-info","listing-pub-status","listing-path","listing-description","listing-filename","listing-file-modified","listing-reading-time"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-research'] = new List('listing-research', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
     const listingTargetEl = window.document.querySelector('#listing-blog .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
@@ -133,7 +161,7 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <meta name="twitter:title" content="Kazuharu Yanagimoto - Hi There!">
-<meta name="twitter:description" content="I am PhD student in Economics at CEMFI in Madrid, Spain.">
+<meta name="twitter:description" content="I am a Ph.D.&nbsp;student in Economics at CEMFI in Madrid, Spain.">
 <meta name="twitter:creator" content="@kazuyanagimoto">
 <meta name="twitter:site" content="@kazuyanagimoto">
 <meta name="twitter:card" content="summary">
@@ -158,6 +186,10 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
   <li class="nav-item">
     <a class="nav-link active" href="../about/index.html" aria-current="page">
  <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../research/index.html">
+ <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../blog/index.html">
@@ -219,15 +251,58 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
 
 
 
-<p>I am PhD student in Economics at <a href="https://www.cemfi.es/">CEMFI</a> in Madrid, Spain.</p>
+<p>I am a Ph.D.&nbsp;student in Economics at <a href="https://www.cemfi.es/">CEMFI</a> in Madrid, Spain.</p>
 <p>My research field is family economics, broadly speaking, I am interested in questions like:</p>
 <ul>
 <li>Why do gender wage and earning gaps still remain?</li>
-<li>Why do fertility rate remain low in any countries?</li>
+<li>Why does the fertility rate remain low in any country?</li>
 </ul>
 <p><i class="fa-solid fa-graduation-cap" aria-label="graduation-cap"></i> Master in Economics ∙ CEMFI ∙ 2021</p>
 <p><i class="fa-solid fa-graduation-cap" aria-label="graduation-cap"></i> Bachelor in Economics ∙ University of Tokyo ∙ 2019</p>
 <p><br></p>
+<section id="working-papers" class="level2">
+<h2 class="anchored" data-anchor-id="working-papers">WORKING PAPERS</h2>
+<div id="listing-research" class="quarto-listing quarto-listing-container-custom">
+<div class="list research">
+    <div class="research-entry" data-index="0" data-categories="Gender Gaps,Social Norms,Japan" data-listing-date-sort="1674169200000" data-listing-file-modified-sort="1675379567084" data-listing-reading-time-sort="1.53">
+        <div class="body">
+            <p class="title listing-title">
+                    <a href="../research/working-papers/static-norm/index.html">Why not Choose a Better Job? Flexibility, Social Norms, and Gender Gaps in Japan</a>
+            </p>
+            <div class="item-categories listing-categories">
+                <div class="item-category listing-category" onclick="window.quartoListingCategory('Gender Gaps'); return false;">
+                    Gender Gaps
+                </div>
+                <div class="item-category listing-category" onclick="window.quartoListingCategory('Social Norms'); return false;">
+                    Social Norms
+                </div>
+                <div class="item-category listing-category" onclick="window.quartoListingCategory('Japan'); return false;">
+                    Japan
+                </div>
+            </div>
+            <ul class="research-links">
+                    <li class="research-link">
+                        <a href="../research/working-papers/static-norm/yanagimoto-why_slides.pdf">
+                            <i class="fa-solid fa-chalkboard-user"></i> Slides (SAEe2022)
+                        </a>
+                    </li>
+                    <li class="research-link">
+                        <a href="../research/working-papers/static-norm/yanagimoto-why.pdf">
+                            <i class="fa-solid fa-file-pdf"></i> Slides (SAEe2022)
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+<div style="text-align: right">
+<p><a href="../research">See All →</a></p>
+</div>
+</section>
 <section id="a-blog-that-works" class="level2">
 <h2 class="anchored" data-anchor-id="a-blog-that-works">A BLOG THAT WORKS</h2>
 <div id="listing-blog" class="quarto-listing quarto-listing-container-custom">

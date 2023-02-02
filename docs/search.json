@@ -32,7 +32,7 @@
     "href": "about/index.html",
     "title": "Hi There!",
     "section": "",
-    "text": "I am PhD student in Economics at CEMFI in Madrid, Spain.\nMy research field is family economics, broadly speaking, I am interested in questions like:\nMaster in Economics ∙ CEMFI ∙ 2021\nBachelor in Economics ∙ University of Tokyo ∙ 2019"
+    "text": "I am a Ph.D. student in Economics at CEMFI in Madrid, Spain.\nMy research field is family economics, broadly speaking, I am interested in questions like:\nMaster in Economics ∙ CEMFI ∙ 2021\nBachelor in Economics ∙ University of Tokyo ∙ 2019"
   },
   {
     "objectID": "about/index.html#a-blog-that-works",
@@ -138,5 +138,131 @@
     "title": "Talks that Last",
     "section": "2021",
     "text": "2021\n\n\n    \n        \n            \n        \n        \n            \n                Git & GitHub Workshop \n            \n            \n                September 24, 2021 ∙ \n                CEMFI\n            \n            Here is a talk I gave on managing codes and data by using GitHub and DVC for economists\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         GitHub\n                    \n                \n            \n        \n    \n\n\nNo matching items"
+  },
+  {
+    "objectID": "research/working-papers/static-norm/index.html",
+    "href": "research/working-papers/static-norm/index.html",
+    "title": "Why not Choose a Better Job? Flexibility, Social Norms, and Gender Gaps in Japan",
+    "section": "",
+    "text": "Paper (will be uploaded soon)\nSlides (SAEe2022)\nPDF Slides (SAEe2022)"
+  },
+  {
+    "objectID": "research/working-papers/static-norm/index.html#abstract",
+    "href": "research/working-papers/static-norm/index.html#abstract",
+    "title": "Why not Choose a Better Job? Flexibility, Social Norms, and Gender Gaps in Japan",
+    "section": "Abstract",
+    "text": "Abstract\nJapan ranks 116th out of 146 countries in the World Economic Forum’s Global Gender Gap Index 2022, well below many developing countries, and has one of the largest gender pay gaps among high-income countries. On the other hand, women’s labor force participation is high in Japan. However, women are much more likely to work in non-regular jobs, which are associated with lower wages and fewer hours. Men, in contrast, have regular, higher-paid jobs with long-hours requirements. In this paper, I build and estimate a model in which couples jointly decide their occupations and working hours. Occupations differ in their flexibility. Regular ones require long working hours, and hourly wages are convex functions of hours worked. Non-regular occupations have a linear mapping between hours worked and hourly wages. The model also allows for social norms that penalize women who earn more than their husbands. Given the inflexibility of regular jobs and social norms, women are more likely to choose non-regular jobs or not to work, and allocate a larger share of their hours for home production for their households. The model can account for all the observed gender gaps in labor force participation, 33% in occupational choices, 74% in labor hours, and 34% in wages. Through the lens of the model, the inflexibility of regular jobs explains almost all the gaps in occupational choices and wages, while social norms that penalize women who earn more than their husbands account for all the gap in the participation rate and half of the gap in hours worked."
+  },
+  {
+    "objectID": "research/working-papers/static-norm/index.html#important-figure",
+    "href": "research/working-papers/static-norm/index.html#important-figure",
+    "title": "Time Allocations, Social Norms, and Gender Gaps",
+    "section": "Important figure",
+    "text": "Important figure\nFigure 5: Derogation decisions across pandemic violations and pandemic backsliding\n\n\n\nFigure 5: Derogation decisions across pandemic violations and pandemic backsliding"
+  },
+  {
+    "objectID": "research/working-papers/static-norm/index.html#bibtex-citation",
+    "href": "research/working-papers/static-norm/index.html#bibtex-citation",
+    "title": "Why not Choose a Better Job? Flexibility, Social Norms, and Gender Gaps in Japan",
+    "section": "BibTeX citation",
+    "text": "BibTeX citation\n@unpublished{Yanagimoto:2023,\n    Author = {Kazuharu Yanagimoto},\n    Note = {Working paper},\n    Title = {Why not Choose a Better Job? Flexibility, Social Norms, and Gender Gaps in Japan},\n    Year = {2023}}"
+  },
+  {
+    "objectID": "research/index.html",
+    "href": "research/index.html",
+    "title": "Research ",
+    "section": "",
+    "text": "Why not Choose a Better Job? Flexibility, Social Norms, and Gender Gaps in Japan\n            \n            \n                \n                    Gender Gaps\n                \n                \n                    Social Norms\n                \n                \n                    Japan\n                \n            \n            \n                    \n                        \n                             Slides (SAEe2022)\n                        \n                    \n                    \n                        \n                             Slides (SAEe2022)\n                        \n                    \n            \n        \n    \n\n\nNo matching items"
+  },
+  {
+    "objectID": "research/working-papers/static-norm/index.html#important-table-figure",
+    "href": "research/working-papers/static-norm/index.html#important-table-figure",
+    "title": "Why not Choose a Better Job? Flexibility, Social Norms, and Gender Gaps in Japan",
+    "section": "Important table & figure",
+    "text": "Important table & figure"
+  },
+  {
+    "objectID": "research/work-in-progress/hetero2wfe/index.html#abstract",
+    "href": "research/work-in-progress/hetero2wfe/index.html#abstract",
+    "title": "Heterogenous Child Penalties",
+    "section": "Abstract",
+    "text": "Abstract"
+  },
+  {
+    "objectID": "research/work-in-progress/hetero2wfe/index.html#important-table-figure",
+    "href": "research/work-in-progress/hetero2wfe/index.html#important-table-figure",
+    "title": "Heterogenous Child Penalties",
+    "section": "Important table & figure",
+    "text": "Important table & figure"
+  },
+  {
+    "objectID": "research/index.html#work-in-progress",
+    "href": "research/index.html#work-in-progress",
+    "title": "Research ",
+    "section": "WORK IN PROGRESS",
+    "text": "WORK IN PROGRESS\n\n\n    \n        \n            \n                    Heterogenous Child Penalties\n            \n            \n                \n                    Two-way Fixed Effects\n                \n                \n                    Child Penalty\n                \n                \n                    Gender Gaps\n                \n            \n            \n                with Dmitry Arkhangelsky and Tom Zohar\n            \n            \n            \n        \n    \n\n\nNo matching items"
+  },
+  {
+    "objectID": "research/index.html#working-papers",
+    "href": "research/index.html#working-papers",
+    "title": "Research",
+    "section": "Working Papers",
+    "text": "Working Papers\n\n\n    \n        \n            \n                    Why not Choose a Better Job? Flexibility, Social Norms, and Gender Gaps in Japan\n            \n            \n                \n                    Gender Gaps\n                \n                \n                    Social Norms\n                \n                \n                    Japan\n                \n            \n            \n                    \n                        \n                             PDF\n                        \n                    \n                    \n                        \n                             Slides (SAEe2022)\n                        \n                    \n            \n        \n    \n\n\nNo matching items"
+  },
+  {
+    "objectID": "about/index.html#selected-papers",
+    "href": "about/index.html#selected-papers",
+    "title": "Hi There!",
+    "section": "Selected Papers",
+    "text": "Selected Papers"
+  },
+  {
+    "objectID": "about/index.html#working-papers",
+    "href": "about/index.html#working-papers",
+    "title": "Hi There!",
+    "section": "WORKING PAPERS",
+    "text": "WORKING PAPERS\n\n\n    \n        \n            \n                    Why not Choose a Better Job? Flexibility, Social Norms, and Gender Gaps in Japan\n            \n            \n                \n                    Gender Gaps\n                \n                \n                    Social Norms\n                \n                \n                    Japan\n                \n            \n            \n                    \n                        \n                             Slides (SAEe2022)\n                        \n                    \n                    \n                        \n                             Slides (SAEe2022)\n                        \n                    \n            \n        \n    \n\n\nNo matching items\n\n\n\nSee All →"
+  },
+  {
+    "objectID": "research/index.html#work-in-prgress",
+    "href": "research/index.html#work-in-prgress",
+    "title": "Research",
+    "section": "WORK IN PRGRESS",
+    "text": "WORK IN PRGRESS\n\n\n    \n        \n            \n                    Heterogenous Child Penalties\n            \n            \n                \n                    Two-way Fixed Effects\n                \n                \n                    Child Penalty\n                \n                \n                    Gender Gaps\n                \n            \n            \n                with Dmitry Arkhangelsky and Tom Zohar\n            \n            \n            \n        \n    \n\n\nNo matching items"
+  },
+  {
+    "objectID": "research/index.html#work-in-progress-fa-regular-spinner",
+    "href": "research/index.html#work-in-progress-fa-regular-spinner",
+    "title": "Research",
+    "section": "WORK IN PROGRESS ",
+    "text": "WORK IN PROGRESS \n\n\n    \n        \n            \n                    Heterogenous Child Penalties\n            \n            \n                \n                    Two-way Fixed Effects\n                \n                \n                    Child Penalty\n                \n                \n                    Gender Gaps\n                \n            \n            \n                with Dmitry Arkhangelsky and Tom Zohar\n            \n            \n            \n        \n    \n\n\nNo matching items"
+  },
+  {
+    "objectID": "research/index.html#work-in-progress-fa-regular-copyright",
+    "href": "research/index.html#work-in-progress-fa-regular-copyright",
+    "title": "Research",
+    "section": "WORK IN PROGRESS ",
+    "text": "WORK IN PROGRESS \n\n\n    \n        \n            \n                    Heterogenous Child Penalties\n            \n            \n                \n                    Two-way Fixed Effects\n                \n                \n                    Child Penalty\n                \n                \n                    Gender Gaps\n                \n            \n            \n                with Dmitry Arkhangelsky and Tom Zohar\n            \n            \n            \n        \n    \n\n\nNo matching items"
+  },
+  {
+    "objectID": "research/index.html#work-in-progress-fas-spinner",
+    "href": "research/index.html#work-in-progress-fas-spinner",
+    "title": "Research",
+    "section": "WORK IN PROGRESS ",
+    "text": "WORK IN PROGRESS \n\n\n    \n        \n            \n                    Heterogenous Child Penalties\n            \n            \n                \n                    Two-way Fixed Effects\n                \n                \n                    Child Penalty\n                \n                \n                    Gender Gaps\n                \n            \n            \n                with Dmitry Arkhangelsky and Tom Zohar\n            \n            \n            \n        \n    \n\n\nNo matching items"
+  },
+  {
+    "objectID": "research/index.html#work-in-progress-fa-spinner",
+    "href": "research/index.html#work-in-progress-fa-spinner",
+    "title": "Research",
+    "section": "WORK IN PROGRESS ",
+    "text": "WORK IN PROGRESS \n\n\n    \n        \n            \n                    Heterogenous Child Penalties\n            \n            \n                \n                    Two-way Fixed Effects\n                \n                \n                    Child Penalty\n                \n                \n                    Gender Gaps\n                \n            \n            \n                with Dmitry Arkhangelsky and Tom Zohar\n            \n            \n            \n        \n    \n\n\nNo matching items"
+  },
+  {
+    "objectID": "research/index.html#fa-spinner-work-in-progress",
+    "href": "research/index.html#fa-spinner-work-in-progress",
+    "title": "Research",
+    "section": " WORK IN PROGRESS",
+    "text": "WORK IN PROGRESS\n\n\n    \n        \n            \n                    Heterogenous Child Penalties\n            \n            \n                \n                    Two-way Fixed Effects\n                \n                \n                    Child Penalty\n                \n                \n                    Gender Gaps\n                \n            \n            \n                with Dmitry Arkhangelsky and Tom Zohar\n            \n            \n            \n        \n    \n\n\nNo matching items"
   }
 ]
