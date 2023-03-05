@@ -28,12 +28,16 @@ website:
         href: https://kazuyanagimoto.com/cv/
       - text: Talks
         file: talks/index.qmd
-      - icon: github
-        href: https://github.com/kazuyanagimoto
-      - icon: twitter
-        href: https://twitter.com/kazuyanagimoto
-      - icon: linkedin
-        href: https://www.linkedin.com/in/kazuharu-yanagimoto/
+  page-footer:
+    left: |
+      <span class="faux-block">{{< fa brands creative-commons >}} {{< var years >}} Kazuharu Yanagimoto</span>
+      <span class="faux-block">All content licensed under</span>
+      <span class="faux-block">[{{< fa brands creative-commons >}} {{< fa brands creative-commons-by >}} {{< fa brands creative-commons-sa >}} Creative Commons CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)</span>
+    center: |
+      <span class="faux-block">[{{< fa brands github >}}]({{< var github-url >}}) [{{< fa brands twitter >}}]({{< var twitter-url >}}) [{{< fa brands linkedin >}}]({{< var linkedin-url >}})</span>
+    right: |
+      <span class="faux-block">Made with {{< fa brands r-project >}} and [Quarto](https://quarto.org/)</span>
+      <span class="faux-block">View the source at [{{< fa brands github >}} GitHub]({{< var repo-url >}})</span>
       
 format:
   html:

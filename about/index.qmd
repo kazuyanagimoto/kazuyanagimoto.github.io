@@ -20,7 +20,6 @@ listing:
   - id: talks
     contents: ../talks/talks_2023.yml
     sort: "date desc"
-    max-items: 1
     template: ../static/html/about/talks.ejs
 page-layout: full
 title-block-banner: true
