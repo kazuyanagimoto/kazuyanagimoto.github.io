@@ -1,5 +1,6 @@
 - title: "An Advanced Introdution to R"
   date: 2023-01-13
+  language: English
   description: Here is a talk on practical techniques to write a paper with R
   location: CEMFI, Madrid
   feature: "https://source.unsplash.com/5QgIuuBxKwM"
@@ -10,3 +11,16 @@
   - name: GitHub
     url: https://github.com/kazuyanagimoto/workshop-r-2022
     icon: fa-brands fa-github
+- title: "Non-designer's Quarto Presentation"
+  date: 2023-03-04
+  language: Japanese
+  description: <a ref="https://tokyor.connpass.com/event/275591/">第104回Tokyo.R</a>にてQuartoによるRevealjsスライドのデザインについてお話しました.
+  location: Tokyo.R (via zoom)
+  feature: "https://github.com/kazuyanagimoto/quarto-slides-example/blob/main/code/slides/tokyor_quarto_slides/img/title_small.png?raw=true"
+  links:
+  - name: Slides
+    url: https://kazuyanagimoto.com/quarto-slides-example/code/slides/tokyor_quarto_slides
+    icon: fa-solid fa-chalkboard-user
+  - name: Code
+    url: https://github.com/kazuyanagimoto/quarto-slides-example/blob/main/code/slides/tokyor_quarto_slides/index.qmd
+    icon: fa-solid fa-code
