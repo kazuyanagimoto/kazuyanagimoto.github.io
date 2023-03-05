@@ -1,5 +1,6 @@
 - title: "Git & GitHub Workshop"
   date: 2021-09-24
+  language: English
   description: "Here is a talk I gave on managing codes and data by using GitHub and DVC for economists"
   location: CEMFI
   feature: /talks/feature/210924_github_workshop.png

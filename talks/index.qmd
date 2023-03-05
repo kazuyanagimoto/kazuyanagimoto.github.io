@@ -1,6 +1,6 @@
 ---
 title: "Talks that Last"
-description: "A list for my talks, workshops, or other events with a time, date, and place"
+description: "A list of my talks, workshops, or other events with a time, date, and place"
 listing:
   - id: talks_2023
     contents: talks_2023.yml

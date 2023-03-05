@@ -1,5 +1,6 @@
 - title: "El Camino del PhD"
   date: 2022-07-10
+  language: Japanese
   description: 米国大学院学生会主催の<a href="https://gakuiryugaku.net/seminar/3162">海外大学院留学説明会@東京大学</a>で所属する<a href="https://www.cemfi.es/">CEMFI</a>での生活についてお話しました.
   location: 東京大学 (via Zoom)
   feature: /talks/feature/220710_beikoku_daigakuin.jpg
@@ -10,6 +11,7 @@
   
 - title: "Git & GitHub Workshop"
   date: 2022-09-23
+  language: English
   description: Here is a talk I gave on managing codes and data by using GitHub and DVC for economists.
   location: CEMFI, Madrid
   feature: /talks/feature/220923_github_workshop.jpg
