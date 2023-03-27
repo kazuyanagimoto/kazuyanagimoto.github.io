@@ -25,7 +25,7 @@ website:
       - text: Blog
         file: blog/index.qmd
       - text: CV
-        href: https://kazuyanagimoto.com/cv/
+        href: https://kazuyanagimoto.com/cv/cv.pdf
       - text: Talks
         file: talks/index.qmd
   page-footer:
