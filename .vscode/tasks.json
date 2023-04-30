@@ -1,0 +1,24 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Fetch BibTeX",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "type": "shell",
+            "command": "wget 'https://drive.google.com/uc?export=download&id=13lEHYTH4x-eePfGAF2qeVg5ATJ-8Eymk' -O references.bib",
+            "args": [
+                
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "silent",
+                "close": true
+            }
+        },
+    ]
+}

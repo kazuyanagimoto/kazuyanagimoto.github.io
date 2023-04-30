@@ -45,5 +45,8 @@ format:
     theme: 
       - static/html/custom.scss
 
+bibliography: references.bib
+
+
 
 
