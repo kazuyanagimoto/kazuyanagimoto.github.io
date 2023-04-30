@@ -7,6 +7,7 @@
     "listing": "/about/index.html",
     "items": [
       "/research/working-papers/static-norm/index.html",
+      "/blog/2023/04/30/quarto_multi_lang/index.html",
       "/blog/2022/12/27/quarto_tips/index.html",
       "/blog/2022/05/24/docker_template/index.html"
     ]
@@ -14,6 +15,7 @@
   {
     "listing": "/blog/index.html",
     "items": [
+      "/blog/2023/04/30/quarto_multi_lang/index.html",
       "/blog/2022/12/27/quarto_tips/index.html",
       "/blog/2022/05/24/docker_template/index.html"
     ]
