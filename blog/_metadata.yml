@@ -6,3 +6,8 @@ freeze: true
 
 # Enable banner style title blocks
 title-block-banner: true
+
+# Enable comments
+comments: 
+  giscus: 
+    repo: kazuyanagimoto/kazuyanagimoto.github.io
