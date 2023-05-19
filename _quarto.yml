@@ -34,7 +34,7 @@ website:
       <span class="faux-block">All content licensed under</span>
       <span class="faux-block">[{{< fa brands creative-commons >}} {{< fa brands creative-commons-by >}} {{< fa brands creative-commons-sa >}} Creative Commons CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)</span>
     center: |
-      <span class="faux-block">[{{< fa brands github >}}]({{< var github-url >}}) [{{< fa brands twitter >}}]({{< var twitter-url >}}) [{{< fa brands linkedin >}}]({{< var linkedin-url >}})</span>
+      <span class="faux-block">[{{< fa brands github >}}]({{< var github-url >}}) [{{< fa brands twitter >}}]({{< var twitter-url >}}) [{{< fa brands linkedin >}}]({{< var linkedin-url >}}) [{{< iconify simple-icons zenn >}}]({{< var zenn-url >}})</span>
       <span class="faux-block">{{< fa brands orcid >}} <strong>ORCID</strong> [{{< var orcid >}}](https://orcid.org/{{< var orcid >}})</span>
     right: |
       <span class="faux-block">Made with {{< fa brands r-project >}} and [Quarto](https://quarto.org/)</span>
