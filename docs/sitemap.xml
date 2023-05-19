@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://kazuyanagimoto.com/index.html</loc>
-    <lastmod>2023-05-04T19:09:27.721Z</lastmod>
+    <lastmod>2023-05-19T09:32:04.715Z</lastmod>
   </url>
   <url>
     <loc>https://kazuyanagimoto.com/blog/2022/12/27/quarto_tips/index.html</loc>
@@ -10,7 +10,7 @@
   </url>
   <url>
     <loc>https://kazuyanagimoto.com/blog/index.html</loc>
-    <lastmod>2023-05-04T19:08:21.387Z</lastmod>
+    <lastmod>2023-05-19T09:31:50.249Z</lastmod>
   </url>
   <url>
     <loc>https://kazuyanagimoto.com/blog/2022/05/24/docker_template/index.html</loc>
@@ -18,7 +18,7 @@
   </url>
   <url>
     <loc>https://kazuyanagimoto.com/about/index.html</loc>
-    <lastmod>2023-05-04T19:08:38.014Z</lastmod>
+    <lastmod>2023-05-19T09:32:01.155Z</lastmod>
   </url>
   <url>
     <loc>https://kazuyanagimoto.com/talks/index.html</loc>
@@ -30,7 +30,7 @@
   </url>
   <url>
     <loc>https://kazuyanagimoto.com/research/index.html</loc>
-    <lastmod>2023-05-04T19:09:08.784Z</lastmod>
+    <lastmod>2023-05-19T09:31:59.523Z</lastmod>
   </url>
   <url>
     <loc>https://kazuyanagimoto.com/research/work-in-progress/hetero2wfe/index.html</loc>
@@ -39,5 +39,9 @@
   <url>
     <loc>https://kazuyanagimoto.com/blog/2023/04/30/quarto_multi_lang/index.html</loc>
     <lastmod>2023-05-04T19:08:07.059Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kazuyanagimoto.com/research/working-papers/common-cheetah/index.html</loc>
+    <lastmod>2023-05-19T08:49:53.522Z</lastmod>
   </url>
 </urlset>

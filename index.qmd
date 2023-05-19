@@ -13,6 +13,8 @@ about:
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/kazuharu-yanagimoto/
+    - text: "{{< iconify simple-icons zenn >}} Zenn"
+      href: https://zenn.dev/nicetak
 ---
 
 I am a PhD student at [CEMFI](https://www.cemfi.es/).<br>
