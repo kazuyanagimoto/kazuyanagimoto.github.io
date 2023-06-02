@@ -5,8 +5,10 @@
     "remoteUser": "rstudio",
     "extensions": [
 		"REditorSupport.r",
+        "julialang.language-julia",
         "quarto.quarto",
-        "znck.grammarly"
+        "znck.grammarly",
+        "GitHub.copilot"
 	],
 	"forwardPorts": [8787],
     "workspaceFolder": "/home/rstudio/kazuyanagimoto.github.io",

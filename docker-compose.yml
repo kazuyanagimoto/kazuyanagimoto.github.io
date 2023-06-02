@@ -7,6 +7,11 @@ services:
             - TZ=Europe/Madrid
             - DISABLE_AUTH=true
             - RENV_PATHS_CACHE=/home/rstudio/.renv/cache
+            - PYTHONUSERBASE=/home/rstudio/.pip
         volumes:
             - .:/home/rstudio/kazuyanagimoto.github.io
             - $HOME/.renv:/home/rstudio/.renv/cache
+            - $HOME/.TinyTeX:/home/rstudio/.TinyTeX
+            - $HOME/.julia:/home/rstudio/.julia
+            - $HOME/.pip:/home/rstudio/.pip
+            - $HOME/.local/share/fonts:/usr/share/fonts

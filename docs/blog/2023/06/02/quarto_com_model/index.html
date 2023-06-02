@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Kazuharu Yanagimoto">
+<meta name="dcterms.date" content="2023-06-02">
 
-<title>Kazuharu Yanagimoto</title>
+<title>Kazuharu Yanagimoto - Quarto Communication for Economic Models</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +25,26 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./static/img/favicon.drawio.svg" rel="icon" type="image/svg+xml">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
-<script src="site_libs/quarto-contrib/iconify-1.0.0-beta.2/iconify-icon.min.js"></script>
+<script src="../../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../../">
+<link href="../../../../../static/img/favicon.drawio.svg" rel="icon" type="image/svg+xml">
+<script src="../../../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script src="../../../../../site_libs/quarto-contrib/iconify-1.0.0-beta.2/iconify-icon.min.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,10 +74,15 @@ gtag('js', new Date());
 gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
 </script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta name="twitter:title" content="Kazuharu Yanagimoto">
-<meta name="twitter:description" content="I am a PhD student at CEMFI. My research fields are labor, macro, and especially family economics.">
-<meta name="twitter:image" content="https://kazuyanagimoto.com/static/img/profile.jpg">
+<meta name="twitter:title" content="Kazuharu Yanagimoto - Quarto Communication for Economic Models">
+<meta name="twitter:description" content="For \(t = 1, \dots, T\), households solve \[
+V(t, e, x) = \max_{c, x'} \frac{c^{1 - \sigma}}{1 - \sigma} + \beta \mathbb{E}V(t + 1, e', x')
+\] \[
+\begin{aligned}
+c + x' &amp;\le (1 + r)x + ew…">
+<meta name="twitter:image" content="https://source.unsplash.com/aNVx2FpKAF8">
 <meta name="twitter:creator" content="@kazuyanagimoto">
 <meta name="twitter:site" content="@kazuyanagimoto">
 <meta name="twitter:card" content="summary_large_image">
@@ -87,7 +95,7 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../../../../index.html">
     <span class="navbar-title">Kazuharu Yanagimoto</span>
     </a>
   </div>
@@ -97,15 +105,15 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about/index.html">
+    <a class="nav-link" href="../../../../../about/index.html">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./research/index.html">
+    <a class="nav-link" href="../../../../../research/index.html">
  <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blog/index.html">
+    <a class="nav-link" href="../../../../../blog/index.html">
  <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
@@ -113,7 +121,7 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
  <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./talks/index.html">
+    <a class="nav-link" href="../../../../../talks/index.html">
  <span class="menu-text">Talks</span></a>
   </li>  
 </ul>
@@ -123,48 +131,123 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Quarto Communication for Economic Models</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Julia</div>
+                <div class="quarto-category">Observable JS</div>
+                <div class="quarto-category">Quarto</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Kazuharu Yanagimoto </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">June 2, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-jolla">
-  <img src="/static/img/profile.jpg" class="about-image
-  round " style="height: 15em; width: 15em;">
- <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Kazuharu Yanagimoto</h1>
-</div>
-<div class="quarto-title-meta">
-  </div>
-</header><main class="content" id="quarto-document-content">
-<p>I am a PhD student at <a href="https://www.cemfi.es/">CEMFI</a>.<br> My research fields are labor, macro, and especially family economics.</p>
-<div style="text-align: right">
-<p><a href="../about">Read More →</a></p>
-</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
-</main> 
-  <hr class="about-sep">
-   <div class="about-links">
-  <a href="https://github.com/kazuyanagimoto" class="about-link">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">Github</span>
-  </a>
-  <a href="https://twitter.com/kazuyanagimoto" class="about-link">
-    <i class="bi bi-twitter"></i>
-     <span class="about-link-text">Twitter</span>
-  </a>
-  <a href="https://www.linkedin.com/in/kazuharu-yanagimoto/" class="about-link">
-    <i class="bi bi-linkedin"></i>
-     <span class="about-link-text">LinkedIn</span>
-  </a>
-  <a href="https://zenn.dev/nicetak" class="about-link">
-     <span class="about-link-text"><iconify-icon inline="" icon="simple-icons:zenn"></iconify-icon> Zenn</span>
-  </a>
-</div>
-</div>
- <!-- /main -->
+
+
+<p>For <span class="math inline">\(t = 1, \dots, T\)</span>, households solve <span class="math display">\[
+V(t, e, x) = \max_{c, x'} \frac{c^{1 - \sigma}}{1 - \sigma} + \beta \mathbb{E}V(t + 1, e', x')
+\]</span> <span class="math display">\[
+\begin{aligned}
+c + x' &amp;\le (1 + r)x + ew \\
+\text{Pr}(e' | e) &amp;= \Gamma(e) \\
+c, x' &amp;\ge 0
+\end{aligned}
+\]</span></p>
+<pre class="{julia}"><code>using Parameters
+using QuantEcon
+using Plots
+using LaTeXStrings</code></pre>
+<pre class="{julia}"><code>@with_kw struct Model
+    
+    # Grid for x
+    nₓ::Int = 100
+    x̲::Float64 = 0.1
+    x̄::Float64 = 4.0
+    x_grid::Vector{Float64} = range(start = x̲, stop = x̄, length = nₓ)
+    
+    # Grid for e: parameters for Tauchen
+    nₑ::Int = 10
+    σ_ε::Float64 = 0.02058
+    λ_ε::Float64 = 0.99
+    m::Float64 = 1.5
+    mc::MarkovChain = tauchen(nₑ, λ_ε, σ_ε, 0.0, m)
+    e_grid::Vector{Float64} = exp.(mc.state_values)
+    P::Matrix{Float64} = mc.p
+
+    # Utility function
+    σ::Float64 = 2.0
+    β::Float64 = 0.97
+    T::Int = 10
+
+    # Prices
+    r::Float64 = 0.07
+    w::Float64 = 5.0
+    
+end
+
+m = Model()</code></pre>
+<pre class="{julia}"><code>u(c, m::Model) = isone(m.σ) ? log(c) : c^(1 - m.σ) / (1 - m.σ)</code></pre>
+<pre class="{julia}"><code>function solve(m::Model)
+
+    @unpack T, nₓ, nₑ, r, w, β, P, x_grid, e_grid = m
+
+    V = zeros(nₓ, nₑ, T)
+
+    for t = T:-1:1, iₓ= 1:nₓ, iₑ = 1:nₑ
+        
+        utility = -Inf
+        for iₓ′ = 1:nₓ
+            
+            expected = (t == T) ? 0.0 : 
+                sum(P[iₑ, iₑ′] * V[iₓ′, iₑ′, t+1] for iₑ′ = 1:nₑ)
+            c = (1 + r) * x_grid[iₓ] + e_grid[iₑ] * w - x_grid[iₓ′]
+            
+            if c &gt; 0
+                utility = max(u(c, m) + β * expected, utility)
+            end
+    
+        end
+    
+        V[iₓ, iₑ, t] = utility
+    end
+
+    return V
+end</code></pre>
+<pre class="{julia}"><code>V = solve(m);</code></pre>
+
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -185,6 +268,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const clipboard = new window.ClipboardJS('.code-copy-button', {
     target: function(trigger) {
       return trigger.previousElementSibling;
@@ -290,6 +380,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
+</script>
+<script src="https://giscus.app/client.js" data-repo="kazuyanagimoto/kazuyanagimoto.github.io" data-repo-id="R_kgDOHSlYJQ" data-category="General" data-category-id="DIC_kwDOHSlYJc4CWQ7Q" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 <footer class="footer">
