@@ -334,5 +334,12 @@
     "title": "Why not Choose a Better Job? Flexibility, Social Norms, and Gender Gaps in Japan",
     "section": "BibTeX citation",
     "text": "BibTeX citation\n@unpublished{Yanagimoto:2023,\n    Author = {Kazuharu Yanagimoto},\n    Note = {Working paper},\n    Title = {Why not Choose a Better Job? Flexibility, Social Norms, and Gender Gaps in Japan},\n    Year = {2023}}"
+  },
+  {
+    "objectID": "blog/2023/06/02/quarto_com_model/index.html",
+    "href": "blog/2023/06/02/quarto_com_model/index.html",
+    "title": "Quarto Communication for Economic Models",
+    "section": "",
+    "text": "For \\(t = 1, \\dots, T\\), households solve \\[\nV(t, e, x) = \\max_{c, x'} \\frac{c^{1 - \\sigma}}{1 - \\sigma} + \\beta \\mathbb{E}V(t + 1, e', x')\n\\] \\[\n\\begin{aligned}\nc + x' &\\le (1 + r)x + ew \\\\\n\\text{Pr}(e' | e) &= \\Gamma(e) \\\\\nc, x' &\\ge 0\n\\end{aligned}\n\\]\nusing Parameters\nusing QuantEcon\nusing Plots\nusing LaTeXStrings\n@with_kw struct Model\n    \n    # Grid for x\n    nₓ::Int = 100\n    x̲::Float64 = 0.1\n    x̄::Float64 = 4.0\n    x_grid::Vector{Float64} = range(start = x̲, stop = x̄, length = nₓ)\n    \n    # Grid for e: parameters for Tauchen\n    nₑ::Int = 10\n    σ_ε::Float64 = 0.02058\n    λ_ε::Float64 = 0.99\n    m::Float64 = 1.5\n    mc::MarkovChain = tauchen(nₑ, λ_ε, σ_ε, 0.0, m)\n    e_grid::Vector{Float64} = exp.(mc.state_values)\n    P::Matrix{Float64} = mc.p\n\n    # Utility function\n    σ::Float64 = 2.0\n    β::Float64 = 0.97\n    T::Int = 10\n\n    # Prices\n    r::Float64 = 0.07\n    w::Float64 = 5.0\n    \nend\n\nm = Model()\nu(c, m::Model) = isone(m.σ) ? log(c) : c^(1 - m.σ) / (1 - m.σ)\nfunction solve(m::Model)\n\n    @unpack T, nₓ, nₑ, r, w, β, P, x_grid, e_grid = m\n\n    V = zeros(nₓ, nₑ, T)\n\n    for t = T:-1:1, iₓ= 1:nₓ, iₑ = 1:nₑ\n        \n        utility = -Inf\n        for iₓ′ = 1:nₓ\n            \n            expected = (t == T) ? 0.0 : \n                sum(P[iₑ, iₑ′] * V[iₓ′, iₑ′, t+1] for iₑ′ = 1:nₑ)\n            c = (1 + r) * x_grid[iₓ] + e_grid[iₑ] * w - x_grid[iₓ′]\n            \n            if c > 0\n                utility = max(u(c, m) + β * expected, utility)\n            end\n    \n        end\n    \n        V[iₓ, iₑ, t] = utility\n    end\n\n    return V\nend\nV = solve(m);"
   }
 ]
