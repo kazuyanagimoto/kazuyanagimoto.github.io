@@ -1,0 +1,44 @@
+---
+title: "Estimating Individual-level Child-penalties for (Improved) Childcare Policy Evaluation"
+author:
+  - name: Dmitry Arkhangelsky
+    url: https://sites.google.com/view/dmitry-arkhangelsky/
+    affiliation: CEMFI
+  - name: Kazuharu Yanagimoto
+    url: https://kazuyanagimoto.com/
+    affiliation: CEMFI
+  - name: Tom Zohar
+    url: https://tomzohar.com/
+    affiliation: CEMFI
+categories:
+  - Two-way Fixed Effects
+  - Child Penalty
+  - Gender Gaps
+status: work-in-progress
+pub-info:
+  coauthors: >-
+    <a href="https://sites.google.com/view/dmitry-arkhangelsky/">Dmitry Arkhangelsky</a>
+    and
+    <a href="https://tomzohar.com/">Tom Zohar</a>
+hide-detail: true
+pub-status: 
+  status: Writing
+  class: warning
+  icon: fa-solid fa-pencil
+#   status: Under review
+#   class: success
+#   icon: fas fa-glasses
+---
+
+## Important links
+
+
+
+## Abstract
+
+
+
+## Important table & figure
+
+
+

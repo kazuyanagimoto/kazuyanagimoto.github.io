@@ -1,4 +1,1 @@
-User-agent: *
-Disallow: /project/
-
 Sitemap: https://kazuyanagimoto.com/sitemap.xml
