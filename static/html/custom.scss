@@ -256,6 +256,12 @@ $footer-fg: $gray-500 !default;
             line-height: 1.2;
         }
 
+        .subtitle {
+            font-family: $headings-font-family;
+            font-size: 1.0em;
+            margin-bottom: 0.2em;
+        }
+
         .description {
             font-weight: 300;
             font-size: 1em;
