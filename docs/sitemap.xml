@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://kazuyanagimoto.com/index.html</loc>
-    <lastmod>2023-06-02T11:14:49.177Z</lastmod>
+    <lastmod>2023-06-04T17:58:01.484Z</lastmod>
   </url>
   <url>
     <loc>https://kazuyanagimoto.com/blog/2022/12/27/quarto_tips/index.html</loc>
@@ -10,7 +10,7 @@
   </url>
   <url>
     <loc>https://kazuyanagimoto.com/blog/index.html</loc>
-    <lastmod>2023-05-19T09:31:50.249Z</lastmod>
+    <lastmod>2023-06-04T18:02:23.044Z</lastmod>
   </url>
   <url>
     <loc>https://kazuyanagimoto.com/blog/2022/05/24/docker_template/index.html</loc>
@@ -18,11 +18,11 @@
   </url>
   <url>
     <loc>https://kazuyanagimoto.com/about/index.html</loc>
-    <lastmod>2023-05-19T09:32:01.155Z</lastmod>
+    <lastmod>2023-06-04T17:56:56.092Z</lastmod>
   </url>
   <url>
     <loc>https://kazuyanagimoto.com/talks/index.html</loc>
-    <lastmod>2023-05-04T19:08:57.741Z</lastmod>
+    <lastmod>2023-06-04T18:03:17.906Z</lastmod>
   </url>
   <url>
     <loc>https://kazuyanagimoto.com/research/working-papers/static-norm/index.html</loc>
@@ -30,7 +30,7 @@
   </url>
   <url>
     <loc>https://kazuyanagimoto.com/research/index.html</loc>
-    <lastmod>2023-06-02T11:14:49.487Z</lastmod>
+    <lastmod>2023-06-04T17:55:28.248Z</lastmod>
   </url>
   <url>
     <loc>https://kazuyanagimoto.com/research/work-in-progress/hetero2wfe/index.html</loc>
@@ -38,14 +38,18 @@
   </url>
   <url>
     <loc>https://kazuyanagimoto.com/blog/2023/04/30/quarto_multi_lang/index.html</loc>
-    <lastmod>2023-05-04T19:08:07.059Z</lastmod>
+    <lastmod>2023-06-04T18:02:26.034Z</lastmod>
   </url>
   <url>
     <loc>https://kazuyanagimoto.com/research/working-papers/common-cheetah/index.html</loc>
-    <lastmod>2023-06-02T11:14:48.847Z</lastmod>
+    <lastmod>2023-06-04T16:15:17.759Z</lastmod>
   </url>
   <url>
-    <loc>https://kazuyanagimoto.com/blog/2023/06/02/quarto_com_model/index.html</loc>
-    <lastmod>2023-06-02T12:12:44.679Z</lastmod>
+    <loc>https://kazuyanagimoto.com/research/common-cheetah/index.html</loc>
+    <lastmod>2023-06-04T17:55:36.549Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kazuyanagimoto.com/research/hetero2wfe/index.html</loc>
+    <lastmod>2023-06-04T17:09:52.546Z</lastmod>
   </url>
 </urlset>

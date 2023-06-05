@@ -6,7 +6,9 @@
   {
     "listing": "/about/index.html",
     "items": [
-      "/research/working-papers/common-cheetah/index.html",
+      "/research/hetero2wfe/index.html",
+      "/research/index.html",
+      "/research/common-cheetah/index.html",
       "/blog/2023/04/30/quarto_multi_lang/index.html",
       "/blog/2022/12/27/quarto_tips/index.html",
       "/blog/2022/05/24/docker_template/index.html"
@@ -23,8 +25,8 @@
   {
     "listing": "/research/index.html",
     "items": [
-      "/research/working-papers/common-cheetah/index.html",
-      "/research/work-in-progress/hetero2wfe/index.html"
+      "/research/hetero2wfe/index.html",
+      "/research/common-cheetah/index.html"
     ]
   }
 ]

@@ -2,11 +2,10 @@
 title: "Hi There!"
 listing:
   - id: research
-    contents: ../research/working-papers/**/index.qmd
+    contents: ../research/**/index.qmd
     sort: "date desc"
     type: default
     categories: false
-    max-items: 1
     template: ../static/html/about/research.ejs
   - id: blog
     contents: ../blog/*/**/index.qmd
