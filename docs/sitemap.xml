@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://kazuyanagimoto.com/index.html</loc>
-    <lastmod>2023-06-06T12:35:24.743Z</lastmod>
+    <lastmod>2023-06-10T14:51:55.720Z</lastmod>
   </url>
   <url>
     <loc>https://kazuyanagimoto.com/blog/2022/12/27/quarto_tips/index.html</loc>
@@ -10,7 +10,7 @@
   </url>
   <url>
     <loc>https://kazuyanagimoto.com/blog/index.html</loc>
-    <lastmod>2023-06-04T18:02:23.044Z</lastmod>
+    <lastmod>2023-06-10T14:51:55.450Z</lastmod>
   </url>
   <url>
     <loc>https://kazuyanagimoto.com/blog/2022/05/24/docker_template/index.html</loc>
@@ -18,31 +18,19 @@
   </url>
   <url>
     <loc>https://kazuyanagimoto.com/about/index.html</loc>
-    <lastmod>2023-06-06T12:35:18.213Z</lastmod>
+    <lastmod>2023-06-10T14:51:55.130Z</lastmod>
   </url>
   <url>
     <loc>https://kazuyanagimoto.com/talks/index.html</loc>
     <lastmod>2023-06-04T18:03:17.906Z</lastmod>
   </url>
   <url>
-    <loc>https://kazuyanagimoto.com/research/working-papers/static-norm/index.html</loc>
-    <lastmod>2023-05-04T19:08:41.838Z</lastmod>
-  </url>
-  <url>
     <loc>https://kazuyanagimoto.com/research/index.html</loc>
     <lastmod>2023-06-06T12:32:33.446Z</lastmod>
   </url>
   <url>
-    <loc>https://kazuyanagimoto.com/research/work-in-progress/hetero2wfe/index.html</loc>
-    <lastmod>2023-04-29T15:13:47.624Z</lastmod>
-  </url>
-  <url>
     <loc>https://kazuyanagimoto.com/blog/2023/04/30/quarto_multi_lang/index.html</loc>
     <lastmod>2023-06-04T18:02:26.034Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kazuyanagimoto.com/research/working-papers/common-cheetah/index.html</loc>
-    <lastmod>2023-06-04T16:15:17.759Z</lastmod>
   </url>
   <url>
     <loc>https://kazuyanagimoto.com/research/common-cheetah/index.html</loc>
@@ -51,5 +39,9 @@
   <url>
     <loc>https://kazuyanagimoto.com/research/hetero2wfe/index.html</loc>
     <lastmod>2023-06-04T17:09:52.546Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kazuyanagimoto.com/blog/2023/06/10/quarto_com_model/index.html</loc>
+    <lastmod>2023-06-10T14:51:54.830Z</lastmod>
   </url>
 </urlset>
