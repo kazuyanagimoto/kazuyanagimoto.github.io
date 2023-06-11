@@ -1,6 +1,7 @@
 ---
-title: "Scientific Communication with Quarto: Economic Model Case"
+title: "Scientific Communication with Quarto: Economic Models"
 date: 2023-06-10
+last-updated: last-modified
 author: Kazuharu Yanagimoto
 categories: [Julia, Observable JS, Quarto]
 image: "img/anim.gif"
@@ -12,6 +13,7 @@ execute:
 format:
   html:
     code-fold: true
+    code-tools: true
 jupyter: julia-1.9
 ---
 
@@ -20,7 +22,7 @@ jupyter: julia-1.9
 Notebook coding (Jupyter, Rmarkdown, and Quarto) has gotten popular in the last decade.
 It allows us to tell a story with code and data, and it makes scientific communication more transparent and reproducible.
 I use Quarto to share my current results with my supervisor and coauthors,
-especially when I am in a playground stage of the project.
+especially when I am in the playground stage of the project.
 
 While it is naturally useful in that it is an easy tool for creating reports,
 exploiting its HTML feature, we can enrich communication even further.
