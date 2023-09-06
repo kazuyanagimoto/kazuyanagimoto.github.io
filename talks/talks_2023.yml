@@ -24,3 +24,16 @@
   - name: Code
     url: https://github.com/kazuyanagimoto/quarto-slides-example/blob/main/code/slides/tokyor_quarto_slides/index.qmd
     icon: fa-solid fa-code
+- title: "社会科学のためのDocker入門"
+  date: 2023-08-31
+  language: Japanese
+  description: VSCodeを用いたDockerによる環境構築の方法についてレクチャーしました.
+  location: RA Bootcamp, 湘南国際村
+  feature: feature/230831_docker_workshop.svg
+  links:
+  - name: Slides
+    url: https://kazuyanagimoto.com/rabootcamp-docker-2023/
+    icon: fa-solid fa-chalkboard-user
+  - name: GitHub
+    url: https://github.com/kazuyanagimoto/rabootcamp-docker-2023
+    icon: fa-brands fa-github

@@ -10,7 +10,7 @@
         "znck.grammarly",
         "GitHub.copilot"
 	],
-	"forwardPorts": [8787],
+	"forwardPorts": [8080, 8787],
     "workspaceFolder": "/home/rstudio/kazuyanagimoto.github.io",
     "shutdownAction": "stopCompose",
     "settings": {
