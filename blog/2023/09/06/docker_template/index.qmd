@@ -1,0 +1,418 @@
+---
+title: "A Minimal & Portable Research Environment with Docker" 
+date: 2023-09-06
+author: Kazuharu Yanagimoto
+draft: false
+categories: [R, Docker, VSCode, Julia, LaTeX, Python]
+image: "https://source.unsplash.com/1cqIcrWFQBI"
+twitter-card:
+    image: "https://source.unsplash.com/1cqIcrWFQBI"
+execute:
+    eval: false
+---
+
+## More Minimal and Portable Environment!
+
+Since Docker is a simple and clean method to guarantee the replicablity of the research,
+I have been using Docker environments for my research since 2020.
+During these three years, I have been trying to make my environment more minimal and portable
+so that I can set up, modify, and deliver (to AWS, GCP, etc.) my environment as easily as possible.
+
+Here is the [GitHub template {{< fa arrow-up-right-from-square >}}](https://github.com/nicetak/dockerR/) for this environment.
+I usually use this template to start a new project.
+A project made on this template can be replicated by only the 4 steps below.^[You need to install Docker and VSCode in advance. For the first project on the computer, you need to set up the Docker Volumes.]
+
+1. `git clone`
+1. In VSCode, "Open in Remote Containers"
+1. `renv::restore()` (`pip install -r requirements.txt`, `Pkg.instantiate()`)
+1. `dvc pull`
+
+
+### Summary of the Template
+
+I use R, Julia, $\LaTeX$, and sometimes Python for my research.
+Also, I use Git & GitHub for version control and [DVC](https://dvc.org/) for data management.
+If you are not familiar with DVC, you may want to read the materials of
+[my previous workshop {{< fa arrow-up-right-from-square >}}](https://github.com/kazuyanagimoto/github-workshop2022).
+
+Given these conditions, I have concluded that the following setup is the most minimal and portable.
+
+1. Everything is done in VSCode. Use Dev Containers Extension
+1. An [rocker](https://github.com/rocker-org/rocker)-based image since R is always required
+1. Python is required because DVC is a Python package
+1. Julia is optional, depending on the project
+1. [TinyTeX](https://yihui.org/tinytex/) is enough for $\LaTeX$
+1. R, Python, Julia, TinyTeX packages are cached in Docker Volumes
+
+::: {.callout-note}
+
+## Why R is required? Why rocker-based?
+
+I think R is required in all the fields of data analysis for writing papers.
+This is not only because various estimation methods are provided in R in my field, economics,
+but also because there are no packages that can make graphs as beautiful as `ggplot2`
+and tables as functional as `kableExtra` in other languages.
+If you are interested in how I make graphs and tables, please refer to
+[my previous workshop {{< fa arrow-up-right-from-square >}}](https://github.com/kazuyanagimoto/workshop-r-2022)
+
+Also, why not Ubuntu or other images?
+This is because installing R and Rstudio on Linux is more complicated than installing Python or Julia.
+If you look at the Dockerfile in my template, you will see that installing Python and Julia is quite easy.
+Hence, I think it is best to use the rocker image since R is required anyway.
+
+:::
+
+
+## Docker Environment
+
+```Dockerfile
+FROM rocker/rstudio
+
+RUN apt update && apt install -y \
+    openssh-client libxt-dev \
+    # Python
+    python3 python3-pip
+
+# R Package
+RUN R -e "install.packages(c('renv'))"
+
+# Julia
+ENV JULIA_MINOR_VERSION=1.9
+ENV JULIA_PATCH_VERSION=3
+
+RUN wget https://julialang-s3.julialang.org/bin/linux/x64/${JULIA_MINOR_VERSION}/julia-${JULIA_MINOR_VERSION}.${JULIA_PATCH_VERSION}-linux-x86_64.tar.gz && \
+    tar xvf julia-${JULIA_MINOR_VERSION}.${JULIA_PATCH_VERSION}-linux-x86_64.tar.gz && \
+    rm julia-${JULIA_MINOR_VERSION}.${JULIA_PATCH_VERSION}-linux-x86_64.tar.gz && \
+    ln -s $(pwd)/julia-$JULIA_MINOR_VERSION.$JULIA_PATCH_VERSION/bin/julia /usr/bin/julia
+
+# DVC Path
+ENV PATH $PATH:~/.pip/bin
+
+# Package Cahce & Permission
+RUN cd /home/rstudio && mkdir .pip .cache .cache/R .cache/R/renv .TinyTeX .julia && \
+    chown rstudio:rstudio .pip .cache .cache/R .cache/R/renv .TinyTeX .julia
+```
+
+### R
+
+Since I cached R packages in Docker Volumes, I use `rocker/rstudio` for the base image,
+which is simplest in the other rocker images.
+However, it does not have `renv`, I manually install it in the Dockerfile.
+Only if you use geospatial packages, you may want to use `rocker/geospatial` instead.
+
+The `renv` is the best package manager for R, in my opinion.
+You can record the packages you installed by `renv::snapshot()` in `renv.lock` file.
+Then, you can reproduce the same environment by `renv::restore()` in other computers.
+If you are interested in `renv`, please refer to [my previous workshop](https://github.com/kazuyanagimoto/workshop-r-2022).
+
+
+### Python
+
+I usually use Python only for DVC, so I don't care much about the version.
+I install the latest version that can be installed with `apt`.
+In case that I need to use Python for analysis (e.g., scraping or natural language processing),
+I manage the version of the packages by `pip` and `requirements.txt`.
+
+- `pip install -r requirements.txt` for installation
+- `pip freeze > requirements.txt` for recording
+
+::: {.callout-note}
+
+## Why do I manage the packages by `requirements.txt`?
+
+As of September 2023, I think the virtual environment of Python is in chaos.
+For example, there are various tools such as [venv](https://docs.python.org/3/library/venv.html),
+[anaconda](https://www.anaconda.com/), [pyenv](https://github.com/pyenv/pyenv),
+[poetry](https://python-poetry.org/), and [rye](https://rye-up.com/guide/),
+and I don't know which one is the best and long-lasting.
+To be honest, I think `pip install -r requirements.txt` and `pip freeze > requirements.txt` are enough
+because we are building the environment with Docker.
+However, I am not a researcher mainly using Python, so please let me know if there is any misunderstanding.
+
+:::
+
+
+### Julia
+
+You can specify the version of Julia in the Dockerfile by
+`ENV JULIA_MINOR_VERSION=1.9` and `ENV JULIA_PATCH_VERSION=3`. 
+From my experience, Julia has been updated to be faster, but I have not encountered any bugs.
+Therefore, I usually specify the latest version and keep updating it during the project.
+
+For the package management of Julia, I use `Project.toml`. The workflow is as follows.
+
+1. Create an empty `Project.toml` file
+1. Activate the environment by `Pkg.activate()`
+1. Install the packages by `Pkg.add("Package Name")`, which automatically updates `Project.toml`
+1. When you clone the project, activate the environment by `Pkg.activate()` and install the packages by `Pkg.instantiate()`
+
+
+### Other Softwares & Settings
+
+- `openssh-client` is required for SSH communication with GitHub from the container
+- Since DVC is a Python package, I add `~/.pip/bin` to the PATH
+- I change the permission of the cached packages. This is because when you mount Docker Volumes, the packages are created with root permission, and you cannot write them with user permission
+
+
+::: {.callout-note}
+
+## Using Git & GitHub in the container
+
+Since I work in the container environment,
+I want to run `git pull` and `git push` in the container.
+To do so, you need to move the SSH key for the GitHub from the host environment to the container.
+This can be done by adding the key to `ssh-agent`.
+With the Remote Containers feature, you can use the key inside of the container automatically.
+The settings are different for each host OS, so I recommend reading the section "Sharing Git credentials with your container" in the official documentation of [Developping inside a container](https://code.visualstudio.com/docs/remote/containers#_sharing-git-credentials-with-your-container).
+
+I use Windows WSL as the host OS, so I add the following to `~/.bash_profile`.
+The difference from the official documentation is that I added `ssh-add` at the end.
+
+
+```{.shell filename="~/.bash_profile"}
+eval "$(ssh-agent -s)"
+if [ -z "$SSH_AUTH_SOCK" ]; then
+   # Check for a currently running instance of the agent
+   RUNNING_AGENT="`ps -ax | grep 'ssh-agent -s' | grep -v grep | wc -l | tr -d '[:space:]'`"
+   if [ "$RUNNING_AGENT" = "0" ]; then
+        # Launch a new instance of the agent
+        ssh-agent -s &> $HOME/.ssh/ssh-agent
+   fi
+   eval `cat $HOME/.ssh/ssh-agent`
+fi
+ssh-add $HOME/.ssh/id_ed25519
+```
+
+:::
+
+### docker-compose.yml
+
+```{.yaml}
+services:
+    rstudio:
+        build:
+            context: .
+        environment:
+            - TZ=Europe/Madrid
+            - DISABLE_AUTH=true
+            - PYTHONUSERBASE=/home/rstudio/.pip
+        volumes:
+            - .:/home/rstudio/work
+            - renv:/home/rstudio/.cache/R/renv
+            - pip:/home/rstudio/.pip
+            - julia:/home/rstudio/.julia
+            - TinyTeX:/home/rstudio/.TinyTeX
+            - fonts:/usr/share/fonts
+volumes:
+  renv:
+    external: true
+  pip:
+    external: true
+  julia:
+    external: true
+  TinyTeX:
+    external: true
+  fonts:
+    external: true
+
+```
+
+The most important point is that I mount the `renv` cache to the host's [Docker Volumes](https://docs.docker.com/storage/volumes/).
+This means that once you install the R packages, they will be saved on the host side.
+Therefore, you don't need to install R packages every time you build the Docker.
+Also, when you use Docker environments for multiple projects,
+you don't need to install the same packages multiple times.
+The same is true for Julia, Python, and TinyTeX packages.
+
+::: {.callout-note}
+
+## What is Docker Volumes?
+
+Docker Volumes is a mechanism for storing Docker container data on the host side.
+This allows you to keep the data even if you delete the container.
+Unlike the binding mount, the data is stored in hidden folders on the host side
+and optimized for Docker, so it is faster than the binding mount.
+When you use this template for the first time, you need to create Docker Volumes by the following command.
+
+```{.shell}
+docker volume create renv
+docker volume create pip
+docker volume createe julia
+docker volume create TinyTeX
+docker volume create fonts
+```
+
+In some articles on the Internet (including my previous post),
+the author binding-mounts package caches into the host area directly,
+such as `~/.cache/R/renv`. 
+This is not recommended since the file system of MacOS and Windows (except WSL2) is different from Linux (Docker).
+The bind mounts may significantly slow down the execution of the package.
+:::
+
+
+## $\LaTeX$ Environment
+
+To use $\LaTeX$ in Docker, you can install `texlive` with `apt` or use it as a separate service in `docker-compose.yml`.
+However, there is a very light and convenient package called `tinytex` in R^[TinyTeX can also be installed and used in an environment without R. For details, please refer to the [official documentation](https://yihui.org/tinytex/#for-other-users).],
+so I will use it.
+
+### What is TinyTeX?
+
+[TinyTeX](https://yihui.org/tinytex/) is a super lightweight distribution of $\LaTeX$.
+It automatically installs missing packages and compiles them,
+so you don't need to install a large number of packages in advance to build a $\LaTeX$ environment.
+This is why TinyTeX is used by default when compiling PDFs with Rmarkdown or Quarto.
+This lightness is very compatible with the Docker environment,
+and it is also adopted in the `rocker/verse` image.
+In this template, I will use TinyTeX as the $\LaTeX$ compiler in VSCode.
+Also, the $\LaTeX$ packages installed at this time are cached in Docker Volumes.
+
+
+### Installing TinyTeX and Setting in VSCode
+
+When installing TinyTeX, there is an R command called `tinytex::install_tinytex()`.
+However, since I want to cache the packages installed with TinyTeX in Docker Volumes,
+I specify the installation folder as follows.
+
+```{.r}
+tinytex::install_tinytex(dir = "/home/rstudio/.TinyTeX", force = TRUE)
+```
+
+Note that once you install it in Docker Volumes,
+you don't need to run this command again in other Docker projects.
+
+To use TinyTeX as the $\LaTeX$ compiler in VSCode, edit `settings.json` as [this](https://github.com/kazuyanagimoto/dockerR/blob/main/.vscode/_settings.json).
+Note that if you set it in `WORKSPACE_DIR/.vscode/settings.json`,
+it will only be valid for this workspace.
+Since the `.vscode/settings.json` is often git-ignored in team projects,
+I have renamed it to `_settings.json` in the template.
+
+::: {.callout-tip}
+
+## Why I don't use Overleaf?
+
+[Overleaf](https://www.overleaf.com/) is probably the first candidate for $\LaTeX$ editors, however, I don't use Overleaf for the following reasons.
+
+- In the free version, Overleaf cannot be linked with GitHub
+- GitHub branches cannot be separated
+- If I want to modify the appearance of figures and tables in slides and papers, I have to upload them every time
+- The number of files is limited to a maximum of 2000 files per project
+- Sometimes the service goes down. This is fatal if it is before the deadline
+- It is a waste of time to use an editor that cannot use GitHub Copilot or any other AIs 🫠
+
+I think the setup with TinyTeX and VSCode's LaTeX Workshop extension is not so difficult,
+and the compilation is (usually) faster on your local computer.
+
+:::
+
+## VSCode Extensions
+
+The settings for VSCode Remote Containers are as follows.
+It is almost intuitive, but I would like to explain some of the extensions.
+
+```{.json}
+{
+    "name": "${localWorkspaceFolderBasename}",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "rstudio",
+    "remoteUser": "rstudio",
+    "extensions": [
+		"REditorSupport.r",
+        "quarto.quarto",
+        "znck.grammarly",
+        "julialang.language-julia",
+        "janisdd.vscode-edit-csv",
+        "James-Yu.latex-workshop",
+        "GitHub.copilot"
+	],
+	"forwardPorts": [8080, 8787],
+    "workspaceFolder": "/home/rstudio/work",
+    "shutdownAction": "stopCompose",
+}
+```
+
+#### [Gramarly Extension](https://marketplace.visualstudio.com/items?itemName=znck.grammarly)
+
+An unofficial extension of the English proofreading service [Grammarly](https://www.grammarly.com/).
+Just by installing this, it will correct spelling mistakes, missing "s" in the third person singular, and articles.
+You can also use the paid version by logging in.
+Also, it can be used in `.tex`, `.Rmd`, and `.qmd` files.
+I would like you to refer to the help of the extension itself for details,
+but in short, you can add the extension name by adding the following to the config file.
+
+```{.json}
+{
+  "grammarly.files.include": ["**/README.md", "**/readme.md", "**/*.txt", "**/*.tex", "**/*.Rmd", "**/*.qmd"]
+}
+```
+
+#### [Edit CSV](https://marketplace.visualstudio.com/items?itemName=janisdd.vscode-edit-csv)
+
+This is an extension that allows you to quickly preview and edit CSV and TSV files.
+Without this, you cannot preview or edit CSV files without using spreadsheet software such as Excel.
+
+#### GitHub Copilot
+
+As of September 2023, it is a waste of time to code **without** GitHub Copilot.
+
+## Workflows
+
+I will introduce the workflow when starting a project using this template and when working.
+The _administrator_ creates a project using this template,
+and the _collaborators_ clone the project and work on it.
+
+### Administrator
+
+0. Create Docker Volumes. (Only for the first time using this template)
+
+```{.shell}
+docker volume create renv
+docker volume create pip
+docker volume createe julia
+docker volume create TinyTeX
+docker volume create fonts
+```
+
+1. Create a new repository from this template on GitHub and clone it to your local computer
+1. Open this repository in VSCode. (Remote Containers)
+1. Create an R project. If you use Rstudio, access `localhost:8787` and create a project.
+1. Start package management with `renv::init()`
+1. Install DVC with `pip install dvc dvc-gdrive`. This command is not required after the second time because of the pip cache
+1. Set up the DVC environment
+   - Create a folder on Google Drive and copy its ID
+   - Run `dvc init && dvc remote add -d myremote gdrive://<Google Drive folder ID>`
+   - Share the Google Drive folder with the collaborators (as a normal Google Drive folder)
+1. Set up VSCode settings for LaTeX
+    - For the first time, run `tinytex::install_tinytex(dir = "/home/rstudio/.TinyTeX", force = TRUE)`
+    - Copy `.vscode/_settings.json` to `.vscode/settings.json`
+1. Set up Julia environment. Create an empty `Project.toml` file and activate it with `Pkg.activate()`.
+
+### Collaborators
+
+0. Create Docker Volumes. (Only for the first time using this template)
+1. Clone the repository created by the administrator on GitHub
+1. Open this repository in VSCode. (Remote Containers)
+1. Open the R project. (If you use Rstudio, access `localhost:8787` and open the project.)
+1. Install the R packages with `renv::restore()`
+1. Install Python packages (including DVC) with `pip install -r requirements.txt`
+1. Download the data with `dvc pull`
+1. Set up VSCode settings for LaTeX
+    - For the first time, run `tinytex::install_tinytex(dir = "/home/rstudio/.TinyTeX", force = TRUE)`
+    - Copy `.vscode/_settings.json` to `.vscode/settings.json`
+1. Install Julia packages with `Pkg.activate(); Pkg.instantiate()`
+
+### During Work
+
+1. When you add an R package, record it with `renv::snapshot()`
+1. When you add a Julia package, add it with `Pkg.add("Package Name")`. It will be automatically recorded in `Project.toml`
+1. When you add a Python package, add it with `pip install Package Name` and record it with `pip freeze > requirements.txt`
+1. When you add data with DVC, add it with `dvc add`. Usually, just add the directory with `dvc add data/`
+1. After the above work, `git add`, `git commit`, and `git push`
+1. When you finish the work, upload the data with `dvc push`
+
+## Fin.
+
+The above is my template for a minimal and portable research environment and how to use it.
+Since everything is done in VSCode and Docker, you can reproduce exactly the same environment on other computers with very few steps.
+Also, since all the packages are cached, the build time of Docker is also significantly reduced, resulting in a lower maintenance cost.
+The best environment for me may not be the best environment for you, but I hope this article will help you in your research 🥂!

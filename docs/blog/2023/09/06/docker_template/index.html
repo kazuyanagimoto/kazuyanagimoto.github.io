@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.353">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Kazuharu Yanagimoto">
+<meta name="dcterms.date" content="2023-09-06">
+
+<title>Kazuharu Yanagimoto - A Minimal &amp; Portable Research Environment with Docker</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../../">
+<link href="../../../../../static/img/favicon.drawio.svg" rel="icon" type="image/svg+xml">
+<script src="../../../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script src="../../../../../site_libs/quarto-contrib/iconify-1.0.0-beta.2/iconify-icon.min.js"></script>
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EX523L4LWJ"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
+</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<meta name="twitter:title" content="Kazuharu Yanagimoto - A Minimal &amp; Portable Research Environment with Docker">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://source.unsplash.com/1cqIcrWFQBI">
+<meta name="twitter:creator" content="@kazuyanagimoto">
+<meta name="twitter:site" content="@kazuyanagimoto">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../../../../index.html">
+    <span class="navbar-title">Kazuharu Yanagimoto</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../../about/index.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../../research/index.html" rel="" target="">
+ <span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../../blog/index.html" rel="" target="">
+ <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://kazuyanagimoto.com/cv/cv.pdf" rel="" target="">
+ <span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../../talks/index.html" rel="" target="">
+ <span class="menu-text">Talks</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">A Minimal &amp; Portable Research Environment with Docker</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">R</div>
+                <div class="quarto-category">Docker</div>
+                <div class="quarto-category">VSCode</div>
+                <div class="quarto-category">Julia</div>
+                <div class="quarto-category">LaTeX</div>
+                <div class="quarto-category">Python</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Kazuharu Yanagimoto </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">September 6, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="more-minimal-and-portable-environment" class="level2">
+<h2 class="anchored" data-anchor-id="more-minimal-and-portable-environment">More Minimal and Portable Environment!</h2>
+<p>Since Docker is a simple and clean method to guarantee the replicablity of the research, I have been using Docker environments for my research since 2020. During these three years, I have been trying to make my environment more minimal and portable so that I can set up, modify, and deliver (to AWS, GCP, etc.) my environment as easily as possible.</p>
+<p>Here is the <a href="https://github.com/nicetak/dockerR/">GitHub template <i class="fa-solid fa-arrow-up-right-from-square" aria-label="arrow-up-right-from-square"></i></a> for this environment. I usually use this template to start a new project. A project made on this template can be replicated by only the 4 steps below.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<ol type="1">
+<li><code>git clone</code></li>
+<li>In VSCode, “Open in Remote Containers”</li>
+<li><code>renv::restore()</code> (<code>pip install -r requirements.txt</code>, <code>Pkg.instantiate()</code>)</li>
+<li><code>dvc pull</code></li>
+</ol>
+<section id="summary-of-the-template" class="level3">
+<h3 class="anchored" data-anchor-id="summary-of-the-template">Summary of the Template</h3>
+<p>I use R, Julia, <span class="math inline">\(\LaTeX\)</span>, and sometimes Python for my research. Also, I use Git &amp; GitHub for version control and <a href="https://dvc.org/">DVC</a> for data management. If you are not familiar with DVC, you may want to read the materials of <a href="https://github.com/kazuyanagimoto/github-workshop2022">my previous workshop <i class="fa-solid fa-arrow-up-right-from-square" aria-label="arrow-up-right-from-square"></i></a>.</p>
+<p>Given these conditions, I have concluded that the following setup is the most minimal and portable.</p>
+<ol type="1">
+<li>Everything is done in VSCode. Use Dev Containers Extension</li>
+<li>An <a href="https://github.com/rocker-org/rocker">rocker</a>-based image since R is always required</li>
+<li>Python is required because DVC is a Python package</li>
+<li>Julia is optional, depending on the project</li>
+<li><a href="https://yihui.org/tinytex/">TinyTeX</a> is enough for <span class="math inline">\(\LaTeX\)</span></li>
+<li>R, Python, Julia, TinyTeX packages are cached in Docker Volumes</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Why R is required? Why rocker-based?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I think R is required in all the fields of data analysis for writing papers. This is not only because various estimation methods are provided in R in my field, economics, but also because there are no packages that can make graphs as beautiful as <code>ggplot2</code> and tables as functional as <code>kableExtra</code> in other languages. If you are interested in how I make graphs and tables, please refer to <a href="https://github.com/kazuyanagimoto/workshop-r-2022">my previous workshop <i class="fa-solid fa-arrow-up-right-from-square" aria-label="arrow-up-right-from-square"></i></a></p>
+<p>Also, why not Ubuntu or other images? This is because installing R and Rstudio on Linux is more complicated than installing Python or Julia. If you look at the Dockerfile in my template, you will see that installing Python and Julia is quite easy. Hence, I think it is best to use the rocker image since R is required anyway.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="docker-environment" class="level2">
+<h2 class="anchored" data-anchor-id="docker-environment">Docker Environment</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode dockerfile code-with-copy"><code class="sourceCode dockerfile"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> rocker/rstudio</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">RUN</span> <span class="ex">apt</span> update <span class="kw">&amp;&amp;</span> <span class="ex">apt</span> install <span class="at">-y</span> <span class="dt">\</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    openssh-client libxt-dev <span class="dt">\</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Python</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    python3 python3-pip</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># R Package</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="kw">RUN</span> <span class="ex">R</span> <span class="at">-e</span> <span class="st">"install.packages(c('renv'))"</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Julia</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="kw">ENV</span> JULIA_MINOR_VERSION=1.9</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="kw">ENV</span> JULIA_PATCH_VERSION=3</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="kw">RUN</span> <span class="fu">wget</span> https://julialang-s3.julialang.org/bin/linux/x64/<span class="va">${JULIA_MINOR_VERSION}</span>/julia-<span class="va">${JULIA_MINOR_VERSION}</span>.<span class="va">${JULIA_PATCH_VERSION}</span>-linux-x86_64.tar.gz <span class="kw">&amp;&amp;</span> <span class="dt">\</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">tar</span> xvf julia-<span class="va">${JULIA_MINOR_VERSION}</span>.<span class="va">${JULIA_PATCH_VERSION}</span>-linux-x86_64.tar.gz <span class="kw">&amp;&amp;</span> <span class="dt">\</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rm</span> julia-<span class="va">${JULIA_MINOR_VERSION}</span>.<span class="va">${JULIA_PATCH_VERSION}</span>-linux-x86_64.tar.gz <span class="kw">&amp;&amp;</span> <span class="dt">\</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ln</span> <span class="at">-s</span> <span class="va">$(</span><span class="bu">pwd</span><span class="va">)</span>/julia-<span class="va">$JULIA_MINOR_VERSION</span>.<span class="va">$JULIA_PATCH_VERSION</span>/bin/julia /usr/bin/julia</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co"># DVC Path</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="kw">ENV</span> PATH $PATH:~/.pip/bin</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Package Cahce &amp; Permission</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="kw">RUN</span> <span class="bu">cd</span> /home/rstudio <span class="kw">&amp;&amp;</span> <span class="fu">mkdir</span> .pip .cache .cache/R .cache/R/renv .TinyTeX .julia <span class="kw">&amp;&amp;</span> <span class="dt">\</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">chown</span> rstudio:rstudio .pip .cache .cache/R .cache/R/renv .TinyTeX .julia</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="r" class="level3">
+<h3 class="anchored" data-anchor-id="r">R</h3>
+<p>Since I cached R packages in Docker Volumes, I use <code>rocker/rstudio</code> for the base image, which is simplest in the other rocker images. However, it does not have <code>renv</code>, I manually install it in the Dockerfile. Only if you use geospatial packages, you may want to use <code>rocker/geospatial</code> instead.</p>
+<p>The <code>renv</code> is the best package manager for R, in my opinion. You can record the packages you installed by <code>renv::snapshot()</code> in <code>renv.lock</code> file. Then, you can reproduce the same environment by <code>renv::restore()</code> in other computers. If you are interested in <code>renv</code>, please refer to <a href="https://github.com/kazuyanagimoto/workshop-r-2022">my previous workshop</a>.</p>
+</section>
+<section id="python" class="level3">
+<h3 class="anchored" data-anchor-id="python">Python</h3>
+<p>I usually use Python only for DVC, so I don’t care much about the version. I install the latest version that can be installed with <code>apt</code>. In case that I need to use Python for analysis (e.g., scraping or natural language processing), I manage the version of the packages by <code>pip</code> and <code>requirements.txt</code>.</p>
+<ul>
+<li><code>pip install -r requirements.txt</code> for installation</li>
+<li><code>pip freeze &gt; requirements.txt</code> for recording</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Why do I manage the packages by <code>requirements.txt</code>?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>As of September 2023, I think the virtual environment of Python is in chaos. For example, there are various tools such as <a href="https://docs.python.org/3/library/venv.html">venv</a>, <a href="https://www.anaconda.com/">anaconda</a>, <a href="https://github.com/pyenv/pyenv">pyenv</a>, <a href="https://python-poetry.org/">poetry</a>, and <a href="https://rye-up.com/guide/">rye</a>, and I don’t know which one is the best and long-lasting. To be honest, I think <code>pip install -r requirements.txt</code> and <code>pip freeze &gt; requirements.txt</code> are enough because we are building the environment with Docker. However, I am not a researcher mainly using Python, so please let me know if there is any misunderstanding.</p>
+</div>
+</div>
+</section>
+<section id="julia" class="level3">
+<h3 class="anchored" data-anchor-id="julia">Julia</h3>
+<p>You can specify the version of Julia in the Dockerfile by <code>ENV JULIA_MINOR_VERSION=1.9</code> and <code>ENV JULIA_PATCH_VERSION=3</code>. From my experience, Julia has been updated to be faster, but I have not encountered any bugs. Therefore, I usually specify the latest version and keep updating it during the project.</p>
+<p>For the package management of Julia, I use <code>Project.toml</code>. The workflow is as follows.</p>
+<ol type="1">
+<li>Create an empty <code>Project.toml</code> file</li>
+<li>Activate the environment by <code>Pkg.activate()</code></li>
+<li>Install the packages by <code>Pkg.add("Package Name")</code>, which automatically updates <code>Project.toml</code></li>
+<li>When you clone the project, activate the environment by <code>Pkg.activate()</code> and install the packages by <code>Pkg.instantiate()</code></li>
+</ol>
+</section>
+<section id="other-softwares-settings" class="level3">
+<h3 class="anchored" data-anchor-id="other-softwares-settings">Other Softwares &amp; Settings</h3>
+<ul>
+<li><code>openssh-client</code> is required for SSH communication with GitHub from the container</li>
+<li>Since DVC is a Python package, I add <code>~/.pip/bin</code> to the PATH</li>
+<li>I change the permission of the cached packages. This is because when you mount Docker Volumes, the packages are created with root permission, and you cannot write them with user permission</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Using Git &amp; GitHub in the container
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Since I work in the container environment, I want to run <code>git pull</code> and <code>git push</code> in the container. To do so, you need to move the SSH key for the GitHub from the host environment to the container. This can be done by adding the key to <code>ssh-agent</code>. With the Remote Containers feature, you can use the key inside of the container automatically. The settings are different for each host OS, so I recommend reading the section “Sharing Git credentials with your container” in the official documentation of <a href="https://code.visualstudio.com/docs/remote/containers#_sharing-git-credentials-with-your-container">Developping inside a container</a>.</p>
+<p>I use Windows WSL as the host OS, so I add the following to <code>~/.bash_profile</code>. The difference from the official documentation is that I added <code>ssh-add</code> at the end.</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>~/.bash_profile</strong></pre>
+</div>
+<pre class="shell"><code>eval "$(ssh-agent -s)"
+if [ -z "$SSH_AUTH_SOCK" ]; then
+   # Check for a currently running instance of the agent
+   RUNNING_AGENT="`ps -ax | grep 'ssh-agent -s' | grep -v grep | wc -l | tr -d '[:space:]'`"
+   if [ "$RUNNING_AGENT" = "0" ]; then
+        # Launch a new instance of the agent
+        ssh-agent -s &amp;&gt; $HOME/.ssh/ssh-agent
+   fi
+   eval `cat $HOME/.ssh/ssh-agent`
+fi
+ssh-add $HOME/.ssh/id_ed25519</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="docker-compose.yml" class="level3">
+<h3 class="anchored" data-anchor-id="docker-compose.yml">docker-compose.yml</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">services</span><span class="kw">:</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">rstudio</span><span class="kw">:</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">build</span><span class="kw">:</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="fu">context</span><span class="kw">:</span><span class="at"> .</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">environment</span><span class="kw">:</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="kw">-</span><span class="at"> TZ=Europe/Madrid</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="kw">-</span><span class="at"> DISABLE_AUTH=true</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="kw">-</span><span class="at"> PYTHONUSERBASE=/home/rstudio/.pip</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">volumes</span><span class="kw">:</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="kw">-</span><span class="at"> .:/home/rstudio/work</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="kw">-</span><span class="at"> renv:/home/rstudio/.cache/R/renv</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="kw">-</span><span class="at"> pip:/home/rstudio/.pip</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="kw">-</span><span class="at"> julia:/home/rstudio/.julia</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="kw">-</span><span class="at"> TinyTeX:/home/rstudio/.TinyTeX</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="kw">-</span><span class="at"> fonts:/usr/share/fonts</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="fu">volumes</span><span class="kw">:</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">renv</span><span class="kw">:</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">external</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">pip</span><span class="kw">:</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">external</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">julia</span><span class="kw">:</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">external</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">TinyTeX</span><span class="kw">:</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">external</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">fonts</span><span class="kw">:</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">external</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The most important point is that I mount the <code>renv</code> cache to the host’s <a href="https://docs.docker.com/storage/volumes/">Docker Volumes</a>. This means that once you install the R packages, they will be saved on the host side. Therefore, you don’t need to install R packages every time you build the Docker. Also, when you use Docker environments for multiple projects, you don’t need to install the same packages multiple times. The same is true for Julia, Python, and TinyTeX packages.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+What is Docker Volumes?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Docker Volumes is a mechanism for storing Docker container data on the host side. This allows you to keep the data even if you delete the container. Unlike the binding mount, the data is stored in hidden folders on the host side and optimized for Docker, so it is faster than the binding mount. When you use this template for the first time, you need to create Docker Volumes by the following command.</p>
+<pre class="shell"><code>docker volume create renv
+docker volume create pip
+docker volume createe julia
+docker volume create TinyTeX
+docker volume create fonts</code></pre>
+<p>In some articles on the Internet (including my previous post), the author binding-mounts package caches into the host area directly, such as <code>~/.cache/R/renv</code>. This is not recommended since the file system of MacOS and Windows (except WSL2) is different from Linux (Docker). The bind mounts may significantly slow down the execution of the package.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="latex-environment" class="level2">
+<h2 class="anchored" data-anchor-id="latex-environment"><span class="math inline">\(\LaTeX\)</span> Environment</h2>
+<p>To use <span class="math inline">\(\LaTeX\)</span> in Docker, you can install <code>texlive</code> with <code>apt</code> or use it as a separate service in <code>docker-compose.yml</code>. However, there is a very light and convenient package called <code>tinytex</code> in R<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>, so I will use it.</p>
+<section id="what-is-tinytex" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-tinytex">What is TinyTeX?</h3>
+<p><a href="https://yihui.org/tinytex/">TinyTeX</a> is a super lightweight distribution of <span class="math inline">\(\LaTeX\)</span>. It automatically installs missing packages and compiles them, so you don’t need to install a large number of packages in advance to build a <span class="math inline">\(\LaTeX\)</span> environment. This is why TinyTeX is used by default when compiling PDFs with Rmarkdown or Quarto. This lightness is very compatible with the Docker environment, and it is also adopted in the <code>rocker/verse</code> image. In this template, I will use TinyTeX as the <span class="math inline">\(\LaTeX\)</span> compiler in VSCode. Also, the <span class="math inline">\(\LaTeX\)</span> packages installed at this time are cached in Docker Volumes.</p>
+</section>
+<section id="installing-tinytex-and-setting-in-vscode" class="level3">
+<h3 class="anchored" data-anchor-id="installing-tinytex-and-setting-in-vscode">Installing TinyTeX and Setting in VSCode</h3>
+<p>When installing TinyTeX, there is an R command called <code>tinytex::install_tinytex()</code>. However, since I want to cache the packages installed with TinyTeX in Docker Volumes, I specify the installation folder as follows.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>tinytex<span class="sc">::</span><span class="fu">install_tinytex</span>(<span class="at">dir =</span> <span class="st">"/home/rstudio/.TinyTeX"</span>, <span class="at">force =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Note that once you install it in Docker Volumes, you don’t need to run this command again in other Docker projects.</p>
+<p>To use TinyTeX as the <span class="math inline">\(\LaTeX\)</span> compiler in VSCode, edit <code>settings.json</code> as <a href="https://github.com/kazuyanagimoto/dockerR/blob/main/.vscode/_settings.json">this</a>. Note that if you set it in <code>WORKSPACE_DIR/.vscode/settings.json</code>, it will only be valid for this workspace. Since the <code>.vscode/settings.json</code> is often git-ignored in team projects, I have renamed it to <code>_settings.json</code> in the template.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Why I don’t use Overleaf?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="https://www.overleaf.com/">Overleaf</a> is probably the first candidate for <span class="math inline">\(\LaTeX\)</span> editors, however, I don’t use Overleaf for the following reasons.</p>
+<ul>
+<li>In the free version, Overleaf cannot be linked with GitHub</li>
+<li>GitHub branches cannot be separated</li>
+<li>If I want to modify the appearance of figures and tables in slides and papers, I have to upload them every time</li>
+<li>The number of files is limited to a maximum of 2000 files per project</li>
+<li>Sometimes the service goes down. This is fatal if it is before the deadline</li>
+<li>It is a waste of time to use an editor that cannot use GitHub Copilot or any other AIs 🫠</li>
+</ul>
+<p>I think the setup with TinyTeX and VSCode’s LaTeX Workshop extension is not so difficult, and the compilation is (usually) faster on your local computer.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="vscode-extensions" class="level2">
+<h2 class="anchored" data-anchor-id="vscode-extensions">VSCode Extensions</h2>
+<p>The settings for VSCode Remote Containers are as follows. It is almost intuitive, but I would like to explain some of the extensions.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"name"</span><span class="fu">:</span> <span class="st">"${localWorkspaceFolderBasename}"</span><span class="fu">,</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"dockerComposeFile"</span><span class="fu">:</span> <span class="st">"../docker-compose.yml"</span><span class="fu">,</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"service"</span><span class="fu">:</span> <span class="st">"rstudio"</span><span class="fu">,</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"remoteUser"</span><span class="fu">:</span> <span class="st">"rstudio"</span><span class="fu">,</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"extensions"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>        <span class="st">"REditorSupport.r"</span><span class="ot">,</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>        <span class="st">"quarto.quarto"</span><span class="ot">,</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>        <span class="st">"znck.grammarly"</span><span class="ot">,</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>        <span class="st">"julialang.language-julia"</span><span class="ot">,</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>        <span class="st">"janisdd.vscode-edit-csv"</span><span class="ot">,</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>        <span class="st">"James-Yu.latex-workshop"</span><span class="ot">,</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>        <span class="st">"GitHub.copilot"</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"forwardPorts"</span><span class="fu">:</span> <span class="ot">[</span><span class="dv">8080</span><span class="ot">,</span> <span class="dv">8787</span><span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"workspaceFolder"</span><span class="fu">:</span> <span class="st">"/home/rstudio/work"</span><span class="fu">,</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"shutdownAction"</span><span class="fu">:</span> <span class="st">"stopCompose"</span><span class="fu">,</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="gramarly-extension" class="level4">
+<h4 class="anchored" data-anchor-id="gramarly-extension"><a href="https://marketplace.visualstudio.com/items?itemName=znck.grammarly">Gramarly Extension</a></h4>
+<p>An unofficial extension of the English proofreading service <a href="https://www.grammarly.com/">Grammarly</a>. Just by installing this, it will correct spelling mistakes, missing “s” in the third person singular, and articles. You can also use the paid version by logging in. Also, it can be used in <code>.tex</code>, <code>.Rmd</code>, and <code>.qmd</code> files. I would like you to refer to the help of the extension itself for details, but in short, you can add the extension name by adding the following to the config file.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"grammarly.files.include"</span><span class="fu">:</span> <span class="ot">[</span><span class="st">"**/README.md"</span><span class="ot">,</span> <span class="st">"**/readme.md"</span><span class="ot">,</span> <span class="st">"**/*.txt"</span><span class="ot">,</span> <span class="st">"**/*.tex"</span><span class="ot">,</span> <span class="st">"**/*.Rmd"</span><span class="ot">,</span> <span class="st">"**/*.qmd"</span><span class="ot">]</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="edit-csv" class="level4">
+<h4 class="anchored" data-anchor-id="edit-csv"><a href="https://marketplace.visualstudio.com/items?itemName=janisdd.vscode-edit-csv">Edit CSV</a></h4>
+<p>This is an extension that allows you to quickly preview and edit CSV and TSV files. Without this, you cannot preview or edit CSV files without using spreadsheet software such as Excel.</p>
+</section>
+<section id="github-copilot" class="level4">
+<h4 class="anchored" data-anchor-id="github-copilot">GitHub Copilot</h4>
+<p>As of September 2023, it is a waste of time to code <strong>without</strong> GitHub Copilot.</p>
+</section>
+</section>
+<section id="workflows" class="level2">
+<h2 class="anchored" data-anchor-id="workflows">Workflows</h2>
+<p>I will introduce the workflow when starting a project using this template and when working. The <em>administrator</em> creates a project using this template, and the <em>collaborators</em> clone the project and work on it.</p>
+<section id="administrator" class="level3">
+<h3 class="anchored" data-anchor-id="administrator">Administrator</h3>
+<ol start="0" type="1">
+<li>Create Docker Volumes. (Only for the first time using this template)</li>
+</ol>
+<pre class="shell"><code>docker volume create renv
+docker volume create pip
+docker volume createe julia
+docker volume create TinyTeX
+docker volume create fonts</code></pre>
+<ol type="1">
+<li>Create a new repository from this template on GitHub and clone it to your local computer</li>
+<li>Open this repository in VSCode. (Remote Containers)</li>
+<li>Create an R project. If you use Rstudio, access <code>localhost:8787</code> and create a project.</li>
+<li>Start package management with <code>renv::init()</code></li>
+<li>Install DVC with <code>pip install dvc dvc-gdrive</code>. This command is not required after the second time because of the pip cache</li>
+<li>Set up the DVC environment
+<ul>
+<li>Create a folder on Google Drive and copy its ID</li>
+<li>Run <code>dvc init &amp;&amp; dvc remote add -d myremote gdrive://&lt;Google Drive folder ID&gt;</code></li>
+<li>Share the Google Drive folder with the collaborators (as a normal Google Drive folder)</li>
+</ul></li>
+<li>Set up VSCode settings for LaTeX
+<ul>
+<li>For the first time, run <code>tinytex::install_tinytex(dir = "/home/rstudio/.TinyTeX", force = TRUE)</code></li>
+<li>Copy <code>.vscode/_settings.json</code> to <code>.vscode/settings.json</code></li>
+</ul></li>
+<li>Set up Julia environment. Create an empty <code>Project.toml</code> file and activate it with <code>Pkg.activate()</code>.</li>
+</ol>
+</section>
+<section id="collaborators" class="level3">
+<h3 class="anchored" data-anchor-id="collaborators">Collaborators</h3>
+<ol start="0" type="1">
+<li>Create Docker Volumes. (Only for the first time using this template)</li>
+<li>Clone the repository created by the administrator on GitHub</li>
+<li>Open this repository in VSCode. (Remote Containers)</li>
+<li>Open the R project. (If you use Rstudio, access <code>localhost:8787</code> and open the project.)</li>
+<li>Install the R packages with <code>renv::restore()</code></li>
+<li>Install Python packages (including DVC) with <code>pip install -r requirements.txt</code></li>
+<li>Download the data with <code>dvc pull</code></li>
+<li>Set up VSCode settings for LaTeX
+<ul>
+<li>For the first time, run <code>tinytex::install_tinytex(dir = "/home/rstudio/.TinyTeX", force = TRUE)</code></li>
+<li>Copy <code>.vscode/_settings.json</code> to <code>.vscode/settings.json</code></li>
+</ul></li>
+<li>Install Julia packages with <code>Pkg.activate(); Pkg.instantiate()</code></li>
+</ol>
+</section>
+<section id="during-work" class="level3">
+<h3 class="anchored" data-anchor-id="during-work">During Work</h3>
+<ol type="1">
+<li>When you add an R package, record it with <code>renv::snapshot()</code></li>
+<li>When you add a Julia package, add it with <code>Pkg.add("Package Name")</code>. It will be automatically recorded in <code>Project.toml</code></li>
+<li>When you add a Python package, add it with <code>pip install Package Name</code> and record it with <code>pip freeze &gt; requirements.txt</code></li>
+<li>When you add data with DVC, add it with <code>dvc add</code>. Usually, just add the directory with <code>dvc add data/</code></li>
+<li>After the above work, <code>git add</code>, <code>git commit</code>, and <code>git push</code></li>
+<li>When you finish the work, upload the data with <code>dvc push</code></li>
+</ol>
+</section>
+</section>
+<section id="fin." class="level2">
+<h2 class="anchored" data-anchor-id="fin.">Fin.</h2>
+<p>The above is my template for a minimal and portable research environment and how to use it. Since everything is done in VSCode and Docker, you can reproduce exactly the same environment on other computers with very few steps. Also, since all the packages are cached, the build time of Docker is also significantly reduced, resulting in a lower maintenance cost. The best environment for me may not be the best environment for you, but I hope this article will help you in your research 🥂!</p>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>You need to install Docker and VSCode in advance. For the first project on the computer, you need to set up the Docker Volumes.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>TinyTeX can also be installed and used in an environment without R. For details, please refer to the <a href="https://yihui.org/tinytex/#for-other-users">official documentation</a>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<script src="https://giscus.app/client.js" data-repo="kazuyanagimoto/kazuyanagimoto.github.io" data-repo-id="R_kgDOHSlYJQ" data-category="General" data-category-id="DIC_kwDOHSlYJc4CWQ7Q" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left"><span class="faux-block"><i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> 2021–2023 Kazuharu Yanagimoto</span> <span class="faux-block">All content licensed under</span> <span class="faux-block"><a href="https://creativecommons.org/licenses/by-sa/4.0/"><i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> <i class="fa-brands fa-creative-commons-by" aria-label="creative-commons-by"></i> <i class="fa-brands fa-creative-commons-sa" aria-label="creative-commons-sa"></i> Creative Commons CC BY-SA 4.0</a></span></div>   
+    <div class="nav-footer-center"><span class="faux-block"><a href="https://github.com/kazuyanagimoto"><i class="fa-brands fa-github" aria-label="github"></i></a> <a href="https://twitter.com/kazuyanagimoto"><i class="fa-brands fa-twitter" aria-label="twitter"></i></a> <a href="https://www.linkedin.com/in/kazuharu-yanagimoto/"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a> <a href="https://zenn.dev/nicetak"><iconify-icon inline="" icon="simple-icons:zenn"></iconify-icon></a></span> <span class="faux-block"><i class="fa-brands fa-orcid" aria-label="orcid"></i> <strong>ORCID</strong> <a href="https://orcid.org/0009-0007-1967-8304">0009-0007-1967-8304</a></span></div>
+    <div class="nav-footer-right"><span class="faux-block">Made with <i class="fa-brands fa-r-project" aria-label="r-project"></i> and <a href="https://quarto.org/">Quarto</a></span> <span class="faux-block">View the source at <a href="https://github.com/kazuyanagimoto/kazuyanagimoto.github.io"><i class="fa-brands fa-github" aria-label="github"></i> GitHub</a></span></div>
+  </div>
+</footer>
+
+
+
+</body></html>
