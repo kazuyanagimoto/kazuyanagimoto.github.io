@@ -392,7 +392,7 @@ What is Docker Volumes?
 <p>Docker Volumes is a mechanism for storing Docker container data on the host side. This allows you to keep the data even if you delete the container. Unlike the binding mount, the data is stored in hidden folders on the host side and optimized for Docker, so it is faster than the binding mount. When you use this template for the first time, you need to create Docker Volumes by the following command.</p>
 <pre class="shell"><code>docker volume create renv
 docker volume create pip
-docker volume createe julia
+docker volume create julia
 docker volume create TinyTeX
 docker volume create fonts</code></pre>
 <p>In some articles on the Internet (including my previous post), the author binding-mounts package caches into the host area directly, such as <code>~/.cache/R/renv</code>. This is not recommended since the file system of MacOS and Windows (except WSL2) is different from Linux (Docker). The bind mounts may significantly slow down the execution of the package.</p>
@@ -484,7 +484,7 @@ Why I don’t use Overleaf?
 </ol>
 <pre class="shell"><code>docker volume create renv
 docker volume create pip
-docker volume createe julia
+docker volume create julia
 docker volume create TinyTeX
 docker volume create fonts</code></pre>
 <ol type="1">
