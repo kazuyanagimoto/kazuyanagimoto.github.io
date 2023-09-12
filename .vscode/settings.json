@@ -1,3 +1,4 @@
 {
-    "r.lsp.promptToInstall": false
+    "r.lsp.promptToInstall": false,
+    "quarto.render.previewType": "external"
 }

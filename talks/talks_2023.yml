@@ -14,7 +14,7 @@
 - title: "Non-designer's Quarto Presentation"
   date: 2023-03-04
   language: Japanese
-  description: <a ref="https://tokyor.connpass.com/event/275591/">第104回Tokyo.R</a>にてQuartoによるRevealjsスライドのデザインについてお話しました.
+  description: <a ref="https://tokyor.connpass.com/event/275591/">第104回Tokyo.R</a>にてQuartoによるRevealjsスライドのデザインについてお話しました
   location: Tokyo.R (via zoom)
   feature: "https://github.com/kazuyanagimoto/quarto-slides-example/blob/main/code/slides/tokyor_quarto_slides/img/title_small.png?raw=true"
   links:
@@ -27,7 +27,7 @@
 - title: "社会科学のためのDocker入門"
   date: 2023-08-31
   language: Japanese
-  description: VSCodeを用いたDockerによる環境構築の方法についてレクチャーしました.
+  description: VSCodeを用いたDockerによる環境構築の方法についてレクチャーしました
   location: RA Bootcamp, 湘南国際村
   feature: feature/230831_docker_workshop.svg
   links:
