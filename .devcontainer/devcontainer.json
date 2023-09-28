@@ -8,7 +8,8 @@
         "julialang.language-julia",
         "quarto.quarto",
         "znck.grammarly",
-        "GitHub.copilot"
+        "GitHub.copilot",
+        "GitHub.copilot-chat"
 	],
 	"forwardPorts": [8080, 8787],
     "workspaceFolder": "/home/rstudio/kazuyanagimoto.github.io",
