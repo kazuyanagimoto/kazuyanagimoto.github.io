@@ -32,5 +32,23 @@
       "/research/hetero2wfe/index.html",
       "/research/common-cheetah/index.html"
     ]
+  },
+  {
+    "listing": "/blog/ja/index.html",
+    "items": [
+      "/blog/2023/12/01/choose_color/ja/index.html"
+    ]
+  },
+  {
+    "listing": "/blog_ja/index.html",
+    "items": [
+      "/blog_ja/2023/12/01/choose_color_ja/index.html"
+    ]
+  },
+  {
+    "listing": "/blog-ja/index.html",
+    "items": [
+      "/blog-ja/2023/12/01/choose_color_ja/index.html"
+    ]
   }
 ]

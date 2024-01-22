@@ -572,5 +572,89 @@
     "title": "A Minimal & Portable Research Environment with Docker",
     "section": "Fin.",
     "text": "Fin.\nThe above is my template for a minimal and portable research environment and how to use it. Since everything is done in VSCode and Docker, you can reproduce exactly the same environment on other computers with very few steps. Also, since all the packages are cached, the build time of Docker is also significantly reduced, resulting in a lower maintenance cost. The best environment for me may not be the best environment for you, but I hope this article will help you in your research 🥂!"
+  },
+  {
+    "objectID": "blog/ja/index.html",
+    "href": "blog/ja/index.html",
+    "title": "日本語ブログ",
+    "section": "",
+    "text": "December 1, 2023\n        \n        \n            色の選び方\n            \n                \n                    R\n                \n                \n                    Observable JS\n                \n            \n            \n        \n        \n            \n        \n    \n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog/ja/index.html#section",
+    "href": "blog/ja/index.html#section",
+    "title": "日本語ブログ",
+    "section": "",
+    "text": "December 1, 2023\n        \n        \n            色の選び方\n            \n                \n                    R\n                \n                \n                    Observable JS\n                \n            \n            \n        \n        \n            \n        \n    \n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog_ja/index.html",
+    "href": "blog_ja/index.html",
+    "title": "日本語ブログ",
+    "section": "",
+    "text": "December 1, 2023\n        \n        \n            色の選び方\n            \n                \n                    R\n                \n                \n                    Observable JS\n                \n                \n                    日本語\n                \n            \n            \n        \n        \n            \n        \n    \n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog_ja/index.html#section",
+    "href": "blog_ja/index.html#section",
+    "title": "日本語ブログ",
+    "section": "",
+    "text": "December 1, 2023\n        \n        \n            色の選び方\n            \n                \n                    R\n                \n                \n                    Observable JS\n                \n                \n                    日本語\n                \n            \n            \n        \n        \n            \n        \n    \n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog/2023/12/01/choose_color_ja/index.html",
+    "href": "blog/2023/12/01/choose_color_ja/index.html",
+    "title": "色の選び方",
+    "section": "",
+    "text": "知識不足です."
+  },
+  {
+    "objectID": "blog/2023/12/01/choose_color_ja/index.html#どうして私のグラフの色はダサいのか",
+    "href": "blog/2023/12/01/choose_color_ja/index.html#どうして私のグラフの色はダサいのか",
+    "title": "色の選び方",
+    "section": "",
+    "text": "知識不足です."
+  },
+  {
+    "objectID": "blog_ja/2023/12/01/choose_color_ja/index.html",
+    "href": "blog_ja/2023/12/01/choose_color_ja/index.html",
+    "title": "色の選び方",
+    "section": "",
+    "text": "知識不足です."
+  },
+  {
+    "objectID": "blog_ja/2023/12/01/choose_color_ja/index.html#どうして私のグラフの色はダサいのか",
+    "href": "blog_ja/2023/12/01/choose_color_ja/index.html#どうして私のグラフの色はダサいのか",
+    "title": "色の選び方",
+    "section": "",
+    "text": "知識不足です."
+  },
+  {
+    "objectID": "blog-ja/index.html",
+    "href": "blog-ja/index.html",
+    "title": "日本語ブログ",
+    "section": "",
+    "text": "December 1, 2023\n        \n        \n            色の選び方\n            \n                \n                    R\n                \n                \n                    Observable JS\n                \n                \n                    日本語\n                \n            \n            \n        \n        \n            \n        \n    \n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog-ja/index.html#section",
+    "href": "blog-ja/index.html#section",
+    "title": "日本語ブログ",
+    "section": "",
+    "text": "December 1, 2023\n        \n        \n            色の選び方\n            \n                \n                    R\n                \n                \n                    Observable JS\n                \n                \n                    日本語\n                \n            \n            \n        \n        \n            \n        \n    \n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog-ja/2023/12/01/choose_color_ja/index.html",
+    "href": "blog-ja/2023/12/01/choose_color_ja/index.html",
+    "title": "色の選び方",
+    "section": "",
+    "text": "知識不足です."
+  },
+  {
+    "objectID": "blog-ja/2023/12/01/choose_color_ja/index.html#どうして私のグラフの色はダサいのか",
+    "href": "blog-ja/2023/12/01/choose_color_ja/index.html#どうして私のグラフの色はダサいのか",
+    "title": "色の選び方",
+    "section": "",
+    "text": "知識不足です."
   }
 ]

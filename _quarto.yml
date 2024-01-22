@@ -23,7 +23,11 @@ website:
       - text: Research
         file: research/index.qmd
       - text: Blog
-        file: blog/index.qmd
+        menu:
+          - text: English
+            href: blog/index.qmd
+          - text: 日本語
+            href: blog-ja/index.qmd
       - text: CV
         href: https://kazuyanagimoto.com/cv/cv.pdf
       - text: Talks

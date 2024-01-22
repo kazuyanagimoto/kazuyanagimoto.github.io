@@ -2,15 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://kazuyanagimoto.com/index.html</loc>
-    <lastmod>2023-09-12T06:39:19.798Z</lastmod>
+    <lastmod>2023-12-30T08:52:10.668Z</lastmod>
   </url>
   <url>
     <loc>https://kazuyanagimoto.com/blog/2022/12/27/quarto_tips/index.html</loc>
-    <lastmod>2023-09-12T06:34:06.407Z</lastmod>
+    <lastmod>2023-11-15T23:22:40.512Z</lastmod>
   </url>
   <url>
     <loc>https://kazuyanagimoto.com/blog/index.html</loc>
-    <lastmod>2023-09-12T06:33:42.416Z</lastmod>
+    <lastmod>2023-11-15T23:19:58.976Z</lastmod>
   </url>
   <url>
     <loc>https://kazuyanagimoto.com/blog/2022/05/24/docker_template/index.html</loc>
@@ -18,15 +18,15 @@
   </url>
   <url>
     <loc>https://kazuyanagimoto.com/about/index.html</loc>
-    <lastmod>2023-09-12T06:35:21.369Z</lastmod>
+    <lastmod>2023-11-15T23:20:06.716Z</lastmod>
   </url>
   <url>
     <loc>https://kazuyanagimoto.com/talks/index.html</loc>
-    <lastmod>2023-09-12T06:37:21.634Z</lastmod>
+    <lastmod>2023-11-15T23:20:23.928Z</lastmod>
   </url>
   <url>
     <loc>https://kazuyanagimoto.com/research/index.html</loc>
-    <lastmod>2023-09-12T06:38:50.087Z</lastmod>
+    <lastmod>2023-11-15T23:21:03.939Z</lastmod>
   </url>
   <url>
     <loc>https://kazuyanagimoto.com/blog/2023/04/30/quarto_multi_lang/index.html</loc>
@@ -34,7 +34,7 @@
   </url>
   <url>
     <loc>https://kazuyanagimoto.com/research/common-cheetah/index.html</loc>
-    <lastmod>2023-09-12T06:39:05.318Z</lastmod>
+    <lastmod>2023-11-15T22:47:35.161Z</lastmod>
   </url>
   <url>
     <loc>https://kazuyanagimoto.com/research/hetero2wfe/index.html</loc>
@@ -46,6 +46,38 @@
   </url>
   <url>
     <loc>https://kazuyanagimoto.com/blog/2023/09/06/docker_template/index.html</loc>
-    <lastmod>2023-09-12T06:30:49.409Z</lastmod>
+    <lastmod>2023-11-15T23:23:19.384Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kazuyanagimoto.com/blog/2023/12/01/choose_color/ja/index.html</loc>
+    <lastmod>2023-11-15T22:43:49.763Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kazuyanagimoto.com/blog/ja/index.html</loc>
+    <lastmod>2023-11-15T22:44:34.714Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kazuyanagimoto.com/blog_ja/index.html</loc>
+    <lastmod>2023-11-15T23:13:45.053Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kazuyanagimoto.com/blog_ja/2023/12/01/choose_color/index.html</loc>
+    <lastmod>2023-11-15T22:57:47.955Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kazuyanagimoto.com/blog/2023/12/01/choose_color_ja/index.html</loc>
+    <lastmod>2023-11-15T23:02:49.067Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kazuyanagimoto.com/blog_ja/2023/12/01/choose_color_ja/index.html</loc>
+    <lastmod>2023-11-15T23:13:44.783Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kazuyanagimoto.com/blog-ja/index.html</loc>
+    <lastmod>2023-12-30T08:51:58.217Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kazuyanagimoto.com/blog-ja/2023/12/01/choose_color_ja/index.html</loc>
+    <lastmod>2023-12-30T08:52:02.177Z</lastmod>
   </url>
 </urlset>
