@@ -14,7 +14,7 @@ format:
   html:
     code-fold: true
     code-tools: true
-jupyter: julia-1.9
+jupyter: julia-1.10
 ---
 
 ## Quarto Is not Just for Static Reports
