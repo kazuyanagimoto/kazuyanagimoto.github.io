@@ -15,11 +15,11 @@ status: working-papers
 pub-info:
   links:
     - name: Working Paper
-      url: "yanagimoto_why_2023.pdf"
+      url: "research/common-cheetah/yanagimoto_why_2023.pdf"
       local: true
       icon: fa-solid fa-file-pdf
     - name: Slides (SEHO2023)
-      url: "seho2023_yanagimoto.pdf"
+      url: "research/common-cheetah/seho2023_yanagimoto.pdf"
       local: true
       icon: fa-solid fa-chalkboard-user
   extra: >-
