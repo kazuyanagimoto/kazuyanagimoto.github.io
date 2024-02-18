@@ -45,5 +45,6 @@ vignettes/*.pdf
 # Julia
 Manifest.toml
 
-# Before Submission
-yanagimoto-why.pdf
+# Quarto
+docs/
+
