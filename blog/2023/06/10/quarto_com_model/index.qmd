@@ -14,7 +14,6 @@ format:
   html:
     code-fold: true
     code-tools: true
-jupyter: julia-1.10
 ---
 
 ## Quarto Is not Just for Static Reports
@@ -47,14 +46,13 @@ See the following code for the parameters and the solution algorithm.
 
 
 ```{julia}
-using Parameters
 using QuantEcon
 using Plots
 using LaTeXStrings
 using CSV
 using DataFrames
 
-@with_kw struct Model
+@kwdef struct Model
 	
 	# Grid for x
 	nₓ::Int = 30
@@ -86,7 +84,7 @@ u(c, m::Model) = isone(m.σ) ? log(c) : c^(1 - m.σ) / (1 - m.σ);
 
 function solve(m::Model)
 
-	@unpack T, nₓ, nₑ, r, w, β, P, x_grid, e_grid = m
+	(; T, nₓ, nₑ, r, w, β, P, x_grid, e_grid) = m
 
 	V = zeros(nₓ, nₑ, T)
 
