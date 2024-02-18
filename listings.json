@@ -1,5 +1,15 @@
 [
   {
+    "listing": "/blog/index.html",
+    "items": [
+      "/blog/2023/09/06/docker_template/index.html",
+      "/blog/2023/06/10/quarto_com_model/index.html",
+      "/blog/2023/04/30/quarto_multi_lang/index.html",
+      "/blog/2022/12/27/quarto_tips/index.html",
+      "/blog/2022/05/24/docker_template/index.html"
+    ]
+  },
+  {
     "listing": "/talks/index.html",
     "items": []
   },
@@ -9,16 +19,6 @@
       "/research/hetero2wfe/index.html",
       "/research/index.html",
       "/research/common-cheetah/index.html",
-      "/blog/2023/09/06/docker_template/index.html",
-      "/blog/2023/06/10/quarto_com_model/index.html",
-      "/blog/2023/04/30/quarto_multi_lang/index.html",
-      "/blog/2022/12/27/quarto_tips/index.html",
-      "/blog/2022/05/24/docker_template/index.html"
-    ]
-  },
-  {
-    "listing": "/blog/index.html",
-    "items": [
       "/blog/2023/09/06/docker_template/index.html",
       "/blog/2023/06/10/quarto_com_model/index.html",
       "/blog/2023/04/30/quarto_multi_lang/index.html",
