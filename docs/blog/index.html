@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -53,7 +53,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -62,8 +68,10 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <script>
@@ -76,9 +84,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-project','listing-website','listing-format','listing-bibliography','listing-_quarto-vars','listing-language','listing-freeze','listing-title-block-banner','listing-comments','listing-title','listing-date','listing-author','listing-categories','listing-image','listing-twitter-card','listing-knitr','listing-execute','listing-path','listing-outputHref','listing-date-modified','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-last-updated','listing-jupyter','listing-draft',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] }],
+      valueNames: ['listing-project','listing-execute','listing-website','listing-format','listing-bibliography','listing-_quarto-vars','listing-language','listing-title-block-banner','listing-comments','listing-title','listing-date','listing-author','listing-categories','listing-image','listing-twitter-card','listing-knitr','listing-path','listing-outputHref','listing-date-modified','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count','listing-last-updated','listing-jupyter','listing-draft',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
       
-      searchColumns: ["listing-project","listing-website","listing-format","listing-bibliography","listing-_quarto-vars","listing-language","listing-freeze","listing-title-block-banner","listing-comments","listing-title","listing-date","listing-author","listing-categories","listing-image","listing-twitter-card","listing-knitr","listing-execute","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-last-updated","listing-jupyter","listing-draft"],
+      searchColumns: ["listing-project","listing-execute","listing-website","listing-format","listing-bibliography","listing-_quarto-vars","listing-language","listing-title-block-banner","listing-comments","listing-title","listing-date","listing-author","listing-categories","listing-image","listing-twitter-card","listing-knitr","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-last-updated","listing-jupyter","listing-draft"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -104,9 +112,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-project','listing-website','listing-format','listing-bibliography','listing-_quarto-vars','listing-language','listing-freeze','listing-title-block-banner','listing-comments','listing-title','listing-date','listing-author','listing-draft','listing-categories','listing-image','listing-twitter-card','listing-execute','listing-path','listing-outputHref','listing-date-modified','listing-description','listing-filename','listing-file-modified','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] }],
+      valueNames: ['listing-project','listing-execute','listing-website','listing-format','listing-bibliography','listing-_quarto-vars','listing-language','listing-title-block-banner','listing-comments','listing-title','listing-date','listing-author','listing-draft','listing-categories','listing-image','listing-twitter-card','listing-path','listing-outputHref','listing-date-modified','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
       
-      searchColumns: ["listing-project","listing-website","listing-format","listing-bibliography","listing-_quarto-vars","listing-language","listing-freeze","listing-title-block-banner","listing-comments","listing-title","listing-date","listing-author","listing-draft","listing-categories","listing-image","listing-twitter-card","listing-execute","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time"],
+      searchColumns: ["listing-project","listing-execute","listing-website","listing-format","listing-bibliography","listing-_quarto-vars","listing-language","listing-title-block-banner","listing-comments","listing-title","listing-date","listing-author","listing-draft","listing-categories","listing-image","listing-twitter-card","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -136,6 +144,33 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 <meta name="twitter:title" content="Kazuharu Yanagimoto - Blog">
 <meta name="twitter:description" content="My notepad to keep some technical tips for Economic research">
 <meta name="twitter:image" content="https://kazuyanagimoto.com/blog/2022/05/24/docker_template/feature.png">
@@ -149,10 +184,10 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Kazuharu Yanagimoto</span>
     </a>
@@ -164,29 +199,29 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../about/index.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="../about/index.html"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../research/index.html" rel="" target="">
- <span class="menu-text">Research</span></a>
+    <a class="nav-link" href="../research/index.html"> 
+<span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../blog/index.html" rel="" target="" aria-current="page">
- <span class="menu-text">Blog</span></a>
+    <a class="nav-link active" href="../blog/index.html" aria-current="page"> 
+<span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://kazuyanagimoto.com/cv/cv.pdf" rel="" target="">
- <span class="menu-text">CV</span></a>
+    <a class="nav-link" href="https://kazuyanagimoto.com/cv/cv.pdf"> 
+<span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../talks/index.html" rel="" target="">
- <span class="menu-text">Talks</span></a>
+    <a class="nav-link" href="../talks/index.html"> 
+<span class="menu-text">Talks</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -204,7 +239,7 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
   </div>
     
   
-  <div class="quarto-title-meta">
+  <div class="quarto-title-meta column-page-left">
 
       
     
@@ -224,95 +259,128 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
 
 
 
+
 <section id="section" class="level2">
 <h2 class="anchored" data-anchor-id="section">2023</h2>
 <div id="listing-posts_2023" class="quarto-listing quarto-listing-container-custom">
-
 <div class="list blog">
-    <div class="blog-entry" data-index="0" data-categories="R,Docker,VSCode,Julia,LaTeX,Python" data-listing-date-sort="1693951200000" data-listing-file-modified-sort="1694425504414" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13">
+    
+    <div class="blog-entry" data-index="0" data-categories="R,Docker,VSCode,Julia,LaTeX,Python" data-listing-date-sort="1693951200000" data-listing-file-modified-sort="1708096358632" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2564">
         <div class="metadata">          
             <p class="date listing-date">September 6, 2023</p>
         </div>
         <div class="body">
             <p class="title listing-title"><a href="../blog/2023/09/06/docker_template/index.html">A Minimal &amp; Portable Research Environment with Docker</a></p>
+            
             <div class="post-categories listing-categories">
+                
                 <div class="post-category listing-category" onclick="window.quartoListingCategory('R'); return false;">
                     R
                 </div>
+                
                 <div class="post-category listing-category" onclick="window.quartoListingCategory('Docker'); return false;">
                     Docker
                 </div>
+                
                 <div class="post-category listing-category" onclick="window.quartoListingCategory('VSCode'); return false;">
                     VSCode
                 </div>
+                
                 <div class="post-category listing-category" onclick="window.quartoListingCategory('Julia'); return false;">
                     Julia
                 </div>
+                
                 <div class="post-category listing-category" onclick="window.quartoListingCategory('LaTeX'); return false;">
                     LaTeX
                 </div>
+                
                 <div class="post-category listing-category" onclick="window.quartoListingCategory('Python'); return false;">
                     Python
                 </div>
+                
             </div>
-            <p class="description listing-description">Since Docker is a simple and clean method to guarantee the replicablity of the research, I have been using Docker environments for my research since 2020. During these…</p>
+            
+            <p class="description listing-description">Since Docker is a simple and clean method to guarantee the replicablity of the research, I have been using Docker environments for my research since 2020. During these three…</p>
         </div>
+        
         <div class="thumbnail">
             <img src="https://source.unsplash.com/1cqIcrWFQBI" alt="A Minimal &amp; Portable Research Environment with Docker" title="A Minimal &amp; Portable Research Environment with Docker">
         </div>
+        
     </div>
-    <div class="blog-entry" data-index="1" data-categories="Julia,Observable JS,Quarto" data-listing-date-sort="1686348000000" data-listing-file-modified-sort="1694006351414" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+    
+    <div class="blog-entry" data-index="1" data-categories="Julia,Observable JS,Quarto" data-listing-date-sort="1686348000000" data-listing-file-modified-sort="1708212288152" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="778">
         <div class="metadata">          
             <p class="date listing-date">June 10, 2023</p>
         </div>
         <div class="body">
             <p class="title listing-title"><a href="../blog/2023/06/10/quarto_com_model/index.html">Scientific Communication with Quarto: Economic Models</a></p>
+            
             <div class="post-categories listing-categories">
+                
                 <div class="post-category listing-category" onclick="window.quartoListingCategory('Julia'); return false;">
                     Julia
                 </div>
+                
                 <div class="post-category listing-category" onclick="window.quartoListingCategory('Observable JS'); return false;">
                     Observable JS
                 </div>
+                
                 <div class="post-category listing-category" onclick="window.quartoListingCategory('Quarto'); return false;">
                     Quarto
                 </div>
+                
             </div>
+            
             <p class="description listing-description">Notebook coding (Jupyter, Rmarkdown, and Quarto) has gotten popular in the last decade. It allows us to tell a story with code and data, and it makes scientific…</p>
         </div>
+        
         <div class="thumbnail">
             <img src="../blog/2023/06/10/quarto_com_model/img/anim.gif" alt="Scientific Communication with Quarto: Economic Models" title="Scientific Communication with Quarto: Economic Models">
         </div>
+        
     </div>
-    <div class="blog-entry" data-index="2" data-categories="Julia,Python,R,Quarto,Stata" data-listing-date-sort="1682805600000" data-listing-file-modified-sort="1685701864121" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
+    
+    <div class="blog-entry" data-index="2" data-categories="Julia,Python,R,Quarto,Stata" data-listing-date-sort="1682805600000" data-listing-file-modified-sort="1708213934503" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="813">
         <div class="metadata">          
             <p class="date listing-date">April 30, 2023</p>
         </div>
         <div class="body">
             <p class="title listing-title"><a href="../blog/2023/04/30/quarto_multi_lang/index.html">Quarto Is Multi-lingual!</a></p>
+            
             <div class="post-categories listing-categories">
+                
                 <div class="post-category listing-category" onclick="window.quartoListingCategory('Julia'); return false;">
                     Julia
                 </div>
+                
                 <div class="post-category listing-category" onclick="window.quartoListingCategory('Python'); return false;">
                     Python
                 </div>
+                
                 <div class="post-category listing-category" onclick="window.quartoListingCategory('R'); return false;">
                     R
                 </div>
+                
                 <div class="post-category listing-category" onclick="window.quartoListingCategory('Quarto'); return false;">
                     Quarto
                 </div>
+                
                 <div class="post-category listing-category" onclick="window.quartoListingCategory('Stata'); return false;">
                     Stata
                 </div>
+                
             </div>
-            <p class="description listing-description">A common misunderstanding about Quarto is that we cannot use multiple languages within a document. Indeed, <em>Jupyter</em> cannot use multiple languages within a document, and we usually use the…</p>
+            
+            <p class="description listing-description">A common misunderstanding about Quarto is that we cannot use multiple languages within a document. Indeed, <em>Jupyter</em> cannot use multiple languages within a document, and we…</p>
         </div>
+        
         <div class="thumbnail">
             <img src="https://source.unsplash.com/aNVx2FpKAF8" alt="Quarto Is Multi-lingual!" title="Quarto Is Multi-lingual!">
         </div>
+        
     </div>
+    
 </div>
 <div class="listing-no-matching d-none">
 No matching items
@@ -323,46 +391,63 @@ No matching items
 <h2 class="anchored" data-anchor-id="section-1">2022</h2>
 <div id="listing-posts_2022" class="quarto-listing quarto-listing-container-custom">
 <div class="list blog">
-    <div class="blog-entry" data-index="0" data-categories="R,Quarto" data-listing-date-sort="1672182000000" data-listing-file-modified-sort="1672589334223" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10">
+    
+    <div class="blog-entry" data-index="0" data-categories="R,Quarto" data-listing-date-sort="1672182000000" data-listing-file-modified-sort="1708096358598" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1861">
         <div class="metadata">          
             <p class="date listing-date">December 28, 2022</p>
         </div>
         <div class="body">
             <p class="title listing-title"><a href="../blog/2022/12/27/quarto_tips/index.html">Some Quarto Tips for Academic Presentation</a></p>
+            
             <div class="post-categories listing-categories">
+                
                 <div class="post-category listing-category" onclick="window.quartoListingCategory('R'); return false;">
                     R
                 </div>
+                
                 <div class="post-category listing-category" onclick="window.quartoListingCategory('Quarto'); return false;">
                     Quarto
                 </div>
+                
             </div>
-            <p class="description listing-description">The other day, I used slides made with Quarto in a presentation at a conference. In the Economics community, 98% of people use Beamer of <span class="math inline">\(\LaTeX\)</span>, and about 2% use PowerPoint for their presentations. I personally don’t like Beamer’s design, and I think PowerPoint has a problem with maintainability (i.e., can it be…</p>
+            
+            <p class="description listing-description">The other day, I used slides made with Quarto in a presentation at a conference. In the Economics community, 98% of people use Beamer of <span class="math inline">\(\LaTeX\)</span>, and about 2% use…</p>
         </div>
+        
         <div class="thumbnail">
             <img src="https://source.unsplash.com/F2KRf_QfCqw" alt="Some Quarto Tips for Academic Presentation" title="Some Quarto Tips for Academic Presentation">
         </div>
+        
     </div>
-    <div class="blog-entry" data-index="1" data-categories="R,Docker" data-listing-date-sort="1653343200000" data-listing-file-modified-sort="1672589320053" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+    
+    <div class="blog-entry" data-index="1" data-categories="R,Docker" data-listing-date-sort="1653343200000" data-listing-file-modified-sort="1708210830874" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="559">
         <div class="metadata">          
             <p class="date listing-date">May 24, 2022</p>
         </div>
         <div class="body">
             <p class="title listing-title"><a href="../blog/2022/05/24/docker_template/index.html">My Docker Template for R</a></p>
+            
             <div class="post-categories listing-categories">
+                
                 <div class="post-category listing-category" onclick="window.quartoListingCategory('R'); return false;">
                     R
                 </div>
+                
                 <div class="post-category listing-category" onclick="window.quartoListingCategory('Docker'); return false;">
                     Docker
                 </div>
+                
             </div>
-            <p class="description listing-description">Docker is one of the best environments for <strong>reproductivity</strong> of the research. I use Docker for basically all my…</p>
+            
+            <p class="description listing-description">Docker is one of the best environments for <strong>reproductivity</strong> of the research. I use Docker for basically all my projects, but it took me about 2 years to get to a satisfactory…</p>
         </div>
+        
         <div class="thumbnail">
             <img src="../blog/2022/05/24/docker_template/feature.png" alt="My Docker Template for R" title="My Docker Template for R">
         </div>
+        
     </div>
+    
 </div>
 <div class="listing-no-matching d-none">
 No matching items
@@ -453,10 +538,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -466,8 +550,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -480,6 +573,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -523,6 +735,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -548,6 +761,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -610,11 +849,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left"><span class="faux-block"><i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> 2021–2023 Kazuharu Yanagimoto</span> <span class="faux-block">All content licensed under</span> <span class="faux-block"><a href="https://creativecommons.org/licenses/by-sa/4.0/"><i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> <i class="fa-brands fa-creative-commons-by" aria-label="creative-commons-by"></i> <i class="fa-brands fa-creative-commons-sa" aria-label="creative-commons-sa"></i> Creative Commons CC BY-SA 4.0</a></span></div>   
-    <div class="nav-footer-center"><span class="faux-block"><a href="https://github.com/kazuyanagimoto"><i class="fa-brands fa-github" aria-label="github"></i></a> <a href="https://twitter.com/kazuyanagimoto"><i class="fa-brands fa-twitter" aria-label="twitter"></i></a> <a href="https://www.linkedin.com/in/kazuharu-yanagimoto/"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a> <a href="https://zenn.dev/nicetak"><iconify-icon inline="" icon="simple-icons:zenn"></iconify-icon></a></span> <span class="faux-block"><i class="fa-brands fa-orcid" aria-label="orcid"></i> <strong>ORCID</strong> <a href="https://orcid.org/0009-0007-1967-8304">0009-0007-1967-8304</a></span></div>
-    <div class="nav-footer-right"><span class="faux-block">Made with <i class="fa-brands fa-r-project" aria-label="r-project"></i> and <a href="https://quarto.org/">Quarto</a></span> <span class="faux-block">View the source at <a href="https://github.com/kazuyanagimoto/kazuyanagimoto.github.io"><i class="fa-brands fa-github" aria-label="github"></i> GitHub</a></span></div>
+    <div class="nav-footer-left">
+<p><span class="faux-block"><i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> 2021–2023 Kazuharu Yanagimoto</span> <span class="faux-block">All content licensed under</span> <span class="faux-block"><a href="https://creativecommons.org/licenses/by-sa/4.0/"><i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> <i class="fa-brands fa-creative-commons-by" aria-label="creative-commons-by"></i> <i class="fa-brands fa-creative-commons-sa" aria-label="creative-commons-sa"></i> Creative Commons CC BY-SA 4.0</a></span></p>
+</div>   
+    <div class="nav-footer-center">
+<p><span class="faux-block"><a href="https://github.com/kazuyanagimoto"><i class="fa-brands fa-github" aria-label="github"></i></a> <a href="https://twitter.com/kazuyanagimoto"><i class="fa-brands fa-twitter" aria-label="twitter"></i></a> <a href="https://www.linkedin.com/in/kazuharu-yanagimoto/"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a> <a href="https://zenn.dev/nicetak"><iconify-icon inline="" icon="simple-icons:zenn"></iconify-icon></a></span> <span class="faux-block"><i class="fa-brands fa-orcid" aria-label="orcid"></i> <strong>ORCID</strong> <a href="https://orcid.org/0009-0007-1967-8304">0009-0007-1967-8304</a></span></p>
+</div>
+    <div class="nav-footer-right">
+<p><span class="faux-block">Made with <i class="fa-brands fa-r-project" aria-label="r-project"></i> and <a href="https://quarto.org/">Quarto</a></span> <span class="faux-block">View the source at <a href="https://github.com/kazuyanagimoto/kazuyanagimoto.github.io"><i class="fa-brands fa-github" aria-label="github"></i> GitHub</a></span></p>
+</div>
   </div>
 </footer>
+
 
 
 

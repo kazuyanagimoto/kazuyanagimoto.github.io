@@ -37,6 +37,10 @@ pub-status:
 <iframe class="slide-deck" src="seho2023_yanagimoto.html"></iframe>
 ```
 
+```{r}
+#| include: false
+```
+
 
 [{{< fa file-pdf >}} Working Paper](yanagimoto_why_2023.pdf) &nbsp;
 [ {{< fa chalkboard-teacher >}} Slides (SEHO2023)](seho2023_yanagimoto.pdf)

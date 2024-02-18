@@ -42,5 +42,8 @@ vignettes/*.pdf
 
 /.luarc.json
 
+# Julia
+Manifest.toml
+
 # Before Submission
 yanagimoto-why.pdf

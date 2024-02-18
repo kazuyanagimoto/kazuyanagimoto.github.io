@@ -125,7 +125,7 @@ allows us to use Stata on Rmarkdown (so as on Quarto!)
 ```{r, filename = "R"}
 # devtools::install_github("Hemken/Statamarkdown")
 library(Statamarkdown)
-haven::write_dta(penguins, "data/palmerpenguins.dta") # Pass data to Stata
+haven::write_dta(penguins, here::here("blog/2023/04/30/quarto_multi_lang/palmerpenguins.dta"))
 ```
 
 Thanks to `Statamarkdown`, we can easily set the working directory to the directory where the `.qmd` file exists by just calling `cd` in Stata.
@@ -138,7 +138,7 @@ Then, you can run Stata code in a code chunk.
 
 
 ```{stata, results="hide"}
-use data/palmerpenguins.dta, clear
+use palmerpenguins.dta, clear
 
 twoway (hist body_mass_g if species == 1, color(orange%40)) ///
   (hist body_mass_g if species == 2, color(emerald%40)) ///
@@ -159,7 +159,7 @@ But you have to manually export an image file for a plot and add it into a docum
 
 I think, one of the most useful case is when you want to support multiple source codes
 in a textbook or lecture notes.
-Quato supports [Tabset layout](https://quarto.org/docs/interactive/layout.html#tabset-panel)
+Quarto supports [Tabset layout](https://quarto.org/docs/interactive/layout.html#tabset-panel)
 and it's so smart!
 
 ::: {.panel-tabset}

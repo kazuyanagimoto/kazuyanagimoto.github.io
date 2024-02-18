@@ -7,6 +7,9 @@ project:
     watch-inputs: true
     navigate: true
 
+execute:
+  freeze: auto
+
 website:
   title: "Kazuharu Yanagimoto"
   favicon: static/img/favicon.drawio.svg
