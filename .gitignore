@@ -48,3 +48,5 @@ Manifest.toml
 # Quarto
 docs/
 
+# VSCode
+.vscode/settings.json
