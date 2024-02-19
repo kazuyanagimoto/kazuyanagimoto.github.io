@@ -14,6 +14,10 @@
     "items": []
   },
   {
+    "listing": "/software/index.html",
+    "items": []
+  },
+  {
     "listing": "/about/index.html",
     "items": [
       "/research/hetero2wfe/index.html",

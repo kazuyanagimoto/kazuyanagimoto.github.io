@@ -100,14 +100,14 @@
   {
     "objectID": "research/hetero2wfe/index.html#abstract",
     "href": "research/hetero2wfe/index.html#abstract",
-    "title": "Estimating Individual-level Child-penalties for (Improved) Childcare Policy Evaluation",
+    "title": "Estimating Heterogeneous Event-studies for Policy Evaluation",
     "section": "Abstract",
     "text": "Abstract"
   },
   {
     "objectID": "research/hetero2wfe/index.html#important-table-figure",
     "href": "research/hetero2wfe/index.html#important-table-figure",
-    "title": "Estimating Individual-level Child-penalties for (Improved) Childcare Policy Evaluation",
+    "title": "Estimating Heterogeneous Event-studies for Policy Evaluation",
     "section": "Important table & figure",
     "text": "Important table & figure"
   },
@@ -168,6 +168,20 @@
     "text": "2021\n\n\n    \n    \n        \n            \n            \n            \n        \n        \n            \n                \n                Git & GitHub Workshop \n                \n            \n            \n                September 24, 2021 ∙ \n                CEMFI\n                \n            \n            Here is a talk I gave on managing codes and data by using GitHub and DVC for economists\n\n            \n                \n                \n                    \n                    \n                    \n                         Slides\n                    \n                \n                \n                \n                    \n                    \n                    \n                         GitHub\n                    \n                \n                \n            \n        \n    \n    \n\n\nNo matching items"
   },
   {
+    "objectID": "software/index.html",
+    "href": "software/index.html",
+    "title": "Software",
+    "section": "",
+    "text": "unitdid \n                \n            \n            Providing functions for Unit-level Difference-in-Differences (Arkhangelsky, Yanagimot, and Zohar, 2024)\n\n            \n                \n                \n                    \n                    \n                    \n                         Documentation\n                    \n                \n                \n                \n                    \n                    \n                    \n                         GitHub\n                    \n                \n                \n            \n        \n    \n    \n    \n        \n            \n                \n                quartomonothemer \n                \n            \n            Makes a Monotone Theme for Quarto Revealjs, {ggplot2}, and {gt}.\n\n            \n                \n                \n                    \n                    \n                    \n                         Documentation\n                    \n                \n                \n                \n                    \n                    \n                    \n                         GitHub\n                    \n                \n                \n            \n        \n    \n    \n\n\nNo matching items"
+  },
+  {
+    "objectID": "software/index.html#r",
+    "href": "software/index.html#r",
+    "title": "Software",
+    "section": "",
+    "text": "unitdid \n                \n            \n            Providing functions for Unit-level Difference-in-Differences (Arkhangelsky, Yanagimot, and Zohar, 2024)\n\n            \n                \n                \n                    \n                    \n                    \n                         Documentation\n                    \n                \n                \n                \n                    \n                    \n                    \n                         GitHub\n                    \n                \n                \n            \n        \n    \n    \n    \n        \n            \n                \n                quartomonothemer \n                \n            \n            Makes a Monotone Theme for Quarto Revealjs, {ggplot2}, and {gt}.\n\n            \n                \n                \n                    \n                    \n                    \n                         Documentation\n                    \n                \n                \n                \n                    \n                    \n                    \n                         GitHub\n                    \n                \n                \n            \n        \n    \n    \n\n\nNo matching items"
+  },
+  {
     "objectID": "about/index.html",
     "href": "about/index.html",
     "title": "Hi There!",
@@ -214,7 +228,7 @@
     "href": "research/index.html#work-in-progress",
     "title": "Research ",
     "section": "WORK IN PROGRESS",
-    "text": "WORK IN PROGRESS\n\n\n    \n        \n        \n            \n                \n                    \n                        Estimating Individual-level Child-penalties for (Improved) Childcare Policy Evaluation\n                    \n                \n                \n                    \n                \n                \n                \n                    \n                    \n                        Two-way Fixed Effects\n                    \n                    \n                    \n                        Child Penalty\n                    \n                    \n                    \n                        Gender Gaps\n                    \n                    \n                \n                \n                \n                \n                    with Dmitry Arkhangelsky and Tom Zohar\n                \n                \n                \n                    \n                \n            \n            \n            \n        \n        \n    \n        \n    \n\n\nNo matching items"
+    "text": "WORK IN PROGRESS\n\n\n    \n        \n        \n            \n                \n                    \n                        Estimating Heterogeneous Event-studies for Policy Evaluation\n                    \n                \n                \n                    Application to the Child-penalty\n                \n                \n                \n                    \n                    \n                        Two-way Fixed Effects\n                    \n                    \n                    \n                        Child Penalty\n                    \n                    \n                    \n                        Gender Gaps\n                    \n                    \n                \n                \n                \n                \n                    with Dmitry Arkhangelsky and Tom Zohar\n                \n                \n                \n                    \n                \n            \n            \n            \n        \n        \n    \n        \n    \n\n\nNo matching items"
   },
   {
     "objectID": "blog/2023/06/10/quarto_com_model/index.html",
