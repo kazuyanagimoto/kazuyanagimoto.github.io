@@ -321,6 +321,60 @@ $footer-fg: $gray-500 !default;
     }
 }
 
+// Softwares
+.softwares {
+    .software-entry {
+        display: flex;
+        flex-direction: row;
+        font-family: $font-family-sans-serif;
+        line-height: 1.3;
+        margin-bottom: 0.3em;
+        column-gap: 0.7em;
+
+        .body {
+            flex: 1 1 auto;
+        }
+
+        .feature {
+            flex: 0 0 25%;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+                max-height: 120px;
+            }
+        }
+
+        .software-title {
+            font-family: $headings-font-family;
+            font-weight: 500;
+            font-size: 1.7em;
+            margin-bottom: 0.2em;
+        }
+        
+
+        .software-description {
+            font-weight: 500;
+            font-size: 1.0em;
+            margin-bottom: 0.5em;
+            color: $gray-700;
+        }
+
+        ul.software-links {
+            padding: 0 0.5em;
+            margin-bottom: 0;
+
+            .software-link {
+                display: inline-block;
+                white-space: nowrap;
+                margin: 0;
+                padding: 0.5em 1em 0.5em 0;
+                font-size: 0.85em;
+            }
+        }
+    }
+}
+
 
 // Talks
 .talks {

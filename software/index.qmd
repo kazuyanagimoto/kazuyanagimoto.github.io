@@ -1,0 +1,20 @@
+---
+title: "Software"
+description: "A list of my packages and software"
+listing:
+  - id: r
+    contents: r.yml
+    sort: "date desc"
+    template: ../static/html/software/listing.ejs
+title-block-banner: "#fff"
+page-layout: full
+toc: true
+toc-location: right
+toc-title: Language
+---
+
+
+## R
+
+:::{#r}
+:::

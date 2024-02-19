@@ -25,6 +25,8 @@ website:
         file: about/index.qmd
       - text: Research
         file: research/index.qmd
+      - text: Software
+        file: software/index.qmd
       - text: Blog
         file: blog/index.qmd
       - text: CV

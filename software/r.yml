@@ -1,0 +1,18 @@
+- title: "unitdid"
+  description: Providing functions for Unit-level Difference-in-Differences (Arkhangelsky, Yanagimot, and Zohar, 2024)
+  links:
+  - name: Documentation
+    url: http://kazuyanagimoto.com/unitdid/
+    icon: fa-solid fa-book
+  - name: GitHub
+    url: https://github.com/kazuyanagimoto/unitdid
+    icon: fa-brands fa-github
+- title: "quartomonothemer"
+  description: Makes a Monotone Theme for Quarto Revealjs, {ggplot2}, and {gt}.
+  links:
+  - name: Documentation
+    url: http://kazuyanagimoto.com/quartomonothemer/
+    icon: fa-solid fa-book
+  - name: GitHub
+    url: https://github.com/kazuyanagimoto/quartomonothemer
+    icon: fa-brands fa-github

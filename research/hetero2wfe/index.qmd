@@ -1,5 +1,6 @@
 ---
-title: "Estimating Individual-level Child-penalties for (Improved) Childcare Policy Evaluation"
+title: "Estimating Heterogeneous Event-studies for Policy Evaluation"
+subtitle: "Application to the Child-penalty"
 author:
   - name: Dmitry Arkhangelsky
     url: https://sites.google.com/view/dmitry-arkhangelsky/

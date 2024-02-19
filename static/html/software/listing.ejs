@@ -1,0 +1,32 @@
+```{=html}
+<div class="softwares">
+    <% for (const software of items) { %>
+    <div class="software-entry">
+        <div class="body">
+            <p class="software-title">
+                <% if (software.url) { %>
+                <a href="<%= software.url %>" target="_blank"><%= software.title %></a> 
+                <% } else { %>
+                <%= software.title %> 
+                <% } %>
+            </p>
+            <p class="software-description"><%= software.description %></p>
+
+            <ul class="software-links">
+                <% for (const link of software.links) { %>
+                <li class="software-link">
+                    <% if (link.local) { %>
+                    <a href="<%- software.path.substring(0, software.path.lastIndexOf('/')) %>/<%- link.url %>">
+                    <% } else { %>
+                    <a href="<%- link.url %>">
+                    <% } %>
+                        <i class="<%- link.icon %>"></i> <%= link.name %>
+                    </a>
+                </li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+    <% } %>
+</div>
+```
