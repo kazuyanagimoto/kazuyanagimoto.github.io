@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.4.551">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -269,7 +269,7 @@ window.Quarto = {
 <div id="listing-posts_2023" class="quarto-listing quarto-listing-container-custom">
 <div class="list blog">
     
-    <div class="blog-entry" data-index="0" data-categories="R,Docker,VSCode,Julia,LaTeX,Python" data-listing-date-sort="1693958400000" data-listing-file-modified-sort="1708380045172" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2564">
+    <div class="blog-entry" data-index="0" data-categories="R,Docker,VSCode,Julia,LaTeX,Python" data-listing-date-sort="1693958400000" data-listing-file-modified-sort="1709743998558" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2564">
         <div class="metadata">          
             <p class="date listing-date">September 6, 2023</p>
         </div>
@@ -313,7 +313,7 @@ window.Quarto = {
         
     </div>
     
-    <div class="blog-entry" data-index="1" data-categories="Julia,Observable JS,Quarto" data-listing-date-sort="1686355200000" data-listing-file-modified-sort="1708380045172" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="777">
+    <div class="blog-entry" data-index="1" data-categories="Julia,Observable JS,Quarto" data-listing-date-sort="1686355200000" data-listing-file-modified-sort="1709743998558" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="777">
         <div class="metadata">          
             <p class="date listing-date">June 10, 2023</p>
         </div>
@@ -345,7 +345,7 @@ window.Quarto = {
         
     </div>
     
-    <div class="blog-entry" data-index="2" data-categories="Julia,Python,R,Quarto,Stata" data-listing-date-sort="1682812800000" data-listing-file-modified-sort="1708380045144" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="813">
+    <div class="blog-entry" data-index="2" data-categories="Julia,Python,R,Quarto,Stata" data-listing-date-sort="1682812800000" data-listing-file-modified-sort="1709743998534" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="813">
         <div class="metadata">          
             <p class="date listing-date">April 30, 2023</p>
         </div>
@@ -396,7 +396,7 @@ No matching items
 <div id="listing-posts_2022" class="quarto-listing quarto-listing-container-custom">
 <div class="list blog">
     
-    <div class="blog-entry" data-index="0" data-categories="R,Quarto" data-listing-date-sort="1672185600000" data-listing-file-modified-sort="1708380045144" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1861">
+    <div class="blog-entry" data-index="0" data-categories="R,Quarto" data-listing-date-sort="1672185600000" data-listing-file-modified-sort="1709743998534" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1861">
         <div class="metadata">          
             <p class="date listing-date">December 28, 2022</p>
         </div>
@@ -424,7 +424,7 @@ No matching items
         
     </div>
     
-    <div class="blog-entry" data-index="1" data-categories="R,Docker" data-listing-date-sort="1653350400000" data-listing-file-modified-sort="1708380045144" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="559">
+    <div class="blog-entry" data-index="1" data-categories="R,Docker" data-listing-date-sort="1653350400000" data-listing-file-modified-sort="1709743998534" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="559">
         <div class="metadata">          
             <p class="date listing-date">May 24, 2022</p>
         </div>
@@ -542,6 +542,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/kazuyanagimoto\.com");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -576,7 +594,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');

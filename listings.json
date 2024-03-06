@@ -18,6 +18,13 @@
     "items": []
   },
   {
+    "listing": "/research/index.html",
+    "items": [
+      "/research/hetero2wfe/index.html",
+      "/research/common-cheetah/index.html"
+    ]
+  },
+  {
     "listing": "/about/index.html",
     "items": [
       "/research/hetero2wfe/index.html",
@@ -28,13 +35,6 @@
       "/blog/2023/04/30/quarto_multi_lang/index.html",
       "/blog/2022/12/27/quarto_tips/index.html",
       "/blog/2022/05/24/docker_template/index.html"
-    ]
-  },
-  {
-    "listing": "/research/index.html",
-    "items": [
-      "/research/hetero2wfe/index.html",
-      "/research/common-cheetah/index.html"
     ]
   }
 ]
