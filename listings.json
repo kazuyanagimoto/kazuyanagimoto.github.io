@@ -1,5 +1,9 @@
 [
   {
+    "listing": "/software/index.html",
+    "items": []
+  },
+  {
     "listing": "/blog/index.html",
     "items": [
       "/blog/2023/09/06/docker_template/index.html",
@@ -10,19 +14,15 @@
     ]
   },
   {
-    "listing": "/talks/index.html",
-    "items": []
-  },
-  {
-    "listing": "/software/index.html",
-    "items": []
-  },
-  {
     "listing": "/research/index.html",
     "items": [
       "/research/hetero2wfe/index.html",
       "/research/common-cheetah/index.html"
     ]
+  },
+  {
+    "listing": "/talks/index.html",
+    "items": []
   },
   {
     "listing": "/about/index.html",
