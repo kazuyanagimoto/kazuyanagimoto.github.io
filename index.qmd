@@ -7,8 +7,8 @@ about:
     - icon: github
       text: GitHub
       href: https://github.com/kazuyanagimoto
-    - icon: twitter
-      text: Twitter
+    - icon: twitter-x
+      text: X
       href: https://twitter.com/kazuyanagimoto
     - icon: linkedin
       text: LinkedIn
