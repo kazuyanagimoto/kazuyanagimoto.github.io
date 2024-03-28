@@ -227,6 +227,35 @@ $footer-fg: $gray-500 !default;
 
 
 // Research
+.quarto-title-block {
+    
+    .project-details {
+        padding: 0 0.5em 1em 0;
+    }
+
+    .project-links {
+        padding: 1em 0;
+    }
+
+    .project-link {
+        margin-right: 0.3em;
+        border: 1px solid $color-main;
+        border-radius: 0.25rem;
+        display: inline-block;
+        padding: 0.2em 0.5em;
+
+        &:hover {
+            background-color: $color-main;
+            color: $white;
+        }
+
+        &:hover a {
+            color: $white;
+        }
+    }
+
+}   
+
 .research {
     .research-entry {
         display: flex;
@@ -245,12 +274,11 @@ $footer-fg: $gray-500 !default;
         }
 
         .thumbnail {
-            flex: 0 0 25%;
+            flex: 0 0 35%;
 
             img {
                 width: 100%;
                 object-fit: cover;
-                max-height: 120px;
             }
         }
 

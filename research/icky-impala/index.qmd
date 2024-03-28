@@ -1,0 +1,26 @@
+---
+title: A Quantitative Model of Non/Late Marriage
+subtitle: Bargaining over Leisure
+date: today
+author:
+  - name: Kazuharu Yanagimoto
+    url: {{< var website-urle >}}
+    orcid: {{ < var orcid >}}
+    affiliation: CEMFI
+categories:
+  - Marriage
+  - Fertility
+  - Japan
+status: work-in-progress
+pub-info:
+  extra: >-
+    Presented at 47th Simposio de la Asociación Española de Economía (Valencia, December 15-17, 2022)
+hide-detail: true
+pub-status: 
+  status: Writing
+  class: warning
+  icon: fa-solid fa-pencil
+#   status: Under review
+#   class: success
+#   icon: fas fa-glasses
+---

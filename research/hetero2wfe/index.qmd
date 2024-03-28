@@ -1,12 +1,14 @@
 ---
-title: "Heterogeneous Event-studies"
+title: "Flexible Analysis of Individual Heterogeneity in Event Studies"
 subtitle: "Application to the Child-penalty"
+date: 2024-03-28
 author:
   - name: Dmitry Arkhangelsky
     url: https://sites.google.com/view/dmitry-arkhangelsky/
     affiliation: CEMFI
   - name: Kazuharu Yanagimoto
-    url: https://kazuyanagimoto.com/
+    url: {{< var website-url >}}
+    orcid: {{ < var orcid > }}
     affiliation: CEMFI
   - name: Tom Zohar
     url: https://tomzohar.com/
@@ -15,13 +17,20 @@ categories:
   - Two-way Fixed Effects
   - Child Penalty
   - Gender Gaps
-status: work-in-progress
+image: img/kmeans_earn_cage30_34.svg
+status: working-papers
 pub-info:
   coauthors: >-
     <a href="https://sites.google.com/view/dmitry-arkhangelsky/">Dmitry Arkhangelsky</a>
     and
     <a href="https://tomzohar.com/">Tom Zohar</a>
-hide-detail: true
+  links:
+    - name: "Latest WP"
+      url: https://arxiv.org/abs/2403.19563
+      icon: ai ai-arxiv
+    - name: Package (unitdid)
+      url: https://github.com/kazuyanagimoto/unitdid
+      icon: fa-brands fa-github
 pub-status: 
   status: Writing
   class: warning
@@ -31,15 +40,42 @@ pub-status:
 #   icon: fas fa-glasses
 ---
 
-## Important links
-
-
-
 ## Abstract
 
-
+We provide a practical toolkit for analyzing effect heterogeneity in event studies.
+We develop an estimation algorithm and adapt existing econometric results
+to provide its theoretical justification.
+We apply these tools to Dutch administrative data to study individual
+heterogeneity in the child-penalty (CP) context in three ways.
+First, we document significant heterogeneity in the individual-level CP trajectories,
+emphasizing the importance of going beyond the average CP.
+Second, we use individual-level estimates to examine the impact of childcare
+supply expansion policies.
+Our approach uncovers nonlinear treatment effects,
+challenging the conventional policy evaluation methods constrained to less flexible specifications.
+Third, we use the individual-level estimates as a regressor on the right-hand side
+to study the intergenerational elasticity of the CP between mothers and daughters.
+After adjusting for the measurement error bias, we find the elasticity of 24%.
+Our methodological framework contributes to empirical practice by offering
+a flexible approach tailored to specific research questions and contexts.
+We provide an open-source package ([unitdid](https://github.com/kazuyanagimoto/unitdid)) to facilitate widespread adoption.
 
 ## Important table & figure
 
+![Figure I (b): High Heterogeneity in Child-penalties (CP), Different CP Paths (K-Means)](img/kmeans_earn_cage30_34.svg)
 
+![Figure VII: Intergenerational mobility in CP: mothers vs daughters](img/IGMcp.svg)
 
+## BibTeX citation
+
+```bibtex
+@misc{arkhangelsky2024,
+  author = {Dmitry Arkhangelsky and Kazuharu Yanagimoto and Tom Zohar},
+  title = {Flexible Analysis of Individual Heterogeneity in Event Studies:
+           Application to the Child Penalty},
+  year = {2024},
+  eprint = {arXiv:2403.19563},
+}
+```
+
+{{< ai blank-just-to-add-ai-dependency-to-this-page >}}
