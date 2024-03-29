@@ -16,6 +16,7 @@
   {
     "listing": "/research/index.html",
     "items": [
+      "/research/icky-impala/index.html",
       "/research/hetero2wfe/index.html",
       "/research/common-cheetah/index.html"
     ]
@@ -27,8 +28,9 @@
   {
     "listing": "/about/index.html",
     "items": [
-      "/research/hetero2wfe/index.html",
       "/research/index.html",
+      "/research/icky-impala/index.html",
+      "/research/hetero2wfe/index.html",
       "/research/common-cheetah/index.html",
       "/blog/2023/09/06/docker_template/index.html",
       "/blog/2023/06/10/quarto_com_model/index.html",

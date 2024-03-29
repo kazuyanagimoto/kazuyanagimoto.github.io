@@ -2,14 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.551">
+<meta name="generator" content="quarto-1.4.552">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="">
 <meta name="description" content="This section contains my ongoing research">
 
-<title>Kazuharu Yanagimoto - Research </title>
+<title>Kazuharu Yanagimoto - Research</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -47,6 +46,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script src="../site_libs/quarto-contrib/iconify-1.0.0-beta.2/iconify-icon.min.js"></script>
+<link href="../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -77,48 +78,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-working-papers .list');
+    const listingTargetEl = window.document.querySelector('#listing-projects .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-project','listing-execute','listing-website','listing-format','listing-bibliography','listing-_quarto-vars','listing-language','listing-title','listing-subtitle','listing-date','listing-author','listing-categories','listing-status','listing-pub-info','listing-pub-status','listing-path','listing-outputHref','listing-date-modified','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count','listing-hide-detail',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      valueNames: ['listing-project','listing-execute','listing-website','listing-format','listing-bibliography','listing-_quarto-vars','listing-language','listing-title','listing-subtitle','listing-date','listing-author','listing-categories','listing-image','listing-status','listing-pub-info','listing-pub-status','listing-path','listing-outputHref','listing-date-modified','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count','listing-hide-detail',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
       
-      searchColumns: ["listing-project","listing-execute","listing-website","listing-format","listing-bibliography","listing-_quarto-vars","listing-language","listing-title","listing-subtitle","listing-date","listing-author","listing-categories","listing-status","listing-pub-info","listing-pub-status","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-hide-detail"],
+      searchColumns: ["listing-project","listing-execute","listing-website","listing-format","listing-bibliography","listing-_quarto-vars","listing-language","listing-title","listing-subtitle","listing-date","listing-author","listing-categories","listing-image","listing-status","listing-pub-info","listing-pub-status","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-hide-detail"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-working-papers'] = new List('listing-working-papers', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-work-in-progress .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-project','listing-execute','listing-website','listing-format','listing-bibliography','listing-_quarto-vars','listing-language','listing-title','listing-subtitle','listing-date','listing-author','listing-categories','listing-status','listing-pub-info','listing-pub-status','listing-path','listing-outputHref','listing-date-modified','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count','listing-hide-detail',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
-      
-      searchColumns: ["listing-project","listing-execute","listing-website","listing-format","listing-bibliography","listing-_quarto-vars","listing-language","listing-title","listing-subtitle","listing-date","listing-author","listing-categories","listing-status","listing-pub-info","listing-pub-status","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-hide-detail"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-work-in-progress'] = new List('listing-work-in-progress', options);
+    window['quarto-listings']['listing-projects'] = new List('listing-projects', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -177,7 +150,7 @@ window.Quarto = {
 };
 </script>
 
-<meta name="twitter:title" content="Kazuharu Yanagimoto - Research ">
+<meta name="twitter:title" content="Kazuharu Yanagimoto - Research">
 <meta name="twitter:description" content="This section contains my ongoing research">
 <meta name="twitter:creator" content="@kazuyanagimoto">
 <meta name="twitter:site" content="@kazuyanagimoto">
@@ -234,181 +207,221 @@ window.Quarto = {
 </header>
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Research <i class="fa-solid fa-books" aria-label="books"></i></h1>
-                  <div>
-        <div class="description">
-          This section contains my ongoing research
-        </div>
-      </div>
-                </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta column-page-left">
+            <div class="quarto-title-banner page-columns page-full">
+            <div class="quarto-title column-page-left">
+                <h1 class="title">Research</h1>
 
-      
+                
+                                <div>
+                    <div class="description">
+                        This section contains my ongoing research
+                    </div>
+                </div>
+                
+            </div>
+        </div>
     
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+        </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Contents</h2>
-   
-  <ul>
-  <li><a href="#working-papers" id="toc-working-papers" class="nav-link active" data-scroll-target="#working-papers">WORKING PAPERS</a></li>
-  <li><a href="#work-in-progress" id="toc-work-in-progress" class="nav-link" data-scroll-target="#work-in-progress">WORK IN PROGRESS</a></li>
-  </ul>
-</nav>
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Child Penalty">Child Penalty <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Gender Gaps">Gender Gaps <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Japan">Japan <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Social Norms">Social Norms <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Two-way Fixed Effects">Two-way Fixed Effects <span class="quarto-category-count">(2)</span></div></div></div>
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Child Penalty">Child Penalty <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Fertility">Fertility <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Gender Gaps">Gender Gaps <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Japan">Japan <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Marriage">Marriage <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Social Norms">Social Norms <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Two-way Fixed Effects">Two-way Fixed Effects <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
 
 
 
-
-<section id="working-papers" class="level2">
-<h2 class="anchored" data-anchor-id="working-papers">WORKING PAPERS</h2>
-<div id="listing-working-papers" class="quarto-listing quarto-listing-container-custom">
+<div id="listing-projects" class="quarto-listing quarto-listing-container-custom">
 <div class="list research">
     
-        
+    
     
         
-        <div class="research-entry" data-index="0" data-categories="Gender Gaps,Social Norms,Japan" data-listing-date-sort="1674172800000" data-listing-file-modified-sort="1711365484071" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="335">
-            <div class="body">
-                <p class="title listing-title">
-                    
-                        <a href="../research/common-cheetah/index.html">Why not Choose a Better Job?</a>
-                    
-                </p>
-                <p class="subtitle listing-subtitle">
-                    Flexibility, Social Norms, and Gender Gaps in Japan
-                </p>
-                
-                <div class="item-categories listing-categories">
-                    
-                    <div class="item-category listing-category" onclick="window.quartoListingCategory('Gender Gaps'); return false;">
-                        Gender Gaps
+            
+                <h2 class="anchored">WORKING PAPERS</h2>
+            
+            
+                <div class="research-entry" data-index="0" data-categories="Two-way Fixed Effects,Child Penalty,Gender Gaps" data-listing-date-sort="1711584000000" data-listing-file-modified-sort="1711698105464" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="221">
+                    <div class="body">
+                        <p class="title listing-title">
+                            
+                                <a href="../research/hetero2wfe/index.html">Flexible Analysis of Individual Heterogeneity in Event Studies</a>
+                            
+                        </p>
+                        <p class="subtitle listing-subtitle">
+                            Application to the Child-penalty
+                        </p>
+                        
+                        <div class="item-categories listing-categories">
+                            
+                            <div class="item-category listing-category" onclick="window.quartoListingCategory('Two-way Fixed Effects'); return false;">
+                                Two-way Fixed Effects
+                            </div>
+                            
+                            <div class="item-category listing-category" onclick="window.quartoListingCategory('Child Penalty'); return false;">
+                                Child Penalty
+                            </div>
+                            
+                            <div class="item-category listing-category" onclick="window.quartoListingCategory('Gender Gaps'); return false;">
+                                Gender Gaps
+                            </div>
+                            
+                        </div>
+                        
+                        
+                        <p class="research-coauthors">
+                            with <a href="https://sites.google.com/view/dmitry-arkhangelsky/">Dmitry Arkhangelsky</a> and <a href="https://tomzohar.com/">Tom Zohar</a>
+                        </p>
+                        
+                        <ul class="research-links">
+                            
+                                
+                                <li class="research-link">
+                                    
+                                    <a href="https://arxiv.org/abs/2403.19563">
+                                    
+                                        <i class="ai ai-arxiv"></i> Latest WP
+                                    </a>
+                                </li>
+                                
+                                <li class="research-link">
+                                    
+                                    <a href="https://github.com/kazuyanagimoto/unitdid">
+                                    
+                                        <i class="fa-brands fa-github"></i> Package (unitdid)
+                                    </a>
+                                </li>
+                                
+                            
+                        </ul>
                     </div>
                     
-                    <div class="item-category listing-category" onclick="window.quartoListingCategory('Social Norms'); return false;">
-                        Social Norms
+                        <div class="thumbnail">
+                            <img src="../research/hetero2wfe/img/kmeans_earn_cage30_34.svg" alt="Flexible Analysis of Individual Heterogeneity in Event Studies" title="Flexible Analysis of Individual Heterogeneity in Event Studies">
+                        </div>
+                    
+                </div>
+            
+                <div class="research-entry" data-index="1" data-categories="Gender Gaps,Social Norms,Japan" data-listing-date-sort="1674172800000" data-listing-file-modified-sort="1711698105392" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="329">
+                    <div class="body">
+                        <p class="title listing-title">
+                            
+                                <a href="../research/common-cheetah/index.html">Why not Choose a Better Job?</a>
+                            
+                        </p>
+                        <p class="subtitle listing-subtitle">
+                            Flexibility, Social Norms, and Gender Gaps in Japan
+                        </p>
+                        
+                        <div class="item-categories listing-categories">
+                            
+                            <div class="item-category listing-category" onclick="window.quartoListingCategory('Gender Gaps'); return false;">
+                                Gender Gaps
+                            </div>
+                            
+                            <div class="item-category listing-category" onclick="window.quartoListingCategory('Social Norms'); return false;">
+                                Social Norms
+                            </div>
+                            
+                            <div class="item-category listing-category" onclick="window.quartoListingCategory('Japan'); return false;">
+                                Japan
+                            </div>
+                            
+                        </div>
+                        
+                        
+                        <ul class="research-links">
+                            
+                                
+                                <li class="research-link">
+                                    
+                                    <a href="https://www.cemfi.es/ftp/wp/2405.pdf">
+                                    
+                                        <i class="fa-solid fa-file-pdf"></i> CEMFI WP
+                                    </a>
+                                </li>
+                                
+                                <li class="research-link">
+                                    
+                                    <a href="../research/common-cheetah/yanagimoto_common_cheetah.pdf">
+                                    
+                                        <i class="fa-regular fa-file-pdf"></i> Latest WP
+                                    </a>
+                                </li>
+                                
+                                <li class="research-link">
+                                    
+                                    <a href="../research/common-cheetah/seho2023_yanagimoto.pdf">
+                                    
+                                        <i class="fa-solid fa-chalkboard-user"></i> Slides (SEHO2023)
+                                    </a>
+                                </li>
+                                
+                            
+                        </ul>
                     </div>
                     
-                    <div class="item-category listing-category" onclick="window.quartoListingCategory('Japan'); return false;">
-                        Japan
+                        <div class="thumbnail">
+                            <img src="../research/common-cheetah/thumbnail.svg" alt="Why not Choose a Better Job?" title="Why not Choose a Better Job?">
+                        </div>
+                    
+                </div>
+            
+                    
+    
+        
+            
+                <h2 class="anchored">WORK in PROGRESS</h2>
+            
+            
+                <div class="research-entry" data-index="2" data-categories="Marriage,Fertility,Japan" data-listing-date-sort="1711670400000" data-listing-file-modified-sort="1711698105464" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+                    <div class="body">
+                        <p class="title listing-title">
+                            
+                                A Quantitative Model of Non/Late Marriage
+                            
+                        </p>
+                        <p class="subtitle listing-subtitle">
+                            Bargaining over Leisure
+                        </p>
+                        
+                        <div class="item-categories listing-categories">
+                            
+                            <div class="item-category listing-category" onclick="window.quartoListingCategory('Marriage'); return false;">
+                                Marriage
+                            </div>
+                            
+                            <div class="item-category listing-category" onclick="window.quartoListingCategory('Fertility'); return false;">
+                                Fertility
+                            </div>
+                            
+                            <div class="item-category listing-category" onclick="window.quartoListingCategory('Japan'); return false;">
+                                Japan
+                            </div>
+                            
+                        </div>
+                        
+                        
+                        <ul class="research-links">
+                            
+                        </ul>
                     </div>
                     
                 </div>
-                
-                
-                <ul class="research-links">
-                    
-                        
-                        <li class="research-link">
-                            
-                            <a href="https://www.cemfi.es/ftp/wp/2405.pdf">
-                            
-                                <i class="fa-solid fa-file-pdf"></i> CEMFI WP
-                            </a>
-                        </li>
-                        
-                        <li class="research-link">
-                            
-                            <a href="../research/common-cheetah/yanagimoto_common_cheetah.pdf">
-                            
-                                <i class="fa-regular fa-file-pdf"></i> Latest WP
-                            </a>
-                        </li>
-                        
-                        <li class="research-link">
-                            
-                            <a href="../research/common-cheetah/seho2023_yanagimoto.pdf">
-                            
-                                <i class="fa-solid fa-chalkboard-user"></i> Slides (SEHO2023)
-                            </a>
-                        </li>
-                        
-                    
-                </ul>
-            </div>
             
-            
-        </div>
-        
+                    
     
 </div>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
 </div>
-</section>
-<section id="work-in-progress" class="level2">
-<h2 class="anchored" data-anchor-id="work-in-progress">WORK IN PROGRESS</h2>
-<div id="listing-work-in-progress" class="quarto-listing quarto-listing-container-custom">
-<div class="list research">
-    
-        
-        <div class="research-entry" data-index="0" data-categories="Two-way Fixed Effects,Child Penalty,Gender Gaps" data-listing-file-modified-sort="1711365484139" data-listing-reading-time-sort="1" data-listing-word-count-sort="6">
-            <div class="body">
-                <p class="title listing-title">
-                    
-                        Heterogeneous Event-studies
-                    
-                </p>
-                <p class="subtitle listing-subtitle">
-                    Application to the Child-penalty
-                </p>
-                
-                <div class="item-categories listing-categories">
-                    
-                    <div class="item-category listing-category" onclick="window.quartoListingCategory('Two-way Fixed Effects'); return false;">
-                        Two-way Fixed Effects
-                    </div>
-                    
-                    <div class="item-category listing-category" onclick="window.quartoListingCategory('Child Penalty'); return false;">
-                        Child Penalty
-                    </div>
-                    
-                    <div class="item-category listing-category" onclick="window.quartoListingCategory('Gender Gaps'); return false;">
-                        Gender Gaps
-                    </div>
-                    
-                </div>
-                
-                
-                <p class="research-coauthors">
-                    with <a href="https://sites.google.com/view/dmitry-arkhangelsky/">Dmitry Arkhangelsky</a> and <a href="https://tomzohar.com/">Tom Zohar</a>
-                </p>
-                
-                <ul class="research-links">
-                    
-                </ul>
-            </div>
-            
-            
-        </div>
-        
-    
-        
-    
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
+<p><i class="ai  ai-blank-just-to-add-ai-dependency-to-this-page"></i></p>
 
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
