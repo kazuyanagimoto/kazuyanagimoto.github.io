@@ -63,3 +63,5 @@ My research field is family economics, broadly speaking, I am interested in ques
 ::: {style="text-align: right"}
 [See All →](../talks)
 :::
+
+{{< ai blank-just-to-add-ai-dependency-to-this-page >}}

@@ -1,0 +1,71 @@
+<header id="title-block-header" class="quarto-title-block default">
+    $if(home)$
+        <div class="quarto-title-banner">
+            <div class="quarto-title column-body">
+                <h1 class="title">$title$</h1>
+
+                $if(subtitle)$
+                <p class="subtitle lead">$subtitle$</p>
+                $endif$
+
+                $if(description)$
+                <div>
+                    <div class="description">
+                        $description$
+                    </div>
+                </div>
+                $endif$
+
+            </div>
+        </div>
+    $endif$
+
+    $if(home)$
+    $else$
+        <div class="quarto-title">
+            <h1 class="title">$title$</h1>
+
+            $if(subtitle)$
+            <p class="subtitle lead">$subtitle$</p>
+            $endif$
+
+            $if(categories)$
+            $if(quarto-template-params.title-block-categories)$
+            <div class="quarto-categories">
+                $for(categories)$
+                <div class="quarto-category">$categories$</div>
+                $endfor$
+            </div>
+            $endif$
+            $endif$
+        </div>
+        
+
+        $title-metadata.html()$
+
+        $if(pub-info.extra)$
+
+        <div class="quarto-title-meta-heading manual">Other details</div>
+        <div class="quarto-title-meta-contents">
+            <p class="publication-extra">
+                $pub-info.extra$
+            </p>
+        </div>
+        $endif$
+
+        $if(pub-info)$
+        <div class="project-details">
+            $if(pub-info.links)$
+            <ul class="project-links">
+                $for(pub-info.links)$
+                <li class="project-link">
+                    <a href="$pub-info.links.url$"><i class="$pub-info.links.icon$"></i> $pub-info.links.name$</a>
+                </li>
+                $endfor$
+            </ul>
+            $endif$
+        </div>
+
+        $endif$
+    $endif$
+</header>

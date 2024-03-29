@@ -1,32 +1,21 @@
 ---
-title: Research {{< fa books >}}
-description: "This section contains my ongoing research"
-author: ""
+title: Research
+description: This section contains my ongoing research
+home: true
 listing:
-  - id: working-papers
+  - id: projects
     contents: "/*/index.qmd"
     sort: "date desc"
-    template: ../static/html/research/working-papers.ejs
-    categories: true
-  - id: work-in-progress
-    contents: "/*/index.qmd"
-    sort: "date desc"
-    template: ../static/html/research/work-in-progress.ejs
-    categories: true
+    template: ../static/html/research/listing.ejs
+    categories: true  
 title-block-banner: "#fff"
 page-layout: full
 toc: true
 toc-location: right
 toc-title: Contents
-date-format: "MMMM D, YYYY"
 ---
 
-## WORKING PAPERS
-
-:::{#working-papers}
+:::{#projects}
 :::
 
-## WORK IN PROGRESS
-
-:::{#work-in-progress}
-:::
+{{< ai blank-just-to-add-ai-dependency-to-this-page >}}
