@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.552">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -75,6 +75,34 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-posts_2024 .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-project','listing-execute','listing-website','listing-format','listing-bibliography','listing-_quarto-vars','listing-language','listing-title-block-banner','listing-comments','listing-title','listing-date','listing-author','listing-draft','listing-categories','listing-image','listing-twitter-card','listing-toc','listing-path','listing-outputHref','listing-date-modified','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      
+      searchColumns: ["listing-project","listing-execute","listing-website","listing-format","listing-bibliography","listing-_quarto-vars","listing-language","listing-title-block-banner","listing-comments","listing-title","listing-date","listing-author","listing-draft","listing-categories","listing-image","listing-twitter-card","listing-toc","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-posts_2024'] = new List('listing-posts_2024', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
     const listingTargetEl = window.document.querySelector('#listing-posts_2023 .list');
@@ -171,13 +199,19 @@ window.Quarto = {
 };
 </script>
 
+<meta property="og:title" content="Kazuharu Yanagimoto - Blog">
+<meta property="og:description" content="My notepad to keep some technical tips for Economic research">
+<meta property="og:image" content="https://kazuyanagimoto.com/blog/2024/04/05/img/thumbnail.png">
+<meta property="og:site_name" content="Kazuharu Yanagimoto">
+<meta property="og:image:height" content="964">
+<meta property="og:image:width" content="1828">
 <meta name="twitter:title" content="Kazuharu Yanagimoto - Blog">
 <meta name="twitter:description" content="My notepad to keep some technical tips for Economic research">
-<meta name="twitter:image" content="https://kazuyanagimoto.com/blog/2022/05/24/docker_template/feature.png">
+<meta name="twitter:image" content="https://kazuyanagimoto.com/blog/2024/04/05/img/thumbnail.png">
 <meta name="twitter:creator" content="@kazuyanagimoto">
 <meta name="twitter:site" content="@kazuyanagimoto">
-<meta name="twitter:image-height" content="1240">
-<meta name="twitter:image-width" content="1748">
+<meta name="twitter:image-height" content="964">
+<meta name="twitter:image-width" content="1828">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -256,7 +290,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Docker">Docker <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Julia">Julia <span class="quarto-category-count">(3)</span></div><div class="category" data-category="LaTeX">LaTeX <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Observable JS">Observable JS <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Python">Python <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Quarto">Quarto <span class="quarto-category-count">(3)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Stata">Stata <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VSCode">VSCode <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(6)</span></div><div class="category" data-category="Docker">Docker <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Julia">Julia <span class="quarto-category-count">(3)</span></div><div class="category" data-category="LaTeX">LaTeX <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Observable JS">Observable JS <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Python">Python <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Quarto">Quarto <span class="quarto-category-count">(4)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Stata">Stata <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VSCode">VSCode <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -265,11 +299,50 @@ window.Quarto = {
 
 
 <section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section">2023</h2>
+<h2 class="anchored" data-anchor-id="section">2024</h2>
+<div id="listing-posts_2024" class="quarto-listing quarto-listing-container-custom">
+<div class="list blog">
+    
+    <div class="blog-entry" data-index="0" data-categories="R,Quarto" data-listing-date-sort="1712275200000" data-listing-file-modified-sort="1712274274458" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14" data-listing-word-count-sort="2778">
+        <div class="metadata">          
+            <p class="date listing-date">April 5, 2024</p>
+        </div>
+        <div class="body">
+            <p class="title listing-title"><a href="../blog/2024/04/05/index.html">Researching as if to Blog</a></p>
+            
+            <div class="post-categories listing-categories">
+                
+                <div class="post-category listing-category" onclick="window.quartoListingCategory('R'); return false;">
+                    R
+                </div>
+                
+                <div class="post-category listing-category" onclick="window.quartoListingCategory('Quarto'); return false;">
+                    Quarto
+                </div>
+                
+            </div>
+            
+            <p class="description listing-description">Jupyter Notebook and R Markdown are very useful tools for communication with co-authors and supervisors during the trial and error stage of research. However, as these files…</p>
+        </div>
+        
+        <div class="thumbnail">
+            <img src="../blog/2024/04/05/img/thumbnail.png" alt="Researching as if to Blog" title="Researching as if to Blog">
+        </div>
+        
+    </div>
+    
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1">2023</h2>
 <div id="listing-posts_2023" class="quarto-listing quarto-listing-container-custom">
 <div class="list blog">
     
-    <div class="blog-entry" data-index="0" data-categories="R,Docker,VSCode,Julia,LaTeX,Python" data-listing-date-sort="1693958400000" data-listing-file-modified-sort="1711698105392" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2564">
+    <div class="blog-entry" data-index="0" data-categories="R,Docker,VSCode,Julia,LaTeX,Python" data-listing-date-sort="1693958400000" data-listing-file-modified-sort="1712274274458" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2564">
         <div class="metadata">          
             <p class="date listing-date">September 6, 2023</p>
         </div>
@@ -313,7 +386,7 @@ window.Quarto = {
         
     </div>
     
-    <div class="blog-entry" data-index="1" data-categories="Julia,Observable JS,Quarto" data-listing-date-sort="1686355200000" data-listing-file-modified-sort="1711698105392" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="777">
+    <div class="blog-entry" data-index="1" data-categories="Julia,Observable JS,Quarto" data-listing-date-sort="1686355200000" data-listing-file-modified-sort="1712274274458" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="777">
         <div class="metadata">          
             <p class="date listing-date">June 10, 2023</p>
         </div>
@@ -345,7 +418,7 @@ window.Quarto = {
         
     </div>
     
-    <div class="blog-entry" data-index="2" data-categories="Julia,Python,R,Quarto,Stata" data-listing-date-sort="1682812800000" data-listing-file-modified-sort="1711698105368" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="813">
+    <div class="blog-entry" data-index="2" data-categories="Julia,Python,R,Quarto,Stata" data-listing-date-sort="1682812800000" data-listing-file-modified-sort="1712274274430" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="813">
         <div class="metadata">          
             <p class="date listing-date">April 30, 2023</p>
         </div>
@@ -391,12 +464,12 @@ No matching items
 </div>
 </div>
 </section>
-<section id="section-1" class="level2">
-<h2 class="anchored" data-anchor-id="section-1">2022</h2>
+<section id="section-2" class="level2">
+<h2 class="anchored" data-anchor-id="section-2">2022</h2>
 <div id="listing-posts_2022" class="quarto-listing quarto-listing-container-custom">
 <div class="list blog">
     
-    <div class="blog-entry" data-index="0" data-categories="R,Quarto" data-listing-date-sort="1672185600000" data-listing-file-modified-sort="1711698105368" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1861">
+    <div class="blog-entry" data-index="0" data-categories="R,Quarto" data-listing-date-sort="1672185600000" data-listing-file-modified-sort="1712274274430" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1861">
         <div class="metadata">          
             <p class="date listing-date">December 28, 2022</p>
         </div>
@@ -424,7 +497,7 @@ No matching items
         
     </div>
     
-    <div class="blog-entry" data-index="1" data-categories="R,Docker" data-listing-date-sort="1653350400000" data-listing-file-modified-sort="1711698105368" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="559">
+    <div class="blog-entry" data-index="1" data-categories="R,Docker" data-listing-date-sort="1653350400000" data-listing-file-modified-sort="1712274274430" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="559">
         <div class="metadata">          
             <p class="date listing-date">May 24, 2022</p>
         </div>
