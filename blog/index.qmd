@@ -3,6 +3,11 @@ title: "Blog"
 description: "My notepad to keep some technical tips for Economic research"
 author: ""
 listing:
+  - id: posts_2024
+    contents: "2024/**/index.qmd"
+    sort: "date desc"
+    template: ../static/html/blog/listing.ejs
+    categories: true
   - id: posts_2023
     contents: "2023/**/index.qmd"
     sort: "date desc"
@@ -20,6 +25,11 @@ date-format: "MMMM D, YYYY"
 code-tools: false
 comments: false
 ---
+
+## 2024
+
+:::{#posts_2024}
+:::
 
 ## 2023
 

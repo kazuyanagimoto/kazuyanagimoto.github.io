@@ -19,6 +19,7 @@ website:
   twitter-card:
     creator: "@kazuyanagimoto"
     site: "@kazuyanagimoto"
+  open-graph: true
   navbar:
     right:
       - text: About
