@@ -1,0 +1,15 @@
+{
+  "hash": "2dc23d23993c825d8f6a2f300d6a65a8",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Researching as if to Blog\"\ndate: 2024-04-28\nauthor: Kazuharu Yanagimoto\ndraft: false\ncategories: [R, Quarto]\nimage: img/thumbnail.png\ntwitter-card:\n    image: img/thumbnail.png\ntoc: true\n---\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(dplyr)\nlibrary(tidyr)\nlibrary(tinytable)\n\ndir_post <- here::here(\"blog/2024/04/28/\")\ndata <- arrow::read_parquet(file.path(dir_post, \"data\", \"cleaned.parquet\"))\n```\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\ntab <- data |>\n  filter(!is.na(weather), !is.na(gender)) |>\n  summarize(n = n(), .by = c(year, gender, weather)) |>  \n  pivot_wider(names_from = c(gender, year), values_from = n, names_prefix = \"n_\") |>\n  arrange(weather) |>\n  select(weather, starts_with(\"n_Men\"), starts_with(\"n_Women\"))\n```\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\ntab |>\n  `colnames<-`(c(\"\", rep(2019:2023, 2))) |>\n  tt() |>\n  group_tt(i = list(\"Good Weather\" = 1, \"Bad Weather\" = 3),\n           j = list(\" \" = 1, \"Men\" = 2:6, \"Women\" = 7:11)) |>\n  save_tt(file.path(dir_post, \"img\", \"table.pdf\"), overwrite = TRUE)\n```\n:::\n\n::: {.cell}\n\n```{.shell .cell-code}\npdf2svg blog/2024/04/28/img/table.pdf blog/2024/04/28/img/table.svg\n```\n:::",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
