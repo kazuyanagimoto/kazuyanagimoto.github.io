@@ -5,8 +5,6 @@ author: Kazuharu Yanagimoto
 draft: false
 categories: [R, Quarto]
 image: img/thumbnail.png
-twitter-card:
-    image: img/thumbnail.png
 toc: true
 ---
 

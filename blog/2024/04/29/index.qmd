@@ -4,8 +4,6 @@ date: 2024-04-29
 author: Kazuharu Yanagimoto
 categories: [R, Quarto, LaTeX]
 image: img/table_reg.svg
-twitter-card:
-    image: img/table_rev.svg
 toc: true
 ---
 
