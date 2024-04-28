@@ -5,3 +5,11 @@ title-block-banner: true
 comments: 
   giscus: 
     repo: kazuyanagimoto/kazuyanagimoto.github.io
+
+execute: 
+  warning: false
+  message: false
+
+format:
+  html:
+    code-tools: true
