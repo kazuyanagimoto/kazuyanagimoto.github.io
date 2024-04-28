@@ -1,0 +1,153 @@
+---
+title: "How I Choose Colors"
+date: 2024-04-15
+author: Kazuharu Yanagimoto
+draft: true
+categories: [R, Quarto]
+image: img/thumbnail.png
+twitter-card:
+    image: img/thumbnail.png
+toc: true
+execute:
+  eval: false
+  echo: false
+---
+
+```{r}
+library(dplyr)
+library(ggplot2)
+```
+
+## 学者ならグラフに命をかけろ
+
+みなさん, 論文読んでいますか. 私はあんまり読んでません.
+ほとんどはアブストラクトと表とグラフに目を通すだけです.
+
+
+## 色彩基礎理論
+
+コンピュータ上で色がRGBの0から255の値で表現されるということはこの記事を読む方はご存知でしょう.
+しかし, 色を選ぶ際にはRGB空間では原則選んではいけません, 色の印象とはRGB空間では**非線形**だからです.
+歪んだカップで計量し料理を行うようなものです.
+では, 人間の印象に合わせた空間とはなにか, それが色相 (**Hue**), 彩度 (**Saturation**), 明度 (**Value**) の三要素からなる**HSV**空間です.
+
+
+
+### HSV空間の定義
+
+学者なら定義が気になるでしょう. 以下ではHSV空間の三要素について説明します.
+
+::: {.callout-note}
+
+## 明度 (Value)
+
+明度は色の明るさを表す要素で, 0から1の値で表現され, 以下の式で定義される.
+
+$$
+\text{Value} = \frac{\max(R, G, B)}{255}
+$$
+
+:::
+
+これは`rgb(255, 255, 255)` が白であり, `rgb(0, 0, 0)` が黒であることからも分かる通り直感的です.
+$R = 255$ と固定して, $G$ と $B$ を変化させたときに, 明るさの印象が変化しないことを確かめることができます.
+
+```{r}
+tibble(xmin = 0, xmax = 1, ymin = 0, ymax = 1,
+       r = 255,
+       g = rep(seq(0, 255, length.out = 3), each = 3),
+       b = rep(seq(0, 255, length.out= 3), times = 3)) |>
+  mutate(lbl_facet = sprintf("RGB = (%s, %s, %s)", r, g, b)) |>
+  ggplot() +
+  geom_rect(aes(xmin = xmin, xmax= xmax, ymin = ymin, ymax = ymax,
+                fill = rgb(r, g, b, maxColorValue = 255))) +
+  scale_fill_identity() +
+  facet_wrap(~lbl_facet) +
+  theme_void() +
+  theme(legend.position = "none")
+```
+
+
+::: {.callout-note}
+
+## 彩度 (Saturation)
+
+彩度は色の鮮やかさを表す要素で, 0から1の値で表現され, 以下の式で定義される.
+
+$$
+\text{Saturation} = \frac{\max(R, G, B) - \min(R, G, B)}{\max(R, G, B)}
+$$
+
+:::
+
+彩度はRGBの最大と最小値の差の相対的な大きさです.
+$R$ を最大値, $B$ を最小値として $G$ がその間の値を取る時, 彩度が最大となります.
+
+```{r}
+tibble(xmin = 0, xmax = 1, ymin = 0, ymax = 1,
+       r = rep(seq(64, 255, length.out= 3), each = 3),
+       g = rep(seq(0, 1, length.out = 3), times = 3),
+       b = 0) |>
+  mutate(g = r * g,
+         lbl_facet = forcats::fct_reorder(sprintf("RGB = (%s, %s, %s)", r, g, b), row_number())) |>
+  ggplot() +
+  geom_rect(aes(xmin = xmin, xmax= xmax, ymin = ymin, ymax = ymax,
+                fill = rgb(r, g, b, maxColorValue = 255))) +
+  scale_fill_identity() +
+  facet_wrap(~lbl_facet) +
+  theme_void() +
+  theme(legend.position = "none")
+```
+
+
+
+::: {.callout-note}
+
+
+## 色相 (Hue)
+
+色相は色の種類を表す要素で, 0から360度で表現されます. 0度が赤, 120度が緑, 240度が青です.
+
+$$
+\text{Hue} = \begin{cases}
+    0 & \text{if } \max(R, G, B) = \min(R, G, B) \\
+    60 \times \left( \frac{G - B}{\max(R, G, B) - \min(R, G, B)} \right) & \text{if } \max(R, G, B) = R \\
+    60 \times \left( \frac{B - R}{\max(R, G, B) - \min(R, G, B)}\right) & \text{if } \max(R, G, B) = G \\
+    60 \times \left( \frac{R - G}{\max(R, G, B) - \min(R, G, B)}\right) & \text{if } \max(R, G, B) = B
+\end{cases}
+$$
+
+
+:::
+
+
+```{r}
+tibble(theta = seq(0, 2*pi, length.out = 7)) |>
+  mutate(x = sin(seq(0, 2*pi, length.out = 7)),
+         y = cos(seq(0, 2*pi, length.out = 7)),
+         r = case_when(between(theta, 0, pi/3) | between(theta, 5 * pi / 3, 2 * pi) ~ 255,
+                       between(theta, pi/3, 2 * pi/3) ~ 255 - 255 * (theta - pi / 3) / (pi / 3),
+                       between(theta, 4 * pi / 3, 5 * pi / 5) ~ 255 * ((theta - 5 * pi / 3)) / (pi / 3),
+                       .default = 0),
+         g = case_when(between(theta, pi/3, pi) ~ 255,
+                       between(theta, pi, 4*pi/3) ~ 255 - 255 * (theta - pi) / (pi / 3),
+                       .default = 0),
+          b = case_when(between(theta, pi, 5*pi/3) ~ 255,
+                        between(theta, 5*pi/3, 2*pi) ~ 255 - 255 * (theta - 2 * pi / 3) / (pi / 3),
+                        .default = 0))
+  ggplot(aes(x, y)) +
+    geom_point() +
+    geom_path() +
+    coord_fixed() +
+    theme_void()
+```
+
+## 論文における色の選び方
+
+- 調和の理論
+- 識別性とカラーセーフティ
+- グレーロバストネスと色に頼らないグラフの作成
+
+
+## ダサいグラフの言語化
+

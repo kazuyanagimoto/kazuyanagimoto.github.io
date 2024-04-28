@@ -9,6 +9,7 @@ project:
 
 execute:
   freeze: auto
+  warning: false
 
 website:
   title: "Kazuharu Yanagimoto"
@@ -48,6 +49,7 @@ website:
       
 format:
   html:
+    code-tools: true
     theme: 
       - static/html/custom.scss
 

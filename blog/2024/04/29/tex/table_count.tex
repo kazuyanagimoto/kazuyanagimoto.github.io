@@ -1,0 +1,30 @@
+\begin{tblr}[         %% tabularray outer open
+]                     %% tabularray outer close
+{                     %% tabularray inner open
+colspec={Q[]Q[]Q[]Q[]Q[]Q[]Q[]Q[]Q[]Q[]Q[]},
+cell{1}{2}={c=5,}{halign=c,},
+cell{1}{7}={c=5,}{halign=c,},
+cell{3}{1}={c=11}{},cell{6}{1}={c=11}{},
+cell{4}{1}={preto={\hspace{1em}}},
+cell{5}{1}={preto={\hspace{1em}}},
+cell{7}{1}={preto={\hspace{1em}}},
+cell{8}{1}={preto={\hspace{1em}}},
+cell{9}{1}={preto={\hspace{1em}}},
+cell{10}{1}={preto={\hspace{1em}}},
+cell{11}{1}={preto={\hspace{1em}}},
+row{3}={,cmd=\bfseries,},
+row{6}={,cmd=\bfseries,},
+}                     %% tabularray inner close
+\toprule
+& Men &  &  &  &  & Women &  &  &  &  \\ \cmidrule[lr]{2-6}\cmidrule[lr]{7-11}
+& 2019 & 2020 & 2021 & 2022 & 2023 & 2019 & 2020 & 2021 & 2022 & 2023 \\ \midrule %% TinyTableHeader
+Good Weather &&&&&&&&&&& \\
+sunny & 24399 & 14969 & 19208 & 20679 & 22451 & 11971 & 6958 & 9417 & 9894 & 10884 \\
+cloud &  1159 &  1190 &  1325 &  2082 &  2011 &   555 &  554 &  630 & 1000 &   947 \\
+Bad Weather &&&&&&&&&&& \\
+soft rain &  2126 &  1198 &  1281 &  1930 &  1224 &  1068 &  542 &  605 & 1002 &   607 \\
+hard rain &   386 &   202 &   386 &   527 &   317 &   222 &   96 &  210 &  275 &   201 \\
+snow &     2 &     2 &   124 &     5 & - & - & - &   38 &    1 & - \\
+hail &    11 &     5 &     6 &     4 &     3 &     3 &    3 &    1 &    2 &     4 \\
+\bottomrule
+\end{tblr}
