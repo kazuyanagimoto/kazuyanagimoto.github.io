@@ -49,7 +49,6 @@ website:
       
 format:
   html:
-    code-tools: true
     theme: 
       - static/html/custom.scss
 
