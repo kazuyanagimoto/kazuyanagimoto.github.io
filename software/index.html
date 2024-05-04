@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -90,6 +90,34 @@ ul.task-list li input[type="checkbox"] {
 
     window['quarto-listings'] = window['quarto-listings'] || {};
     window['quarto-listings']['listing-r'] = new List('listing-r', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-quarto .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-description','listing-links',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-title","listing-description","listing-links"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-quarto'] = new List('listing-quarto', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -237,6 +265,7 @@ window.Quarto = {
    
   <ul>
   <li><a href="#r" id="toc-r" class="nav-link active" data-scroll-target="#r">R</a></li>
+  <li><a href="#quarto" id="toc-quarto" class="nav-link" data-scroll-target="#quarto">Quarto</a></li>
   </ul>
 </nav>
     </div>
@@ -305,6 +334,71 @@ window.Quarto = {
                 <li class="software-link">
                     
                     <a href="https://github.com/kazuyanagimoto/quartomonothemer">
+                    
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+    
+    <div class="software-entry">
+        <div class="body">
+            <p class="software-title">
+                
+                typstcv 
+                
+            </p>
+            <p class="software-description">Provides supporting functions for Quarto + Typst CV</p>
+
+            <ul class="software-links">
+                
+                <li class="software-link">
+                    
+                    <a href="http://kazuyanagimoto.com/typstcv/">
+                    
+                        <i class="fa-solid fa-book"></i> Documentation
+                    </a>
+                </li>
+                
+                <li class="software-link">
+                    
+                    <a href="https://github.com/kazuyanagimoto/typstcv">
+                    
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+    
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="quarto" class="level2">
+<h2 class="anchored" data-anchor-id="quarto">Quarto</h2>
+<div id="listing-quarto" class="quarto-listing quarto-listing-container-custom">
+<div class="softwares">
+    
+    <div class="software-entry">
+        <div class="body">
+            <p class="software-title">
+                
+                quarto-awesomecv-typst 
+                
+            </p>
+            <p class="software-description">A Quarto + Typst Template for Awesome CV</p>
+
+            <ul class="software-links">
+                
+                <li class="software-link">
+                    
+                    <a href="https://github.com/kazuyanagimoto/quarto-awesomecv-typst">
                     
                         <i class="fa-brands fa-github"></i> GitHub
                     </a>
