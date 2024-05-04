@@ -16,3 +16,12 @@
   - name: GitHub
     url: https://github.com/kazuyanagimoto/quartomonothemer
     icon: fa-brands fa-github
+- title: "typstcv"
+  description: "Provides supporting functions for Quarto + Typst CV"
+  links:
+  - name: Documentation
+    url: http://kazuyanagimoto.com/typstcv/
+    icon: fa-solid fa-book
+  - name: GitHub
+    url: https://github.com/kazuyanagimoto/typstcv
+    icon: fa-brands fa-github

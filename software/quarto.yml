@@ -1,0 +1,6 @@
+- title: "quarto-awesomecv-typst"
+  description: A Quarto + Typst Template for Awesome CV
+  links:
+  - name: GitHub
+    url: https://github.com/kazuyanagimoto/quarto-awesomecv-typst
+    icon: fa-brands fa-github

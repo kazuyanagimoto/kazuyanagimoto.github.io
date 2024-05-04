@@ -6,6 +6,10 @@ listing:
     contents: r.yml
     sort: "date desc"
     template: ../static/html/software/listing.ejs
+  - id: quarto
+    contents: quarto.yml
+    sort: "date desc"
+    template: ../static/html/software/listing.ejs
 title-block-banner: "#fff"
 page-layout: full
 toc: true
@@ -17,4 +21,9 @@ toc-title: Language
 ## R
 
 :::{#r}
+:::
+
+## Quarto
+
+:::{#quarto}
 :::
