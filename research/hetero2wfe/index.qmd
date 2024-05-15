@@ -4,6 +4,7 @@ subtitle: "Application to the Child-penalty"
 date: 2024-03-28
 author:
   - name: Dmitry Arkhangelsky
+    orcid: 0000-0003-2346-1056
     url: https://sites.google.com/view/dmitry-arkhangelsky/
     affiliation: CEMFI
   - name: Kazuharu Yanagimoto
@@ -11,6 +12,7 @@ author:
     orcid: {{ < var orcid > }}
     affiliation: CEMFI
   - name: Tom Zohar
+    orcid: 0000-0002-7507-7673
     url: https://tomzohar.com/
     affiliation: CEMFI
 categories:
