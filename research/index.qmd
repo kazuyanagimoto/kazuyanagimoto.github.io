@@ -10,7 +10,7 @@ listing:
     categories: true  
 title-block-banner: "#fff"
 page-layout: full
-toc: true
+toc: true 
 toc-location: right
 toc-title: Contents
 ---

@@ -7,7 +7,7 @@
             <% if (items[0].status == "working-papers") { %>
                 <h2>WORKING PAPERS</h2>
             <% } else { %>
-                <h2>WORK in PROGRESS</h2>
+                <h2>WORK IN PROGRESS</h2>
             <% } %>
             <% for (const item of items) { %>
                 <div class="research-entry" <%= metadataAttrs(item) %>>
@@ -22,22 +22,42 @@
                         <p class="subtitle listing-subtitle">
                             <%= item.subtitle %>
                         </p>
-                        <% if (item.categories) { %>
-                        <div class="item-categories listing-categories">
-                            <% for (const category of item.categories) { %>
-                            <div class="item-category listing-category" onclick="window.quartoListingCategory('<%=category%>'); return false;">
-                                <%= category %>
-                            </div>
-                            <% } %>
-                        </div>
+                        <% if (item.authors) { %>
+                            <% coauthors = item.authors.filter(author => author.name != "Kazuharu Yanagimoto") %>
+                            <% n_coauthors = coauthors.length %>
+                            <p class="research-coauthors">
+                                with
+                                <% for (const author of coauthors) { %>
+                                    <% if (author.url) { %>
+                                        <a href="<%- author.url %>"><%= author.name %></a>
+                                    <% } else { %>
+                                        <%= author.name %>
+                                    <% } %>
+                                    <% if (n_coauthors > 2) { %>
+                                        <% if (author.name == coauthors[n_coauthors - 2].name) { %>
+                                            , and 
+                                        <% } else if (author.name != coauthors[n_coauthors - 1].name) { %>
+                                            , 
+                                        <% } %>
+                                    <% } else if (n_coauthors == 2) { %>
+                                        <% if (author.name != coauthors[n_coauthors - 1].name) { %>
+                                            and
+                                        <% } %>
+                                    <% } %>
+                                <% } %>
+                            </p>
                         <% } %>
-                        <% if (item['pub-info'].coauthors) { %>
-                        <p class="research-coauthors">
-                            with <%= item["pub-info"].coauthors %>
-                        </p>
+                        <% if (item.categories) { %>
+                            <div class="item-categories listing-categories">
+                                <% for (const category of item.categories) { %>
+                                <div class="item-category listing-category" onclick="window.quartoListingCategory('<%=category%>'); return false;">
+                                    <%= category %>
+                                </div>
+                                <% } %>
+                            </div>
                         <% } %>
                         <ul class="research-links">
-                            <% if (item['pub-info'].links) { %>
+                            <% if (item['pub-info'] && item['pub-info'].links) { %>
                                 <% for (const link of item['pub-info'].links) { %>
                                 <li class="research-link">
                                     <% if (link.local) { %>

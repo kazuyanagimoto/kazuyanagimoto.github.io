@@ -1,0 +1,46 @@
+---
+title: How can food programs support social distancing during a pandemic?
+subtitle: Evidence from the Bayan Bayanihan Program in the Philippines during COVID-19
+date: today
+authors:
+  - name: Christopher James Cabuay
+    url: https://portal.pep-net.org/public/researcher/12756
+    affiliation: De La Salle University
+  - name: Yasuyuki Sawada
+    url: https://sites.google.com/site/yasuyukisawadapage
+    orcid: 0000-0002-4167-7697
+    affiliation: University of Tokyo
+  - name: Elaine Tan
+    affiliation: Asian Development Bank
+  - name: Arturo Martinez, Jr.
+    affiliation: Asian Development Bank
+  - name: Daniel Boller
+    affilition: Asian Development Bank
+  - name: Joseph Albert
+    affilition: Asian Development Bank
+  - name: Nino Bulan
+    affilition: Asian Development Bank
+  - name: Ron Lester Durante
+    affilition: Asian Development Bank
+  - name: Soyoka Okumura
+    affiliation: University of Tokyo
+  - name: Kazuharu Yanagimoto
+    url: {{< var website-urle >}}
+    orcid: {{ < var orcid >}}
+    affiliation: CEMFI
+categories:
+  - COVID-19
+  - Phillipines
+status: work-in-progress
+pub-info:
+  coauthor: >-
+    <a href="https://portal.pep-net.org/public/researcher/12756">Christopher James Cabuay</a>, <a href="https://sites.google.com/site/yasuyukisawadapage/">Yasuyuki Sawada</a>, Elaine Tan, Arturo Martinez, Jr., Daniel Boller, Joseph Albert, Nino Bulan, Ron Lester Durante, and Soyoka Okumura
+hide-detail: true
+pub-status: 
+  status: Writing
+  class: warning
+  icon: fa-solid fa-pencil
+#   status: Under review
+#   class: success
+#   icon: fas fa-glasses
+---

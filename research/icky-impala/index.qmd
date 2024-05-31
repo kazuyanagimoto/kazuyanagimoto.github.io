@@ -12,9 +12,6 @@ categories:
   - Fertility
   - Japan
 status: work-in-progress
-pub-info:
-  extra: >-
-    Presented at 47th Simposio de la Asociación Española de Economía (Valencia, December 15-17, 2022)
 hide-detail: true
 pub-status: 
   status: Writing

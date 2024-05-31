@@ -2,7 +2,7 @@
 title: "Flexible Analysis of Individual Heterogeneity in Event Studies"
 subtitle: "Application to the Child-penalty"
 date: 2024-03-28
-author:
+authors:
   - name: Dmitry Arkhangelsky
     orcid: 0000-0003-2346-1056
     url: https://sites.google.com/view/dmitry-arkhangelsky/
@@ -19,13 +19,10 @@ categories:
   - Two-way Fixed Effects
   - Child Penalty
   - Gender Gaps
+  - Netherlands
 image: img/kmeans_earn_cage30_34.svg
 status: working-papers
 pub-info:
-  coauthors: >-
-    <a href="https://sites.google.com/view/dmitry-arkhangelsky/">Dmitry Arkhangelsky</a>
-    and
-    <a href="https://tomzohar.com/">Tom Zohar</a>
   links:
     - name: "Latest WP"
       url: https://arxiv.org/abs/2403.19563

@@ -14,6 +14,31 @@
                     <p class="subtitle listing-subtitle">
                         <%= item.subtitle %>
                     </p>
+                    <% if (item.authors) { %>
+                        <% coauthors = item.authors.filter(author => author.name != "Kazuharu Yanagimoto") %>
+                        <% n_coauthors = coauthors.length %>
+                        <p class="research-coauthors">
+                            with
+                            <% for (const author of coauthors) { %>
+                                <% if (author.url) { %>
+                                    <a href="<%- author.url %>"><%= author.name %></a>
+                                <% } else { %>
+                                    <%= author.name %>
+                                <% } %>
+                                <% if (n_coauthors > 2) { %>
+                                    <% if (author.name == coauthors[n_coauthors - 2].name) { %>
+                                        , and 
+                                    <% } else if (author.name != coauthors[n_coauthors - 1].name) { %>
+                                        , 
+                                    <% } %>
+                                <% } else if (n_coauthors == 2) { %>
+                                    <% if (author.name != coauthors[n_coauthors - 1].name) { %>
+                                        and
+                                    <% } %>
+                                <% } %>
+                            <% } %>
+                        </p>
+                    <% } %>
                     <% if (item.categories) { %>
                     <div class="item-categories listing-categories">
                         <% for (const category of item.categories) { %>
@@ -23,13 +48,8 @@
                         <% } %>
                     </div>
                     <% } %>
-                    <% if (item['pub-info'].coauthors) { %>
-                    <p class="research-coauthors">
-                        with <%= item["pub-info"].coauthors %>
-                    </p>
-                    <% } %>
                     <ul class="research-links">
-                        <% if (item['pub-info'].links) { %>
+                        <% if (item['pub-info'] && item['pub-info'].links) { %>
                             <% for (const link of item['pub-info'].links) { %>
                             <li class="research-link">
                                 <% if (link.local) { %>
