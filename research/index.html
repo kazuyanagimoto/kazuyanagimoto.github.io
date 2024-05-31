@@ -85,9 +85,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-project','listing-execute','listing-website','listing-format','listing-bibliography','listing-_quarto-vars','listing-language','listing-title','listing-subtitle','listing-date','listing-author','listing-categories','listing-image','listing-status','listing-pub-info','listing-pub-status','listing-path','listing-outputHref','listing-date-modified','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count','listing-hide-detail',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      valueNames: ['listing-project','listing-execute','listing-website','listing-format','listing-bibliography','listing-_quarto-vars','listing-language','listing-title','listing-subtitle','listing-date','listing-authors','listing-categories','listing-status','listing-pub-info','listing-hide-detail','listing-pub-status','listing-path','listing-outputHref','listing-date-modified','listing-author','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
       
-      searchColumns: ["listing-project","listing-execute","listing-website","listing-format","listing-bibliography","listing-_quarto-vars","listing-language","listing-title","listing-subtitle","listing-date","listing-author","listing-categories","listing-image","listing-status","listing-pub-info","listing-pub-status","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-hide-detail"],
+      searchColumns: ["listing-project","listing-execute","listing-website","listing-format","listing-bibliography","listing-_quarto-vars","listing-language","listing-title","listing-subtitle","listing-date","listing-authors","listing-categories","listing-status","listing-pub-info","listing-hide-detail","listing-pub-status","listing-path","listing-outputHref","listing-date-modified","listing-author","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-image"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -229,7 +229,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Child Penalty">Child Penalty <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Fertility">Fertility <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Gender Gaps">Gender Gaps <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Japan">Japan <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Marriage">Marriage <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Social Norms">Social Norms <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Two-way Fixed Effects">Two-way Fixed Effects <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="COVID-19">COVID-19 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Child Penalty">Child Penalty <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Fertility">Fertility <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Gender Gaps">Gender Gaps <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Japan">Japan <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Marriage">Marriage <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Netherlands">Netherlands <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Phillipines">Phillipines <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Social Norms">Social Norms <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Two-way Fixed Effects">Two-way Fixed Effects <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -246,7 +246,7 @@ window.Quarto = {
                 <h2 class="anchored">WORKING PAPERS</h2>
             
             
-                <div class="research-entry" data-index="0" data-categories="Two-way Fixed Effects,Child Penalty,Gender Gaps" data-listing-date-sort="1711584000000" data-listing-file-modified-sort="1715807192154" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="221">
+                <div class="research-entry" data-index="0" data-categories="Two-way Fixed Effects,Child Penalty,Gender Gaps,Netherlands" data-listing-date-sort="1711584000000" data-listing-file-modified-sort="1717149331883" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="221">
                     <div class="body">
                         <p class="title listing-title">
                             
@@ -257,26 +257,49 @@ window.Quarto = {
                             Application to the Child-penalty
                         </p>
                         
-                        <div class="item-categories listing-categories">
                             
-                            <div class="item-category listing-category" onclick="window.quartoListingCategory('Two-way Fixed Effects'); return false;">
-                                Two-way Fixed Effects
-                            </div>
                             
-                            <div class="item-category listing-category" onclick="window.quartoListingCategory('Child Penalty'); return false;">
-                                Child Penalty
-                            </div>
-                            
-                            <div class="item-category listing-category" onclick="window.quartoListingCategory('Gender Gaps'); return false;">
-                                Gender Gaps
-                            </div>
-                            
-                        </div>
+                            <p class="research-coauthors">
+                                with
+                                
+                                    
+                                        <a href="https://sites.google.com/view/dmitry-arkhangelsky/">Dmitry Arkhangelsky</a>
+                                    
+                                    
+                                        
+                                            and
+                                        
+                                    
+                                
+                                    
+                                        <a href="https://tomzohar.com/">Tom Zohar</a>
+                                    
+                                    
+                                        
+                                    
+                                
+                            </p>
                         
                         
-                        <p class="research-coauthors">
-                            with <a href="https://sites.google.com/view/dmitry-arkhangelsky/">Dmitry Arkhangelsky</a> and <a href="https://tomzohar.com/">Tom Zohar</a>
-                        </p>
+                            <div class="item-categories listing-categories">
+                                
+                                <div class="item-category listing-category" onclick="window.quartoListingCategory('Two-way Fixed Effects'); return false;">
+                                    Two-way Fixed Effects
+                                </div>
+                                
+                                <div class="item-category listing-category" onclick="window.quartoListingCategory('Child Penalty'); return false;">
+                                    Child Penalty
+                                </div>
+                                
+                                <div class="item-category listing-category" onclick="window.quartoListingCategory('Gender Gaps'); return false;">
+                                    Gender Gaps
+                                </div>
+                                
+                                <div class="item-category listing-category" onclick="window.quartoListingCategory('Netherlands'); return false;">
+                                    Netherlands
+                                </div>
+                                
+                            </div>
                         
                         <ul class="research-links">
                             
@@ -307,7 +330,7 @@ window.Quarto = {
                     
                 </div>
             
-                <div class="research-entry" data-index="1" data-categories="Gender Gaps,Social Norms,Japan" data-listing-date-sort="1674172800000" data-listing-file-modified-sort="1715807192082" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="329">
+                <div class="research-entry" data-index="1" data-categories="Gender Gaps,Social Norms,Japan" data-listing-date-sort="1674172800000" data-listing-file-modified-sort="1717149331811" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="329">
                     <div class="body">
                         <p class="title listing-title">
                             
@@ -318,22 +341,22 @@ window.Quarto = {
                             Flexibility, Social Norms, and Gender Gaps in Japan
                         </p>
                         
-                        <div class="item-categories listing-categories">
-                            
-                            <div class="item-category listing-category" onclick="window.quartoListingCategory('Gender Gaps'); return false;">
-                                Gender Gaps
-                            </div>
-                            
-                            <div class="item-category listing-category" onclick="window.quartoListingCategory('Social Norms'); return false;">
-                                Social Norms
-                            </div>
-                            
-                            <div class="item-category listing-category" onclick="window.quartoListingCategory('Japan'); return false;">
-                                Japan
-                            </div>
-                            
-                        </div>
                         
+                            <div class="item-categories listing-categories">
+                                
+                                <div class="item-category listing-category" onclick="window.quartoListingCategory('Gender Gaps'); return false;">
+                                    Gender Gaps
+                                </div>
+                                
+                                <div class="item-category listing-category" onclick="window.quartoListingCategory('Social Norms'); return false;">
+                                    Social Norms
+                                </div>
+                                
+                                <div class="item-category listing-category" onclick="window.quartoListingCategory('Japan'); return false;">
+                                    Japan
+                                </div>
+                                
+                            </div>
                         
                         <ul class="research-links">
                             
@@ -376,10 +399,127 @@ window.Quarto = {
     
         
             
-                <h2 class="anchored">WORK in PROGRESS</h2>
+                <h2 class="anchored">WORK IN PROGRESS</h2>
             
             
-                <div class="research-entry" data-index="2" data-categories="Marriage,Fertility,Japan" data-listing-date-sort="1715731200000" data-listing-file-modified-sort="1715807192154" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+                <div class="research-entry" data-index="2" data-categories="COVID-19,Phillipines" data-listing-date-sort="1717113600000" data-listing-file-modified-sort="1717149331811" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+                    <div class="body">
+                        <p class="title listing-title">
+                            
+                                How can food programs support social distancing during a pandemic?
+                            
+                        </p>
+                        <p class="subtitle listing-subtitle">
+                            Evidence from the Bayan Bayanihan Program in the Philippines during COVID-19
+                        </p>
+                        
+                            
+                            
+                            <p class="research-coauthors">
+                                with
+                                
+                                    
+                                        <a href="https://portal.pep-net.org/public/researcher/12756">Christopher James Cabuay</a>
+                                    
+                                    
+                                        
+                                            , 
+                                        
+                                    
+                                
+                                    
+                                        <a href="https://sites.google.com/site/yasuyukisawadapage">Yasuyuki Sawada</a>
+                                    
+                                    
+                                        
+                                            , 
+                                        
+                                    
+                                
+                                    
+                                        Elaine Tan
+                                    
+                                    
+                                        
+                                            , 
+                                        
+                                    
+                                
+                                    
+                                        Arturo Martinez, Jr.
+                                    
+                                    
+                                        
+                                            , 
+                                        
+                                    
+                                
+                                    
+                                        Daniel Boller
+                                    
+                                    
+                                        
+                                            , 
+                                        
+                                    
+                                
+                                    
+                                        Joseph Albert
+                                    
+                                    
+                                        
+                                            , 
+                                        
+                                    
+                                
+                                    
+                                        Nino Bulan
+                                    
+                                    
+                                        
+                                            , 
+                                        
+                                    
+                                
+                                    
+                                        Ron Lester Durante
+                                    
+                                    
+                                        
+                                            , and 
+                                        
+                                    
+                                
+                                    
+                                        Soyoka Okumura
+                                    
+                                    
+                                        
+                                    
+                                
+                            </p>
+                        
+                        
+                            <div class="item-categories listing-categories">
+                                
+                                <div class="item-category listing-category" onclick="window.quartoListingCategory('COVID-19'); return false;">
+                                    COVID-19
+                                </div>
+                                
+                                <div class="item-category listing-category" onclick="window.quartoListingCategory('Phillipines'); return false;">
+                                    Phillipines
+                                </div>
+                                
+                            </div>
+                        
+                        <ul class="research-links">
+                            
+                        </ul>
+                    </div>
+                    
+                </div>
+            
+                <div class="research-entry" data-index="3" data-categories="Marriage,Fertility,Japan" data-listing-date-sort="1717113600000" data-listing-file-modified-sort="1717149331883" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
                     <div class="body">
                         <p class="title listing-title">
                             
@@ -390,22 +530,22 @@ window.Quarto = {
                             Bargaining over Leisure
                         </p>
                         
-                        <div class="item-categories listing-categories">
-                            
-                            <div class="item-category listing-category" onclick="window.quartoListingCategory('Marriage'); return false;">
-                                Marriage
-                            </div>
-                            
-                            <div class="item-category listing-category" onclick="window.quartoListingCategory('Fertility'); return false;">
-                                Fertility
-                            </div>
-                            
-                            <div class="item-category listing-category" onclick="window.quartoListingCategory('Japan'); return false;">
-                                Japan
-                            </div>
-                            
-                        </div>
                         
+                            <div class="item-categories listing-categories">
+                                
+                                <div class="item-category listing-category" onclick="window.quartoListingCategory('Marriage'); return false;">
+                                    Marriage
+                                </div>
+                                
+                                <div class="item-category listing-category" onclick="window.quartoListingCategory('Fertility'); return false;">
+                                    Fertility
+                                </div>
+                                
+                                <div class="item-category listing-category" onclick="window.quartoListingCategory('Japan'); return false;">
+                                    Japan
+                                </div>
+                                
+                            </div>
                         
                         <ul class="research-links">
                             

@@ -3,6 +3,7 @@
     "listing": "/about/index.html",
     "items": [
       "/research/index.html",
+      "/research/bayan-bayanihan/index.html",
       "/research/icky-impala/index.html",
       "/research/hetero2wfe/index.html",
       "/research/common-cheetah/index.html",
@@ -30,6 +31,7 @@
   {
     "listing": "/research/index.html",
     "items": [
+      "/research/bayan-bayanihan/index.html",
       "/research/icky-impala/index.html",
       "/research/hetero2wfe/index.html",
       "/research/common-cheetah/index.html"
