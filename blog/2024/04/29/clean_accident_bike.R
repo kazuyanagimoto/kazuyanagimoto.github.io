@@ -1,9 +1,9 @@
 library(dplyr)
 library(stringr)
 
-dir_data <- here::here("blog/2024/04/28/data/")
+dir_data <- here::here("blog/2024/04/29/data/")
 
-arrow::read_parquet(file.path(dir_data, "raw.parquet")) |>
+nanoparquet::read_parquet(file.path(dir_data, "raw.parquet")) |>
   rename(id = num_expediente,
          date = fecha,
          hms = hora,
@@ -87,4 +87,4 @@ arrow::read_parquet(file.path(dir_data, "raw.parquet")) |>
                                      "Hospitalization within 24 hours",
                                      "Died within 24 hours")
     ) |>
-    arrow::write_parquet(file.path(dir_data, "cleaned.parquet"))
+    nanoparquet::write_parquet(file.path(dir_data, "cleaned.parquet"))

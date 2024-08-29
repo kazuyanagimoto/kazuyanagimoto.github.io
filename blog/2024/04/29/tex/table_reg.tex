@@ -1,23 +1,7 @@
-\begin{talltblr}[         %% tabularray outer open
-entry=none,label=none,
-note{}={+ p < 0.1, * p < 0.05, ** p < 0.01},
-]                     %% tabularray outer close
-{                     %% tabularray inner open
-colspec={Q[]Q[]Q[]Q[]Q[]Q[]Q[]},
-cell{1}{2}={c=3,}{halign=c,},
-cell{1}{5}={c=3,}{halign=c,},
-column{1}={halign=l,},
-column{2}={halign=c,},
-column{3}={halign=c,},
-column{4}={halign=c,},
-column{5}={halign=c,},
-column{6}={halign=c,},
-column{7}={halign=c,},
-hline{9}={1,2,3,4,5,6,7}{solid, 0.05em, black},
-}                     %% tabularray inner close
-\toprule
-& Hospitalization &  &  & Died within 24 hours &  &  \\ \cmidrule[lr]{2-4}\cmidrule[lr]{5-7}
-& (1) & (2) & (3) & (4) & (5) & (6) \\ \midrule %% TinyTableHeader
+\begin{tabular}{lllllll}
+\hline
+& Hospitalization &  &  & Died within 24 hours &  &  \\ \cmidrule(lr]{2-4}\cmidrule[lr){5-7}
+& (1) & (2) & (3) & (4) & (5) & (6) \\ \hline
 Passenger           & 0.026   & 0.501** & 0.475** & -1.697**  & -1.445*   & -1.440*   \\
 & (0.100) & (0.069) & (0.068) & (0.616)   & (0.631)   & (0.631)   \\
 Pedestrian          & 2.117** & 2.381** & 2.298** & 2.190**   & 2.326**   & 2.327**   \\
@@ -29,5 +13,5 @@ FE: Age Group       & X       & X       & X       & X         & X         & X   
 FE: Gender          & X       & X       & X       & X         & X         & X         \\
 FE: Type of Vehicle &         & X       & X       &           & X         & X         \\
 FE: Weather         &         &         & X       &           &           & X         \\
-\bottomrule
-\end{talltblr}
+\hline
+\end{tabular}

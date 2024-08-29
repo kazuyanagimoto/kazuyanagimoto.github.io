@@ -1,18 +1,24 @@
 ---
-title: A Quantitative Model of Non/Late Marriage
+title: A Quantitative Model of Non-Marriage and Fertility
 subtitle: Bargaining over Leisure
 date: today
 author:
   - name: Kazuharu Yanagimoto
-    url: {{< var website-urle >}}
+    url: {{< var website-url >}}
     orcid: {{ < var orcid >}}
     affiliation: CEMFI
 categories:
   - Marriage
   - Fertility
   - Japan
-status: work-in-progress
-hide-detail: true
+image: thumbnail.svg
+status: working-papers
+pub-info:
+  links:
+    - name: Latest WP
+      url: "yanagimoto_icky_impala.pdf"
+      local: true
+      icon: fa-regular fa-file-pdf
 pub-status: 
   status: Writing
   class: warning
@@ -21,3 +27,20 @@ pub-status:
 #   class: success
 #   icon: fas fa-glasses
 ---
+
+## Abstract
+
+This paper introduces a new factor contributing to the decline in marriage and fertility: the growth of leisure technology. Over recent decades, high-income countries have experienced two notable shifts in household and family dynamics. First, there has been a significant decline in marriage rates and fertility. Second, time has increasingly been allocated to leisure activities. This paper presents a unified model of marriage and fertility, incorporating intra-household bargaining dynamics. The model, calibrated using data from Japan between 2018 and 2022, is employed to assess the impact of leisure technology growth on marriage and fertility during 2005-2009. The findings highlight that leisure technology growth makes single life relatively more appealing compared to marriage and parenthood. The model explains nearly the entire decline in fertility and accounts for 25% of the decline in marriage in Japan during this period.
+
+## BibTeX citation
+
+```bibtex
+@unpublished{yanagimoto2024,
+    Title = {A Quantitative Model of Non-Marriage and Fertility:
+             Bargaining over Leisure},
+    Author = {Kazuharu Yanagimoto},
+    Note = {Working paper},
+    Year = {2024},
+    month = aug,
+}
+```

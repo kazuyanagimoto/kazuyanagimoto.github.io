@@ -50,3 +50,6 @@ docs/
 
 # VSCode
 .vscode/settings.json
+
+# Other
+.DS_Store
