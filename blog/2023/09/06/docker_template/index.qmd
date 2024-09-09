@@ -4,9 +4,9 @@ date: 2023-09-06
 author: Kazuharu Yanagimoto
 draft: false
 categories: [R, Docker, VSCode, Julia, LaTeX, Python]
-image: "https://source.unsplash.com/1cqIcrWFQBI"
+image: venti-views-1cqIcrWFQBI-unsplash.jpg
 twitter-card:
-    image: "https://source.unsplash.com/1cqIcrWFQBI"
+    image: venti-views-1cqIcrWFQBI-unsplash.jpg
 execute:
     eval: false
 ---
