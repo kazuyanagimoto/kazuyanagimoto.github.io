@@ -20,6 +20,9 @@ about:
 I am a PhD student at [CEMFI](https://www.cemfi.es/).<br>
 My research fields are labor, macro, and especially family economics.
 
+Download my [Job Market Paper {{< fa arrow-up-right-from-square >}}](research/icky-impala/yanagimoto_icky_impala.pdf)
+
+
 ::: {style="text-align: right"}
 [Read More →](../about)
 :::

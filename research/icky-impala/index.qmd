@@ -8,6 +8,7 @@ author:
     orcid: {{ < var orcid >}}
     affiliation: CEMFI
 categories:
+  - Job Market Paper
   - Marriage
   - Fertility
   - Japan
