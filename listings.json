@@ -1,32 +1,7 @@
 [
   {
-    "listing": "/software/index.html",
-    "items": []
-  },
-  {
-    "listing": "/blog/index.html",
-    "items": [
-      "/blog/2024/04/29/index.html",
-      "/blog/2024/04/05/index.html",
-      "/blog/2023/09/06/docker_template/index.html",
-      "/blog/2023/06/10/quarto_com_model/index.html",
-      "/blog/2023/04/30/quarto_multi_lang/index.html",
-      "/blog/2022/12/27/quarto_tips/index.html",
-      "/blog/2022/05/24/docker_template/index.html"
-    ]
-  },
-  {
     "listing": "/talks/index.html",
     "items": []
-  },
-  {
-    "listing": "/research/index.html",
-    "items": [
-      "/research/bayan-bayanihan/index.html",
-      "/research/icky-impala/index.html",
-      "/research/hetero2wfe/index.html",
-      "/research/common-cheetah/index.html"
-    ]
   },
   {
     "listing": "/about/index.html",
@@ -44,5 +19,30 @@
       "/blog/2022/12/27/quarto_tips/index.html",
       "/blog/2022/05/24/docker_template/index.html"
     ]
+  },
+  {
+    "listing": "/research/index.html",
+    "items": [
+      "/research/bayan-bayanihan/index.html",
+      "/research/icky-impala/index.html",
+      "/research/hetero2wfe/index.html",
+      "/research/common-cheetah/index.html"
+    ]
+  },
+  {
+    "listing": "/blog/index.html",
+    "items": [
+      "/blog/2024/04/29/index.html",
+      "/blog/2024/04/05/index.html",
+      "/blog/2023/09/06/docker_template/index.html",
+      "/blog/2023/06/10/quarto_com_model/index.html",
+      "/blog/2023/04/30/quarto_multi_lang/index.html",
+      "/blog/2022/12/27/quarto_tips/index.html",
+      "/blog/2022/05/24/docker_template/index.html"
+    ]
+  },
+  {
+    "listing": "/software/index.html",
+    "items": []
   }
 ]
