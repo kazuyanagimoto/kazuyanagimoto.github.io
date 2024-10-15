@@ -10,6 +10,8 @@ about:
     - icon: twitter-x
       text: X
       href: https://twitter.com/kazuyanagimoto
+    - text: "{{< iconify simple-icons bluesky >}} Bluesky"
+      href: https://bsky.app/profile/kazuyanagimoto.bsky.social
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/kazuharu-yanagimoto/
