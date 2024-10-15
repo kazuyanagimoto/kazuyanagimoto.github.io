@@ -139,11 +139,11 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
 
 <meta property="og:title" content="Quarto Is Multi-lingual! – Kazuharu Yanagimoto">
 <meta property="og:description" content="">
-<meta property="og:image" content="https://source.unsplash.com/aNVx2FpKAF8">
+<meta property="og:image" content="https://kazuyanagimoto.com/blog/2023/04/30/quarto_multi_lang/img/matthias-heyde-8HLMLrkyLvE-unsplash.jpg">
 <meta property="og:site_name" content="Kazuharu Yanagimoto">
 <meta name="twitter:title" content="Quarto Is Multi-lingual! – Kazuharu Yanagimoto">
 <meta name="twitter:description" content="">
-<meta name="twitter:image" content="https://source.unsplash.com/aNVx2FpKAF8">
+<meta name="twitter:image" content="https://kazuyanagimoto.com/blog/2023/04/30/quarto_multi_lang/img/matthias-heyde-8HLMLrkyLvE-unsplash.jpg">
 <meta name="twitter:creator" content="@kazuyanagimoto">
 <meta name="twitter:site" content="@kazuyanagimoto">
 <meta name="twitter:card" content="summary_large_image">
@@ -251,7 +251,7 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
 <h3 class="anchored" data-anchor-id="r">R</h3>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins, <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm)) <span class="sc">+</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">fill =</span> species), </span>
@@ -380,7 +380,7 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
 <span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>   <span class="bn">plotregion</span>(fcolor(<span class="bn">white</span>)) graphregion(fcolor(<span class="bn">white</span>))</span>
 <span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="kw">export</span> <span class="st">"figure/stata/hist.svg"</span>, <span class="kw">replace</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><img src="figure/stata/hist.svg" class="img-fluid"></p>
+<p><img src="img/stata/hist.svg" class="img-fluid"></p>
 <p>But you have to manually export an image file for a plot and add it into a document…</p>
 </section>
 <section id="tabset" class="level2">
@@ -471,11 +471,7 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
 <span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>   <span class="bn">plotregion</span>(fcolor(<span class="bn">white</span>)) graphregion(fcolor(<span class="bn">white</span>))</span>
 <span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="kw">qui</span> <span class="kw">graph</span> <span class="kw">export</span> <span class="st">"figure/stata/scatter.svg"</span>, <span class="kw">replace</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figure/stata/scatter.svg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
+<p>` <img src="img/stata/scatter.svg" class="img-fluid quarto-figure quarto-figure-center"></p>
 </div>
 </div>
 </div>
@@ -972,9 +968,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> 2023-4-30</span></span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> Kazuharu Yanagimoto</span></span>
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> [Julia, Python, R, Quarto, Stata]</span></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="an">image:</span><span class="co"> https://source.unsplash.com/aNVx2FpKAF8</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="an">image:</span><span class="co"> img/matthias-heyde-8HLMLrkyLvE-unsplash.jpg</span></span>
 <span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="an">twitter-card:</span></span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="co">  image: https://source.unsplash.com/aNVx2FpKAF8</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="co">  image: img/matthias-heyde-8HLMLrkyLvE-unsplash.jpg</span></span>
 <span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="an">knitr:</span><span class="co"> true</span></span>
 <span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="an">execute:</span><span class="co"> </span></span>
 <span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="co">  warning: false</span></span>
@@ -998,7 +994,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 4</span></span>
 <span id="cb12-32"><a href="#cb12-32" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-align: center</span></span>
 <span id="cb12-33"><a href="#cb12-33" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
-<span id="cb12-34"><a href="#cb12-34" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb12-34"><a href="#cb12-34" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb12-35"><a href="#cb12-35" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-36"><a href="#cb12-36" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins, <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm)) <span class="sc">+</span></span>
 <span id="cb12-37"><a href="#cb12-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">fill =</span> species), </span>
@@ -1119,7 +1115,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb12-156"><a href="#cb12-156" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-157"><a href="#cb12-157" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb12-158"><a href="#cb12-158" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-159"><a href="#cb12-159" aria-hidden="true" tabindex="-1"></a><span class="al">![](figure/stata/hist.svg)</span></span>
+<span id="cb12-159"><a href="#cb12-159" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/stata/hist.svg)</span></span>
 <span id="cb12-160"><a href="#cb12-160" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-161"><a href="#cb12-161" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-162"><a href="#cb12-162" aria-hidden="true" tabindex="-1"></a>But you have to manually export an image file for a plot and add it into a document...</span>
@@ -1209,8 +1205,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb12-252"><a href="#cb12-252" aria-hidden="true" tabindex="-1"></a><span class="in">   plotregion(fcolor(white)) graphregion(fcolor(white))</span></span>
 <span id="cb12-253"><a href="#cb12-253" aria-hidden="true" tabindex="-1"></a><span class="in">qui graph export "figure/stata/scatter.svg", replace</span></span>
 <span id="cb12-254"><a href="#cb12-254" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-255"><a href="#cb12-255" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-256"><a href="#cb12-256" aria-hidden="true" tabindex="-1"></a><span class="al">![](figure/stata/scatter.svg)</span>{fig-align=center}</span>
+<span id="cb12-255"><a href="#cb12-255" aria-hidden="true" tabindex="-1"></a>`</span>
+<span id="cb12-256"><a href="#cb12-256" aria-hidden="true" tabindex="-1"></a><span class="al">![](img/stata/scatter.svg)</span>{fig-align=center}</span>
 <span id="cb12-257"><a href="#cb12-257" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-258"><a href="#cb12-258" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb12-259"><a href="#cb12-259" aria-hidden="true" tabindex="-1"></a></span>
