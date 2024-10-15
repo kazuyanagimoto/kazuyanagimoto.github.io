@@ -3,9 +3,9 @@ title: "Quarto Is Multi-lingual!"
 date: 2023-4-30
 author: Kazuharu Yanagimoto
 categories: [Julia, Python, R, Quarto, Stata]
-image: https://source.unsplash.com/aNVx2FpKAF8
+image: img/matthias-heyde-8HLMLrkyLvE-unsplash.jpg
 twitter-card:
-  image: https://source.unsplash.com/aNVx2FpKAF8
+  image: img/matthias-heyde-8HLMLrkyLvE-unsplash.jpg
 knitr: true
 execute: 
   warning: false
@@ -29,7 +29,7 @@ Let's see the following example with `palmerpenguins::penguins` of @horst2020
 #| fig-height: 4
 #| fig-align: center
 library(palmerpenguins)
-library(tidyverse)
+library(ggplot2)
 
 ggplot(data = penguins, aes(x = flipper_length_mm)) +
   geom_histogram(aes(fill = species), 
@@ -150,7 +150,7 @@ graph export "figure/stata/hist.svg", replace
 
 ```
 
-![](figure/stata/hist.svg)
+![](img/stata/hist.svg)
 
 
 But you have to manually export an image file for a plot and add it into a document...
@@ -240,8 +240,8 @@ twoway scatter body_mass_g? flipper_length_mm, ///
    plotregion(fcolor(white)) graphregion(fcolor(white))
 qui graph export "figure/stata/scatter.svg", replace
 ```
-
-![](figure/stata/scatter.svg){fig-align=center}
+`
+![](img/stata/scatter.svg){fig-align=center}
 
 :::
 

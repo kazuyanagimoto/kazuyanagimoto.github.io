@@ -14,6 +14,7 @@ format:
   html:
     code-fold: true
     code-tools: true
+engine: julia
 ---
 
 ## Quarto Is not Just for Static Reports
