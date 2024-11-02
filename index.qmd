@@ -11,7 +11,7 @@ about:
       text: X
       href: https://twitter.com/kazuyanagimoto
     - text: "{{< iconify simple-icons bluesky >}} Bluesky"
-      href: https://bsky.app/profile/kazuyanagimoto.bsky.social
+      href: https://bsky.app/profile/kazuyanagimoto.com
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/kazuharu-yanagimoto/
