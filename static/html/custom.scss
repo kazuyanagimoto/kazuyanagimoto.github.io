@@ -363,13 +363,14 @@ $footer-fg: $gray-500 !default;
             flex: 1 1 auto;
         }
 
-        .feature {
-            flex: 0 0 25%;
+        .thumbnail {
+            flex: 0 0 35%;
 
             img {
                 width: 100%;
                 object-fit: cover;
-                max-height: 120px;
+                max-height: 200px;
+                object-position: top;
             }
         }
 

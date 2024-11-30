@@ -1,22 +1,21 @@
 ```{=html}
 <div class="softwares">
-    <% for (const software of items) { %>
+    <% for (const item of items) { %>
     <div class="software-entry">
         <div class="body">
             <p class="software-title">
-                <% if (software.url) { %>
-                <a href="<%= software.url %>" target="_blank"><%= software.title %></a> 
+                <% if (item.url) { %>
+                <a href="<%= item.url %>" target="_blank"><%= item.title %></a> 
                 <% } else { %>
-                <%= software.title %> 
+                <%= item.title %> 
                 <% } %>
             </p>
-            <p class="software-description"><%= software.description %></p>
-
+            <p class="software-description"><%= item.description %></p>
             <ul class="software-links">
-                <% for (const link of software.links) { %>
+                <% for (const link of item.links) { %>
                 <li class="software-link">
                     <% if (link.local) { %>
-                    <a href="<%- software.path.substring(0, software.path.lastIndexOf('/')) %>/<%- link.url %>">
+                    <a href="<%- item.path.substring(0, item.path.lastIndexOf('/')) %>/<%- link.url %>">
                     <% } else { %>
                     <a href="<%- link.url %>">
                     <% } %>
@@ -26,6 +25,17 @@
                 <% } %>
             </ul>
         </div>
+        <% if (item.image) { %>
+            <div class="thumbnail">
+                <% if (item.url) { %>
+                    <a href="<%= item.url %>" target="_blank">
+                        <img src="<%= item.image %>" alt="<%= item.title %>" title="<%= item.title %>" />
+                    </a>
+                <% } else { %>
+                    <img src="<%= item.image %>" alt="<%= item.title %>" title="<%= item.title %>" />
+                <% } %>
+            </div>
+        <% } %>
     </div>
     <% } %>
 </div>
