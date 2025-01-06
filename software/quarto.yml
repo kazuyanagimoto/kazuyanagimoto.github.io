@@ -14,7 +14,7 @@
 - title: awesomecv-typst
   description: A Quarto + Typst Template for Awesome CV
   url: https://github.com/kazuyanagimoto/quarto-awesomecv-typst
-  image: https://github.com/kazuyanagimoto/quarto-awesomecv-typst/blob/main/assets/img/thumbnail.svg?raw=true
+  image: https://github.com/kazuyanagimoto/quarto-awesomecv-typst/blob/main/assets/img/thumbnail.png?raw=true
   links:
   - name: GitHub
     url: https://github.com/kazuyanagimoto/quarto-awesomecv-typst
