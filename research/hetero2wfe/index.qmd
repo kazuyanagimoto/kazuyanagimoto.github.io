@@ -1,7 +1,7 @@
 ---
-title: "Flexible Analysis of Individual Heterogeneity in Event Studies"
-subtitle: "Application to the Child-penalty"
+title: Using Event Studies as an Outcome in Causal Analysis
 date: 2024-03-28
+date-modified: 2025-01-29
 authors:
   - name: Dmitry Arkhangelsky
     orcid: 0000-0003-2346-1056
@@ -20,7 +20,7 @@ categories:
   - Child Penalty
   - Gender Gaps
   - Netherlands
-image: img/kmeans_earn_cage30_34.svg
+image: img/dist_earn.png
 status: working-papers
 pub-info:
   links:
@@ -34,46 +34,38 @@ pub-status:
   status: Writing
   class: warning
   icon: fa-solid fa-pencil
-#   status: Under review
-#   class: success
-#   icon: fas fa-glasses
+lightbox: true
 ---
 
 ## Abstract
 
-We provide a practical toolkit for analyzing effect heterogeneity in event studies.
-We develop an estimation algorithm and adapt existing econometric results
-to provide its theoretical justification.
-We apply these tools to Dutch administrative data to study individual
-heterogeneity in the child-penalty (CP) context in three ways.
-First, we document significant heterogeneity in the individual-level CP trajectories,
-emphasizing the importance of going beyond the average CP.
-Second, we use individual-level estimates to examine the impact of childcare
-supply expansion policies.
-Our approach uncovers nonlinear treatment effects,
-challenging the conventional policy evaluation methods constrained to less flexible specifications.
-Third, we use the individual-level estimates as a regressor on the right-hand side
-to study the intergenerational elasticity of the CP between mothers and daughters.
-After adjusting for the measurement error bias, we find the elasticity of 24%.
-Our methodological framework contributes to empirical practice by offering
-a flexible approach tailored to specific research questions and contexts.
-We provide an open-source package ([unitdid](https://github.com/kazuyanagimoto/unitdid)) to facilitate widespread adoption.
+We propose a causal framework for applications where the outcome of interest is a unit-specific response to events, which first needs to be measured from the data. We suggest a two-step procedure: first, estimate unit-level event studies (ULES) by comparing pre- and post-event outcomes of each unit to a suitable control group; second, use the ULES in causal analysis. We outline the theoretical conditions under which this two-step procedure produces interpretable results, highlighting the underlying statistical challenges. Our method overcomes the limitations of regression-based approaches prevalent in the empirical literature, allowing for a deeper examination of heterogeneity and dynamic effects. We apply this framework to analyze the impact of childcare provision reform on the magnitude of child penalties in the Netherlands, illustrating its ability to reveal nuanced positive relationships between childcare provision and parental labor supply. In contrast, traditional regression-based analysis delivers negative effects, thereby emphasizing the benefits of our two-step approach.
 
 ## Important table & figure
 
-![Figure I (b): High Heterogeneity in Child-penalties (CP), Different CP Paths (K-Means)](img/kmeans_earn_cage30_34.svg)
+::: {layout-ncol="2"}
 
-![Figure VII: Intergenerational mobility in CP: mothers vs daughters](img/IGMcp.svg)
+![Figure I (a): Distribution of individual CP](img/dist_earn.png)
+
+![Figure IV (a): Effect of the childcare provision expansion on child penalties of earnings (Eᵢ−1)](img/reg_cci_earn_event.svg)
+
+:::
 
 ## BibTeX citation
 
 ```bibtex
-@misc{arkhangelsky2024,
-  author = {Dmitry Arkhangelsky and Kazuharu Yanagimoto and Tom Zohar},
-  title = {Flexible Analysis of Individual Heterogeneity in Event Studies:
-           Application to the Child Penalty},
-  year = {2024},
-  eprint = {arXiv:2403.19563},
+@online{arkhangelsky2025,
+  title = {Using Event Studies as an Outcome in Causal Analysis},
+  author = {Arkhangelsky, Dmitry and Yanagimoto, Kazuharu and Zohar, Tom},
+  date = {2025-01-29},
+  eprint = {2403.19563},
+  eprinttype = {arXiv},
+  eprintclass = {econ},
+  doi = {10.48550/arXiv.2403.19563},
+  url = {http://arxiv.org/abs/2403.19563},
+  langid = {english},
+  pubstate = {prepublished},
+  keywords = {Economics - General Economics,Quantitative Finance - Economics}
 }
 ```
 
