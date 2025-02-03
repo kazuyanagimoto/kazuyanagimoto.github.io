@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2024-03-28">
 
-<title>Flexible Analysis of Individual Heterogeneity in Event Studies – Kazuharu Yanagimoto</title>
+<title>Using Event Studies as an Outcome in Causal Analysis – Kazuharu Yanagimoto</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -74,12 +74,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-f7890bc79a3f65ef06a5b1c5352a79fb.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-cfb47afb8634ad0029e4a3c627f8c887.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-780364aeab2fb299007adf8196f95e70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script src="../../site_libs/quarto-contrib/iconify-1.0.0-beta.2/iconify-icon.min.js"></script>
 <link href="../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -118,15 +121,19 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
 </script>
 
 
-<meta property="og:title" content="Flexible Analysis of Individual Heterogeneity in Event Studies – Kazuharu Yanagimoto">
-<meta property="og:description" content="Application to the Child-penalty">
-<meta property="og:image" content="https://kazuyanagimoto.com/research/hetero2wfe/img/kmeans_earn_cage30_34.svg">
+<meta property="og:title" content="Using Event Studies as an Outcome in Causal Analysis – Kazuharu Yanagimoto">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://kazuyanagimoto.com/research/hetero2wfe/img/dist_earn.png">
 <meta property="og:site_name" content="Kazuharu Yanagimoto">
-<meta name="twitter:title" content="Flexible Analysis of Individual Heterogeneity in Event Studies – Kazuharu Yanagimoto">
-<meta name="twitter:description" content="Application to the Child-penalty">
-<meta name="twitter:image" content="https://kazuyanagimoto.com/research/hetero2wfe/img/kmeans_earn_cage30_34.svg">
+<meta property="og:image:height" content="2400">
+<meta property="og:image:width" content="3900">
+<meta name="twitter:title" content="Using Event Studies as an Outcome in Causal Analysis – Kazuharu Yanagimoto">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://kazuyanagimoto.com/research/hetero2wfe/img/dist_earn.png">
 <meta name="twitter:creator" content="@kazuyanagimoto">
 <meta name="twitter:site" content="@kazuyanagimoto">
+<meta name="twitter:image-height" content="2400">
+<meta name="twitter:image-width" content="3900">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -189,9 +196,8 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default">
     
             <div class="quarto-title">
-            <h1 class="title">Flexible Analysis of Individual Heterogeneity in Event Studies</h1>
+            <h1 class="title">Using Event Studies as an Outcome in Causal Analysis</h1>
 
-                        <p class="subtitle lead">Application to the Child-penalty</p>
             
                                     <div class="quarto-categories">
                                 <div class="quarto-category">Two-way Fixed Effects</div>
@@ -242,6 +248,12 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
             </div>
           </div>
           
+            <div>
+            <div class="quarto-title-meta-heading">Modified</div>
+            <div class="quarto-title-meta-contents">
+              <p class="date-modified">January 29, 2025</p>
+            </div>
+          </div>
             
           </div>
           
@@ -263,32 +275,49 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
 
 <section id="abstract" class="level2">
 <h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
-<p>We provide a practical toolkit for analyzing effect heterogeneity in event studies. We develop an estimation algorithm and adapt existing econometric results to provide its theoretical justification. We apply these tools to Dutch administrative data to study individual heterogeneity in the child-penalty (CP) context in three ways. First, we document significant heterogeneity in the individual-level CP trajectories, emphasizing the importance of going beyond the average CP. Second, we use individual-level estimates to examine the impact of childcare supply expansion policies. Our approach uncovers nonlinear treatment effects, challenging the conventional policy evaluation methods constrained to less flexible specifications. Third, we use the individual-level estimates as a regressor on the right-hand side to study the intergenerational elasticity of the CP between mothers and daughters. After adjusting for the measurement error bias, we find the elasticity of 24%. Our methodological framework contributes to empirical practice by offering a flexible approach tailored to specific research questions and contexts. We provide an open-source package (<a href="https://github.com/kazuyanagimoto/unitdid">unitdid</a>) to facilitate widespread adoption.</p>
+<p>We propose a causal framework for applications where the outcome of interest is a unit-specific response to events, which first needs to be measured from the data. We suggest a two-step procedure: first, estimate unit-level event studies (ULES) by comparing pre- and post-event outcomes of each unit to a suitable control group; second, use the ULES in causal analysis. We outline the theoretical conditions under which this two-step procedure produces interpretable results, highlighting the underlying statistical challenges. Our method overcomes the limitations of regression-based approaches prevalent in the empirical literature, allowing for a deeper examination of heterogeneity and dynamic effects. We apply this framework to analyze the impact of childcare provision reform on the magnitude of child penalties in the Netherlands, illustrating its ability to reveal nuanced positive relationships between childcare provision and parental labor supply. In contrast, traditional regression-based analysis delivers negative effects, thereby emphasizing the benefits of our two-step approach.</p>
 </section>
 <section id="important-table-figure" class="level2">
 <h2 class="anchored" data-anchor-id="important-table-figure">Important table &amp; figure</h2>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/kmeans_earn_cage30_34.svg" class="img-fluid figure-img"></p>
-<figcaption>Figure I (b): High Heterogeneity in Child-penalties (CP), Different CP Paths (K-Means)</figcaption>
+<p><a href="img/dist_earn.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure I (a): Distribution of individual CP"><img src="img/dist_earn.png" class="img-fluid figure-img" alt="Figure I (a): Distribution of individual CP"></a></p>
+<figcaption>Figure I (a): Distribution of individual CP</figcaption>
 </figure>
 </div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/IGMcp.svg" class="img-fluid figure-img"></p>
-<figcaption>Figure VII: Intergenerational mobility in CP: mothers vs daughters</figcaption>
+<p><a href="img/reg_cci_earn_event.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure IV (a): Effect of the childcare provision expansion on child penalties of earnings (Eᵢ−1)"><img src="img/reg_cci_earn_event.svg" class="img-fluid figure-img" alt="Figure IV (a): Effect of the childcare provision expansion on child penalties of earnings (Eᵢ−1)"></a></p>
+<figcaption>Figure IV (a): Effect of the childcare provision expansion on child penalties of earnings (Eᵢ−1)</figcaption>
 </figure>
+</div>
+</div>
+</div>
 </div>
 </section>
 <section id="bibtex-citation" class="level2">
 <h2 class="anchored" data-anchor-id="bibtex-citation">BibTeX citation</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bibtex code-with-copy"><code class="sourceCode bibtex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">@misc</span>{<span class="ot">arkhangelsky2024</span>,</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">author</span> = {Dmitry Arkhangelsky and Kazuharu Yanagimoto and Tom Zohar},</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span> = {Flexible Analysis of Individual Heterogeneity in Event Studies:</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>           Application to the Child Penalty},</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">year</span> = {2024},</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">eprint</span> = {arXiv:2403.19563},</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bibtex code-with-copy"><code class="sourceCode bibtex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">@online</span>{<span class="ot">arkhangelsky2025</span>,</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span> = {Using Event Studies as an Outcome in Causal Analysis},</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">author</span> = {Arkhangelsky, Dmitry and Yanagimoto, Kazuharu and Zohar, Tom},</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">date</span> = {2025-01-29},</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">eprint</span> = {2403.19563},</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">eprinttype</span> = {arXiv},</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">eprintclass</span> = {econ},</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">doi</span> = {10.48550/arXiv.2403.19563},</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">url</span> = {http://arxiv.org/abs/2403.19563},</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">langid</span> = {english},</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="dt">pubstate</span> = {prepublished},</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="dt">keywords</span> = {Economics - General Economics,Quantitative Finance - Economics}</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><i class="ai  ai-blank-just-to-add-ai-dependency-to-this-page"></i></p>
 
 
@@ -726,6 +755,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
