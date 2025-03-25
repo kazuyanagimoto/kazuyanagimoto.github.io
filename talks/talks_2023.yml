@@ -3,7 +3,7 @@
   language: English
   description: Here is a talk on practical techniques to write a paper with R
   location: CEMFI, Madrid
-  feature: "feature/headway-5QgIuuBxKwM-unsplash.jpg"
+  feature: "/talks/feature/headway-5QgIuuBxKwM-unsplash.jpg"
   links:
   - name: Slides
     url: https://kazuyanagimoto.com/workshop-r-2022/code/slides/advancedr/

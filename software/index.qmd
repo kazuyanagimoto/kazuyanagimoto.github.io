@@ -17,7 +17,6 @@ toc-location: right
 toc-title: Language
 ---
 
-
 ## R
 
 :::{#r}
