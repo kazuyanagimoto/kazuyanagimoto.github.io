@@ -24,9 +24,12 @@ image: img/dist_earn.png
 status: working-papers
 pub-info:
   links:
-    - name: "Latest WP"
+    - name: Latest WP
       url: https://arxiv.org/abs/2403.19563
       icon: ai ai-arxiv
+    - name: CEMFI WP
+      url: https://www.cemfi.es/ftp/wp/2503.pdf
+      icon: fa-solid fa-file-pdf
     - name: Package (unitdid)
       url: https://github.com/kazuyanagimoto/unitdid
       icon: fa-brands fa-github

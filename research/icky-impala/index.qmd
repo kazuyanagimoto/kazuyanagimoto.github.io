@@ -1,7 +1,8 @@
 ---
 title: A Quantitative Model of Non-Marriage and Fertility
 subtitle: Bargaining over Leisure
-date: today
+date: 2024-08-29
+date-modified: last-modified
 author:
   - name: Kazuharu Yanagimoto
     url: {{< var website-url >}}
@@ -31,7 +32,7 @@ pub-status:
 
 ## Abstract
 
-This paper introduces a new factor contributing to the decline in marriage and fertility: the growth of leisure technology. Over recent decades, high-income countries have experienced two notable shifts in household and family dynamics. First, there has been a significant decline in marriage rates and fertility. Second, time has increasingly been allocated to leisure activities. This paper presents a unified model of marriage and fertility, incorporating intra-household bargaining dynamics. The model, calibrated using data from Japan between 2018 and 2022, is employed to assess the impact of leisure technology growth on marriage and fertility during 2005-2009. The findings highlight that leisure technology growth makes single life relatively more appealing compared to marriage and parenthood. The model explains nearly the entire decline in fertility and accounts for 25% of the decline in marriage in Japan during this period.
+This paper introduces a new factor contributing to the decline in marriage and fertility: the growth of leisure technology. Over recent decades, high-income countries have experienced two notable shifts in household and family dynamics. First, there has been a significant decline in marriage rates and fertility. Second, time has increasingly been allocated to leisure activities. This paper presents a unified model of marriage and fertility, incorporating intra-household bargaining dynamics. The model, calibrated using data from Japan between 2018 and 2022, is employed to assess the impact of leisure technology growth on marriage and fertility during 2005-2009. The findings highlight that leisure technology growth makes single life relatively more appealing compared to marriage and parenthood. The model explains 22.0% of the decline in marriage and 65.8% of the decrease in fertility.
 
 ## BibTeX citation
 
