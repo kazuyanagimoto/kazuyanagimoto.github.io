@@ -22,8 +22,7 @@ about:
 I am a PhD student at [CEMFI](https://www.cemfi.es/).<br>
 My research fields are labor, macro, and especially family economics.
 
-Download my [Job Market Paper {{< fa arrow-up-right-from-square >}}](research/icky-impala/yanagimoto_icky_impala.pdf)
-
+Starting in September 2025, I will join the [Faculty of Economics](https://www.econ.kobe-u.ac.jp/en/) at Kobe University as an Assistant Professor.
 
 ::: {style="text-align: right"}
 [Read More →](../about)
