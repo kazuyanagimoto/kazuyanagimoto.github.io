@@ -1,18 +1,17 @@
 ---
 title: Research Workflow with Quarto + {targets}
-date: 2025-04-20
+date: 2025-04-26
 author: Kazuharu Yanagimoto
-categories: [R, Quarto]
+categories: [Quarto, R, Julia]
 toc: true
-execute:
-  eval: false
+image: img/thumbnail.png
 ---
 
 # Let {targets} Take the Lead
 
 [`{targets}`](https://books.ropensci.org/targets/) is an R package for building research workflows. Its primary feature is managing R objects (data, functions, and results) and their dependencies, automatically recalculating downstream objects when upstream objects change. This allows you to maintain reproducibility throughout your research process.
 
-When combined with [Quarto](https://quarto.org/), you can manage all aspects of your research workflow in a single pipeline—from interim reports and slides to writing the final manuscript. This article explains a Quarto + {targets} research workflow I actively use in my own research. It's designed to progress step-by-step alongside your research. Research isn't linear but involves constant iteration and exploration, so I've built in flexibility for the experimental phases before manuscript writing begins.
+When combined with [Quarto](https://quarto.org/), you can manage all aspects of your research workflow in a single pipeline—from interim reports and slides to writing the final manuscript. This article explains a Quarto + {targets} research workflow I actively use in my own research. While the final pipeline is a clean and simple workflow, I also add flexibility for experimentation and iteration.
 
 The code is available [here](https://github.com/kazuyanagimoto/quarto-research-blog/). Please refer to it for code examples and directory structure.
 
@@ -28,8 +27,7 @@ The code is available [here](https://github.com/kazuyanagimoto/quarto-research-b
 
 By the time you finish writing your manuscript, you should have a pipeline like the one below. This was generated using `targets::tar_mermaid()`.
 
-```{mermaid}
-#| label: mermaid
+```{mermaid mermaid}
 graph LR
   style Graph fill:#FFFFFF00,stroke:#000000;
   subgraph Graph
@@ -66,19 +64,19 @@ graph LR
   end
 ```
 
-Before explaining each part of the workflow, let's cover the basics of using `{targets}`.
+Before explaining each part of the workflow, let's cover the basics of `{targets}`.
 
 ## {targets} Basics
 
-The official [tutorial](https://books.ropensci.org/targets/) is the best way to learn `{targets}` basics, but in practice, we often use the extended syntax from `{tarchetypes}`. Here, I'll explain the minimal usage based on `{tarchetypes}` syntax. This [tutorial](https://carpentries-incubator.github.io/targets-workshop/index.html) was helpful for transitioning from `{targets}` to `{tarchetypes}`.
+The official [tutorial](https://books.ropensci.org/targets/) is the best way to learn `{targets}` basics, but in practice, we often use the extended syntax from `{tarchetypes}`. Here, I'll explain a minimal usage based on `{tarchetypes}` syntax. This [tutorial](https://carpentries-incubator.github.io/targets-workshop/index.html) was helpful for transitioning from `{targets}` to `{tarchetypes}`.
 
 ### The Three Basic Elements
 
-The philosophy of `{targets}` divides research workflows into three elements: **files**, **functions**, and **objects**.
+The philosophy of `{targets}` divides research workflows into three elements: _files_, _functions_, and _objects_.
 
-- **Files**: Objects defined with `tar_file()` that hold file paths. They also store file size and timestamp, so even if the path hasn't changed, if the content changes, dependent parts of the pipeline will be recalculated.
-- **Objects**: Variables, data frames, and other R objects.
-- **Functions**: R functions. All inputs that the function depends on must be specified, and the output must be a file or object. This makes dependencies explicit.
+- _Files_: Objects defined with `tar_file()` that hold file paths. They also store file size and timestamp, so even if the path hasn't changed, if the content changes, dependent parts of the pipeline will be recalculated.
+- _Objects_: Variables, data frames, and other R objects.
+- _Functions_: R functions. All inputs that the function depends on must be specified, and the output must be a file or object. This makes dependencies explicit.
 
 Conceptually, you start with files, read them to create objects, and then use those objects to run functions that create new objects. These elements are defined within `tar_plan()`.
 
@@ -183,6 +181,7 @@ Specifies the directory containing source code for functions used in your pipeli
 Defines the pipeline. You don't need to include every pipeline element here—you can define pipelines in files loaded via `tar_source()` and call them. For example, the `data` pipeline is defined in `R/tar_data.R`:
 
 ```{r filename="R/tar_data.R"}
+#| eval: false
 #| label: tar_data
 #| code-fold: true
 #| code-summary: R/tar_data.R
@@ -329,13 +328,14 @@ clean_accident_bike <- function(raw_accident_bike) {
 
 ### `here_rel()`
 
-`here::here()` is a function for specifying relative paths based on the project root directory. This ensures you don't need to change paths if the project root directory changes. However, using `here::here()` within `_targets.R` saves absolute paths, which causes problems when sharing with others. Therefore, we use a function that maintains the convenience of `here::here()` while saving relative paths. This part is based on Andrew Heiss's [code](https://github.com/andrewheiss/lemon-lucifer/blob/main/_targets.R).
+`here::here()` is a function for specifying relative paths based on the project root directory. This ensures you don't need to change paths if the project root directory changes. However, using `here::here()` within `_targets.R` saves absolute paths, which causes problems when sharing with others. Therefore, we use a function that maintains the convenience of `here::here()` while saving relative paths. This part is based on Dr. Andrew Heiss's [code](https://github.com/andrewheiss/lemon-lucifer/blob/main/_targets.R).
 
 ## 2. Define Data Cleaning
 
 Define your data cleaning pipeline. See the code here for details:
 
 ```{r filename="R/tar_data.R"}
+#| eval: false
 #| label: tar_data-2
 #| code-fold: true
 #| code-summary: R/tar_data.R
@@ -482,11 +482,11 @@ clean_accident_bike <- function(raw_accident_bike) {
 
 The key points are:
 
-- Define raw data files with `tar_file()`
-- Read raw data using functions like `readr::read_csv()`
-- Create cleaning functions that take raw data as arguments and return cleaned data
+1. Define raw data files with `tar_file()`
+1. Read raw data using functions like `readr::read_csv()`
+1. Create cleaning functions that take raw data as arguments and return cleaned data
 
-Always follow this process. You can also combine the first two steps:
+You can also combine the first two steps by `tar_file_read()`:
 
 ```{.r}
 tar_plan(
@@ -512,11 +512,11 @@ download_file <- function(url, destfile) {
 
 Define this function and call it within `tar_file()`. The key is to return the path to the saved file.
 
-I've outlined my approach to data cleaning in this [workshop](https://github.com/kazuyanagimoto/workshop-r-2022).
+For your information, I have outlined my approach to data cleaning in this [workshop](https://github.com/kazuyanagimoto/workshop-r-2022).
 
 ## 3. Configure the Website
 
-Use `tar_quarto()` to build a website within your pipeline. For the purpose of websites and specific configurations, see my blog post on [Researching as if to Blog](https://kazuyanagimoto.com/blog/2024/04/05/).
+Use `tar_quarto()` to build a website within your pipeline. For the purpose of websites and specific configurations, see my blog post on ["Researching as if to Blog"](https://kazuyanagimoto.com/blog/2024/04/05/).
 
 ## 4. Experiment with Data Analysis and Models
 
@@ -565,6 +565,7 @@ Continue your research, getting feedback from presentations. When you have suffi
 ### Incorporate Key Results into the Pipeline
 
 ```{r filename="R/tar_fact.R"}
+#| eval: false
 #| label: tar_fact
 #| code-fold: true
 #| code-summary: R/tar_fact.R
@@ -661,6 +662,7 @@ While R analyses can be directly incorporated into the pipeline, Julia code requ
 3. Save Julia execution results as CSV or YAML files for loading in R with `tar_file_read()`
 
 ```{r filename="R/tar_model.R"}
+#| eval: false
 #| label: tar_model
 #| code-fold: true
 #| code-summary: R/tar_model.R
@@ -782,7 +784,7 @@ compile_latex <- function(manuscript_file, path_pdf) {
 }
 ```
 
-Note that you'd need to include all figure and table dependencies.
+Note that you may need to include all figure and table dependencies.
 
 # Conclusion
 
