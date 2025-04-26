@@ -1,71 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://kazuyanagimoto.com/software/index.html</loc>
-    <lastmod>2025-04-07T21:26:41.619Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kazuyanagimoto.com/research/common-cheetah/index.html</loc>
-    <lastmod>2025-04-07T21:26:41.563Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kazuyanagimoto.com/research/bayan-bayanihan/index.html</loc>
-    <lastmod>2025-04-07T21:26:41.563Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kazuyanagimoto.com/blog/2022/05/24/docker_template/index.html</loc>
-    <lastmod>2025-04-07T21:26:41.532Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kazuyanagimoto.com/blog/2023/09/06/docker_template/index.html</loc>
-    <lastmod>2025-04-07T21:26:41.557Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kazuyanagimoto.com/blog/2024/04/29/index.html</loc>
-    <lastmod>2025-04-07T21:26:41.562Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kazuyanagimoto.com/blog/index.html</loc>
-    <lastmod>2025-04-07T21:26:41.562Z</lastmod>
-  </url>
-  <url>
     <loc>https://kazuyanagimoto.com/index.html</loc>
-    <lastmod>2025-04-07T21:26:41.562Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kazuyanagimoto.com/talks/index.html</loc>
-    <lastmod>2025-04-07T21:26:41.630Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kazuyanagimoto.com/about/index.html</loc>
-    <lastmod>2025-04-07T21:26:41.531Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kazuyanagimoto.com/blog/2024/04/05/index.html</loc>
-    <lastmod>2025-04-07T21:26:41.561Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kazuyanagimoto.com/blog/2023/04/30/quarto_multi_lang/index.html</loc>
-    <lastmod>2025-04-07T21:26:41.535Z</lastmod>
+    <lastmod>2025-04-26T08:23:59.615Z</lastmod>
   </url>
   <url>
     <loc>https://kazuyanagimoto.com/blog/2023/06/10/quarto_com_model/index.html</loc>
-    <lastmod>2025-04-07T21:26:41.557Z</lastmod>
+    <lastmod>2025-04-26T08:23:59.608Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kazuyanagimoto.com/blog/2023/04/30/quarto_multi_lang/index.html</loc>
+    <lastmod>2025-04-26T08:23:59.587Z</lastmod>
   </url>
   <url>
     <loc>https://kazuyanagimoto.com/blog/2022/12/27/quarto_tips/index.html</loc>
-    <lastmod>2025-04-07T21:26:41.532Z</lastmod>
+    <lastmod>2025-04-26T08:23:59.584Z</lastmod>
   </url>
   <url>
-    <loc>https://kazuyanagimoto.com/research/index.html</loc>
-    <lastmod>2025-04-07T21:26:41.619Z</lastmod>
+    <loc>https://kazuyanagimoto.com/blog/2024/04/05/index.html</loc>
+    <lastmod>2025-04-26T08:23:59.612Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kazuyanagimoto.com/software/index.html</loc>
+    <lastmod>2025-04-26T08:23:59.670Z</lastmod>
   </url>
   <url>
     <loc>https://kazuyanagimoto.com/research/icky-impala/index.html</loc>
-    <lastmod>2025-04-07T21:26:41.618Z</lastmod>
+    <lastmod>2025-04-26T08:23:59.668Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kazuyanagimoto.com/research/index.html</loc>
+    <lastmod>2025-04-26T08:23:59.670Z</lastmod>
   </url>
   <url>
     <loc>https://kazuyanagimoto.com/research/hetero2wfe/index.html</loc>
-    <lastmod>2025-04-07T21:26:41.618Z</lastmod>
+    <lastmod>2025-04-26T08:23:59.668Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kazuyanagimoto.com/talks/index.html</loc>
+    <lastmod>2025-04-26T08:23:59.680Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kazuyanagimoto.com/about/index.html</loc>
+    <lastmod>2025-04-26T08:23:59.583Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kazuyanagimoto.com/research/common-cheetah/index.html</loc>
+    <lastmod>2025-04-26T08:23:59.615Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kazuyanagimoto.com/research/bayan-bayanihan/index.html</loc>
+    <lastmod>2025-04-26T08:23:59.615Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kazuyanagimoto.com/blog/2024/04/29/index.html</loc>
+    <lastmod>2025-04-26T08:23:59.613Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kazuyanagimoto.com/blog/2022/05/24/docker_template/index.html</loc>
+    <lastmod>2025-04-26T08:23:59.584Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kazuyanagimoto.com/blog/index.html</loc>
+    <lastmod>2025-04-26T08:23:59.615Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kazuyanagimoto.com/blog/2023/09/06/docker_template/index.html</loc>
+    <lastmod>2025-04-26T08:23:59.609Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kazuyanagimoto.com/blog/2025/0426_research_workflow/index.html</loc>
+    <lastmod>2025-04-26T08:23:59.614Z</lastmod>
   </url>
 </urlset>
