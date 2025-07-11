@@ -14,6 +14,7 @@ categories:
   - Japan
 image: thumbnail.svg
 status: working-papers
+feature: true
 pub-info:
   links:
     - name: Latest WP

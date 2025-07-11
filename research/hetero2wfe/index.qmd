@@ -1,27 +1,31 @@
 ---
 title: Using Event Studies as an Outcome in Causal Analysis
 date: 2024-03-28
-date-modified: 2025-01-29
+date-modified: 2025-06-24
 authors:
   - name: Dmitry Arkhangelsky
     orcid: 0000-0003-2346-1056
     url: https://sites.google.com/view/dmitry-arkhangelsky/
     affiliation: CEMFI
+    email: darkhangel@cemfi.es
   - name: Kazuharu Yanagimoto
-    url: {{< var website-url >}}
-    orcid: {{ < var orcid > }}
+    url: "{{< var website-url >}}"
+    orcid: "{{ < var orcid > }}"
     affiliation: CEMFI
+    email: "{{< var email >}}"
   - name: Tom Zohar
     orcid: 0000-0002-7507-7673
     url: https://tomzohar.com/
     affiliation: CEMFI
+    email: tom.zohar@cemfi.es
 categories:
   - Two-way Fixed Effects
   - Child Penalty
   - Gender Gaps
   - Netherlands
-image: img/dist_earn.png
+image: img/agg_earn.svg
 status: working-papers
+feature: true
 pub-info:
   links:
     - name: Latest WP
@@ -42,15 +46,15 @@ lightbox: true
 
 ## Abstract
 
-We propose a causal framework for applications where the outcome of interest is a unit-specific response to events, which first needs to be measured from the data. We suggest a two-step procedure: first, estimate unit-level event studies (ULES) by comparing pre- and post-event outcomes of each unit to a suitable control group; second, use the ULES in causal analysis. We outline the theoretical conditions under which this two-step procedure produces interpretable results, highlighting the underlying statistical challenges. Our method overcomes the limitations of regression-based approaches prevalent in the empirical literature, allowing for a deeper examination of heterogeneity and dynamic effects. We apply this framework to analyze the impact of childcare provision reform on the magnitude of child penalties in the Netherlands, illustrating its ability to reveal nuanced positive relationships between childcare provision and parental labor supply. In contrast, traditional regression-based analysis delivers negative effects, thereby emphasizing the benefits of our two-step approach.
+We study a causal inference problem with group-level outcomes, which are themselves parameters identified from microdata. We formalize these outcomes using population moment conditions and demonstrate that one-step Generalized Method of Moments (GMM) estimators are generally inconsistent due to an endogenous weighting bias, where policy affects the implicit GMM weights. In contrast, two-stage Minimum Distance (MD) estimators perform well when group sizes are sufficiently large. While MD estimators can still be inconsistent in small groups due to a policy-induced sample selection, we demonstrate that this can be addressed by incorporating auxiliary population information. An empirical application illustrates the practical importance of these findings.
 
 ## Important table & figure
 
 ::: {layout-ncol="2"}
 
-![Figure I (a): Distribution of individual CP](img/dist_earn.png)
+![Figure B.2 (a): Child penalties by age at first childbirth](img/agg_earn.svg)
 
-![Figure IV (a): Effect of the childcare provision expansion on child penalties of earnings (Eᵢ−1)](img/reg_cci_earn_event.svg)
+![Figure II (b): Effect of the childcare provision expansion on CP (MD)](img/reg_2x2_md.svg)
 
 :::
 

@@ -3,10 +3,13 @@ title: "Hi There!"
 listing:
   - id: research
     contents: ../research/**/index.qmd
-    sort: "date desc"
+    sort:
+      - "feature"
+      - "date desc"
     type: default
     categories: false
     template: ../static/html/about/research.ejs
+    max-items: 2
   - id: blog
     contents: ../blog/*/**/index.qmd
     sort: "date desc"
@@ -31,7 +34,9 @@ My research field is family economics, broadly speaking, I am interested in ques
 - Why do gender wage and earning gaps still remain?
 - Why does the fertility rate remain low in any country?
 
-{{< fa graduation-cap >}} Master in Economics  &#8729; CEMFI  &#8729;  2021
+{{< fa graduation-cap >}} Ph.D. in Economics  &#8729; CEMFI  &#8729;  2025
+
+{{< fa graduation-cap >}} Master in Economics and Finance  &#8729; CEMFI  &#8729;  2021
 
 {{< fa graduation-cap >}} Bachelor in Economics  &#8729; University of Tokyo  &#8729;  2019
 

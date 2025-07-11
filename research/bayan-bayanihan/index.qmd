@@ -1,41 +1,51 @@
 ---
-title: How can food programs support social distancing during a pandemic?
-subtitle: Evidence from the Bayan Bayanihan Program in the Philippines during COVID-19
-date: today
+title: COVID-19, Food Relief, and Social Distancing
+subtitle: Evidence from the Bayan Bayanihan Program in the Philippines
+date: 2025-05-16
 authors:
   - name: Christopher James Cabuay
     url: https://portal.pep-net.org/public/researcher/12756
     affiliation: De La Salle University
+    email: christopher.cabuay@dlsu.edu.ph
   - name: Yasuyuki Sawada
     url: https://sites.google.com/site/yasuyukisawadapage
     orcid: 0000-0002-4167-7697
     affiliation: University of Tokyo
+    email: sawada@e.u-tokyo.ac.jp
   - name: Elaine Tan
     affiliation: Asian Development Bank
+    email: estan@adb.org
   - name: Arturo Martinez, Jr.
     affiliation: Asian Development Bank
+    email: amartinezjr@adb.org
   - name: Daniel Boller
+    affilition: World Bank
+    email: dboller@worldbank.org
+  - name: Joseph Albert Nino Bulan
     affilition: Asian Development Bank
-  - name: Joseph Albert
-    affilition: Asian Development Bank
-  - name: Nino Bulan
-    affilition: Asian Development Bank
+    email: jbulan@adb.org
   - name: Ron Lester Durante
     affilition: Asian Development Bank
+    email: rondurante@adb.org
   - name: Soyoka Okumura
     affiliation: University of Tokyo
+    email: okamura-soyoka134@g.ecc.u-tokyo.ac.jp
   - name: Kazuharu Yanagimoto
-    url: {{< var website-urle >}}
-    orcid: {{ < var orcid >}}
+    url: "{{< var website-url >}}"
+    orcid: "{{< var orcid >}}"
     affiliation: CEMFI
+    email: "{{< var email >}}"
 categories:
   - COVID-19
   - Phillipines
-status: work-in-progress
+status: working-papers
 pub-info:
+  links:
+    - name: SSRN WP
+      url: https://doi.org/10.2139/ssrn.5256485
+      icon: fa-solid fa-file-pdf
   coauthor: >-
     <a href="https://portal.pep-net.org/public/researcher/12756">Christopher James Cabuay</a>, <a href="https://sites.google.com/site/yasuyukisawadapage/">Yasuyuki Sawada</a>, Elaine Tan, Arturo Martinez, Jr., Daniel Boller, Joseph Albert, Nino Bulan, Ron Lester Durante, and Soyoka Okumura
-hide-detail: true
 pub-status: 
   status: Writing
   class: warning
@@ -44,3 +54,21 @@ pub-status:
 #   class: success
 #   icon: fas fa-glasses
 ---
+
+## Abstract
+
+At the onset of the coronavirus disease (COVID-19) lockdown in the Philippines in April 2020, the Asian Development Bank, in partnership with the Philippine government and the private sector, implemented the Bayan Bayanihan (BB) food relief program which served approximately 162,000 households in the National Capital Region and nearby provinces. This study evaluates the impact of in-kind transfers on social distancing by examining the effectiveness of the BB program in restricting mobility by enabling households to stay at home. We leverage plausibly random variations in the timing of the rollout of the program by employing recent developments in estimating staggered difference-in-differences strategies to more accurately identify the effect of the program. We find supportive evidence that the program could generally discourage mobility. Our findings suggest that in addition to mitigating food insecurity, food transfer programs can also generate multiple dividends by helping families stay home and reducing the spread of COVID-19.
+
+## BibTeX citation
+
+```bibtex
+@misc{
+  title = {COVID-19, Food Relief, and Social Distancing: Evidence from the Bayan Bayanihan Program in the Philippines},
+  author = {Cabuay, Christopher James and Sawada, Yasuyuki and Tan, Elaine and Martinez, Jr and Boller, Daniel and Bulan, Joseph and Durante, Ron Lester and Okamura, Soyoka and Yanagimoto, Kazuharu},
+  year = {2025},
+  month = may,
+  publisher = {Social Science Research Network},
+  doi = {10.2139/ssrn.5256485},
+}
+
+```

@@ -5,16 +5,17 @@ date: 2024-08-29
 date-modified: last-modified
 author:
   - name: Kazuharu Yanagimoto
-    url: {{< var website-url >}}
-    orcid: {{ < var orcid >}}
+    url: "{{< var website-url >}}"
+    orcid: "{{< var orcid >}}"
     affiliation: CEMFI
+    email: "{{< var email >}}"
 categories:
-  - Job Market Paper
   - Marriage
   - Fertility
   - Japan
 image: thumbnail.svg
 status: working-papers
+feature: true
 pub-info:
   links:
     - name: Latest WP

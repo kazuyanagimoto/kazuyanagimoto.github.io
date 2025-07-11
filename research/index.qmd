@@ -5,7 +5,9 @@ home: true
 listing:
   - id: projects
     contents: "/*/index.qmd"
-    sort: "date desc"
+    sort:
+      - "feature"
+      - "date desc"
     template: ../static/html/research/listing.ejs
     categories: true  
 title-block-banner: "#fff"
