@@ -4,26 +4,13 @@
     "items": []
   },
   {
-    "listing": "/research/index.html",
-    "items": [
-      "/research/bayan-bayanihan/index.html",
-      "/research/icky-impala/index.html",
-      "/research/hetero2wfe/index.html",
-      "/research/common-cheetah/index.html"
-    ]
-  },
-  {
-    "listing": "/talks/index.html",
-    "items": []
-  },
-  {
     "listing": "/about/index.html",
     "items": [
-      "/research/index.html",
-      "/research/bayan-bayanihan/index.html",
       "/research/icky-impala/index.html",
       "/research/hetero2wfe/index.html",
       "/research/common-cheetah/index.html",
+      "/research/index.html",
+      "/research/bayan-bayanihan/index.html",
       "/blog/2025/0426_research_workflow/index.html",
       "/blog/2024/04/29/index.html",
       "/blog/2024/04/05/index.html",
@@ -46,5 +33,18 @@
       "/blog/2022/12/27/quarto_tips/index.html",
       "/blog/2022/05/24/docker_template/index.html"
     ]
+  },
+  {
+    "listing": "/research/index.html",
+    "items": [
+      "/research/icky-impala/index.html",
+      "/research/hetero2wfe/index.html",
+      "/research/common-cheetah/index.html",
+      "/research/bayan-bayanihan/index.html"
+    ]
+  },
+  {
+    "listing": "/talks/index.html",
+    "items": []
   }
 ]
