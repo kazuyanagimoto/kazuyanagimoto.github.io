@@ -19,10 +19,8 @@ about:
       href: https://zenn.dev/nicetak
 ---
 
-I am a PhD student at [CEMFI](https://www.cemfi.es/).<br>
+I am an associate professor (tenure track) at [Kobe University](https://www.econ.kobe-u.ac.jp/en/).<br>
 My research fields are labor, macro, and especially family economics.
-
-Starting in September 2025, I will join the [Faculty of Economics](https://www.econ.kobe-u.ac.jp/en/) at Kobe University as an Assistant Professor.
 
 ::: {style="text-align: right"}
 [Read More →](../about)

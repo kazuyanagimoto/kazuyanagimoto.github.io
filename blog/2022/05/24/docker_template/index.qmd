@@ -6,9 +6,7 @@ draft: false
 categories: [R, Docker]
 image: "feature.png"
 twitter-card:
-    image: "feature.png"
-execute:
-    eval: false
+  image: "feature.png"
 ---
 
 Docker is one of the best environments for **reproductivity** of the research.
@@ -24,10 +22,11 @@ I use Docker for basically all my projects, but it took me about 2 years to get 
 1. Set up a [DVC](https://dvc.org/) environment
     1. Prepare a folder in Google Drive (and copy the folder code)
     1. Init DVC
-        ```{bash}
-        dvc init
-        dvc remote add --default myremote gdrive://GDRIVE_FOLDER_CODE
-        ```
+
+```{.bash}
+dvc init
+dvc remote add --default myremote gdrive://GDRIVE_FOLDER_CODE
+```
 
 
 ## Brief Explanations

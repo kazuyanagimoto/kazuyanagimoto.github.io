@@ -27,7 +27,7 @@ page-layout: full
 title-block-banner: true
 ---
 
-I am a Ph.D. student in Economics at [CEMFI](https://www.cemfi.es/) in Madrid, Spain.
+I am an associate professor (tenure track) at [Kobe University](https://www.econ.kobe-u.ac.jp/en/).
 
 My research field is family economics, broadly speaking, I am interested in questions like:
 
