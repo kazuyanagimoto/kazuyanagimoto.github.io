@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -35,14 +35,15 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-6a3d12c26c2fc1597b84067804686218.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-c5b4919bf80523fba3e26ef73c70676e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-7f5fc8e62b1343fbcc71b0415557c36a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-1e57dc25c9d218e2c8f9dcb458291ba0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script src="../site_libs/quarto-contrib/iconify-1.0.0-beta.2/iconify-icon.min.js"></script>
@@ -92,6 +93,34 @@ ul.task-list li input[type="checkbox"] {
 
     window['quarto-listings'] = window['quarto-listings'] || {};
     window['quarto-listings']['listing-research'] = new List('listing-research', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-teaching .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-info','listing-description','listing-image','listing-url','listing-links',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-title","listing-info","listing-description","listing-image","listing-url","listing-links"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-teaching'] = new List('listing-teaching', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -184,7 +213,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -202,19 +231,15 @@ window.Quarto = {
 
 <meta property="og:title" content="Hi There! – Kazuharu Yanagimoto">
 <meta property="og:description" content="">
-<meta property="og:image" content="https://kazuyanagimoto.com/blog/2025/0426_research_workflow/img/thumbnail.png">
+<meta property="og:image" content="https://kazuyanagimoto.com/research/icky-impala/thumbnail.svg">
 <meta property="og:site_name" content="Kazuharu Yanagimoto">
-<meta property="og:image:alt" content="Research Workflow with Quarto + {targets}">
-<meta property="og:image:height" content="1617">
-<meta property="og:image:width" content="2591">
+<meta property="og:image:alt" content="A Quantitative Model of Non-Marriage and Fertility">
 <meta name="twitter:title" content="Hi There! – Kazuharu Yanagimoto">
 <meta name="twitter:description" content="">
-<meta name="twitter:image" content="https://kazuyanagimoto.com/blog/2025/0426_research_workflow/img/thumbnail.png">
+<meta name="twitter:image" content="https://kazuyanagimoto.com/research/icky-impala/thumbnail.svg">
 <meta name="twitter:creator" content="@kazuyanagimoto">
 <meta name="twitter:site" content="@kazuyanagimoto">
-<meta name="twitter:image:alt" content="Research Workflow with Quarto + {targets}">
-<meta name="twitter:image-height" content="1617">
-<meta name="twitter:image-width" content="2591">
+<meta name="twitter:image:alt" content="A Quantitative Model of Non-Marriage and Fertility">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -225,6 +250,8 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Kazuharu Yanagimoto</span>
     </a>
@@ -238,6 +265,10 @@ window.Quarto = {
   <li class="nav-item">
     <a class="nav-link active" href="../about/index.html" aria-current="page"> 
 <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../teaching/index.html"> 
+<span class="menu-text">Teaching</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../research/index.html"> 
@@ -310,7 +341,7 @@ window.Quarto = {
 <div class="list research">
     
                 
-            <div class="research-entry" data-index="0" data-categories="TWFycmlhZ2UlMkNGZXJ0aWxpdHklMkNKYXBhbg==" data-listing-date-sort="1724889600000" data-listing-file-modified-sort="1756951971242" data-listing-date-modified-sort="1756951971000" data-listing-reading-time-sort="1" data-listing-word-count-sort="185">
+            <div class="research-entry" data-index="0" data-categories="TWFycmlhZ2UlMkNGZXJ0aWxpdHklMkNKYXBhbg==" data-listing-date-sort="1724889600000" data-listing-file-modified-sort="1759656555272" data-listing-date-modified-sort="1759656555000" data-listing-reading-time-sort="1" data-listing-word-count-sort="185">
                 <div class="body">
                     <p class="title listing-title">
                         
@@ -362,7 +393,7 @@ window.Quarto = {
         
     
                 
-            <div class="research-entry" data-index="1" data-categories="VHdvLXdheSUyMEZpeGVkJTIwRWZmZWN0cyUyQ0NoaWxkJTIwUGVuYWx0eSUyQ0dlbmRlciUyMEdhcHMlMkNOZXRoZXJsYW5kcw==" data-listing-date-sort="1711584000000" data-listing-file-modified-sort="1756951971242" data-listing-date-modified-sort="1750723200000" data-listing-reading-time-sort="1" data-listing-word-count-sort="198">
+            <div class="research-entry" data-index="1" data-categories="VHdvLXdheSUyMEZpeGVkJTIwRWZmZWN0cyUyQ0NoaWxkJTIwUGVuYWx0eSUyQ0dlbmRlciUyMEdhcHMlMkNOZXRoZXJsYW5kcw==" data-listing-date-sort="1711584000000" data-listing-file-modified-sort="1759656555272" data-listing-date-modified-sort="1750723200000" data-listing-reading-time-sort="1" data-listing-word-count-sort="198">
                 <div class="body">
                     <p class="title listing-title">
                         
@@ -463,12 +494,65 @@ window.Quarto = {
 <p><a href="../research">See All →</a></p>
 </div>
 </section>
+<section id="teaching-that-inspires" class="level2">
+<h2 class="anchored" data-anchor-id="teaching-that-inspires">TEACHING THAT INSPIRES</h2>
+<div id="listing-teaching" class="quarto-listing quarto-listing-container-custom">
+<div class="courses">
+    
+    <div class="course-entry">
+        <div class="course-image">
+            
+            <a href="https://kazuyanagimoto.com/course-kobe-macro4-2025/" target="_blank"><img src="https://kazuyanagimoto.com/course-kobe-macro4-2025/static/img/logo.drawio.svg" alt="Family Macroeconomics" title="Family Macroeconomics"></a>
+            
+        </div>
+        <div class="body">
+            <p class="course-title">
+                
+                <a href="https://kazuyanagimoto.com/course-kobe-macro4-2025/" target="_blank">Family Macroeconomics</a> 
+                
+            </p>
+            <p class="course-details">
+                <span class="course-info">Macro IV・Fall 2025・Kobe University</span>
+            </p>
+            <p class="course-description">Quantitative analysis of Marriage, Fertitlity, and Gender Gaps</p>
+
+            <ul class="course-links">
+                
+                    
+                    <li class="course-link">
+                        
+                        <a href="https://kazuyanagimoto.com/course-kobe-macro4-2025/">
+                        
+                            <i class="fa-solid fa-globe"></i> Website
+                        </a>
+                    </li>
+                    
+                    <li class="course-link">
+                        
+                        <a href="https://github.com/kazuyanagimoto/course-kobe-macro4-2025">
+                        
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+                    </li>
+                    
+                
+            </ul>
+        </div>
+    </div>
+    
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+<div style="text-align: right">
+<p><a href="../teaching">See All →</a></p>
+</div>
+</section>
 <section id="a-blog-that-works" class="level2">
 <h2 class="anchored" data-anchor-id="a-blog-that-works">A BLOG THAT WORKS</h2>
 <div id="listing-blog" class="quarto-listing quarto-listing-container-custom">
 <div class="list blog">
     
-    <div class="blog-entry" data-index="0" data-categories="UXVhcnRvJTJDUiUyQ0p1bGlh" data-listing-date-sort="1745625600000" data-listing-file-modified-sort="1756951971186" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="25" data-listing-word-count-sort="4824">
+    <div class="blog-entry" data-index="0" data-categories="UXVhcnRvJTJDUiUyQ0p1bGlh" data-listing-date-sort="1745625600000" data-listing-file-modified-sort="1759656555217" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="25" data-listing-word-count-sort="4824">
         
             <div class="thumbnail">
                 <img src="../blog/2025/0426_research_workflow/img/thumbnail.png" alt="Research Workflow with Quarto + {targets}" title="Research Workflow with Quarto + {targets}">
@@ -622,13 +706,14 @@ window.Quarto = {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

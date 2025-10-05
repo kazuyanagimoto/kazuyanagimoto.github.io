@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -70,14 +70,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../../../static/img/favicon.drawio.svg" rel="icon" type="image/svg+xml">
 <script src="../../../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-6a3d12c26c2fc1597b84067804686218.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-c5b4919bf80523fba3e26ef73c70676e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../../site_libs/bootstrap/bootstrap-7f5fc8e62b1343fbcc71b0415557c36a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../../site_libs/bootstrap/bootstrap-1e57dc25c9d218e2c8f9dcb458291ba0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script src="../../../../../site_libs/quarto-contrib/iconify-1.0.0-beta.2/iconify-icon.min.js"></script>
@@ -132,7 +133,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -167,6 +168,8 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../../../../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../../../../../index.html">
     <span class="navbar-title">Kazuharu Yanagimoto</span>
     </a>
@@ -180,6 +183,10 @@ window.Quarto = {
   <li class="nav-item">
     <a class="nav-link" href="../../../../../about/index.html"> 
 <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../../teaching/index.html"> 
+<span class="menu-text">Teaching</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../../../../research/index.html"> 
@@ -284,7 +291,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Why R is required? Why rocker-based?
+<span class="screen-reader-only">Note</span>Why R is required? Why rocker-based?
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -296,7 +303,7 @@ Why R is required? Why rocker-based?
 </section>
 <section id="docker-environment" class="level2">
 <h2 class="anchored" data-anchor-id="docker-environment">Docker Environment</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode dockerfile code-with-copy"><code class="sourceCode dockerfile"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> rocker/rstudio</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode dockerfile code-with-copy"><code class="sourceCode dockerfile"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> rocker/rstudio</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">RUN</span> <span class="ex">apt</span> update <span class="kw">&amp;&amp;</span> <span class="ex">apt</span> install <span class="at">-y</span> <span class="dt">\</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    openssh-client libxt-dev <span class="dt">\</span></span>
@@ -320,7 +327,7 @@ Why R is required? Why rocker-based?
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Package Cahce &amp; Permission</span></span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="kw">RUN</span> <span class="bu">cd</span> /home/rstudio <span class="kw">&amp;&amp;</span> <span class="fu">mkdir</span> .pip .cache .cache/R .cache/R/renv .TinyTeX .julia <span class="kw">&amp;&amp;</span> <span class="dt">\</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">chown</span> rstudio:rstudio .pip .cache .cache/R .cache/R/renv .TinyTeX .julia</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">chown</span> rstudio:rstudio .pip .cache .cache/R .cache/R/renv .TinyTeX .julia</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <section id="r" class="level3">
 <h3 class="anchored" data-anchor-id="r">R</h3>
 <p>Since I cached R packages in Docker Volumes, I use <code>rocker/rstudio</code> for the base image, which is simplest in the other rocker images. However, it does not have <code>renv</code>, I manually install it in the Dockerfile. Only if you use geospatial packages, you may want to use <code>rocker/geospatial</code> instead.</p>
@@ -339,7 +346,7 @@ Why R is required? Why rocker-based?
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Why do I manage the packages by <code>requirements.txt</code>?
+<span class="screen-reader-only">Note</span>Why do I manage the packages by <code>requirements.txt</code>?
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -371,7 +378,7 @@ Why do I manage the packages by <code>requirements.txt</code>?
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Using Git &amp; GitHub in the container
+<span class="screen-reader-only">Note</span>Using Git &amp; GitHub in the container
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -398,7 +405,7 @@ ssh-add $HOME/.ssh/id_ed25519</code></pre>
 </section>
 <section id="docker-compose.yml" class="level3">
 <h3 class="anchored" data-anchor-id="docker-compose.yml">docker-compose.yml</h3>
-<div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">services</span><span class="kw">:</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">services</span><span class="kw">:</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">rstudio</span><span class="kw">:</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">build</span><span class="kw">:</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="fu">context</span><span class="kw">:</span><span class="at"> .</span></span>
@@ -423,7 +430,7 @@ ssh-add $HOME/.ssh/id_ed25519</code></pre>
 <span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">TinyTeX</span><span class="kw">:</span></span>
 <span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">external</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
 <span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">fonts</span><span class="kw">:</span></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">external</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">external</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>The most important point is that I mount the <code>renv</code> cache to the host’s <a href="https://docs.docker.com/storage/volumes/">Docker Volumes</a>. This means that once you install the R packages, they will be saved on the host side. Therefore, you don’t need to install R packages every time you build the Docker. Also, when you use Docker environments for multiple projects, you don’t need to install the same packages multiple times. The same is true for Julia, Python, and TinyTeX packages.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -431,7 +438,7 @@ ssh-add $HOME/.ssh/id_ed25519</code></pre>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-What is Docker Volumes?
+<span class="screen-reader-only">Note</span>What is Docker Volumes?
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -456,7 +463,7 @@ docker volume create fonts</code></pre>
 <section id="installing-tinytex-and-setting-in-vscode" class="level3">
 <h3 class="anchored" data-anchor-id="installing-tinytex-and-setting-in-vscode">Installing TinyTeX and Setting in VSCode</h3>
 <p>When installing TinyTeX, there is an R command called <code>tinytex::install_tinytex()</code>. However, since I want to cache the packages installed with TinyTeX in Docker Volumes, I specify the installation folder as follows.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>tinytex<span class="sc">::</span><span class="fu">install_tinytex</span>(<span class="at">dir =</span> <span class="st">"/home/rstudio/.TinyTeX"</span>, <span class="at">force =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>tinytex<span class="sc">::</span><span class="fu">install_tinytex</span>(<span class="at">dir =</span> <span class="st">"/home/rstudio/.TinyTeX"</span>, <span class="at">force =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Note that once you install it in Docker Volumes, you don’t need to run this command again in other Docker projects.</p>
 <p>To use TinyTeX as the <span class="math inline">\(\LaTeX\)</span> compiler in VSCode, edit <code>settings.json</code> as <a href="https://github.com/kazuyanagimoto/dockerR/blob/main/.vscode/_settings.json">this</a>. Note that if you set it in <code>WORKSPACE_DIR/.vscode/settings.json</code>, it will only be valid for this workspace. Since the <code>.vscode/settings.json</code> is often git-ignored in team projects, I have renamed it to <code>_settings.json</code> in the template.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -465,7 +472,7 @@ docker volume create fonts</code></pre>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Why I don’t use Overleaf?
+<span class="screen-reader-only">Tip</span>Why I don’t use Overleaf?
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -486,7 +493,7 @@ Why I don’t use Overleaf?
 <section id="vscode-extensions" class="level2">
 <h2 class="anchored" data-anchor-id="vscode-extensions">VSCode Extensions</h2>
 <p>The settings for VSCode Remote Containers are as follows. It is almost intuitive, but I would like to explain some of the extensions.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"name"</span><span class="fu">:</span> <span class="st">"${localWorkspaceFolderBasename}"</span><span class="fu">,</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"dockerComposeFile"</span><span class="fu">:</span> <span class="st">"../docker-compose.yml"</span><span class="fu">,</span></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"service"</span><span class="fu">:</span> <span class="st">"rstudio"</span><span class="fu">,</span></span>
@@ -503,13 +510,13 @@ Why I don’t use Overleaf?
 <span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"forwardPorts"</span><span class="fu">:</span> <span class="ot">[</span><span class="dv">8080</span><span class="ot">,</span> <span class="dv">8787</span><span class="ot">]</span><span class="fu">,</span></span>
 <span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"workspaceFolder"</span><span class="fu">:</span> <span class="st">"/home/rstudio/work"</span><span class="fu">,</span></span>
 <span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"shutdownAction"</span><span class="fu">:</span> <span class="st">"stopCompose"</span><span class="fu">,</span></span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <section id="gramarly-extension" class="level4">
 <h4 class="anchored" data-anchor-id="gramarly-extension"><a href="https://marketplace.visualstudio.com/items?itemName=znck.grammarly">Gramarly Extension</a></h4>
 <p>An unofficial extension of the English proofreading service <a href="https://www.grammarly.com/">Grammarly</a>. Just by installing this, it will correct spelling mistakes, missing “s” in the third person singular, and articles. You can also use the paid version by logging in. Also, it can be used in <code>.tex</code>, <code>.Rmd</code>, and <code>.qmd</code> files. I would like you to refer to the help of the extension itself for details, but in short, you can add the extension name by adding the following to the config file.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"grammarly.files.include"</span><span class="fu">:</span> <span class="ot">[</span><span class="st">"**/README.md"</span><span class="ot">,</span> <span class="st">"**/readme.md"</span><span class="ot">,</span> <span class="st">"**/*.txt"</span><span class="ot">,</span> <span class="st">"**/*.tex"</span><span class="ot">,</span> <span class="st">"**/*.Rmd"</span><span class="ot">,</span> <span class="st">"**/*.qmd"</span><span class="ot">]</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="edit-csv" class="level4">
 <h4 class="anchored" data-anchor-id="edit-csv"><a href="https://marketplace.visualstudio.com/items?itemName=janisdd.vscode-edit-csv">Edit CSV</a></h4>
@@ -651,13 +658,14 @@ docker volume create fonts</code></pre>
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -1079,7 +1087,7 @@ docker volume create fonts</code></pre>
   }
   loadGiscus();
 </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb9" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "A Minimal &amp; Portable Research Environment with Docker" </span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> 2023-09-06</span></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> Kazuharu Yanagimoto</span></span>
@@ -1496,7 +1504,7 @@ docker volume create fonts</code></pre>
 <span id="cb9-415"><a href="#cb9-415" aria-hidden="true" tabindex="-1"></a><span class="ex">The</span> above is my template for a minimal and portable research environment and how to use it.</span>
 <span id="cb9-416"><a href="#cb9-416" aria-hidden="true" tabindex="-1"></a><span class="ex">Since</span> everything is done in VSCode and Docker, you can reproduce exactly the same environment on other computers with very few steps.</span>
 <span id="cb9-417"><a href="#cb9-417" aria-hidden="true" tabindex="-1"></a><span class="ex">Also,</span> since all the packages are cached, the build time of Docker is also significantly reduced, resulting in a lower maintenance cost.</span>
-<span id="cb9-418"><a href="#cb9-418" aria-hidden="true" tabindex="-1"></a><span class="ex">The</span> best environment for me may not be the best environment for you, but I hope this article will help you in your research 🥂!</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<span id="cb9-418"><a href="#cb9-418" aria-hidden="true" tabindex="-1"></a><span class="ex">The</span> best environment for me may not be the best environment for you, but I hope this article will help you in your research 🥂!</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
