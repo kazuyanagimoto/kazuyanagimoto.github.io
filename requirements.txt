@@ -1,3 +1,0 @@
-dvc
-dvc-gdrive
-jupyterlab

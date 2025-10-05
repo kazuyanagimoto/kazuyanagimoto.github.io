@@ -8,7 +8,7 @@ listing:
     sort:
       - "feature"
       - "date desc"
-    template: ../static/html/research/listing.ejs
+    template: ../static/html/list-research.ejs
     categories: true  
 title-block-banner: "#fff"
 page-layout: full

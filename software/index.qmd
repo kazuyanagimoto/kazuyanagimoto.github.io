@@ -5,11 +5,11 @@ listing:
   - id: r
     contents: r.yml
     sort: "date desc"
-    template: ../static/html/software/listing.ejs
+    template: ../static/html/list-software.ejs
   - id: quarto
     contents: quarto.yml
     sort: "date desc"
-    template: ../static/html/software/listing.ejs
+    template: ../static/html/list-software.ejs
 title-block-banner: "#fff"
 page-layout: full
 toc: true

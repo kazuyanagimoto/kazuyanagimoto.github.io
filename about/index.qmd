@@ -10,6 +10,10 @@ listing:
     categories: false
     template: ../static/html/about/research.ejs
     max-items: 2
+  - id: teaching
+    contents: ../teaching/ay_2025-26.yml
+    template: ../static/html/list-teaching.ejs
+    max-items: 1
   - id: blog
     contents: ../blog/*/**/index.qmd
     sort: "date desc"
@@ -49,6 +53,15 @@ My research field is family economics, broadly speaking, I am interested in ques
 
 ::: {style="text-align: right"}
 [See All →](../research)
+:::
+
+## TEACHING THAT INSPIRES
+
+:::{#teaching}
+:::
+
+::: {style="text-align: right"}
+[See All →](../teaching)
 :::
 
 ## A BLOG THAT WORKS

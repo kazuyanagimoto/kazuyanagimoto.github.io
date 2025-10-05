@@ -1,0 +1,44 @@
+```{=html}
+<div class="courses">
+    <% for (const course of items) { %>
+    <div class="course-entry">
+        <div class="course-image">
+            <% if (course.url) { %>
+            <a href="<%= course.url %>" target="_blank"><img src="<%= course.image %>" alt="<%= course.title %>" title="<%= course.title %>" /></a>
+            <% } else { %>
+            <img src="<%= course.image %>" alt="<%= course.title %>" title="<%= course.title %>" />
+            <% } %>
+        </div>
+        <div class="body">
+            <p class="course-title">
+                <% if (course.url) { %>
+                <a href="<%= course.url %>" target="_blank"><%= course.title %></a> 
+                <% } else { %>
+                <%= course.title %> 
+                <% } %>
+            </p>
+            <p class="course-details">
+                <span class="course-info"><%= course.info %></span>
+            </p>
+            <p class="course-description"><%= course.description %></p>
+
+            <ul class="course-links">
+                <% if (course.links && course.links.length) { %>
+                    <% for (const link of course.links) { %>
+                    <li class="course-link">
+                        <% if (link.local) { %>
+                        <a href="<%- course.path.substring(0, course.path.lastIndexOf('/')) %>/<%- link.url %>">
+                        <% } else { %>
+                        <a href="<%- link.url %>">
+                        <% } %>
+                            <i class="<%- link.icon %>"></i> <%= link.name %>
+                        </a>
+                    </li>
+                    <% } %>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+    <% } %>
+</div>
+```

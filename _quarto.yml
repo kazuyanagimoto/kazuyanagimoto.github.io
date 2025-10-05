@@ -1,6 +1,5 @@
 project:
   type: website
-  output-dir: docs
   preview: 
     port: 5556
     browser: true
@@ -25,6 +24,8 @@ website:
     right:
       - text: About
         file: about/index.qmd
+      - text: Teaching
+        file: teaching/index.qmd
       - text: Research
         file: research/index.qmd
       - text: Software
@@ -51,7 +52,3 @@ format:
       - static/html/custom.scss
 
 bibliography: references.bib
-
-
-
-

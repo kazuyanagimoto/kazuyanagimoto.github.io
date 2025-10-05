@@ -46,10 +46,11 @@ vignettes/*.pdf
 Manifest.toml
 
 # Quarto
-docs/
+_site/
 
 # VSCode
 .vscode/settings.json
 
 # Other
 .DS_Store
+**/*.quarto_ipynb

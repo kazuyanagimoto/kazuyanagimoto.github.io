@@ -1,0 +1,16 @@
+- title: Family Macroeconomics
+  info: Macro IV・Fall 2025・Kobe University
+  description: Quantitative analysis of Marriage, Fertitlity, and Gender Gaps
+  image: https://kazuyanagimoto.com/course-kobe-macro4-2025/static/img/logo.drawio.svg
+  url: https://kazuyanagimoto.com/course-kobe-macro4-2025/
+  links:
+    - name: Website
+      url: https://kazuyanagimoto.com/course-kobe-macro4-2025/
+      icon: fa-solid fa-globe
+    - name: GitHub
+      url: https://github.com/kazuyanagimoto/course-kobe-macro4-2025
+      icon: fa-brands fa-github
+- title: Macroeconomics
+  info: Macro I・Q4 2025・Kobe University
+  description: RBC, New Keynesian, and DMP Models
+  image: ../static/img/under-construction.svg

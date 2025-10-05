@@ -5,15 +5,15 @@ listing:
   - id: talks_2023
     contents: talks_2023.yml
     sort: "date desc"
-    template: ../static/html/talks/listing.ejs
+    template: ../static/html/list-talks.ejs
   - id: talks_2022
     contents: talks_2022.yml
     sort: "date desc"
-    template: ../static/html/talks/listing.ejs
+    template: ../static/html/list-talks.ejs
   - id: talks_2021
     contents: talks_2021.yml
     sort: "date desc"
-    template: ../static/html/talks/listing.ejs
+    template: ../static/html/list-talks.ejs
 title-block-banner: "#fff"
 page-layout: full
 toc: true

@@ -6,22 +6,22 @@ listing:
   - id: posts_2025
     contents: "2025/**/index.qmd"
     sort: "date desc"
-    template: ../static/html/blog/listing.ejs
+    template: ../static/html/list-blog.ejs
     categories: true
   - id: posts_2024
     contents: "2024/**/index.qmd"
     sort: "date desc"
-    template: ../static/html/blog/listing.ejs
+    template: ../static/html/list-blog.ejs
     categories: true
   - id: posts_2023
     contents: "2023/**/index.qmd"
     sort: "date desc"
-    template: ../static/html/blog/listing.ejs
+    template: ../static/html/list-blog.ejs
     categories: true
   - id: posts_2022
     contents: "2022/**/index.qmd"
     sort: "date desc"
-    template: ../static/html/blog/listing.ejs
+    template: ../static/html/list-blog.ejs
     categories: true
 page-layout: full
 toc-title: Year

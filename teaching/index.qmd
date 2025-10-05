@@ -1,0 +1,19 @@
+---
+title: Teaching
+description: "A list of my teaching materials"
+listing:
+  - id: ay_25-26
+    contents: ay_2025-26.yml
+    sort: "date desc"
+    template: ../static/html/list-teaching.ejs
+title-block-banner: "#fff"
+page-layout: full
+toc: true
+toc-title: Academic Year
+---
+
+## 2025-26
+
+::: {#ay_25-26}
+:::
+
