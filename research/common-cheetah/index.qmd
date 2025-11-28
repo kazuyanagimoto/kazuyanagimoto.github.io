@@ -7,7 +7,7 @@ author:
   - name: Kazuharu Yanagimoto
     url: {{< var website-url >}}
     orcid: {{ < var orcid >}}
-    affiliation: CEMFI
+    affiliation: Kobe University
 categories:
   - Gender Gaps
   - Social Norms
