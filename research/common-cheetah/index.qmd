@@ -1,6 +1,6 @@
 ---
-title: "Why not Choose a Better Job?"
-subtitle: "Flexibility, Social Norms, and Gender Gaps in Japan"
+title: Barriers to Gender Convergence
+subtitle: The Interactive Effects of Job Inflexibility and Social Norms
 date: 2023-01-20
 date-modified: last-modified
 author:
@@ -24,10 +24,6 @@ pub-info:
     - name: CEMFI WP
       url: https://www.cemfi.es/ftp/wp/2405.pdf
       icon: fa-solid fa-file-pdf
-    - name: Slides (SEHO2023)
-      url: "seho2023_yanagimoto.pdf"
-      local: true
-      icon: fa-solid fa-chalkboard-user
   extra: >-
     Presented at 47th Simposio de la Asociación Española de Economía (Valencia, December 15-17, 2022) and Society of Economics of the Household (SEHO) meeting (Copenhagen, June 2023)
 pub-status: 
@@ -42,7 +38,9 @@ pub-status:
 
 ## Abstract
 
-Japan ranks 125th out of 146 countries in the World Economic Forum’s Global Gender Gap Index 2023, well below many developed countries, and has one of the largest gender pay gaps among high-income countries. On the other hand, women’s labor force participation is high in Japan. However, women are much more likely to work in non-regular jobs, which are associated with lower wages and fewer hours. Men, in contrast, have regular, higher-paid jobs with long-hours requirements. In this paper, I build and estimate a model where couples jointly decide their occupations and working hours. Occupations differ in their flexibility. Regular jobs require long working hours, and hourly wages are a convex function of hours worked. Non-regular occupations have a linear mapping between hours worked and hourly wages. The model also allows for social norms that penalize women who earn more than their husbands.Given the inflexibility of regular jobs and social norms, women are more likely to choose non-regular jobs or not to work, and allocate a larger share of their hours for home production. The model can account for nearly all gaps in participation rates, occupational choices, and labor hours, along with 22.4% of the wage gap. Through the lens of the model, the inflexibility of regular jobs explains almost all the gaps in occupational choices and wages, while social norms that penalize women who earn more than their husbands account for all of the gap in the participation rate and half of the gap in hours worked.
+This paper investigates the barriers to gender convergence using Japan as a salient environment to explore the interactive effects of labor market structures and social norms. I develop a quantitative model of household labor supply where couples jointly decide their occupations and working hours. The model features a labor market with inflexible "regular" jobs with convex pay schedules and flexible "non-regular" jobs, interacting with social norms regarding spousal earnings. The calibrated model successfully reproduces observed gender gaps in participation, occupation, and working hours, and explains 51.7% of the gender wage gap. The model also accounts for cross-regional differences in gender gaps solely through variation in social norms. Counterfactual simulations show that while increasing job flexibility substantially reduces wage and occupational gaps, the working hours gap persists due to the unequal burden of domestic work. Closing this remaining gap requires policies such as affordable household services. Furthermore, the model predicts that structural reforms are particularly effective in societies with strong gender norms.
+
+<!---
 
 ## Slides
 
@@ -64,3 +62,5 @@ Japan ranks 125th out of 146 countries in the World Economic Forum’s Global Ge
     number = {2405},
 }
 ```
+
+--->
