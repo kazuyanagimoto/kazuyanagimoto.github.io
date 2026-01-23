@@ -24,6 +24,10 @@ pub-info:
     - name: CEMFI WP
       url: https://www.cemfi.es/ftp/wp/2405.pdf
       icon: fa-solid fa-file-pdf
+    - name: Slides
+      url: "grips_yanagimoto.pdf"
+      local: true
+      icon: fa-solid fa-chalkboard-user
   extra: >-
     Presented at 47th Simposio de la Asociación Española de Economía (Valencia, December 15-17, 2022) and Society of Economics of the Household (SEHO) meeting (Copenhagen, June 2023)
 pub-status: 
@@ -40,13 +44,15 @@ pub-status:
 
 This paper investigates the barriers to gender convergence using Japan as a salient environment to explore the interactive effects of labor market structures and social norms. I develop a quantitative model of household labor supply where couples jointly decide their occupations and working hours. The model features a labor market with inflexible "regular" jobs with convex pay schedules and flexible "non-regular" jobs, interacting with social norms regarding spousal earnings. The calibrated model successfully reproduces observed gender gaps in participation, occupation, and working hours, and explains 51.7% of the gender wage gap. The model also accounts for cross-regional differences in gender gaps solely through variation in social norms. Counterfactual simulations show that while increasing job flexibility substantially reduces wage and occupational gaps, the working hours gap persists due to the unequal burden of domestic work. Closing this remaining gap requires policies such as affordable household services. Furthermore, the model predicts that structural reforms are particularly effective in societies with strong gender norms.
 
-<!---
+
 
 ## Slides
 
 ```{=html}
-<iframe class="slide-deck" src="seho2023_yanagimoto.html"></iframe>
+<iframe class="slide-deck" src="grips_yanagimoto.html"></iframe>
 ```
+
+<!--
 
 ## BibTeX citation
 
