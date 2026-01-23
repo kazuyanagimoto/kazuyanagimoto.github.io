@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2024-03-28">
 
-<title>Using Event Studies as an Outcome in Causal Analysis – Kazuharu Yanagimoto</title>
+<title>On Causal Inference with Model-Based Outcomes – Kazuharu Yanagimoto</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -124,11 +124,11 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
 </script>
 
 
-<meta property="og:title" content="Using Event Studies as an Outcome in Causal Analysis – Kazuharu Yanagimoto">
+<meta property="og:title" content="On Causal Inference with Model-Based Outcomes – Kazuharu Yanagimoto">
 <meta property="og:description" content="">
 <meta property="og:image" content="https://kazuyanagimoto.com/research/hetero2wfe/img/agg_earn.svg">
 <meta property="og:site_name" content="Kazuharu Yanagimoto">
-<meta name="twitter:title" content="Using Event Studies as an Outcome in Causal Analysis – Kazuharu Yanagimoto">
+<meta name="twitter:title" content="On Causal Inference with Model-Based Outcomes – Kazuharu Yanagimoto">
 <meta name="twitter:description" content="">
 <meta name="twitter:image" content="https://kazuyanagimoto.com/research/hetero2wfe/img/agg_earn.svg">
 <meta name="twitter:creator" content="@kazuyanagimoto">
@@ -199,7 +199,7 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default">
     
             <div class="quarto-title">
-            <h1 class="title">Using Event Studies as an Outcome in Causal Analysis</h1>
+            <h1 class="title">On Causal Inference with Model-Based Outcomes</h1>
 
             
                                     <div class="quarto-categories">
@@ -213,7 +213,7 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
 
         <div class="quarto-title-meta-author">
           <div class="quarto-title-meta-heading">Authors</div>
-          <div class="quarto-title-meta-heading">Affiliation</div>
+          <div class="quarto-title-meta-heading">Affiliations</div>
           
             <div class="quarto-title-meta-contents">
             <p class="author"><a href="https://sites.google.com/view/dmitry-arkhangelsky/">Dmitry Arkhangelsky</a> <a href="mailto:darkhangel@cemfi.es" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0000-0003-2346-1056" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
@@ -228,7 +228,7 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
           </div>
           <div class="quarto-title-meta-contents">
                 <p class="affiliation">
-                    CEMFI
+                    Kobe University
                   </p>
               </div>
             <div class="quarto-title-meta-contents">
@@ -254,7 +254,7 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
             <div>
             <div class="quarto-title-meta-heading">Modified</div>
             <div class="quarto-title-meta-contents">
-              <p class="date-modified">June 24, 2025</p>
+              <p class="date-modified">January 9, 2026</p>
             </div>
           </div>
             
@@ -281,7 +281,7 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
 
 <section id="abstract" class="level2">
 <h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
-<p>We study a causal inference problem with group-level outcomes, which are themselves parameters identified from microdata. We formalize these outcomes using population moment conditions and demonstrate that one-step Generalized Method of Moments (GMM) estimators are generally inconsistent due to an endogenous weighting bias, where policy affects the implicit GMM weights. In contrast, two-stage Minimum Distance (MD) estimators perform well when group sizes are sufficiently large. While MD estimators can still be inconsistent in small groups due to a policy-induced sample selection, we demonstrate that this can be addressed by incorporating auxiliary population information. An empirical application illustrates the practical importance of these findings.</p>
+<p>We study the estimation of causal effects on group-level parameters identified from microdata (e.g., child penalties). We demonstrate that standard one-step methods (such as pooled OLS and IV regressions) are generally inconsistent due to an endogenous weighting bias, where the policy affects the implicit weights (e.g., altering fertility rates). In contrast, we advocate for a two-step Minimum Distance (MD) framework that explicitly separates parameter identification from policy evaluation. This approach eliminates the endogenous weighting bias and requires explicitly confronting sample selection when groups are small, thereby improving transparency. We show that the MD estimator performs well when parameters can be estimated for most groups, and propose a robust alternative that uses auxiliary information in settings with limited data. To illustrate the importance of this methodological choice, we evaluate the effect of the 2005 Dutch childcare reform on child penalties and find that the conventional one-step approach yields estimates that are substantially larger than those from the two-step method.</p>
 </section>
 <section id="important-table-figure" class="level2">
 <h2 class="anchored" data-anchor-id="important-table-figure">Important table &amp; figure</h2>
@@ -308,10 +308,10 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
 </section>
 <section id="bibtex-citation" class="level2">
 <h2 class="anchored" data-anchor-id="bibtex-citation">BibTeX citation</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bibtex code-with-copy"><code class="sourceCode bibtex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">@online</span>{<span class="ot">arkhangelsky2025</span>,</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span> = {Using Event Studies as an Outcome in Causal Analysis},</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bibtex code-with-copy"><code class="sourceCode bibtex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">@online</span>{<span class="ot">arkhangelsky2026</span>,</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span> = {On Causal Inference with Model-Based Outcomes},</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">author</span> = {Arkhangelsky, Dmitry and Yanagimoto, Kazuharu and Zohar, Tom},</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">date</span> = {2025-01-29},</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">date</span> = {2026-01-09},</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">eprint</span> = {2403.19563},</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">eprinttype</span> = {arXiv},</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">eprintclass</span> = {econ},</span>
