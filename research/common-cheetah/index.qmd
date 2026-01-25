@@ -5,9 +5,9 @@ date: 2023-01-20
 date-modified: last-modified
 author:
   - name: Kazuharu Yanagimoto
-    url: {{< var website-url >}}
-    orcid: {{ < var orcid >}}
-    affiliation: Kobe University
+    url: "{{< var website-url >}}"
+    orcid: "{{< var orcid >}}"
+    affiliation: "{{< var affiliation >}}"
 categories:
   - Gender Gaps
   - Social Norms

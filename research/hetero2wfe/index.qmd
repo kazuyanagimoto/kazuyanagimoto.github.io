@@ -11,7 +11,7 @@ authors:
   - name: Kazuharu Yanagimoto
     url: "{{< var website-url >}}"
     orcid: "{{ < var orcid > }}"
-    affiliation: Kobe University
+    affiliation: "{{< var affiliation >}}"
     email: "{{< var email >}}"
   - name: Tom Zohar
     orcid: 0000-0002-7507-7673

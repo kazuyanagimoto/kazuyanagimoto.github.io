@@ -7,7 +7,7 @@ author:
   - name: Kazuharu Yanagimoto
     url: "{{< var website-url >}}"
     orcid: "{{< var orcid >}}"
-    affiliation: CEMFI
+    affiliation: "{{< var affiliation >}}"
     email: "{{< var email >}}"
 categories:
   - Marriage
@@ -22,6 +22,10 @@ pub-info:
       url: "yanagimoto_icky_impala.pdf"
       local: true
       icon: fa-regular fa-file-pdf
+    - name: Slides
+      url: "cigs_yanagimoto.pdf"
+      local: true
+      icon: fa-solid fa-chalkboard-user
 pub-status: 
   status: Writing
   class: warning
@@ -35,15 +39,21 @@ pub-status:
 
 This paper introduces a new factor contributing to the decline in marriage and fertility: the growth of leisure technology. Over recent decades, high-income countries have experienced two notable shifts in household and family dynamics. First, there has been a significant decline in marriage rates and fertility. Second, time has increasingly been allocated to leisure activities. This paper presents a unified model of marriage and fertility, incorporating intra-household bargaining dynamics. The model, calibrated using data from Japan between 2018 and 2022, is employed to assess the impact of leisure technology growth on marriage and fertility during 2005-2009. The findings highlight that leisure technology growth makes single life relatively more appealing compared to marriage and parenthood. The model explains 22.0% of the decline in marriage and 65.8% of the decrease in fertility.
 
+## Slides
+
+```{=html}
+<iframe class="slide-deck" src="cigs_yanagimoto.html"></iframe>
+```
+
 ## BibTeX citation
 
 ```bibtex
-@unpublished{yanagimoto2024,
+@unpublished{yanagimoto2025,
     Title = {A Quantitative Model of Non-Marriage and Fertility:
              Bargaining over Leisure},
     Author = {Kazuharu Yanagimoto},
     Note = {Working paper},
-    Year = {2024},
+    Year = {2025},
     month = aug,
 }
 ```
