@@ -1,0 +1,15 @@
+{
+  "hash": "c038673d510e719a7fc7935bd3ed8387",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: Marriage and Divorce in Continuous Time\ndate: 2024-08-29\ndate-modified: last-modified\nauthor:\n  - name: Kazuharu Yanagimoto\n    url: \"{{< var website-url >}}\"\n    orcid: \"{{< var orcid >}}\"\n    affiliation: \"{{< var affiliation >}}\"\n    email: \"{{< var email >}}\"\ncategories:\n  - Marriage\n  - Fertility\n  - Japan\nimage: thumbnail.svg\nstatus: working-papers\nfeature: true\npub-info:\n  links:\n    - name: Latest WP\n      url: \"yanagimoto_icky_impala.pdf\"\n      local: true\n      icon: fa-regular fa-file-pdf\n    - name: Slides\n      url: \"cigs_yanagimoto.pdf\"\n      local: true\n      icon: fa-solid fa-chalkboard-user\npub-status: \n  status: Writing\n  class: warning\n  icon: fa-solid fa-pencil\n#   status: Under review\n#   class: success\n#   icon: fas fa-glasses\n---\n\n#  Marriage and Divorce in Continuous Time \n\n## Abstract\n\nThis paper reformulates the @greenwood2009 marriage and divorce model in continuous time using the HACT methods of @achdou2022. Replacing the AR(1) match quality process with an Ornstein-Uhlenbeck process yields a tridiagonal generator, reducing the computational complexity of both the value function and stationary distribution calculations from quadratic to linear in the number of grid points. The continuous-time model closely replicates the discrete-time equilibrium across all key outcomes, including the share of married households, the marriage rate, and the divorce rate, while achieving substantial gains in computation time and memory usage.\n\n\n## Slides\n\n```{=html}\n<iframe class=\"slide-deck\" src=\"cigs_yanagimoto.html\"></iframe>\n```\n\n## BibTeX citation\n\n```bibtex\n@misc{yanagimoto2026,\n  title = {Marriage and {{Divorce}} in {{Continuous Time}}},\n  author = {Yanagimoto, Kazuharu},\n  year = 2026,\n  month = feb,\n  number = {arXiv:2602.19798},\n  eprint = {2602.19798},\n  primaryclass = {econ},\n  publisher = {arXiv},\n  doi = {10.48550/arXiv.2602.19798},\n  urldate = {2026-02-24},\n  archiveprefix = {arXiv},\n  keywords = {Economics - General Economics}\n}\n```",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

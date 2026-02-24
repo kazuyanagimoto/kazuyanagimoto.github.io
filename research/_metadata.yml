@@ -2,3 +2,4 @@ format:
   html:
     template-partials:
       - ../static/html/title-block.html
+    lightbox: true
