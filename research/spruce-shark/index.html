@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Kazuharu Yanagimoto">
-<meta name="dcterms.date" content="2023-01-20">
+<meta name="dcterms.date" content="2025-02-23">
 
-<title>Barriers to Gender Convergence – Kazuharu Yanagimoto</title>
+<title>Marriage and Divorce in Continuous Time – Kazuharu Yanagimoto</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +21,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -47,6 +82,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script src="../../site_libs/quarto-contrib/iconify-1.0.0-beta.2/iconify-icon.min.js"></script>
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -85,15 +123,19 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
 </script>
 
 
-<meta property="og:title" content="Barriers to Gender Convergence – Kazuharu Yanagimoto">
-<meta property="og:description" content="The Interactive Effects of Job Inflexibility and Social Norms">
-<meta property="og:image" content="https://kazuyanagimoto.com/research/common-cheetah/thumbnail.svg">
+<meta property="og:title" content="Marriage and Divorce in Continuous Time – Kazuharu Yanagimoto">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://kazuyanagimoto.com/research/spruce-shark/img/fig-benchmark-1.png">
 <meta property="og:site_name" content="Kazuharu Yanagimoto">
-<meta name="twitter:title" content="Barriers to Gender Convergence – Kazuharu Yanagimoto">
-<meta name="twitter:description" content="The Interactive Effects of Job Inflexibility and Social Norms">
-<meta name="twitter:image" content="https://kazuyanagimoto.com/research/common-cheetah/thumbnail.svg">
+<meta property="og:image:height" content="864">
+<meta property="og:image:width" content="1728">
+<meta name="twitter:title" content="Marriage and Divorce in Continuous Time – Kazuharu Yanagimoto">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://kazuyanagimoto.com/research/spruce-shark/img/fig-benchmark-1.png">
 <meta name="twitter:creator" content="@kazuyanagimoto">
 <meta name="twitter:site" content="@kazuyanagimoto">
+<meta name="twitter:image-height" content="864">
+<meta name="twitter:image-width" content="1728">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -160,14 +202,13 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default">
     
             <div class="quarto-title">
-            <h1 class="title">Barriers to Gender Convergence</h1>
+            <h1 class="title">Marriage and Divorce in Continuous Time</h1>
 
-                        <p class="subtitle lead">The Interactive Effects of Job Inflexibility and Social Norms</p>
             
                                     <div class="quarto-categories">
-                                <div class="quarto-category">Gender Gaps</div>
-                                <div class="quarto-category">Social Norms</div>
-                                <div class="quarto-category">Japan</div>
+                                <div class="quarto-category">Marriage</div>
+                                <div class="quarto-category">Divorce</div>
+                                <div class="quarto-category">Computational Methods</div>
                             </div>
                                 </div>
         
@@ -177,7 +218,7 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
           <div class="quarto-title-meta-heading">Affiliation</div>
           
             <div class="quarto-title-meta-contents">
-            <p class="author"><a href="https://kazuyanagimoto.com/">Kazuharu Yanagimoto</a> <a href="https://orcid.org/0009-0007-1967-8304" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+            <p class="author"><a href="https://kazuyanagimoto.com/">Kazuharu Yanagimoto</a> <a href="mailto:yanagimoto@econ.kobe-u.ac.jp" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0009-0007-1967-8304" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
           </div>
           <div class="quarto-title-meta-contents">
                 <p class="affiliation">
@@ -192,7 +233,7 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
             <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">January 20, 2023</p>
+              <p class="date">February 23, 2025</p>
             </div>
           </div>
           
@@ -207,23 +248,13 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
           
 
         
-        <div class="quarto-title-meta-heading manual">Other details</div>
-        <div class="quarto-title-meta-contents">
-            <p class="publication-extra">
-                Presented at 47th Simposio de la Asociación Española de Economía (Valencia, December 15-17, 2022) and Society of Economics of the Household (SEHO) meeting (Copenhagen, June 2023)
-            </p>
-        </div>
-        
                 <div class="project-details">
                         <ul class="project-links">
                                 <li class="project-link">
-                    <a href="yanagimoto_common_cheetah.pdf"><i class="fa-regular fa-file-pdf"></i> Latest WP</a>
+                    <a href="https://arxiv.org/abs/2602.19798"><i class="ai ai-arxiv"></i> Latest WP</a>
                 </li>
                                 <li class="project-link">
-                    <a href="https://www.cemfi.es/ftp/wp/2405.pdf"><i class="fa-solid fa-file-pdf"></i> CEMFI WP</a>
-                </li>
-                                <li class="project-link">
-                    <a href="grips_yanagimoto.pdf"><i class="fa-solid fa-chalkboard-user"></i> Slides</a>
+                    <a href="https://github.com/kazuyanagimoto/spruce-shark"><i class="fa-brands fa-github"></i> Code</a>
                 </li>
                             </ul>
                     </div>
@@ -233,29 +264,33 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
 
 <section id="abstract" class="level2">
 <h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
-<p>This paper investigates the barriers to gender convergence using Japan as a salient environment to explore the interactive effects of labor market structures and social norms. I develop a quantitative model of household labor supply where couples jointly decide their occupations and working hours. The model features a labor market with inflexible “regular” jobs with convex pay schedules and flexible “non-regular” jobs, interacting with social norms regarding spousal earnings. The calibrated model successfully reproduces observed gender gaps in participation, occupation, and working hours, and explains 51.7% of the gender wage gap. The model also accounts for cross-regional differences in gender gaps solely through variation in social norms. Counterfactual simulations show that while increasing job flexibility substantially reduces wage and occupational gaps, the working hours gap persists due to the unequal burden of domestic work. Closing this remaining gap requires policies such as affordable household services. Furthermore, the model predicts that structural reforms are particularly effective in societies with strong gender norms.</p>
+<p>This paper reformulates the Greenwood and Guner (2009) marriage and divorce model in continuous time using the HACT methods of Achdou et al.&nbsp;(2022). Replacing the AR(1) match quality process with an Ornstein-Uhlenbeck process yields a tridiagonal generator, reducing the computational complexity of both the value function and stationary distribution calculations from quadratic to linear in the number of grid points. The continuous-time model closely replicates the discrete-time equilibrium across all key outcomes, including the share of married households, the marriage rate, and the divorce rate, while achieving substantial gains in computation time and memory usage.</p>
 </section>
-<section id="slides" class="level2">
-<h2 class="anchored" data-anchor-id="slides">Slides</h2>
-<iframe class="slide-deck" src="grips_yanagimoto.html"></iframe>
-<!--
-
-## BibTeX citation
-
-```bibtex
-@unpublished{yanagimoto2024,
-    Title = {Why not Choose a Better Job?
-             Flexibility, Social Norms, and Gender Gaps in Japan},
-    Author = {Kazuharu Yanagimoto},
-    Note = {Working paper},
-    Year = {2024},
-    month = mar,
-    series = {CEMFI Working Paper},
-    number = {2405},
-}
-```
-
---->
+<section id="important-figures" class="level2">
+<h2 class="anchored" data-anchor-id="important-figures">Important figures</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/fig-marriage-divorce-rate-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Replication of Fig. 7 in Greenwood and Guner (2009)."><img src="img/fig-marriage-divorce-rate-1.png" class="img-fluid figure-img" alt="Replication of Fig. 7 in Greenwood and Guner (2009)."></a></p>
+<figcaption>Replication of Fig. 7 in Greenwood and Guner (2009).</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/fig-benchmark-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Computational Performance of Continuous-Time and Discrete-Time Methods"><img src="img/fig-benchmark-1.png" class="img-fluid figure-img" alt="Computational Performance of Continuous-Time and Discrete-Time Methods"></a></p>
+<figcaption>Computational Performance of Continuous-Time and Discrete-Time Methods</figcaption>
+</figure>
+</div>
+</section>
+<section id="bibtex-citation" class="level2">
+<h2 class="anchored" data-anchor-id="bibtex-citation">BibTeX citation</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bibtex code-with-copy"><code class="sourceCode bibtex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">@misc</span>{<span class="ot">yanagimoto2026</span>,</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span> = {Marriage and Divorce in Continuous Time},</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">author</span> = {Yanagimoto, Kazuharu},</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">year</span> = {2026},</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">eprint</span> = {2602.19798},</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">archiveprefix</span> = {arXiv},</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">doi</span> = {10.48550/arXiv.2602.19798}</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 
 </section>
@@ -675,6 +710,38 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
 </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
