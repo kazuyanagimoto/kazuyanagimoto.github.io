@@ -19,9 +19,8 @@ feature: true
 pub-info:
   links:
     - name: Latest WP
-      url: "yanagimoto_icky_impala.pdf"
-      local: true
-      icon: fa-regular fa-file-pdf
+      url: https://arxiv.org/abs/2603.14758
+      icon: ai ai-arxiv
     - name: Slides
       url: "cigs_yanagimoto.pdf"
       local: true
@@ -37,7 +36,7 @@ pub-status:
 
 ## Abstract
 
-This paper introduces a new factor contributing to the decline in marriage and fertility: the growth of leisure technology. Over recent decades, high-income countries have experienced two notable shifts in household and family dynamics. First, there has been a significant decline in marriage rates and fertility. Second, time has increasingly been allocated to leisure activities. This paper presents a unified model of marriage and fertility, incorporating intra-household bargaining dynamics. The model, calibrated using data from Japan between 2018 and 2022, is employed to assess the impact of leisure technology growth on marriage and fertility during 2005-2009. The findings highlight that leisure technology growth makes single life relatively more appealing compared to marriage and parenthood. The model explains 22.0% of the decline in marriage and 65.8% of the decrease in fertility.
+This paper introduces a new factor contributing to the decline in marriage and fertility: the growth of leisure technology. Over recent decades, high-income countries have experienced two notable shifts in household and family dynamics. First, there has been a significant decline in marriage rates and fertility. Second, time has increasingly been allocated to leisure activities. This paper presents a unified model of marriage and fertility, incorporating intra-household bargaining dynamics. The model, calibrated using data from Japan between 2019 and 2023, is employed to assess the impact of leisure technology growth on marriage and fertility during 2005-2009. The findings highlight that leisure technology growth makes single life relatively more appealing compared to marriage and parenthood. The model explains 21.1% of the decline in marriage and 73.1% of the decrease in fertility.
 
 ## Slides
 
@@ -48,12 +47,12 @@ This paper introduces a new factor contributing to the decline in marriage and f
 ## BibTeX citation
 
 ```bibtex
-@unpublished{yanagimoto2025,
-    Title = {A Quantitative Model of Non-Marriage and Fertility:
-             Bargaining over Leisure},
-    Author = {Kazuharu Yanagimoto},
-    Note = {Working paper},
-    Year = {2025},
-    month = aug,
+@misc{yanagimoto2026,
+  title = {A Quantitative Model of Non-Marriage and Fertility: Bargaining over Leisure},
+  author = {Yanagimoto, Kazuharu},
+  year = {2026},
+  eprint = {2603.14758},
+  archiveprefix = {arXiv},
+  doi = {10.48550/arXiv.2603.14758}
 }
 ```
