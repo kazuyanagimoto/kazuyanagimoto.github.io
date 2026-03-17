@@ -56,3 +56,5 @@ This paper introduces a new factor contributing to the decline in marriage and f
   doi = {10.48550/arXiv.2603.14758}
 }
 ```
+
+{{< ai blank-just-to-add-ai-dependency-to-this-page >}}

@@ -70,5 +70,4 @@ At the onset of the coronavirus disease (COVID-19) lockdown in the Philippines i
   publisher = {Social Science Research Network},
   doi = {10.2139/ssrn.5256485},
 }
-
 ```

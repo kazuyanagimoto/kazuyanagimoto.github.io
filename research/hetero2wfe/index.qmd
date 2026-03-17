@@ -34,8 +34,8 @@ pub-info:
     - name: CEMFI WP
       url: https://www.cemfi.es/ftp/wp/2503.pdf
       icon: fa-solid fa-file-pdf
-    - name: Package (unitdid)
-      url: https://github.com/kazuyanagimoto/unitdid
+    - name: Tutorial
+      url: https://github.com/kazuyanagimoto/tutorial-ayz
       icon: fa-brands fa-github
 pub-status: 
   status: Writing
