@@ -36,7 +36,7 @@ pub-status:
 
 ## Abstract
 
-This paper introduces a new factor contributing to the decline in marriage and fertility: the growth of leisure technology. Over recent decades, high-income countries have experienced two notable shifts in household and family dynamics. First, there has been a significant decline in marriage rates and fertility. Second, time has increasingly been allocated to leisure activities. This paper presents a unified model of marriage and fertility, incorporating intra-household bargaining dynamics. The model, calibrated using data from Japan between 2019 and 2023, is employed to assess the impact of leisure technology growth on marriage and fertility during 2005-2009. The findings highlight that leisure technology growth makes single life relatively more appealing compared to marriage and parenthood. The model explains 21.1% of the decline in marriage and 73.1% of the decrease in fertility.
+{{< arxiv-abstract 2603.14758 >}}
 
 ## Slides
 

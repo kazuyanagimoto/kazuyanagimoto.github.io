@@ -34,7 +34,7 @@ pub-status:
 
 ## Abstract
 
-This paper reformulates the Greenwood and Guner (2009) marriage and divorce model in continuous time using the HACT methods of Achdou et al. (2022). Replacing the AR(1) match quality process with an Ornstein-Uhlenbeck process yields a tridiagonal generator, reducing the computational complexity of both the value function and stationary distribution calculations from quadratic to linear in the number of grid points. The continuous-time model closely replicates the discrete-time equilibrium across all key outcomes, including the share of married households, the marriage rate, and the divorce rate, while achieving substantial gains in computation time and memory usage.
+{{< arxiv-abstract 2602.19798 >}}
 
 ## Important figures
 

@@ -18,9 +18,8 @@ feature: true
 pub-info:
   links:
     - name: Latest WP
-      url: "yanagimoto_common_cheetah.pdf"
-      local: true
-      icon: fa-regular fa-file-pdf
+      url: https://arxiv.org/abs/2603.20817
+      icon: ai ai-arxiv
     - name: CEMFI WP
       url: https://www.cemfi.es/ftp/wp/2405.pdf
       icon: fa-solid fa-file-pdf
@@ -42,7 +41,7 @@ pub-status:
 
 ## Abstract
 
-This paper investigates the barriers to gender convergence using Japan as a salient environment to explore the interactive effects of labor market structures and social norms. I develop a quantitative model of household labor supply where couples jointly decide their occupations and working hours. The model features a labor market with inflexible "regular" jobs with convex pay schedules and flexible "non-regular" jobs, interacting with social norms regarding spousal earnings. The calibrated model successfully reproduces observed gender gaps in participation, occupation, and working hours, and explains 51.7% of the gender wage gap. The model also accounts for cross-regional differences in gender gaps solely through variation in social norms. Counterfactual simulations show that while increasing job flexibility substantially reduces wage and occupational gaps, the working hours gap persists due to the unequal burden of domestic work. Closing this remaining gap requires policies such as affordable household services. Furthermore, the model predicts that structural reforms are particularly effective in societies with strong gender norms.
+{{< arxiv-abstract 2603.20817 >}}
 
 
 
@@ -52,21 +51,17 @@ This paper investigates the barriers to gender convergence using Japan as a sali
 <iframe class="slide-deck" src="grips_yanagimoto.html"></iframe>
 ```
 
-<!--
-
 ## BibTeX citation
 
 ```bibtex
-@unpublished{yanagimoto2024,
-    Title = {Why not Choose a Better Job?
-             Flexibility, Social Norms, and Gender Gaps in Japan},
-    Author = {Kazuharu Yanagimoto},
-    Note = {Working paper},
-    Year = {2024},
-    month = mar,
-    series = {CEMFI Working Paper},
-    number = {2405},
+@misc{yanagimoto2026,
+  title = {Barriers to Gender Convergence: The Interactive Effects of Job Inflexibility and Social Norms},
+  author = {Yanagimoto, Kazuharu},
+  year = {2026},
+  eprint = {2603.20817},
+  archiveprefix = {arXiv},
+  doi = {10.48550/arXiv.2603.20817}
 }
 ```
 
---->
+{{< ai blank-just-to-add-ai-dependency-to-this-page >}}
