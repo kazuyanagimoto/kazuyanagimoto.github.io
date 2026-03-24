@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,6 +11,9 @@
 
 <title>Blog – Kazuharu Yanagimoto</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -37,15 +40,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-8e25f12395e2b1592b002d5f86e95333.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-4935a97d7384e2925efdc6e9bc6f7851.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5568faaf66880f1ade044f1b017d2658.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-105b6bb157676bd45a4f8dc3c96a147f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script src="../site_libs/quarto-contrib/iconify-1.0.0-beta.2/iconify-icon.min.js"></script>
@@ -86,9 +88,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-project','listing-execute','listing-website','listing-format','listing-bibliography','listing-_quarto-vars','listing-language','listing-title-block-banner','listing-comments','listing-title','listing-date','listing-author','listing-categories','listing-toc','listing-image','listing-path','listing-outputHref','listing-date-modified','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      valueNames: ['listing-project','listing-execute','listing-website','listing-format','listing-bibliography','listing-engines','listing-_quarto-vars','listing-language','listing-title-block-banner','listing-comments','listing-title','listing-date','listing-author','listing-categories','listing-toc','listing-image','listing-path','listing-outputHref','listing-date-modified','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
       
-      searchColumns: ["listing-project","listing-execute","listing-website","listing-format","listing-bibliography","listing-_quarto-vars","listing-language","listing-title-block-banner","listing-comments","listing-title","listing-date","listing-author","listing-categories","listing-toc","listing-image","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
+      searchColumns: ["listing-project","listing-execute","listing-website","listing-format","listing-bibliography","listing-engines","listing-_quarto-vars","listing-language","listing-title-block-banner","listing-comments","listing-title","listing-date","listing-author","listing-categories","listing-toc","listing-image","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -114,9 +116,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-project','listing-execute','listing-website','listing-format','listing-bibliography','listing-_quarto-vars','listing-language','listing-title-block-banner','listing-comments','listing-title','listing-date','listing-author','listing-draft','listing-categories','listing-image','listing-toc','listing-path','listing-outputHref','listing-date-modified','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      valueNames: ['listing-project','listing-execute','listing-website','listing-format','listing-bibliography','listing-engines','listing-_quarto-vars','listing-language','listing-title-block-banner','listing-comments','listing-title','listing-date','listing-author','listing-draft','listing-categories','listing-image','listing-toc','listing-path','listing-outputHref','listing-date-modified','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
       
-      searchColumns: ["listing-project","listing-execute","listing-website","listing-format","listing-bibliography","listing-_quarto-vars","listing-language","listing-title-block-banner","listing-comments","listing-title","listing-date","listing-author","listing-draft","listing-categories","listing-image","listing-toc","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
+      searchColumns: ["listing-project","listing-execute","listing-website","listing-format","listing-bibliography","listing-engines","listing-_quarto-vars","listing-language","listing-title-block-banner","listing-comments","listing-title","listing-date","listing-author","listing-draft","listing-categories","listing-image","listing-toc","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -142,9 +144,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-project','listing-execute','listing-website','listing-format','listing-bibliography','listing-_quarto-vars','listing-language','listing-title-block-banner','listing-comments','listing-title','listing-date','listing-author','listing-categories','listing-image','listing-twitter-card','listing-knitr','listing-path','listing-outputHref','listing-date-modified','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count','listing-last-updated','listing-engine','listing-draft',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      valueNames: ['listing-project','listing-execute','listing-website','listing-format','listing-bibliography','listing-engines','listing-_quarto-vars','listing-language','listing-title-block-banner','listing-comments','listing-title','listing-date','listing-author','listing-categories','listing-image','listing-twitter-card','listing-knitr','listing-path','listing-outputHref','listing-date-modified','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count','listing-last-updated','listing-engine','listing-draft',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
       
-      searchColumns: ["listing-project","listing-execute","listing-website","listing-format","listing-bibliography","listing-_quarto-vars","listing-language","listing-title-block-banner","listing-comments","listing-title","listing-date","listing-author","listing-categories","listing-image","listing-twitter-card","listing-knitr","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-last-updated","listing-engine","listing-draft"],
+      searchColumns: ["listing-project","listing-execute","listing-website","listing-format","listing-bibliography","listing-engines","listing-_quarto-vars","listing-language","listing-title-block-banner","listing-comments","listing-title","listing-date","listing-author","listing-categories","listing-image","listing-twitter-card","listing-knitr","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-last-updated","listing-engine","listing-draft"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -170,9 +172,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-project','listing-execute','listing-website','listing-format','listing-bibliography','listing-_quarto-vars','listing-language','listing-title-block-banner','listing-comments','listing-title','listing-date','listing-author','listing-draft','listing-categories','listing-image','listing-twitter-card','listing-path','listing-outputHref','listing-date-modified','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      valueNames: ['listing-project','listing-execute','listing-website','listing-format','listing-bibliography','listing-engines','listing-_quarto-vars','listing-language','listing-title-block-banner','listing-comments','listing-title','listing-date','listing-author','listing-draft','listing-categories','listing-image','listing-twitter-card','listing-path','listing-outputHref','listing-date-modified','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
       
-      searchColumns: ["listing-project","listing-execute","listing-website","listing-format","listing-bibliography","listing-_quarto-vars","listing-language","listing-title-block-banner","listing-comments","listing-title","listing-date","listing-author","listing-draft","listing-categories","listing-image","listing-twitter-card","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
+      searchColumns: ["listing-project","listing-execute","listing-website","listing-format","listing-bibliography","listing-engines","listing-_quarto-vars","listing-language","listing-title-block-banner","listing-comments","listing-title","listing-date","listing-author","listing-draft","listing-categories","listing-image","listing-twitter-card","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -200,7 +202,7 @@ gtag('config', 'G-EX523L4LWJ', { 'anonymize_ip': true});
 </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -339,7 +341,7 @@ window.Quarto = {
 <div id="listing-posts_2025" class="quarto-listing quarto-listing-container-custom">
 <div class="list blog">
     
-    <div class="blog-entry" data-index="0" data-categories="UXVhcnRvJTJDUiUyQ0p1bGlh" data-listing-date-sort="1745625600000" data-listing-file-modified-sort="1773727851087" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="25" data-listing-word-count-sort="4824">
+    <div class="blog-entry" data-index="0" data-categories="UXVhcnRvJTJDUiUyQ0p1bGlh" data-listing-date-sort="1745625600000" data-listing-file-modified-sort="1774337925587" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="25" data-listing-word-count-sort="4824">
         <div class="metadata">          
             <p class="date listing-date">April 26, 2025</p>
         </div>
@@ -380,7 +382,7 @@ window.Quarto = {
 <div id="listing-posts_2024" class="quarto-listing quarto-listing-container-custom">
 <div class="list blog">
     
-    <div class="blog-entry" data-index="0" data-categories="UiUyQ1F1YXJ0byUyQ0xhVGVY" data-listing-date-sort="1714348800000" data-listing-file-modified-sort="1773727851087" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1234">
+    <div class="blog-entry" data-index="0" data-categories="UiUyQ1F1YXJ0byUyQ0xhVGVY" data-listing-date-sort="1714348800000" data-listing-file-modified-sort="1774337925586" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1234">
         <div class="metadata">          
             <p class="date listing-date">April 29, 2024</p>
         </div>
@@ -412,7 +414,7 @@ window.Quarto = {
         
     </div>
     
-    <div class="blog-entry" data-index="1" data-categories="UiUyQ1F1YXJ0bw==" data-listing-date-sort="1712275200000" data-listing-file-modified-sort="1773727851086" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14" data-listing-word-count-sort="2778">
+    <div class="blog-entry" data-index="1" data-categories="UiUyQ1F1YXJ0bw==" data-listing-date-sort="1712275200000" data-listing-file-modified-sort="1774337925585" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14" data-listing-word-count-sort="2778">
         <div class="metadata">          
             <p class="date listing-date">April 5, 2024</p>
         </div>
@@ -449,7 +451,7 @@ window.Quarto = {
 <div id="listing-posts_2023" class="quarto-listing quarto-listing-container-custom">
 <div class="list blog">
     
-    <div class="blog-entry" data-index="0" data-categories="UiUyQ0RvY2tlciUyQ1ZTQ29kZSUyQ0p1bGlhJTJDTGFUZVglMkNQeXRob24=" data-listing-date-sort="1693958400000" data-listing-file-modified-sort="1773727851083" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2564">
+    <div class="blog-entry" data-index="0" data-categories="UiUyQ0RvY2tlciUyQ1ZTQ29kZSUyQ0p1bGlhJTJDTGFUZVglMkNQeXRob24=" data-listing-date-sort="1693958400000" data-listing-file-modified-sort="1774337925581" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2564">
         <div class="metadata">          
             <p class="date listing-date">September 6, 2023</p>
         </div>
@@ -493,7 +495,7 @@ window.Quarto = {
         
     </div>
     
-    <div class="blog-entry" data-index="1" data-categories="SnVsaWElMkNPYnNlcnZhYmxlJTIwSlMlMkNRdWFydG8=" data-listing-date-sort="1686355200000" data-listing-file-modified-sort="1773727851082" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="777">
+    <div class="blog-entry" data-index="1" data-categories="SnVsaWElMkNPYnNlcnZhYmxlJTIwSlMlMkNRdWFydG8=" data-listing-date-sort="1686355200000" data-listing-file-modified-sort="1774337925580" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="777">
         <div class="metadata">          
             <p class="date listing-date">June 10, 2023</p>
         </div>
@@ -525,7 +527,7 @@ window.Quarto = {
         
     </div>
     
-    <div class="blog-entry" data-index="2" data-categories="SnVsaWElMkNQeXRob24lMkNSJTJDUXVhcnRvJTJDU3RhdGE=" data-listing-date-sort="1682812800000" data-listing-file-modified-sort="1773727851061" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="813">
+    <div class="blog-entry" data-index="2" data-categories="SnVsaWElMkNQeXRob24lMkNSJTJDUXVhcnRvJTJDU3RhdGE=" data-listing-date-sort="1682812800000" data-listing-file-modified-sort="1774337925559" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="813">
         <div class="metadata">          
             <p class="date listing-date">April 30, 2023</p>
         </div>
@@ -574,7 +576,7 @@ window.Quarto = {
 <div id="listing-posts_2022" class="quarto-listing quarto-listing-container-custom">
 <div class="list blog">
     
-    <div class="blog-entry" data-index="0" data-categories="UiUyQ1F1YXJ0bw==" data-listing-date-sort="1672185600000" data-listing-file-modified-sort="1773727851060" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1717">
+    <div class="blog-entry" data-index="0" data-categories="UiUyQ1F1YXJ0bw==" data-listing-date-sort="1672185600000" data-listing-file-modified-sort="1774337925557" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1717">
         <div class="metadata">          
             <p class="date listing-date">December 28, 2022</p>
         </div>
@@ -602,7 +604,7 @@ window.Quarto = {
         
     </div>
     
-    <div class="blog-entry" data-index="1" data-categories="UiUyQ0RvY2tlcg==" data-listing-date-sort="1653350400000" data-listing-file-modified-sort="1773727851059" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="527">
+    <div class="blog-entry" data-index="1" data-categories="UiUyQ0RvY2tlcg==" data-listing-date-sort="1653350400000" data-listing-file-modified-sort="1774337925556" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="527">
         <div class="metadata">          
             <p class="date listing-date">May 24, 2022</p>
         </div>

@@ -109,14 +109,14 @@
     "href": "research/spruce-shark/index.html",
     "title": "Marriage and Divorce in Continuous Time",
     "section": "",
-    "text": "This paper reformulates the Greenwood and Guner (2009) marriage and divorce model in continuous time using the HACT methods of Achdou et al. (2022). Replacing the AR(1) match quality process with an Ornstein-Uhlenbeck process yields a tridiagonal generator, reducing the computational complexity of both the value function and stationary distribution calculations from quadratic to linear in the number of grid points. The continuous-time model closely replicates the discrete-time equilibrium across all key outcomes, including the share of married households, the marriage rate, and the divorce rate, while achieving substantial gains in computation time and memory usage."
+    "text": "This paper reformulates the Greenwood and Guner (2009) marriage and divorce model in continuous time using the HACT methods of Achdou et al. (2022). Replacing the AR(1) match quality process with an Ornstein-Uhlenbeck process yields a tridiagonal generator, reducing the computational complexity of both the value function and stationary distribution calculations from quadratic to linear in the number of grid points. The continuous-time model closely replicates the discrete-time equilibrium across all key outcomes, including the share of married households, the marriage rate, and the divorce rate, while achieving substantial gains in computation time and memory usage."
   },
   {
     "objectID": "research/spruce-shark/index.html#abstract",
     "href": "research/spruce-shark/index.html#abstract",
     "title": "Marriage and Divorce in Continuous Time",
     "section": "",
-    "text": "This paper reformulates the Greenwood and Guner (2009) marriage and divorce model in continuous time using the HACT methods of Achdou et al. (2022). Replacing the AR(1) match quality process with an Ornstein-Uhlenbeck process yields a tridiagonal generator, reducing the computational complexity of both the value function and stationary distribution calculations from quadratic to linear in the number of grid points. The continuous-time model closely replicates the discrete-time equilibrium across all key outcomes, including the share of married households, the marriage rate, and the divorce rate, while achieving substantial gains in computation time and memory usage."
+    "text": "This paper reformulates the Greenwood and Guner (2009) marriage and divorce model in continuous time using the HACT methods of Achdou et al. (2022). Replacing the AR(1) match quality process with an Ornstein-Uhlenbeck process yields a tridiagonal generator, reducing the computational complexity of both the value function and stationary distribution calculations from quadratic to linear in the number of grid points. The continuous-time model closely replicates the discrete-time equilibrium across all key outcomes, including the share of married households, the marriage rate, and the divorce rate, while achieving substantial gains in computation time and memory usage."
   },
   {
     "objectID": "research/spruce-shark/index.html#important-figures",
@@ -466,7 +466,7 @@
     "href": "blog/2023/04/30/quarto_multi_lang/index.html",
     "title": "Quarto Is Multi-lingual!",
     "section": "",
-    "text": "A common misunderstanding about Quarto is that we cannot use multiple languages within a document. Indeed, Jupyter cannot use multiple languages within a document, and we usually use the jupyter engine for Python and Julia (and it is officially supported.)\nHowever, knitr has already been able to execute multiple languages tons of years ago, so why can’t we do it in Quarto?\nLet’s see the following example with palmerpenguins::penguins of Horst, Hill, and Gorman (2020)"
+    "text": "A common misunderstanding about Quarto is that we cannot use multiple languages within a document. Indeed, Jupyter cannot use multiple languages within a document, and we usually use the jupyter engine for Python and Julia (and it is officially supported.)\nHowever, knitr has already been able to execute multiple languages tons of years ago, so why can’t we do it in Quarto?\nLet’s see the following example with palmerpenguins::penguins of Horst et al. (2020)"
   },
   {
     "objectID": "blog/2023/04/30/quarto_multi_lang/index.html#tabset",
@@ -543,14 +543,14 @@
     "href": "research/common-cheetah/index.html",
     "title": "Barriers to Gender Convergence",
     "section": "",
-    "text": "This paper investigates the barriers to gender convergence using Japan as a salient environment to explore the interactive effects of labor market structures and social norms. I develop a quantitative model of household labor supply where couples jointly decide their occupations and working hours. The model features a labor market with inflexible “regular” jobs with convex pay schedules and flexible “non-regular” jobs, interacting with social norms regarding spousal earnings. The calibrated model successfully reproduces observed gender gaps in participation, occupation, and working hours, and explains 51.7% of the gender wage gap. The model also accounts for cross-regional differences in gender gaps solely through variation in social norms. Counterfactual simulations show that while increasing job flexibility substantially reduces wage and occupational gaps, the working hours gap persists due to the unequal burden of domestic work. Closing this remaining gap requires policies such as affordable household services. Furthermore, the model predicts that structural reforms are particularly effective in societies with strong gender norms."
+    "text": "This paper investigates the barriers to gender convergence using Japan as a salient environment to explore the interactive effects of labor market structures and social norms. I develop a quantitative model of household labor supply where couples jointly decide their occupations and working hours. The model features a labor market with inflexible “regular” jobs with convex pay schedules and flexible “non-regular” jobs, interacting with social norms regarding spousal earnings. The calibrated model successfully reproduces observed gender gaps in participation, occupation, and working hours, and explains 48% of the gender wage gap. The model also accounts for cross-regional differences in gender gaps solely through variation in social norms. Counterfactual simulations show that while increasing job flexibility substantially reduces wage and occupational gaps, the working hours gap persists due to the unequal burden of domestic work. Closing this remaining gap requires policies such as affordable household services. Furthermore, the model suggests that the effects of structural reforms can depend on the strength of gender norms, with larger reductions in gender gaps in more conservative environments."
   },
   {
     "objectID": "research/common-cheetah/index.html#abstract",
     "href": "research/common-cheetah/index.html#abstract",
     "title": "Barriers to Gender Convergence",
     "section": "",
-    "text": "This paper investigates the barriers to gender convergence using Japan as a salient environment to explore the interactive effects of labor market structures and social norms. I develop a quantitative model of household labor supply where couples jointly decide their occupations and working hours. The model features a labor market with inflexible “regular” jobs with convex pay schedules and flexible “non-regular” jobs, interacting with social norms regarding spousal earnings. The calibrated model successfully reproduces observed gender gaps in participation, occupation, and working hours, and explains 51.7% of the gender wage gap. The model also accounts for cross-regional differences in gender gaps solely through variation in social norms. Counterfactual simulations show that while increasing job flexibility substantially reduces wage and occupational gaps, the working hours gap persists due to the unequal burden of domestic work. Closing this remaining gap requires policies such as affordable household services. Furthermore, the model predicts that structural reforms are particularly effective in societies with strong gender norms."
+    "text": "This paper investigates the barriers to gender convergence using Japan as a salient environment to explore the interactive effects of labor market structures and social norms. I develop a quantitative model of household labor supply where couples jointly decide their occupations and working hours. The model features a labor market with inflexible “regular” jobs with convex pay schedules and flexible “non-regular” jobs, interacting with social norms regarding spousal earnings. The calibrated model successfully reproduces observed gender gaps in participation, occupation, and working hours, and explains 48% of the gender wage gap. The model also accounts for cross-regional differences in gender gaps solely through variation in social norms. Counterfactual simulations show that while increasing job flexibility substantially reduces wage and occupational gaps, the working hours gap persists due to the unequal burden of domestic work. Closing this remaining gap requires policies such as affordable household services. Furthermore, the model suggests that the effects of structural reforms can depend on the strength of gender norms, with larger reductions in gender gaps in more conservative environments."
   },
   {
     "objectID": "research/common-cheetah/index.html#slides",
@@ -558,6 +558,13 @@
     "title": "Barriers to Gender Convergence",
     "section": "Slides",
     "text": "Slides"
+  },
+  {
+    "objectID": "research/common-cheetah/index.html#bibtex-citation",
+    "href": "research/common-cheetah/index.html#bibtex-citation",
+    "title": "Barriers to Gender Convergence",
+    "section": "BibTeX citation",
+    "text": "BibTeX citation\n@misc{yanagimoto2026,\n  title = {Barriers to Gender Convergence: The Interactive Effects of Job Inflexibility and Social Norms},\n  author = {Yanagimoto, Kazuharu},\n  year = {2026},\n  eprint = {2603.20817},\n  archiveprefix = {arXiv},\n  doi = {10.48550/arXiv.2603.20817}\n}"
   },
   {
     "objectID": "teaching/index.html",
