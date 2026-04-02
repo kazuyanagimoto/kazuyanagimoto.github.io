@@ -46,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-4935a97d7384e2925efdc6e9bc6f7851.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-105b6bb157676bd45a4f8dc3c96a147f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-f27338ec2e8dcf03df1131eac7a5eff5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script src="../site_libs/quarto-contrib/iconify-1.0.0-beta.2/iconify-icon.min.js"></script>
@@ -78,6 +78,34 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-ay_26-27 .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-info','listing-description','listing-image','listing-url','listing-links',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-title","listing-info","listing-description","listing-image","listing-url","listing-links"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-ay_26-27'] = new List('listing-ay_26-27', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
     const listingTargetEl = window.document.querySelector('#listing-ay_25-26 .list');
@@ -244,7 +272,8 @@ window.Quarto = {
     <h2 id="toc-title">Academic Year</h2>
    
   <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">2025-26</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">2026-27</a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">2025-26</a></li>
   </ul>
 </nav>
     </div>
@@ -256,7 +285,57 @@ window.Quarto = {
 
 
 <section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section">2025-26</h2>
+<h2 class="anchored" data-anchor-id="section">2026-27</h2>
+<div id="listing-ay_26-27" class="quarto-listing quarto-listing-container-custom">
+<div class="courses">
+    
+    <div class="course-entry">
+        <div class="course-image">
+            
+            <a href="https://kazuyanagimoto.com/course-kobe-firstyear-2026/" target="_blank"><img src="https://kazuyanagimoto.com/course-kobe-firstyear-2026/static/img/logo.svg" alt="First Year Seminar" title="First Year Seminar"></a>
+            
+        </div>
+        <div class="body">
+            <p class="course-title">
+                
+                <a href="https://kazuyanagimoto.com/course-kobe-firstyear-2026/" target="_blank">First Year Seminar</a> 
+                
+            </p>
+            <p class="course-details">
+                <span class="course-info">First Year Seminar・Spring 2026・Kobe University</span>
+            </p>
+            <p class="course-description">Introduction to Academic Writing and Research</p>
+
+            <ul class="course-links">
+                
+                    
+                    <li class="course-link">
+                        
+                        <a href="https://kazuyanagimoto.com/course-kobe-firstyear-2026/">
+                        
+                            <i class="fa-solid fa-globe"></i> Website
+                        </a>
+                    </li>
+                    
+                    <li class="course-link">
+                        
+                        <a href="https://github.com/kazuyanagimoto/course-kobe-firstyear-2026">
+                        
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+                    </li>
+                    
+                
+            </ul>
+        </div>
+    </div>
+    
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+</section>
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1">2025-26</h2>
 <div id="listing-ay_25-26" class="quarto-listing quarto-listing-container-custom">
 <div class="courses">
     
