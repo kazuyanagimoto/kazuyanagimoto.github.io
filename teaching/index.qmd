@@ -2,6 +2,10 @@
 title: Teaching
 description: "A list of my teaching materials"
 listing:
+  - id: ay_26-27
+    contents: ay_2026-27.yml
+    sort: "date desc"
+    template: ../static/html/list-teaching.ejs
   - id: ay_25-26
     contents: ay_2025-26.yml
     sort: "date desc"
@@ -11,6 +15,11 @@ page-layout: full
 toc: true
 toc-title: Academic Year
 ---
+
+## 2026-27
+
+::: {#ay_26-27}
+:::
 
 ## 2025-26
 
