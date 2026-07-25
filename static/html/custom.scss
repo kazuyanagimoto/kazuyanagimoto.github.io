@@ -488,7 +488,8 @@ $footer-fg: $gray-500 !default;
 
             img {
                 width: 100%;
-                object-fit: cover;
+                object-fit: contain;
+                object-position: top;
                 max-height: 120px;
             }
         }

@@ -1,0 +1,13 @@
+- title: Empiricist’s Workflow
+  date: 2026-08-18
+  language: Japanese
+  description: 実証研究に使えるモダンなツールやワークフローを紹介しました
+  location: 神戸大学
+  feature: https://kazuyanagimoto.com/workshop-graduate-2026/static/img/logo/hex-logo.svg
+  links:
+    - name: Website
+      url: https://kazuyanagimoto.com/workshop-graduate-2026/
+      icon: fa-solid fa-chalkboard-user
+    - name: GitHub
+      url: https://github.com/kazuyanagimoto/workshop-graduate-2026
+      icon: fa-brands fa-github
