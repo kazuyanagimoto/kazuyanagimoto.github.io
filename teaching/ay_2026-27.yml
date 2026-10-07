@@ -1,3 +1,15 @@
+- title: Family Macroeconomics
+  info: Macro IV・Fall 2026・Kobe University
+  description: Quantitative analysis of Marriage, Fertitlity, and Gender Gaps
+  image: https://kazuyanagimoto.com/course-kobe-macro4-2026/static/img/logo.drawio.svg
+  url: https://kazuyanagimoto.com/course-kobe-macro4-2026/
+  links:
+    - name: Website
+      url: https://kazuyanagimoto.com/course-kobe-macro4-2026/
+      icon: fa-solid fa-globe
+    - name: GitHub
+      url: https://github.com/kazuyanagimoto/course-kobe-macro4-2026
+      icon: fa-brands fa-github
 - title: First Year Seminar
   info: First Year Seminar・Spring 2026・Kobe University
   description: Introduction to Academic Writing and Research
