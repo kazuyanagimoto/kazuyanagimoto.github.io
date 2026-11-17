@@ -20,6 +20,7 @@ website:
     creator: "@kazuyanagimoto"
     site: "@kazuyanagimoto"
   open-graph: true
+  llms-txt: true
   navbar:
     right:
       - text: About
