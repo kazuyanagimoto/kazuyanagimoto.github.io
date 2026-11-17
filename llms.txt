@@ -1,0 +1,24 @@
+# Kazuharu Yanagimoto
+
+## Pages
+
+- [Teaching](https://kazuyanagimoto.com/teaching/index.llms.md)
+- [Talks that Last](https://kazuyanagimoto.com/talks/index.llms.md)
+- [Researching as if to Blog](https://kazuyanagimoto.com/blog/2024/04/05/index.llms.md)
+- [Research Workflow with Quarto + {targets}](https://kazuyanagimoto.com/blog/2025/0426_research_workflow/index.llms.md)
+- [Some Quarto Tips for Academic Presentation](https://kazuyanagimoto.com/blog/2022/12/27/quarto_tips/index.llms.md)
+- [A Minimal & Portable Research Environment with Docker](https://kazuyanagimoto.com/blog/2023/09/06/docker_template/index.llms.md)
+- [Software](https://kazuyanagimoto.com/software/index.llms.md)
+- [A Quantitative Model of Non-Marriage and Fertility](https://kazuyanagimoto.com/research/icky-impala/index.llms.md)
+- [On Causal Inference with Model-Based Outcomes](https://kazuyanagimoto.com/research/hetero2wfe/index.llms.md)
+- [Barriers to Gender Convergence](https://kazuyanagimoto.com/research/common-cheetah/index.llms.md)
+- [Hi There!](https://kazuyanagimoto.com/about/index.llms.md)
+- [COVID-19, Food Relief, and Social Distancing](https://kazuyanagimoto.com/research/bayan-bayanihan/index.llms.md)
+- [Marriage and Divorce in Continuous Time](https://kazuyanagimoto.com/research/spruce-shark/index.llms.md)
+- [Research](https://kazuyanagimoto.com/research/index.llms.md)
+- [Scientific Communication with Quarto: Economic Models](https://kazuyanagimoto.com/blog/2023/06/10/quarto_com_model/index.llms.md)
+- [Quarto Is Multi-lingual!](https://kazuyanagimoto.com/blog/2023/04/30/quarto_multi_lang/index.llms.md)
+- [My Docker Template for R](https://kazuyanagimoto.com/blog/2022/05/24/docker_template/index.llms.md)
+- [A Gamechanger of Creating Tables in R: tinytable](https://kazuyanagimoto.com/blog/2024/04/29/index.llms.md)
+- [Blog](https://kazuyanagimoto.com/blog/index.llms.md)
+- [Kazuharu Yanagimoto](https://kazuyanagimoto.com/index.llms.md)
